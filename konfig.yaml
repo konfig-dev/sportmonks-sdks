@@ -18,4 +18,4 @@ generators:
     invokerPackage: Sportmonks
     git:
       userId: konfig-dev
-      repoId: sportmonks-sdks/tree/main/php
+      repoId: sportmonks-php-sdk
