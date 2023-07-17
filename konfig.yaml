@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=https://unpkg.com/konfig-lib@latest/konfig-yaml.schema.json
+
+outputDirectory: /tmp/sportmonks-sdks-out
+specPath: api.yaml
+generators:
+  csharp:
+    version: 1.0.0
+    packageName: Sportmonks.Net
+    outputDirectory: csharp
+    logoPath: logo.png
+    git:
+      userId: konfig-dev
+      repoId: sportmonks-sdks/tree/main/csharp
+  php:
+    version: 1.0.0
+    packageName: sportmonks-php
+    outputDirectory: php
+    invokerPackage: Sportmonks
+    git:
+      userId: konfig-dev
+      repoId: sportmonks-sdks/tree/main/php
