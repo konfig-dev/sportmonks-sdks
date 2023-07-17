@@ -1,0 +1,12 @@
+# Sportmonks.Net.Model.SportStandingsLiveByLeagueIdResponseSubscriptionInnerAddOnsInner
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**AddOn** | **string** |  | [optional] 
+**Sport** | **string** |  | [optional] 
+**Category** | **string** |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
