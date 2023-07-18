@@ -29,10 +29,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const bookmakerByIdResponse = await sportmonks.odds.bookmakerById({
-  version: "version_example",
   bookmakerId: 1,
 });
 
@@ -44,8 +46,8 @@ console.log(bookmakerByIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
  **bookmakerId** | [**number**] | The ID of the bookmaker you want to retrieve. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
 
 
 ### Return type
@@ -79,11 +81,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
-const bookmakersAllResponse = await sportmonks.odds.bookmakersAll({
-  version: "version_example",
-});
+const bookmakersAllResponse = await sportmonks.odds.bookmakersAll({});
 
 console.log(bookmakersAllResponse);
 ```
@@ -93,7 +96,7 @@ console.log(bookmakersAllResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
 
 
 ### Return type
@@ -127,11 +130,13 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const bookmakersByFixtureIdResponse =
   await sportmonks.odds.bookmakersByFixtureId({
-    version: "version_example",
     fixtureId: 1,
   });
 
@@ -143,8 +148,8 @@ console.log(bookmakersByFixtureIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
  **fixtureId** | [**number**] | The ID of the bookmaker you want to retrieve. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
 
 
 ### Return type
@@ -178,11 +183,13 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const bookmakersMappingByFixtureIdResponse =
   await sportmonks.odds.bookmakersMappingByFixtureId({
-    version: "version_example",
     fixtureId: 1,
   });
 
@@ -194,8 +201,8 @@ console.log(bookmakersMappingByFixtureIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
  **fixtureId** | [**number**] | The fixtureId you want to retrieve the bookmaker mapping from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
 
 
 ### Return type
@@ -229,10 +236,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const bookmakersSearchResponse = await sportmonks.odds.bookmakersSearch({
-  version: "version_example",
   name: "name_example",
 });
 
@@ -244,8 +253,8 @@ console.log(bookmakersSearchResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
  **name** | [**string**] | The name you want to search on | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
 
 
 ### Return type
@@ -279,12 +288,13 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const fixturesUpcomingByMarketIdResponse =
   await sportmonks.odds.fixturesUpcomingByMarketId({
-    version: "version_example",
-    sport: "sport_example",
     marketId: 1,
   });
 
@@ -296,9 +306,9 @@ console.log(fixturesUpcomingByMarketIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The sport you want to retrieve upcoming fixtures from. | defaults to undefined
- **sport** | [**string**] |  | defaults to undefined
  **marketId** | [**number**] | The ID of the market you want to retrieve upcoming fixtures from. | defaults to undefined
+ **version** | [**string**] | The sport you want to retrieve upcoming fixtures from. | (optional) defaults to undefined
+ **sport** | [**string**] |  | (optional) defaults to undefined
 
 
 ### Return type
@@ -332,10 +342,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const marketByIdResponse = await sportmonks.odds.marketById({
-  version: "version_example",
   marketId: 1,
 });
 
@@ -347,8 +359,8 @@ console.log(marketByIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
  **marketId** | [**number**] | The ID of the market you want to retrieve. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
 
 
 ### Return type
@@ -382,11 +394,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
-const marketsAllResponse = await sportmonks.odds.marketsAll({
-  version: "version_example",
-});
+const marketsAllResponse = await sportmonks.odds.marketsAll({});
 
 console.log(marketsAllResponse);
 ```
@@ -396,7 +409,7 @@ console.log(marketsAllResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
 
 
 ### Return type
@@ -430,10 +443,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const marketsSearchResponse = await sportmonks.odds.marketsSearch({
-  version: "version_example",
   name: "name_example",
 });
 
@@ -445,8 +460,8 @@ console.log(marketsSearchResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
  **name** | [**string**] | The name you want to search on | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
 
 
 ### Return type

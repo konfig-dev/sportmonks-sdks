@@ -23,11 +23,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
-const enrichmentsResponse = await sportmonks.my.enrichments({
-  version: "version_example",
-});
+const enrichmentsResponse = await sportmonks.my.enrichments({});
 
 console.log(enrichmentsResponse);
 ```
@@ -37,7 +38,7 @@ console.log(enrichmentsResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
 
 
 ### Return type
@@ -71,11 +72,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
-const leaguesResponse = await sportmonks.my.leagues({
-  version: "version_example",
-});
+const leaguesResponse = await sportmonks.my.leagues({});
 
 console.log(leaguesResponse);
 ```
@@ -85,7 +87,7 @@ console.log(leaguesResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
 
 
 ### Return type
@@ -119,11 +121,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
-const resourcesResponse = await sportmonks.my.resources({
-  version: "version_example",
-});
+const resourcesResponse = await sportmonks.my.resources({});
 
 console.log(resourcesResponse);
 ```
@@ -133,7 +136,7 @@ console.log(resourcesResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
 
 
 ### Return type

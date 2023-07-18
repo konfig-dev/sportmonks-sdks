@@ -22,11 +22,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
-const allResponse = await sportmonks.continents.all({
-  version: "version_example",
-});
+const allResponse = await sportmonks.continents.all({});
 
 console.log(allResponse);
 ```
@@ -36,7 +37,7 @@ console.log(allResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
 
 
 ### Return type
@@ -70,10 +71,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const getByIdResponse = await sportmonks.continents.getById({
-  version: "version_example",
   continentId: 1,
 });
 
@@ -85,8 +88,8 @@ console.log(getByIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
  **continentId** | [**number**] | The ID of the continent you want to retrieve | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
 
 
 ### Return type

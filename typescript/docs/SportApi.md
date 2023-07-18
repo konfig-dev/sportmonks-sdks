@@ -125,11 +125,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const coachByIdResponse = await sportmonks.sport.coachById({
-  version: "version_example",
-  sport: "sport_example",
   coachId: 1,
 });
 
@@ -141,9 +142,9 @@ console.log(coachByIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **coachId** | [**number**] | The ID of the coach you want to retrieve. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -177,12 +178,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
-const coachesAllResponse = await sportmonks.sport.coachesAll({
-  version: "version_example",
-  sport: "sport_example",
-});
+const coachesAllResponse = await sportmonks.sport.coachesAll({});
 
 console.log(coachesAllResponse);
 ```
@@ -192,8 +193,8 @@ console.log(coachesAllResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -227,11 +228,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const coachesByCountryIdResponse = await sportmonks.sport.coachesByCountryId({
-  version: "version_example",
-  sport: "sport_example",
   countryId: 1,
 });
 
@@ -243,9 +245,9 @@ console.log(coachesByCountryIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **countryId** | [**number**] | The ID of the country you want to retrieve coaches from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -279,12 +281,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
-const coachesLatestResponse = await sportmonks.sport.coachesLatest({
-  version: "version_example",
-  sport: "sport_example",
-});
+const coachesLatestResponse = await sportmonks.sport.coachesLatest({});
 
 console.log(coachesLatestResponse);
 ```
@@ -294,8 +296,8 @@ console.log(coachesLatestResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -329,11 +331,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const coachesSearchResponse = await sportmonks.sport.coachesSearch({
-  version: "version_example",
-  sport: "sport_example",
   name: "name_example",
 });
 
@@ -345,9 +348,9 @@ console.log(coachesSearchResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **name** | [**string**] | The name you want to search on. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -381,12 +384,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
-const commentariesAllResponse = await sportmonks.sport.commentariesAll({
-  version: "version_example",
-  sport: "sport_example",
-});
+const commentariesAllResponse = await sportmonks.sport.commentariesAll({});
 
 console.log(commentariesAllResponse);
 ```
@@ -396,8 +399,8 @@ console.log(commentariesAllResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -431,12 +434,13 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const commentariesByFixtureIdResponse =
   await sportmonks.sport.commentariesByFixtureId({
-    version: "version_example",
-    sport: "sport_example",
     fixtureId: 1,
   });
 
@@ -448,9 +452,9 @@ console.log(commentariesByFixtureIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **fixtureId** | [**number**] | The ID of the fixture you want to retrieve commentaries from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -484,12 +488,13 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const fixtureByDateRangeForTeamResponse =
   await sportmonks.sport.fixtureByDateRangeForTeam({
-    version: "version_example",
-    sport: "sport_example",
     startDate: "startDate_example",
     endDate: "endDate_example",
     teamId: "teamId_example",
@@ -503,11 +508,11 @@ console.log(fixtureByDateRangeForTeamResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **startDate** | [**string**] |  | defaults to undefined
  **endDate** | [**string**] |  | defaults to undefined
  **teamId** | [**string**] |  | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -541,11 +546,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const fixtureByIdResponse = await sportmonks.sport.fixtureById({
-  version: "version_example",
-  sport: "sport_example",
   fixtureId: 1,
 });
 
@@ -557,9 +563,9 @@ console.log(fixtureByIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **fixtureId** | [**number**] | The ID of the fixture you want to retrieve. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -593,12 +599,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
-const fixturesAllResponse = await sportmonks.sport.fixturesAll({
-  version: "version_example",
-  sport: "sport_example",
-});
+const fixturesAllResponse = await sportmonks.sport.fixturesAll({});
 
 console.log(fixturesAllResponse);
 ```
@@ -608,8 +614,8 @@ console.log(fixturesAllResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -643,11 +649,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const fixturesByDateResponse = await sportmonks.sport.fixturesByDate({
-  version: "version_example",
-  sport: "sport_example",
   date: "date_example",
 });
 
@@ -659,9 +666,9 @@ console.log(fixturesByDateResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **date** | [**string**] | The date you want to retrieve fixtures from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -695,11 +702,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const fixturesByDateRangeResponse = await sportmonks.sport.fixturesByDateRange({
-  version: "version_example",
-  sport: "sport_example",
   startDate: "startDate_example",
   endDate: "endDate_example",
 });
@@ -712,10 +720,10 @@ console.log(fixturesByDateRangeResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **startDate** | [**string**] | The start date you want to retrieve fixtures from. | defaults to undefined
  **endDate** | [**string**] | The end date you want to retrieve fixtures from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -749,11 +757,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const fixturesByIdsResponse = await sportmonks.sport.fixturesByIds({
-  version: "version_example",
-  sport: "sport_example",
   fixtureIds: "fixtureIds_example",
 });
 
@@ -765,9 +774,9 @@ console.log(fixturesByIdsResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **fixtureIds** | [**string**] | The IDs you want to retrieve. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -801,11 +810,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const fixturesHeadToHeadResponse = await sportmonks.sport.fixturesHeadToHead({
-  version: "version_example",
-  sport: "sport_example",
   firstTeam: 1,
   secondTeam: 1,
 });
@@ -818,10 +828,10 @@ console.log(fixturesHeadToHeadResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **firstTeam** | [**number**] | The ID of the first team retrieve fixtures from. | defaults to undefined
  **secondTeam** | [**number**] | The ID of the second team retrieve fixtures from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -855,12 +865,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
-const fixturesLatestResponse = await sportmonks.sport.fixturesLatest({
-  version: "version_example",
-  sport: "sport_example",
-});
+const fixturesLatestResponse = await sportmonks.sport.fixturesLatest({});
 
 console.log(fixturesLatestResponse);
 ```
@@ -870,8 +880,8 @@ console.log(fixturesLatestResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -905,11 +915,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const fixturesSearchResponse = await sportmonks.sport.fixturesSearch({
-  version: "version_example",
-  sport: "sport_example",
   name: "name_example",
 });
 
@@ -921,9 +932,9 @@ console.log(fixturesSearchResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **name** | [**string**] | The name you want search on. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -957,11 +968,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const leagueByIdResponse = await sportmonks.sport.leagueById({
-  version: "version_example",
-  sport: "sport_example",
   leagueId: 1,
 });
 
@@ -973,9 +985,9 @@ console.log(leagueByIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **leagueId** | [**number**] | The ID of the league you want to retrieve. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -1009,11 +1021,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const leagueEnrichmentsResponse = await sportmonks.sport.leagueEnrichments({
-  version: "version_example",
-  sport: "sport_example",
   leagueId: 1,
 });
 
@@ -1025,9 +1038,9 @@ console.log(leagueEnrichmentsResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **leagueId** | [**number**] | The ID of the league you want to retrieve enrichments from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -1061,11 +1074,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const leagueShirtsResponse = await sportmonks.sport.leagueShirts({
-  version: "version_example",
-  sport: "sport_example",
   leagueId: 1,
 });
 
@@ -1077,9 +1091,9 @@ console.log(leagueShirtsResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **leagueId** | [**number**] | The ID of the league you want to retrieve. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -1113,12 +1127,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
-const leaguesAllResponse = await sportmonks.sport.leaguesAll({
-  version: "version_example",
-  sport: "sport_example",
-});
+const leaguesAllResponse = await sportmonks.sport.leaguesAll({});
 
 console.log(leaguesAllResponse);
 ```
@@ -1128,8 +1142,8 @@ console.log(leaguesAllResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -1163,11 +1177,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const leaguesByCountryIdResponse = await sportmonks.sport.leaguesByCountryId({
-  version: "version_example",
-  sport: "sport_example",
   countryId: 1,
 });
 
@@ -1179,9 +1194,9 @@ console.log(leaguesByCountryIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **countryId** | [**number**] | The ID of the country you want to retrieve leagues from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -1215,11 +1230,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const leaguesByDateResponse = await sportmonks.sport.leaguesByDate({
-  version: "version_example",
-  sport: "sport_example",
   date: "date_example",
 });
 
@@ -1231,9 +1247,9 @@ console.log(leaguesByDateResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **date** | [**string**] | The date of fixtures you want to retrieve leagues from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -1267,11 +1283,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const leaguesByTeamIdResponse = await sportmonks.sport.leaguesByTeamId({
-  version: "version_example",
-  sport: "sport_example",
   teamId: 1,
 });
 
@@ -1283,9 +1300,9 @@ console.log(leaguesByTeamIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **teamId** | [**number**] | The ID of the team you want to retrieve leagues from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -1319,12 +1336,13 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const leaguesCurrentByTeamIdResponse =
   await sportmonks.sport.leaguesCurrentByTeamId({
-    version: "version_example",
-    sport: "sport_example",
     teamId: 1,
   });
 
@@ -1336,9 +1354,9 @@ console.log(leaguesCurrentByTeamIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **teamId** | [**number**] | The ID of the team you want to retrieve current leagues from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -1372,12 +1390,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
-const leaguesLiveResponse = await sportmonks.sport.leaguesLive({
-  version: "version_example",
-  sport: "sport_example",
-});
+const leaguesLiveResponse = await sportmonks.sport.leaguesLive({});
 
 console.log(leaguesLiveResponse);
 ```
@@ -1387,8 +1405,8 @@ console.log(leaguesLiveResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -1422,11 +1440,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const leaguesSearchResponse = await sportmonks.sport.leaguesSearch({
-  version: "version_example",
-  sport: "sport_example",
   name: "name_example",
 });
 
@@ -1438,9 +1457,9 @@ console.log(leaguesSearchResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **name** | [**string**] | The name you want to search on. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -1474,12 +1493,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
-const livescoresAllResponse = await sportmonks.sport.livescoresAll({
-  version: "version_example",
-  sport: "sport_example",
-});
+const livescoresAllResponse = await sportmonks.sport.livescoresAll({});
 
 console.log(livescoresAllResponse);
 ```
@@ -1489,8 +1508,8 @@ console.log(livescoresAllResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -1524,12 +1543,14 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
-const livescoresAllInPlayResponse = await sportmonks.sport.livescoresAllInPlay({
-  version: "version_example",
-  sport: "sport_example",
-});
+const livescoresAllInPlayResponse = await sportmonks.sport.livescoresAllInPlay(
+  {}
+);
 
 console.log(livescoresAllInPlayResponse);
 ```
@@ -1539,8 +1560,8 @@ console.log(livescoresAllInPlayResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -1574,12 +1595,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
-const livescoresLatestResponse = await sportmonks.sport.livescoresLatest({
-  version: "version_example",
-  sport: "sport_example",
-});
+const livescoresLatestResponse = await sportmonks.sport.livescoresLatest({});
 
 console.log(livescoresLatestResponse);
 ```
@@ -1589,8 +1610,8 @@ console.log(livescoresLatestResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -1624,12 +1645,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
-const newsAllPostMatchResponse = await sportmonks.sport.newsAllPostMatch({
-  version: "version_example",
-  sport: "sport_example",
-});
+const newsAllPostMatchResponse = await sportmonks.sport.newsAllPostMatch({});
 
 console.log(newsAllPostMatchResponse);
 ```
@@ -1639,8 +1660,8 @@ console.log(newsAllPostMatchResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -1674,12 +1695,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
-const newsAllPreMatchResponse = await sportmonks.sport.newsAllPreMatch({
-  version: "version_example",
-  sport: "sport_example",
-});
+const newsAllPreMatchResponse = await sportmonks.sport.newsAllPreMatch({});
 
 console.log(newsAllPreMatchResponse);
 ```
@@ -1689,8 +1710,8 @@ console.log(newsAllPreMatchResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -1724,12 +1745,13 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const newsPostMatchBySeasonIdResponse =
   await sportmonks.sport.newsPostMatchBySeasonId({
-    version: "version_example",
-    sport: "sport_example",
     seasonId: 1,
   });
 
@@ -1741,9 +1763,9 @@ console.log(newsPostMatchBySeasonIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **seasonId** | [**number**] | The ID of the season you want to retrieve post-match news from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -1777,12 +1799,13 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const newsPreMatchBySeasonIdResponse =
   await sportmonks.sport.newsPreMatchBySeasonId({
-    version: "version_example",
-    sport: "sport_example",
     seasonId: 1,
   });
 
@@ -1794,9 +1817,9 @@ console.log(newsPreMatchBySeasonIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **seasonId** | [**number**] | The ID of the season you want to retrieve post-match news from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -1830,13 +1853,13 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const newsUpcomingPostMatchResponse =
-  await sportmonks.sport.newsUpcomingPostMatch({
-    version: "version_example",
-    sport: "sport_example",
-  });
+  await sportmonks.sport.newsUpcomingPostMatch({});
 
 console.log(newsUpcomingPostMatchResponse);
 ```
@@ -1846,8 +1869,8 @@ console.log(newsUpcomingPostMatchResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -1881,13 +1904,13 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const newsUpcomingPreMatchResponse =
-  await sportmonks.sport.newsUpcomingPreMatch({
-    version: "version_example",
-    sport: "sport_example",
-  });
+  await sportmonks.sport.newsUpcomingPreMatch({});
 
 console.log(newsUpcomingPreMatchResponse);
 ```
@@ -1897,8 +1920,8 @@ console.log(newsUpcomingPreMatchResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -1932,12 +1955,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
-const oddsAllInPlayResponse = await sportmonks.sport.oddsAllInPlay({
-  version: "version_example",
-  sport: "sport_example",
-});
+const oddsAllInPlayResponse = await sportmonks.sport.oddsAllInPlay({});
 
 console.log(oddsAllInPlayResponse);
 ```
@@ -1947,8 +1970,8 @@ console.log(oddsAllInPlayResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -1982,12 +2005,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
-const oddsAllPreMatchResponse = await sportmonks.sport.oddsAllPreMatch({
-  version: "version_example",
-  sport: "sport_example",
-});
+const oddsAllPreMatchResponse = await sportmonks.sport.oddsAllPreMatch({});
 
 console.log(oddsAllPreMatchResponse);
 ```
@@ -1997,8 +2020,8 @@ console.log(oddsAllPreMatchResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -2032,12 +2055,13 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const oddsInPlayByFixtureAndBookmakerIdResponse =
   await sportmonks.sport.oddsInPlayByFixtureAndBookmakerId({
-    version: "version_example",
-    sport: "sport_example",
     fixtureId: 1,
     bookmakerId: 1,
   });
@@ -2050,10 +2074,10 @@ console.log(oddsInPlayByFixtureAndBookmakerIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **fixtureId** | [**number**] | The ID of the fixture you want to retrieve in-play odds from. | defaults to undefined
  **bookmakerId** | [**number**] | The ID of the bookmaker you want to retrieve in-play odds from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -2087,12 +2111,13 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const oddsInPlayByFixtureAndMarketIdResponse =
   await sportmonks.sport.oddsInPlayByFixtureAndMarketId({
-    version: "version_example",
-    sport: "sport_example",
     fixtureId: 1,
     marketId: 1,
   });
@@ -2105,10 +2130,10 @@ console.log(oddsInPlayByFixtureAndMarketIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **fixtureId** | [**number**] | The ID of the fixture you want to retrieve in-play odds from. | defaults to undefined
  **marketId** | [**number**] | The ID of the market you want to retrieve in-play odds from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -2142,12 +2167,13 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const oddsInPlayByFixtureIdResponse =
   await sportmonks.sport.oddsInPlayByFixtureId({
-    version: "version_example",
-    sport: "sport_example",
     fixtureId: 1,
   });
 
@@ -2159,9 +2185,9 @@ console.log(oddsInPlayByFixtureIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **fixtureId** | [**number**] | The ID of the fixture you want to retrieve in-play odds from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -2195,12 +2221,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
-const oddsLatestInPlayResponse = await sportmonks.sport.oddsLatestInPlay({
-  version: "version_example",
-  sport: "sport_example",
-});
+const oddsLatestInPlayResponse = await sportmonks.sport.oddsLatestInPlay({});
 
 console.log(oddsLatestInPlayResponse);
 ```
@@ -2210,8 +2236,8 @@ console.log(oddsLatestInPlayResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -2245,12 +2271,14 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
-const oddsLatestPreMatchResponse = await sportmonks.sport.oddsLatestPreMatch({
-  version: "version_example",
-  sport: "sport_example",
-});
+const oddsLatestPreMatchResponse = await sportmonks.sport.oddsLatestPreMatch(
+  {}
+);
 
 console.log(oddsLatestPreMatchResponse);
 ```
@@ -2260,8 +2288,8 @@ console.log(oddsLatestPreMatchResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -2295,12 +2323,13 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const oddsPreMatchByFixtureAndBookmakerIdResponse =
   await sportmonks.sport.oddsPreMatchByFixtureAndBookmakerId({
-    version: "version_example",
-    sport: "sport_example",
     fixtureId: 1,
     bookmakerId: 1,
   });
@@ -2313,10 +2342,10 @@ console.log(oddsPreMatchByFixtureAndBookmakerIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **fixtureId** | [**number**] | The ID of the fixture you want to retrieve pre-match odds from. | defaults to undefined
  **bookmakerId** | [**number**] | The ID of the bookmaker you want to retrieve pre-match odds from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -2350,12 +2379,13 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const oddsPreMatchByFixtureAndMarketIdResponse =
   await sportmonks.sport.oddsPreMatchByFixtureAndMarketId({
-    version: "version_example",
-    sport: "sport_example",
     fixtureId: 1,
     marketId: 1,
   });
@@ -2368,10 +2398,10 @@ console.log(oddsPreMatchByFixtureAndMarketIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **fixtureId** | [**number**] | The ID of the fixture you want to retrieve pre-match odds from. | defaults to undefined
  **marketId** | [**number**] | The ID of the market you want to retrieve pre-match odds from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -2405,12 +2435,13 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const oddsPreMatchByFixtureIdResponse =
   await sportmonks.sport.oddsPreMatchByFixtureId({
-    version: "version_example",
-    sport: "sport_example",
     fixtureId: 1,
   });
 
@@ -2422,9 +2453,9 @@ console.log(oddsPreMatchByFixtureIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **fixtureId** | [**number**] | The ID of the fixture you want to retrieve pre-match odds from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -2458,11 +2489,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const playerByIdResponse = await sportmonks.sport.playerById({
-  version: "version_example",
-  sport: "sport_example",
   playerId: 1,
 });
 
@@ -2474,9 +2506,9 @@ console.log(playerByIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **playerId** | [**number**] | The ID of the player you want to retrieve. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -2510,12 +2542,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
-const playersAllResponse = await sportmonks.sport.playersAll({
-  version: "version_example",
-  sport: "sport_example",
-});
+const playersAllResponse = await sportmonks.sport.playersAll({});
 
 console.log(playersAllResponse);
 ```
@@ -2525,8 +2557,8 @@ console.log(playersAllResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -2560,11 +2592,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const playersByCountryIdResponse = await sportmonks.sport.playersByCountryId({
-  version: "version_example",
-  sport: "sport_example",
   countryId: 1,
 });
 
@@ -2576,9 +2609,9 @@ console.log(playersByCountryIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **countryId** | [**number**] | The ID of the country you want to retrieve players from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -2612,12 +2645,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
-const playersLatestResponse = await sportmonks.sport.playersLatest({
-  version: "version_example",
-  sport: "sport_example",
-});
+const playersLatestResponse = await sportmonks.sport.playersLatest({});
 
 console.log(playersLatestResponse);
 ```
@@ -2627,8 +2660,8 @@ console.log(playersLatestResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -2662,11 +2695,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const playersSearchResponse = await sportmonks.sport.playersSearch({
-  version: "version_example",
-  sport: "sport_example",
   name: "name_example",
 });
 
@@ -2678,9 +2712,9 @@ console.log(playersSearchResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **name** | [**string**] | The name you want to search on. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -2714,12 +2748,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
-const predictionsAllResponse = await sportmonks.sport.predictionsAll({
-  version: "version_example",
-  sport: "sport_example",
-});
+const predictionsAllResponse = await sportmonks.sport.predictionsAll({});
 
 console.log(predictionsAllResponse);
 ```
@@ -2729,8 +2763,8 @@ console.log(predictionsAllResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -2764,13 +2798,13 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const predictionsAllValueBetsResponse =
-  await sportmonks.sport.predictionsAllValueBets({
-    version: "version_example",
-    sport: "sport_example",
-  });
+  await sportmonks.sport.predictionsAllValueBets({});
 
 console.log(predictionsAllValueBetsResponse);
 ```
@@ -2780,8 +2814,8 @@ console.log(predictionsAllValueBetsResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -2815,12 +2849,13 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const predictionsByFixtureIdResponse =
   await sportmonks.sport.predictionsByFixtureId({
-    version: "version_example",
-    sport: "sport_example",
     fixtureId: 1,
   });
 
@@ -2832,9 +2867,9 @@ console.log(predictionsByFixtureIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **fixtureId** | [**number**] | The ID of the fixture you want to retrieve predictions from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -2868,12 +2903,13 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const predictionsValueBetsByFixtureIdResponse =
   await sportmonks.sport.predictionsValueBetsByFixtureId({
-    version: "version_example",
-    sport: "sport_example",
     fixtureId: 1,
   });
 
@@ -2885,9 +2921,9 @@ console.log(predictionsValueBetsByFixtureIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **fixtureId** | [**number**] | The ID of the fixture you want to retrieve value bets from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -2921,11 +2957,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const refereeByIdResponse = await sportmonks.sport.refereeById({
-  version: "version_example",
-  sport: "sport_example",
   refereeId: 1,
 });
 
@@ -2937,9 +2974,9 @@ console.log(refereeByIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **refereeId** | [**number**] | The ID of the referee you want to retrieve. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -2973,12 +3010,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
-const refereesAllResponse = await sportmonks.sport.refereesAll({
-  version: "version_example",
-  sport: "sport_example",
-});
+const refereesAllResponse = await sportmonks.sport.refereesAll({});
 
 console.log(refereesAllResponse);
 ```
@@ -2988,8 +3025,8 @@ console.log(refereesAllResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -3023,11 +3060,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const refereesByCountryIdResponse = await sportmonks.sport.refereesByCountryId({
-  version: "version_example",
-  sport: "sport_example",
   countryId: 1,
 });
 
@@ -3039,9 +3077,9 @@ console.log(refereesByCountryIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **countryId** | [**number**] | The ID of the country you want to retrieve referees from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -3075,11 +3113,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const refereesBySeasonIdResponse = await sportmonks.sport.refereesBySeasonId({
-  version: "version_example",
-  sport: "sport_example",
   seasonId: 1,
 });
 
@@ -3091,9 +3130,9 @@ console.log(refereesBySeasonIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **seasonId** | [**number**] | The ID of the season you want to retrieve referees from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -3127,11 +3166,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const refereesSearchResponse = await sportmonks.sport.refereesSearch({
-  version: "version_example",
-  sport: "sport_example",
   name: "name_example",
 });
 
@@ -3143,9 +3183,9 @@ console.log(refereesSearchResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **name** | [**string**] | The name you want to search on. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -3179,12 +3219,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
-const rivalsAllResponse = await sportmonks.sport.rivalsAll({
-  version: "version_example",
-  sport: "sport_example",
-});
+const rivalsAllResponse = await sportmonks.sport.rivalsAll({});
 
 console.log(rivalsAllResponse);
 ```
@@ -3194,8 +3234,8 @@ console.log(rivalsAllResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -3229,11 +3269,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const rivalsByTeamIdResponse = await sportmonks.sport.rivalsByTeamId({
-  version: "version_example",
-  sport: "sport_example",
   teamId: 1,
 });
 
@@ -3245,9 +3286,9 @@ console.log(rivalsByTeamIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **teamId** | [**number**] | The ID of the team you want to retrieve rivals from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -3281,11 +3322,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const roundByIdResponse = await sportmonks.sport.roundById({
-  version: "version_example",
-  sport: "sport_example",
   roundId: 1,
 });
 
@@ -3297,9 +3339,9 @@ console.log(roundByIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **roundId** | [**number**] | The ID of the round you want to retrieve. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -3333,12 +3375,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
-const roundsAllResponse = await sportmonks.sport.roundsAll({
-  version: "version_example",
-  sport: "sport_example",
-});
+const roundsAllResponse = await sportmonks.sport.roundsAll({});
 
 console.log(roundsAllResponse);
 ```
@@ -3348,8 +3390,8 @@ console.log(roundsAllResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -3383,11 +3425,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const roundsBySeasonIdResponse = await sportmonks.sport.roundsBySeasonId({
-  version: "version_example",
-  sport: "sport_example",
   seasonId: 1,
 });
 
@@ -3399,9 +3442,9 @@ console.log(roundsBySeasonIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **seasonId** | [**number**] | The ID of the season you want to retrieve rounds from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -3435,11 +3478,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const roundsSearchResponse = await sportmonks.sport.roundsSearch({
-  version: "version_example",
-  sport: "sport_example",
   name: 1,
 });
 
@@ -3451,9 +3495,9 @@ console.log(roundsSearchResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **name** | [**number**] | The name you want to search on. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -3487,11 +3531,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const schedulesBySeasonIdResponse = await sportmonks.sport.schedulesBySeasonId({
-  version: "version_example",
-  sport: "sport_example",
   seasonId: 1,
 });
 
@@ -3503,9 +3548,9 @@ console.log(schedulesBySeasonIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **seasonId** | [**number**] |  | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -3539,12 +3584,13 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const schedulesByTeamAndSeasonIdResponse =
   await sportmonks.sport.schedulesByTeamAndSeasonId({
-    version: "version_example",
-    sport: "sport_example",
     seasonId: 1,
     teamId: 1,
   });
@@ -3557,10 +3603,10 @@ console.log(schedulesByTeamAndSeasonIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **seasonId** | [**number**] | The ID of the season you want to retrieve schedule from. | defaults to undefined
  **teamId** | [**number**] | The ID of the team you want to retrieve schedule from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -3594,11 +3640,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const schedulesByTeamIdResponse = await sportmonks.sport.schedulesByTeamId({
-  version: "version_example",
-  sport: "sport_example",
   teamId: 1,
 });
 
@@ -3610,9 +3657,9 @@ console.log(schedulesByTeamIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **teamId** | [**number**] | The ID of the team you want to retrieve schedule from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -3646,11 +3693,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const seasonByIdResponse = await sportmonks.sport.seasonById({
-  version: "version_example",
-  sport: "sport_example",
   seasonId: 1,
 });
 
@@ -3662,9 +3710,9 @@ console.log(seasonByIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **seasonId** | [**number**] | The ID of the season you want to retrieve. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -3698,12 +3746,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
-const seasonsAllResponse = await sportmonks.sport.seasonsAll({
-  version: "version_example",
-  sport: "sport_example",
-});
+const seasonsAllResponse = await sportmonks.sport.seasonsAll({});
 
 console.log(seasonsAllResponse);
 ```
@@ -3713,8 +3761,8 @@ console.log(seasonsAllResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -3748,11 +3796,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const seasonsByTeamIdResponse = await sportmonks.sport.seasonsByTeamId({
-  version: "version_example",
-  sport: "sport_example",
   teamId: 1,
 });
 
@@ -3764,9 +3813,9 @@ console.log(seasonsByTeamIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **teamId** | [**number**] | The ID of the team you want to retrieve seasons from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -3800,11 +3849,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const seasonsSearchResponse = await sportmonks.sport.seasonsSearch({
-  version: "version_example",
-  sport: "sport_example",
   name: 1,
 });
 
@@ -3816,9 +3866,9 @@ console.log(seasonsSearchResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **name** | [**number**] | The name you want to search on. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -3852,12 +3902,13 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const squadsBySeasonAndTeamIdResponse =
   await sportmonks.sport.squadsBySeasonAndTeamId({
-    version: "version_example",
-    sport: "sport_example",
     seasonId: 1,
     teamId: 1,
   });
@@ -3870,10 +3921,10 @@ console.log(squadsBySeasonAndTeamIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **seasonId** | [**number**] | The ID of the season you want to retrieve squads from. | defaults to undefined
  **teamId** | [**number**] | The ID of the team you want to retrieve squads from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -3907,11 +3958,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const squadsByTeamIdResponse = await sportmonks.sport.squadsByTeamId({
-  version: "version_example",
-  sport: "sport_example",
   teamId: 1,
 });
 
@@ -3923,9 +3975,9 @@ console.log(squadsByTeamIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **teamId** | [**number**] | The ID of the team you want to retrieve squads from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -3959,11 +4011,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const stageByIdResponse = await sportmonks.sport.stageById({
-  version: "version_example",
-  sport: "sport_example",
   stageId: 1,
 });
 
@@ -3975,9 +4028,9 @@ console.log(stageByIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **stageId** | [**number**] | The ID of the stage you want to retrieve. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -4011,12 +4064,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
-const stagesAllResponse = await sportmonks.sport.stagesAll({
-  version: "version_example",
-  sport: "sport_example",
-});
+const stagesAllResponse = await sportmonks.sport.stagesAll({});
 
 console.log(stagesAllResponse);
 ```
@@ -4026,8 +4079,8 @@ console.log(stagesAllResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -4061,11 +4114,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const stagesBySeasonIdResponse = await sportmonks.sport.stagesBySeasonId({
-  version: "version_example",
-  sport: "sport_example",
   seasonId: 1,
 });
 
@@ -4077,9 +4131,9 @@ console.log(stagesBySeasonIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **seasonId** | [**number**] | The ID of the season you want to retrieve stages from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -4113,11 +4167,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const stagesSearchResponse = await sportmonks.sport.stagesSearch({
-  version: "version_example",
-  sport: "sport_example",
   name: "name_example",
 });
 
@@ -4129,9 +4184,9 @@ console.log(stagesSearchResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **name** | [**string**] | The name you want to search on. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -4165,12 +4220,13 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const standingCorrectionsBySeasonIdResponse =
   await sportmonks.sport.standingCorrectionsBySeasonId({
-    version: "version_example",
-    sport: "sport_example",
     seasonId: 1,
   });
 
@@ -4182,9 +4238,9 @@ console.log(standingCorrectionsBySeasonIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **seasonId** | [**number**] | The ID of the season you want to retrieve standing corrections from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -4218,12 +4274,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
-const standingsAllResponse = await sportmonks.sport.standingsAll({
-  version: "version_example",
-  sport: "sport_example",
-});
+const standingsAllResponse = await sportmonks.sport.standingsAll({});
 
 console.log(standingsAllResponse);
 ```
@@ -4233,8 +4289,8 @@ console.log(standingsAllResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -4268,11 +4324,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const standingsByRoundIdResponse = await sportmonks.sport.standingsByRoundId({
-  version: "version_example",
-  sport: "sport_example",
   roundId: 1,
 });
 
@@ -4284,9 +4341,9 @@ console.log(standingsByRoundIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **roundId** | [**number**] | The ID of the round you want to retrieve standing from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -4320,11 +4377,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const standingsBySeasonIdResponse = await sportmonks.sport.standingsBySeasonId({
-  version: "version_example",
-  sport: "sport_example",
   seasonId: 1,
 });
 
@@ -4336,9 +4394,9 @@ console.log(standingsBySeasonIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **seasonId** | [**number**] | The ID of the season you want to retrieve standing from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -4372,12 +4430,13 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const standingsLiveByLeagueIdResponse =
   await sportmonks.sport.standingsLiveByLeagueId({
-    version: "version_example",
-    sport: "sport_example",
     leagueId: 1,
   });
 
@@ -4389,9 +4448,9 @@ console.log(standingsLiveByLeagueIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **leagueId** | [**number**] | The ID of the league you want to retrieve standings from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -4425,11 +4484,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const stateByIdResponse = await sportmonks.sport.stateById({
-  version: "version_example",
-  sport: "sport_example",
   stateId: 1,
 });
 
@@ -4441,9 +4501,9 @@ console.log(stateByIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **stateId** | [**number**] | The ID of the state you want to retrieve. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -4477,12 +4537,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
-const statesBySportResponse = await sportmonks.sport.statesBySport({
-  version: "version_example",
-  sport: "sport_example",
-});
+const statesBySportResponse = await sportmonks.sport.statesBySport({});
 
 console.log(statesBySportResponse);
 ```
@@ -4492,8 +4552,8 @@ console.log(statesBySportResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -4527,12 +4587,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
-const teamsAllResponse = await sportmonks.sport.teamsAll({
-  version: "version_example",
-  sport: "sport_example",
-});
+const teamsAllResponse = await sportmonks.sport.teamsAll({});
 
 console.log(teamsAllResponse);
 ```
@@ -4542,8 +4602,8 @@ console.log(teamsAllResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -4577,11 +4637,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const teamsByCountryIdResponse = await sportmonks.sport.teamsByCountryId({
-  version: "version_example",
-  sport: "sport_example",
   countryId: 1,
 });
 
@@ -4593,9 +4654,9 @@ console.log(teamsByCountryIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **countryId** | [**number**] | The ID of the country you want to retrieve teams from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -4629,11 +4690,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const teamsByIdResponse = await sportmonks.sport.teamsById({
-  version: "version_example",
-  sport: "sport_example",
   teamId: 1,
 });
 
@@ -4645,9 +4707,9 @@ console.log(teamsByIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **teamId** | [**number**] | The ID of the team you want to retrieve. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -4681,11 +4743,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const teamsBySeasonIdResponse = await sportmonks.sport.teamsBySeasonId({
-  version: "version_example",
-  sport: "sport_example",
   seasonId: 1,
 });
 
@@ -4697,9 +4760,9 @@ console.log(teamsBySeasonIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **seasonId** | [**number**] | The ID of the season you want to retrieve teams from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -4733,11 +4796,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const teamsSearchResponse = await sportmonks.sport.teamsSearch({
-  version: "version_example",
-  sport: "sport_example",
   name: "name_example",
 });
 
@@ -4749,9 +4813,9 @@ console.log(teamsSearchResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **name** | [**string**] | The name you want to search on. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -4785,12 +4849,13 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const topScorersBySeasonIdResponse =
   await sportmonks.sport.topScorersBySeasonId({
-    version: "version_example",
-    sport: "sport_example",
     seasonId: 1,
   });
 
@@ -4802,9 +4867,9 @@ console.log(topScorersBySeasonIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **seasonId** | [**number**] | The ID of the season you want to retrieve topscorers from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -4838,11 +4903,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const topScorersByStageIdResponse = await sportmonks.sport.topScorersByStageId({
-  version: "version_example",
-  sport: "sport_example",
   stageId: 1,
 });
 
@@ -4854,9 +4920,9 @@ console.log(topScorersByStageIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **stageId** | [**number**] | The ID of the stage you want to retrieve topscorers from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -4890,11 +4956,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const tranfersByDateRangeResponse = await sportmonks.sport.tranfersByDateRange({
-  version: "version_example",
-  sport: "sport_example",
   startDate: "startDate_example",
   endDate: "endDate_example",
 });
@@ -4907,10 +4974,10 @@ console.log(tranfersByDateRangeResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **startDate** | [**string**] | The start date you want to retrieve transfers from. | defaults to undefined
  **endDate** | [**string**] | The end date you want to retrieve transfers from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -4944,11 +5011,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const transferByIdResponse = await sportmonks.sport.transferById({
-  version: "version_example",
-  sport: "sport_example",
   transferId: 1,
 });
 
@@ -4960,9 +5028,9 @@ console.log(transferByIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **transferId** | [**number**] |  | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -4996,12 +5064,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
-const transfersAllResponse = await sportmonks.sport.transfersAll({
-  version: "version_example",
-  sport: "sport_example",
-});
+const transfersAllResponse = await sportmonks.sport.transfersAll({});
 
 console.log(transfersAllResponse);
 ```
@@ -5011,8 +5079,8 @@ console.log(transfersAllResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -5046,11 +5114,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const transfersByPlayerIdResponse = await sportmonks.sport.transfersByPlayerId({
-  version: "version_example",
-  sport: "sport_example",
   playerId: 1,
 });
 
@@ -5062,9 +5131,9 @@ console.log(transfersByPlayerIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **playerId** | [**number**] | The ID of the player you want to retrieve transfers from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -5098,11 +5167,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const transfersByTeamIdResponse = await sportmonks.sport.transfersByTeamId({
-  version: "version_example",
-  sport: "sport_example",
   teamId: 1,
 });
 
@@ -5114,9 +5184,9 @@ console.log(transfersByTeamIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **teamId** | [**number**] | The ID of the team you want to retrieve transfers from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -5150,12 +5220,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
-const transfersLatestResponse = await sportmonks.sport.transfersLatest({
-  version: "version_example",
-  sport: "sport_example",
-});
+const transfersLatestResponse = await sportmonks.sport.transfersLatest({});
 
 console.log(transfersLatestResponse);
 ```
@@ -5165,8 +5235,8 @@ console.log(transfersLatestResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -5200,11 +5270,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const tvStationByIdResponse = await sportmonks.sport.tvStationById({
-  version: "version_example",
-  sport: "sport_example",
   tvStationId: 1,
 });
 
@@ -5216,9 +5287,9 @@ console.log(tvStationByIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **tvStationId** | [**number**] | The ID of the tv station you want to retrieve. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -5252,12 +5323,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
-const tvStationsAllResponse = await sportmonks.sport.tvStationsAll({
-  version: "version_example",
-  sport: "sport_example",
-});
+const tvStationsAllResponse = await sportmonks.sport.tvStationsAll({});
 
 console.log(tvStationsAllResponse);
 ```
@@ -5267,8 +5338,8 @@ console.log(tvStationsAllResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -5302,12 +5373,13 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const tvStationsByFixtureIdResponse =
   await sportmonks.sport.tvStationsByFixtureId({
-    version: "version_example",
-    sport: "sport_example",
     fixtureId: 1,
   });
 
@@ -5319,9 +5391,9 @@ console.log(tvStationsByFixtureIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **fixtureId** | [**number**] | The ID of the fixture you want to retrieve tv-stations from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -5355,11 +5427,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const venueByIdResponse = await sportmonks.sport.venueById({
-  version: "version_example",
-  sport: "sport_example",
   venueId: 1,
 });
 
@@ -5371,9 +5444,9 @@ console.log(venueByIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **venueId** | [**number**] | The ID of the venue you want to retrieve. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -5407,12 +5480,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
-const venuesAllResponse = await sportmonks.sport.venuesAll({
-  version: "version_example",
-  sport: "sport_example",
-});
+const venuesAllResponse = await sportmonks.sport.venuesAll({});
 
 console.log(venuesAllResponse);
 ```
@@ -5422,8 +5495,8 @@ console.log(venuesAllResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -5457,11 +5530,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const venuesBySeasonIdResponse = await sportmonks.sport.venuesBySeasonId({
-  version: "version_example",
-  sport: "sport_example",
   seasonId: 1,
 });
 
@@ -5473,9 +5547,9 @@ console.log(venuesBySeasonIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **seasonId** | [**number**] | The ID of the season you want to retrieve venues from. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type
@@ -5509,11 +5583,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const venuesSearchResponse = await sportmonks.sport.venuesSearch({
-  version: "version_example",
-  sport: "sport_example",
   name: "name_example",
 });
 
@@ -5525,9 +5600,9 @@ console.log(venuesSearchResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
- **sport** | [**string**] | The sport you want retrieve entities from. | defaults to undefined
  **name** | [**string**] | The name you want to search on. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
+ **sport** | [**string**] | The sport you want retrieve entities from. | (optional) defaults to undefined
 
 
 ### Return type

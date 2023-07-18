@@ -33,7 +33,7 @@ export class Sportmonks extends SportmonksCustom {
   readonly sport: SportApi;
   readonly types: TypesApi;
 
-  constructor(configurationParameters: ConfigurationParameters) {
+  constructor(configurationParameters: ConfigurationParameters = {}) {
     super(configurationParameters);
     const configuration = new Configuration(configurationParameters);
     this.cities = new CitiesApi(configuration);

@@ -212,17 +212,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} coachId The ID of the coach you want to retrieve.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        coachById: async (version: string, sport: string, coachId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('coachById', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('coachById', 'sport', sport)
+        coachById: async (coachId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'coachId' is not null or undefined
             assertParamExists('coachById', 'coachId', coachId)
             const localVarPath = `/{version}/{sport}/coaches/{coachId}`
@@ -241,6 +237,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -261,16 +258,12 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary All
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        coachesAll: async (version: string, sport: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('coachesAll', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('coachesAll', 'sport', sport)
+        coachesAll: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/coaches`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)))
                 .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
@@ -286,6 +279,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -306,17 +300,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By Country ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} countryId The ID of the country you want to retrieve coaches from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        coachesByCountryId: async (version: string, sport: string, countryId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('coachesByCountryId', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('coachesByCountryId', 'sport', sport)
+        coachesByCountryId: async (countryId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'countryId' is not null or undefined
             assertParamExists('coachesByCountryId', 'countryId', countryId)
             const localVarPath = `/{version}/{sport}/coaches/countries/{countryId}`
@@ -335,6 +325,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -355,16 +346,12 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary Last updated
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        coachesLatest: async (version: string, sport: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('coachesLatest', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('coachesLatest', 'sport', sport)
+        coachesLatest: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/coaches/latest`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)))
                 .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
@@ -380,6 +367,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -400,17 +388,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary Search
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {string} name The name you want to search on.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        coachesSearch: async (version: string, sport: string, name: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('coachesSearch', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('coachesSearch', 'sport', sport)
+        coachesSearch: async (name: string, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'name' is not null or undefined
             assertParamExists('coachesSearch', 'name', name)
             const localVarPath = `/{version}/{sport}/coaches/search/{name}`
@@ -429,6 +413,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -449,16 +434,12 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary All
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        commentariesAll: async (version: string, sport: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('commentariesAll', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('commentariesAll', 'sport', sport)
+        commentariesAll: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/commentaries`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)))
                 .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
@@ -474,6 +455,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -494,17 +476,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By Fixture ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} fixtureId The ID of the fixture you want to retrieve commentaries from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        commentariesByFixtureId: async (version: string, sport: string, fixtureId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('commentariesByFixtureId', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('commentariesByFixtureId', 'sport', sport)
+        commentariesByFixtureId: async (fixtureId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'fixtureId' is not null or undefined
             assertParamExists('commentariesByFixtureId', 'fixtureId', fixtureId)
             const localVarPath = `/{version}/{sport}/commentaries/fixtures/{fixtureId}`
@@ -523,6 +501,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -543,19 +522,15 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By Date Range for Team
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {string} startDate 
          * @param {string} endDate 
          * @param {string} teamId 
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        fixtureByDateRangeForTeam: async (version: string, sport: string, startDate: string, endDate: string, teamId: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('fixtureByDateRangeForTeam', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('fixtureByDateRangeForTeam', 'sport', sport)
+        fixtureByDateRangeForTeam: async (startDate: string, endDate: string, teamId: string, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'startDate' is not null or undefined
             assertParamExists('fixtureByDateRangeForTeam', 'startDate', startDate)
             // verify required parameter 'endDate' is not null or undefined
@@ -580,6 +555,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -600,17 +576,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary Fixture ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} fixtureId The ID of the fixture you want to retrieve.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        fixtureById: async (version: string, sport: string, fixtureId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('fixtureById', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('fixtureById', 'sport', sport)
+        fixtureById: async (fixtureId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'fixtureId' is not null or undefined
             assertParamExists('fixtureById', 'fixtureId', fixtureId)
             const localVarPath = `/{version}/{sport}/fixtures/{fixtureId}`
@@ -629,6 +601,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -649,16 +622,12 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary All
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        fixturesAll: async (version: string, sport: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('fixturesAll', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('fixturesAll', 'sport', sport)
+        fixturesAll: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/fixtures`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)))
                 .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
@@ -674,6 +643,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -694,17 +664,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By Date
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {string} date The date you want to retrieve fixtures from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        fixturesByDate: async (version: string, sport: string, date: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('fixturesByDate', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('fixturesByDate', 'sport', sport)
+        fixturesByDate: async (date: string, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'date' is not null or undefined
             assertParamExists('fixturesByDate', 'date', date)
             const localVarPath = `/{version}/{sport}/fixtures/date/{date}`
@@ -723,6 +689,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -743,18 +710,14 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By Date Range
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {string} startDate The start date you want to retrieve fixtures from.
          * @param {string} endDate The end date you want to retrieve fixtures from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        fixturesByDateRange: async (version: string, sport: string, startDate: string, endDate: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('fixturesByDateRange', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('fixturesByDateRange', 'sport', sport)
+        fixturesByDateRange: async (startDate: string, endDate: string, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'startDate' is not null or undefined
             assertParamExists('fixturesByDateRange', 'startDate', startDate)
             // verify required parameter 'endDate' is not null or undefined
@@ -776,6 +739,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -796,17 +760,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By IDs
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {string} fixtureIds The IDs you want to retrieve.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        fixturesByIds: async (version: string, sport: string, fixtureIds: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('fixturesByIds', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('fixturesByIds', 'sport', sport)
+        fixturesByIds: async (fixtureIds: string, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'fixtureIds' is not null or undefined
             assertParamExists('fixturesByIds', 'fixtureIds', fixtureIds)
             const localVarPath = `/{version}/{sport}/fixtures/multi/{fixtureIds}`
@@ -825,6 +785,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -845,18 +806,14 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary Head to Head
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} firstTeam The ID of the first team retrieve fixtures from.
          * @param {number} secondTeam The ID of the second team retrieve fixtures from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        fixturesHeadToHead: async (version: string, sport: string, firstTeam: number, secondTeam: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('fixturesHeadToHead', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('fixturesHeadToHead', 'sport', sport)
+        fixturesHeadToHead: async (firstTeam: number, secondTeam: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'firstTeam' is not null or undefined
             assertParamExists('fixturesHeadToHead', 'firstTeam', firstTeam)
             // verify required parameter 'secondTeam' is not null or undefined
@@ -878,6 +835,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -898,16 +856,12 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary Last Updated
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        fixturesLatest: async (version: string, sport: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('fixturesLatest', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('fixturesLatest', 'sport', sport)
+        fixturesLatest: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/fixtures/latest`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)))
                 .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
@@ -923,6 +877,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -943,17 +898,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary Search
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {string} name The name you want search on.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        fixturesSearch: async (version: string, sport: string, name: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('fixturesSearch', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('fixturesSearch', 'sport', sport)
+        fixturesSearch: async (name: string, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'name' is not null or undefined
             assertParamExists('fixturesSearch', 'name', name)
             const localVarPath = `/{version}/{sport}/fixtures/search/{name}`
@@ -972,6 +923,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -992,17 +944,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} leagueId The ID of the league you want to retrieve.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        leagueById: async (version: string, sport: string, leagueId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('leagueById', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('leagueById', 'sport', sport)
+        leagueById: async (leagueId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'leagueId' is not null or undefined
             assertParamExists('leagueById', 'leagueId', leagueId)
             const localVarPath = `/{version}/{sport}/leagues/{leagueId}`
@@ -1021,6 +969,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -1041,17 +990,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary Enrichments
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} leagueId The ID of the league you want to retrieve enrichments from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        leagueEnrichments: async (version: string, sport: string, leagueId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('leagueEnrichments', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('leagueEnrichments', 'sport', sport)
+        leagueEnrichments: async (leagueId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'leagueId' is not null or undefined
             assertParamExists('leagueEnrichments', 'leagueId', leagueId)
             const localVarPath = `/{version}/{sport}/leagues/{leagueId}/includes`
@@ -1070,6 +1015,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -1090,17 +1036,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary Shirts By League ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} leagueId The ID of the league you want to retrieve.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        leagueShirts: async (version: string, sport: string, leagueId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('leagueShirts', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('leagueShirts', 'sport', sport)
+        leagueShirts: async (leagueId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'leagueId' is not null or undefined
             assertParamExists('leagueShirts', 'leagueId', leagueId)
             const localVarPath = `/{version}/{sport}/leagues/{leagueId}/jerseys`
@@ -1119,6 +1061,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -1139,16 +1082,12 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary All
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        leaguesAll: async (version: string, sport: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('leaguesAll', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('leaguesAll', 'sport', sport)
+        leaguesAll: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/leagues`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)))
                 .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
@@ -1164,6 +1103,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -1184,17 +1124,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By Country ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} countryId The ID of the country you want to retrieve leagues from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        leaguesByCountryId: async (version: string, sport: string, countryId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('leaguesByCountryId', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('leaguesByCountryId', 'sport', sport)
+        leaguesByCountryId: async (countryId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'countryId' is not null or undefined
             assertParamExists('leaguesByCountryId', 'countryId', countryId)
             const localVarPath = `/{version}/{sport}/leagues/countries/{countryId}`
@@ -1213,6 +1149,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -1233,17 +1170,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By Date
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {string} date The date of fixtures you want to retrieve leagues from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        leaguesByDate: async (version: string, sport: string, date: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('leaguesByDate', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('leaguesByDate', 'sport', sport)
+        leaguesByDate: async (date: string, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'date' is not null or undefined
             assertParamExists('leaguesByDate', 'date', date)
             const localVarPath = `/{version}/{sport}/leagues/date/{date}`
@@ -1262,6 +1195,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -1282,17 +1216,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary Leagues By Team ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} teamId The ID of the team you want to retrieve leagues from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        leaguesByTeamId: async (version: string, sport: string, teamId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('leaguesByTeamId', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('leaguesByTeamId', 'sport', sport)
+        leaguesByTeamId: async (teamId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'teamId' is not null or undefined
             assertParamExists('leaguesByTeamId', 'teamId', teamId)
             const localVarPath = `/{version}/{sport}/teams/{teamId}/leagues`
@@ -1311,6 +1241,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -1331,17 +1262,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary Current Leagues By Team ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} teamId The ID of the team you want to retrieve current leagues from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        leaguesCurrentByTeamId: async (version: string, sport: string, teamId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('leaguesCurrentByTeamId', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('leaguesCurrentByTeamId', 'sport', sport)
+        leaguesCurrentByTeamId: async (teamId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'teamId' is not null or undefined
             assertParamExists('leaguesCurrentByTeamId', 'teamId', teamId)
             const localVarPath = `/{version}/{sport}/teams/{teamId}/leagues/current`
@@ -1360,6 +1287,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -1380,16 +1308,12 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary Live
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        leaguesLive: async (version: string, sport: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('leaguesLive', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('leaguesLive', 'sport', sport)
+        leaguesLive: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/leagues/live`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)))
                 .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
@@ -1405,6 +1329,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -1425,17 +1350,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary Search
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {string} name The name you want to search on.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        leaguesSearch: async (version: string, sport: string, name: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('leaguesSearch', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('leaguesSearch', 'sport', sport)
+        leaguesSearch: async (name: string, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'name' is not null or undefined
             assertParamExists('leaguesSearch', 'name', name)
             const localVarPath = `/{version}/{sport}/leagues/search/{name}`
@@ -1454,6 +1375,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -1474,16 +1396,12 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary All
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        livescoresAll: async (version: string, sport: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('livescoresAll', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('livescoresAll', 'sport', sport)
+        livescoresAll: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/livescores`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)))
                 .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
@@ -1499,6 +1417,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -1519,16 +1438,12 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary All In-play
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        livescoresAllInPlay: async (version: string, sport: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('livescoresAllInPlay', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('livescoresAllInPlay', 'sport', sport)
+        livescoresAllInPlay: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/livescores/inplay`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)))
                 .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
@@ -1544,6 +1459,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -1564,16 +1480,12 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary Last Updated In-play
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        livescoresLatest: async (version: string, sport: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('livescoresLatest', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('livescoresLatest', 'sport', sport)
+        livescoresLatest: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/livescores/latest`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)))
                 .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
@@ -1589,6 +1501,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -1609,16 +1522,12 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary All Post Match
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        newsAllPostMatch: async (version: string, sport: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('newsAllPostMatch', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('newsAllPostMatch', 'sport', sport)
+        newsAllPostMatch: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/news/post-match`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)))
                 .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
@@ -1634,6 +1543,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -1654,16 +1564,12 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary All Pre-match
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        newsAllPreMatch: async (version: string, sport: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('newsAllPreMatch', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('newsAllPreMatch', 'sport', sport)
+        newsAllPreMatch: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/news/pre-match`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)))
                 .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
@@ -1679,6 +1585,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -1699,17 +1606,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary Post Match by Season ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} seasonId The ID of the season you want to retrieve post-match news from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        newsPostMatchBySeasonId: async (version: string, sport: string, seasonId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('newsPostMatchBySeasonId', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('newsPostMatchBySeasonId', 'sport', sport)
+        newsPostMatchBySeasonId: async (seasonId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'seasonId' is not null or undefined
             assertParamExists('newsPostMatchBySeasonId', 'seasonId', seasonId)
             const localVarPath = `/{version}/{sport}/news/post-match/seasons/{seasonId}`
@@ -1728,6 +1631,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -1748,17 +1652,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary Pre-match By Season ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} seasonId The ID of the season you want to retrieve post-match news from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        newsPreMatchBySeasonId: async (version: string, sport: string, seasonId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('newsPreMatchBySeasonId', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('newsPreMatchBySeasonId', 'sport', sport)
+        newsPreMatchBySeasonId: async (seasonId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'seasonId' is not null or undefined
             assertParamExists('newsPreMatchBySeasonId', 'seasonId', seasonId)
             const localVarPath = `/{version}/{sport}/news/pre-match/seasons/{seasonId}`
@@ -1777,6 +1677,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -1797,16 +1698,12 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary Upcoming Post Match
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        newsUpcomingPostMatch: async (version: string, sport: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('newsUpcomingPostMatch', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('newsUpcomingPostMatch', 'sport', sport)
+        newsUpcomingPostMatch: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/news/post-match/upcoming`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)))
                 .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
@@ -1822,6 +1719,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -1842,16 +1740,12 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary Upcoming Pre-match
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        newsUpcomingPreMatch: async (version: string, sport: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('newsUpcomingPreMatch', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('newsUpcomingPreMatch', 'sport', sport)
+        newsUpcomingPreMatch: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/news/pre-match/upcoming`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)))
                 .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
@@ -1867,6 +1761,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -1887,16 +1782,12 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary All In-play
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        oddsAllInPlay: async (version: string, sport: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('oddsAllInPlay', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('oddsAllInPlay', 'sport', sport)
+        oddsAllInPlay: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/odds/inplay`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)))
                 .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
@@ -1912,6 +1803,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -1932,16 +1824,12 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary All Pre-match
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        oddsAllPreMatch: async (version: string, sport: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('oddsAllPreMatch', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('oddsAllPreMatch', 'sport', sport)
+        oddsAllPreMatch: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/odds/pre-match`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)))
                 .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
@@ -1957,6 +1845,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -1977,18 +1866,14 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary In-play by Fixture and Bookmaker ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} fixtureId The ID of the fixture you want to retrieve in-play odds from.
          * @param {number} bookmakerId The ID of the bookmaker you want to retrieve in-play odds from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        oddsInPlayByFixtureAndBookmakerId: async (version: string, sport: string, fixtureId: number, bookmakerId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('oddsInPlayByFixtureAndBookmakerId', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('oddsInPlayByFixtureAndBookmakerId', 'sport', sport)
+        oddsInPlayByFixtureAndBookmakerId: async (fixtureId: number, bookmakerId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'fixtureId' is not null or undefined
             assertParamExists('oddsInPlayByFixtureAndBookmakerId', 'fixtureId', fixtureId)
             // verify required parameter 'bookmakerId' is not null or undefined
@@ -2010,6 +1895,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -2030,18 +1916,14 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary In-play by Fixture and Market ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} fixtureId The ID of the fixture you want to retrieve in-play odds from.
          * @param {number} marketId The ID of the market you want to retrieve in-play odds from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        oddsInPlayByFixtureAndMarketId: async (version: string, sport: string, fixtureId: number, marketId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('oddsInPlayByFixtureAndMarketId', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('oddsInPlayByFixtureAndMarketId', 'sport', sport)
+        oddsInPlayByFixtureAndMarketId: async (fixtureId: number, marketId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'fixtureId' is not null or undefined
             assertParamExists('oddsInPlayByFixtureAndMarketId', 'fixtureId', fixtureId)
             // verify required parameter 'marketId' is not null or undefined
@@ -2063,6 +1945,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -2083,17 +1966,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary In-play by Fixture ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} fixtureId The ID of the fixture you want to retrieve in-play odds from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        oddsInPlayByFixtureId: async (version: string, sport: string, fixtureId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('oddsInPlayByFixtureId', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('oddsInPlayByFixtureId', 'sport', sport)
+        oddsInPlayByFixtureId: async (fixtureId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'fixtureId' is not null or undefined
             assertParamExists('oddsInPlayByFixtureId', 'fixtureId', fixtureId)
             const localVarPath = `/{version}/{sport}/odds/inplay/fixtures/{fixtureId}`
@@ -2112,6 +1991,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -2132,16 +2012,12 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary Latest In-play
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        oddsLatestInPlay: async (version: string, sport: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('oddsLatestInPlay', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('oddsLatestInPlay', 'sport', sport)
+        oddsLatestInPlay: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/odds/inplay/latest`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)))
                 .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
@@ -2157,6 +2033,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -2177,16 +2054,12 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary Last Updated Pre-match
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        oddsLatestPreMatch: async (version: string, sport: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('oddsLatestPreMatch', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('oddsLatestPreMatch', 'sport', sport)
+        oddsLatestPreMatch: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/odds/pre-match/latest`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)))
                 .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
@@ -2202,6 +2075,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -2222,18 +2096,14 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary Pre-match by Fixture and Bookmaker ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} fixtureId The ID of the fixture you want to retrieve pre-match odds from.
          * @param {number} bookmakerId The ID of the bookmaker you want to retrieve pre-match odds from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        oddsPreMatchByFixtureAndBookmakerId: async (version: string, sport: string, fixtureId: number, bookmakerId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('oddsPreMatchByFixtureAndBookmakerId', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('oddsPreMatchByFixtureAndBookmakerId', 'sport', sport)
+        oddsPreMatchByFixtureAndBookmakerId: async (fixtureId: number, bookmakerId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'fixtureId' is not null or undefined
             assertParamExists('oddsPreMatchByFixtureAndBookmakerId', 'fixtureId', fixtureId)
             // verify required parameter 'bookmakerId' is not null or undefined
@@ -2255,6 +2125,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -2275,18 +2146,14 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary Pre-match by Fixture and Market ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} fixtureId The ID of the fixture you want to retrieve pre-match odds from.
          * @param {number} marketId The ID of the market you want to retrieve pre-match odds from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        oddsPreMatchByFixtureAndMarketId: async (version: string, sport: string, fixtureId: number, marketId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('oddsPreMatchByFixtureAndMarketId', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('oddsPreMatchByFixtureAndMarketId', 'sport', sport)
+        oddsPreMatchByFixtureAndMarketId: async (fixtureId: number, marketId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'fixtureId' is not null or undefined
             assertParamExists('oddsPreMatchByFixtureAndMarketId', 'fixtureId', fixtureId)
             // verify required parameter 'marketId' is not null or undefined
@@ -2308,6 +2175,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -2328,17 +2196,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary Pre-match by Fixture ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} fixtureId The ID of the fixture you want to retrieve pre-match odds from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        oddsPreMatchByFixtureId: async (version: string, sport: string, fixtureId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('oddsPreMatchByFixtureId', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('oddsPreMatchByFixtureId', 'sport', sport)
+        oddsPreMatchByFixtureId: async (fixtureId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'fixtureId' is not null or undefined
             assertParamExists('oddsPreMatchByFixtureId', 'fixtureId', fixtureId)
             const localVarPath = `/{version}/{sport}/odds/pre-match/fixtures/{fixtureId}`
@@ -2357,6 +2221,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -2377,17 +2242,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} playerId The ID of the player you want to retrieve.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        playerById: async (version: string, sport: string, playerId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('playerById', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('playerById', 'sport', sport)
+        playerById: async (playerId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'playerId' is not null or undefined
             assertParamExists('playerById', 'playerId', playerId)
             const localVarPath = `/{version}/{sport}/players/{playerId}`
@@ -2406,6 +2267,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -2426,16 +2288,12 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary All
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        playersAll: async (version: string, sport: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('playersAll', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('playersAll', 'sport', sport)
+        playersAll: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/players`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)))
                 .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
@@ -2451,6 +2309,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -2471,17 +2330,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By Country ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} countryId The ID of the country you want to retrieve players from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        playersByCountryId: async (version: string, sport: string, countryId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('playersByCountryId', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('playersByCountryId', 'sport', sport)
+        playersByCountryId: async (countryId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'countryId' is not null or undefined
             assertParamExists('playersByCountryId', 'countryId', countryId)
             const localVarPath = `/{version}/{sport}/players/countries/{countryId}`
@@ -2500,6 +2355,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -2520,16 +2376,12 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary Latest Updated
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        playersLatest: async (version: string, sport: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('playersLatest', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('playersLatest', 'sport', sport)
+        playersLatest: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/players/latest`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)))
                 .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
@@ -2545,6 +2397,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -2565,17 +2418,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary Search
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {string} name The name you want to search on.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        playersSearch: async (version: string, sport: string, name: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('playersSearch', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('playersSearch', 'sport', sport)
+        playersSearch: async (name: string, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'name' is not null or undefined
             assertParamExists('playersSearch', 'name', name)
             const localVarPath = `/{version}/{sport}/players/search/{name}`
@@ -2594,6 +2443,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -2614,16 +2464,12 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary All
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        predictionsAll: async (version: string, sport: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('predictionsAll', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('predictionsAll', 'sport', sport)
+        predictionsAll: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/predictions/probabilities`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)))
                 .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
@@ -2639,6 +2485,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -2659,16 +2506,12 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary All Value Bets
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        predictionsAllValueBets: async (version: string, sport: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('predictionsAllValueBets', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('predictionsAllValueBets', 'sport', sport)
+        predictionsAllValueBets: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/predictions/value-bets`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)))
                 .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
@@ -2684,6 +2527,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -2704,17 +2548,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By Fixture ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} fixtureId The ID of the fixture you want to retrieve predictions from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        predictionsByFixtureId: async (version: string, sport: string, fixtureId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('predictionsByFixtureId', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('predictionsByFixtureId', 'sport', sport)
+        predictionsByFixtureId: async (fixtureId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'fixtureId' is not null or undefined
             assertParamExists('predictionsByFixtureId', 'fixtureId', fixtureId)
             const localVarPath = `/{version}/{sport}/predictions/probabilities/fixtures/{fixtureId}`
@@ -2733,6 +2573,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -2753,17 +2594,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary Value Bets by Fixture ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} fixtureId The ID of the fixture you want to retrieve value bets from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        predictionsValueBetsByFixtureId: async (version: string, sport: string, fixtureId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('predictionsValueBetsByFixtureId', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('predictionsValueBetsByFixtureId', 'sport', sport)
+        predictionsValueBetsByFixtureId: async (fixtureId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'fixtureId' is not null or undefined
             assertParamExists('predictionsValueBetsByFixtureId', 'fixtureId', fixtureId)
             const localVarPath = `/{version}/{sport}/predictions/value-bets/fixtures/{fixtureId}`
@@ -2782,6 +2619,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -2802,17 +2640,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} refereeId The ID of the referee you want to retrieve.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        refereeById: async (version: string, sport: string, refereeId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('refereeById', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('refereeById', 'sport', sport)
+        refereeById: async (refereeId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'refereeId' is not null or undefined
             assertParamExists('refereeById', 'refereeId', refereeId)
             const localVarPath = `/{version}/{sport}/referees/{refereeId}`
@@ -2831,6 +2665,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -2851,16 +2686,12 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary All
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        refereesAll: async (version: string, sport: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('refereesAll', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('refereesAll', 'sport', sport)
+        refereesAll: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/referees`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)))
                 .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
@@ -2876,6 +2707,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -2896,17 +2728,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By Country ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} countryId The ID of the country you want to retrieve referees from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        refereesByCountryId: async (version: string, sport: string, countryId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('refereesByCountryId', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('refereesByCountryId', 'sport', sport)
+        refereesByCountryId: async (countryId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'countryId' is not null or undefined
             assertParamExists('refereesByCountryId', 'countryId', countryId)
             const localVarPath = `/{version}/{sport}/referees/countries/{countryId}`
@@ -2925,6 +2753,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -2945,17 +2774,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By Season ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} seasonId The ID of the season you want to retrieve referees from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        refereesBySeasonId: async (version: string, sport: string, seasonId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('refereesBySeasonId', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('refereesBySeasonId', 'sport', sport)
+        refereesBySeasonId: async (seasonId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'seasonId' is not null or undefined
             assertParamExists('refereesBySeasonId', 'seasonId', seasonId)
             const localVarPath = `/{version}/{sport}/referees/seasons/{seasonId}`
@@ -2974,6 +2799,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -2994,17 +2820,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary Search
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {string} name The name you want to search on.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        refereesSearch: async (version: string, sport: string, name: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('refereesSearch', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('refereesSearch', 'sport', sport)
+        refereesSearch: async (name: string, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'name' is not null or undefined
             assertParamExists('refereesSearch', 'name', name)
             const localVarPath = `/{version}/{sport}/referees/search/{name}`
@@ -3023,6 +2845,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -3043,16 +2866,12 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary All
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        rivalsAll: async (version: string, sport: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('rivalsAll', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('rivalsAll', 'sport', sport)
+        rivalsAll: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/rivals`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)))
                 .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
@@ -3068,6 +2887,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -3088,17 +2908,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By Team ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} teamId The ID of the team you want to retrieve rivals from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        rivalsByTeamId: async (version: string, sport: string, teamId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('rivalsByTeamId', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('rivalsByTeamId', 'sport', sport)
+        rivalsByTeamId: async (teamId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'teamId' is not null or undefined
             assertParamExists('rivalsByTeamId', 'teamId', teamId)
             const localVarPath = `/{version}/{sport}/rivals/teams/{teamId}`
@@ -3117,6 +2933,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -3137,17 +2954,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} roundId The ID of the round you want to retrieve.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        roundById: async (version: string, sport: string, roundId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('roundById', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('roundById', 'sport', sport)
+        roundById: async (roundId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'roundId' is not null or undefined
             assertParamExists('roundById', 'roundId', roundId)
             const localVarPath = `/{version}/{sport}/rounds/{roundId}`
@@ -3166,6 +2979,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -3186,16 +3000,12 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary All
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        roundsAll: async (version: string, sport: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('roundsAll', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('roundsAll', 'sport', sport)
+        roundsAll: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/rounds`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)))
                 .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
@@ -3211,6 +3021,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -3231,17 +3042,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary Season ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} seasonId The ID of the season you want to retrieve rounds from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        roundsBySeasonId: async (version: string, sport: string, seasonId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('roundsBySeasonId', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('roundsBySeasonId', 'sport', sport)
+        roundsBySeasonId: async (seasonId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'seasonId' is not null or undefined
             assertParamExists('roundsBySeasonId', 'seasonId', seasonId)
             const localVarPath = `/{version}/{sport}/rounds/seasons/{seasonId}`
@@ -3260,6 +3067,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -3280,17 +3088,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary Search
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} name The name you want to search on.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        roundsSearch: async (version: string, sport: string, name: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('roundsSearch', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('roundsSearch', 'sport', sport)
+        roundsSearch: async (name: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'name' is not null or undefined
             assertParamExists('roundsSearch', 'name', name)
             const localVarPath = `/{version}/{sport}/rounds/search/{name}`
@@ -3309,6 +3113,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -3329,17 +3134,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By Season ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} seasonId 
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        schedulesBySeasonId: async (version: string, sport: string, seasonId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('schedulesBySeasonId', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('schedulesBySeasonId', 'sport', sport)
+        schedulesBySeasonId: async (seasonId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'seasonId' is not null or undefined
             assertParamExists('schedulesBySeasonId', 'seasonId', seasonId)
             const localVarPath = `/{version}/{sport}/schedules/seasons/{seasonId}`
@@ -3358,6 +3159,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -3378,18 +3180,14 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By Team and Season ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} seasonId The ID of the season you want to retrieve schedule from.
          * @param {number} teamId The ID of the team you want to retrieve schedule from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        schedulesByTeamAndSeasonId: async (version: string, sport: string, seasonId: number, teamId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('schedulesByTeamAndSeasonId', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('schedulesByTeamAndSeasonId', 'sport', sport)
+        schedulesByTeamAndSeasonId: async (seasonId: number, teamId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'seasonId' is not null or undefined
             assertParamExists('schedulesByTeamAndSeasonId', 'seasonId', seasonId)
             // verify required parameter 'teamId' is not null or undefined
@@ -3411,6 +3209,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -3431,17 +3230,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By Team ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} teamId The ID of the team you want to retrieve schedule from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        schedulesByTeamId: async (version: string, sport: string, teamId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('schedulesByTeamId', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('schedulesByTeamId', 'sport', sport)
+        schedulesByTeamId: async (teamId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'teamId' is not null or undefined
             assertParamExists('schedulesByTeamId', 'teamId', teamId)
             const localVarPath = `/{version}/{sport}/schedules/teams/{teamId}`
@@ -3460,6 +3255,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -3480,17 +3276,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} seasonId The ID of the season you want to retrieve.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        seasonById: async (version: string, sport: string, seasonId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('seasonById', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('seasonById', 'sport', sport)
+        seasonById: async (seasonId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'seasonId' is not null or undefined
             assertParamExists('seasonById', 'seasonId', seasonId)
             const localVarPath = `/{version}/{sport}/seasons/{seasonId}`
@@ -3509,6 +3301,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -3529,16 +3322,12 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary All
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        seasonsAll: async (version: string, sport: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('seasonsAll', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('seasonsAll', 'sport', sport)
+        seasonsAll: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/seasons`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)))
                 .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
@@ -3554,6 +3343,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -3574,17 +3364,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By Team ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} teamId The ID of the team you want to retrieve seasons from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        seasonsByTeamId: async (version: string, sport: string, teamId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('seasonsByTeamId', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('seasonsByTeamId', 'sport', sport)
+        seasonsByTeamId: async (teamId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'teamId' is not null or undefined
             assertParamExists('seasonsByTeamId', 'teamId', teamId)
             const localVarPath = `/{version}/{sport}/seasons/teams/{teamId}`
@@ -3603,6 +3389,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -3623,17 +3410,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary Search
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} name The name you want to search on.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        seasonsSearch: async (version: string, sport: string, name: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('seasonsSearch', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('seasonsSearch', 'sport', sport)
+        seasonsSearch: async (name: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'name' is not null or undefined
             assertParamExists('seasonsSearch', 'name', name)
             const localVarPath = `/{version}/{sport}/seasons/search/{name}`
@@ -3652,6 +3435,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -3672,18 +3456,14 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By Season and Team ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} seasonId The ID of the season you want to retrieve squads from.
          * @param {number} teamId The ID of the team you want to retrieve squads from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        squadsBySeasonAndTeamId: async (version: string, sport: string, seasonId: number, teamId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('squadsBySeasonAndTeamId', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('squadsBySeasonAndTeamId', 'sport', sport)
+        squadsBySeasonAndTeamId: async (seasonId: number, teamId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'seasonId' is not null or undefined
             assertParamExists('squadsBySeasonAndTeamId', 'seasonId', seasonId)
             // verify required parameter 'teamId' is not null or undefined
@@ -3705,6 +3485,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -3725,17 +3506,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By Team ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} teamId The ID of the team you want to retrieve squads from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        squadsByTeamId: async (version: string, sport: string, teamId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('squadsByTeamId', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('squadsByTeamId', 'sport', sport)
+        squadsByTeamId: async (teamId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'teamId' is not null or undefined
             assertParamExists('squadsByTeamId', 'teamId', teamId)
             const localVarPath = `/{version}/{sport}/squads/teams/{teamId}`
@@ -3754,6 +3531,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -3774,17 +3552,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} stageId The ID of the stage you want to retrieve.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        stageById: async (version: string, sport: string, stageId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('stageById', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('stageById', 'sport', sport)
+        stageById: async (stageId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'stageId' is not null or undefined
             assertParamExists('stageById', 'stageId', stageId)
             const localVarPath = `/{version}/{sport}/stages/{stageId}`
@@ -3803,6 +3577,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -3823,16 +3598,12 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary All
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        stagesAll: async (version: string, sport: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('stagesAll', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('stagesAll', 'sport', sport)
+        stagesAll: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/stages`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)))
                 .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
@@ -3848,6 +3619,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -3868,17 +3640,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By Season ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} seasonId The ID of the season you want to retrieve stages from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        stagesBySeasonId: async (version: string, sport: string, seasonId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('stagesBySeasonId', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('stagesBySeasonId', 'sport', sport)
+        stagesBySeasonId: async (seasonId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'seasonId' is not null or undefined
             assertParamExists('stagesBySeasonId', 'seasonId', seasonId)
             const localVarPath = `/{version}/{sport}/stages/seasons/{seasonId}`
@@ -3897,6 +3665,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -3917,17 +3686,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary Search
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {string} name The name you want to search on.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        stagesSearch: async (version: string, sport: string, name: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('stagesSearch', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('stagesSearch', 'sport', sport)
+        stagesSearch: async (name: string, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'name' is not null or undefined
             assertParamExists('stagesSearch', 'name', name)
             const localVarPath = `/{version}/{sport}/stages/search/{name}`
@@ -3946,6 +3711,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -3966,17 +3732,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary Correction by Season ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} seasonId The ID of the season you want to retrieve standing corrections from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        standingCorrectionsBySeasonId: async (version: string, sport: string, seasonId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('standingCorrectionsBySeasonId', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('standingCorrectionsBySeasonId', 'sport', sport)
+        standingCorrectionsBySeasonId: async (seasonId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'seasonId' is not null or undefined
             assertParamExists('standingCorrectionsBySeasonId', 'seasonId', seasonId)
             const localVarPath = `/{version}/{sport}/standings/corrections/seasons/{seasonId}`
@@ -3995,6 +3757,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -4015,16 +3778,12 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary All
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        standingsAll: async (version: string, sport: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('standingsAll', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('standingsAll', 'sport', sport)
+        standingsAll: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/standings`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)))
                 .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
@@ -4040,6 +3799,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -4060,17 +3820,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By Round ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} roundId The ID of the round you want to retrieve standing from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        standingsByRoundId: async (version: string, sport: string, roundId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('standingsByRoundId', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('standingsByRoundId', 'sport', sport)
+        standingsByRoundId: async (roundId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'roundId' is not null or undefined
             assertParamExists('standingsByRoundId', 'roundId', roundId)
             const localVarPath = `/{version}/{sport}/standings/rounds/{roundId}`
@@ -4089,6 +3845,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -4109,17 +3866,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By Season ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} seasonId The ID of the season you want to retrieve standing from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        standingsBySeasonId: async (version: string, sport: string, seasonId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('standingsBySeasonId', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('standingsBySeasonId', 'sport', sport)
+        standingsBySeasonId: async (seasonId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'seasonId' is not null or undefined
             assertParamExists('standingsBySeasonId', 'seasonId', seasonId)
             const localVarPath = `/{version}/{sport}/standings/seasons/{seasonId}`
@@ -4138,6 +3891,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -4158,17 +3912,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By League ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} leagueId The ID of the league you want to retrieve standings from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        standingsLiveByLeagueId: async (version: string, sport: string, leagueId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('standingsLiveByLeagueId', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('standingsLiveByLeagueId', 'sport', sport)
+        standingsLiveByLeagueId: async (leagueId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'leagueId' is not null or undefined
             assertParamExists('standingsLiveByLeagueId', 'leagueId', leagueId)
             const localVarPath = `/{version}/{sport}/standings/live/leagues/{leagueId}`
@@ -4187,6 +3937,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -4207,17 +3958,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} stateId The ID of the state you want to retrieve.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        stateById: async (version: string, sport: string, stateId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('stateById', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('stateById', 'sport', sport)
+        stateById: async (stateId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'stateId' is not null or undefined
             assertParamExists('stateById', 'stateId', stateId)
             const localVarPath = `/{version}/{sport}/states/{stateId}`
@@ -4236,6 +3983,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -4256,16 +4004,12 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By Sport
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        statesBySport: async (version: string, sport: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('statesBySport', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('statesBySport', 'sport', sport)
+        statesBySport: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/states`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)))
                 .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
@@ -4281,6 +4025,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -4301,16 +4046,12 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary All
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        teamsAll: async (version: string, sport: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('teamsAll', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('teamsAll', 'sport', sport)
+        teamsAll: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/teams`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)))
                 .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
@@ -4326,6 +4067,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -4346,17 +4088,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By Country ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} countryId The ID of the country you want to retrieve teams from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        teamsByCountryId: async (version: string, sport: string, countryId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('teamsByCountryId', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('teamsByCountryId', 'sport', sport)
+        teamsByCountryId: async (countryId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'countryId' is not null or undefined
             assertParamExists('teamsByCountryId', 'countryId', countryId)
             const localVarPath = `/{version}/{sport}/teams/countries/{countryId}`
@@ -4375,6 +4113,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -4395,17 +4134,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} teamId The ID of the team you want to retrieve.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        teamsById: async (version: string, sport: string, teamId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('teamsById', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('teamsById', 'sport', sport)
+        teamsById: async (teamId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'teamId' is not null or undefined
             assertParamExists('teamsById', 'teamId', teamId)
             const localVarPath = `/{version}/{sport}/teams/{teamId}`
@@ -4424,6 +4159,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -4444,17 +4180,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By Season ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} seasonId The ID of the season you want to retrieve teams from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        teamsBySeasonId: async (version: string, sport: string, seasonId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('teamsBySeasonId', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('teamsBySeasonId', 'sport', sport)
+        teamsBySeasonId: async (seasonId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'seasonId' is not null or undefined
             assertParamExists('teamsBySeasonId', 'seasonId', seasonId)
             const localVarPath = `/{version}/{sport}/teams/seasons/{seasonId}`
@@ -4473,6 +4205,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -4493,17 +4226,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary Search
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {string} name The name you want to search on.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        teamsSearch: async (version: string, sport: string, name: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('teamsSearch', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('teamsSearch', 'sport', sport)
+        teamsSearch: async (name: string, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'name' is not null or undefined
             assertParamExists('teamsSearch', 'name', name)
             const localVarPath = `/{version}/{sport}/teams/search/{name}`
@@ -4522,6 +4251,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -4542,17 +4272,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By Season ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} seasonId The ID of the season you want to retrieve topscorers from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        topScorersBySeasonId: async (version: string, sport: string, seasonId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('topScorersBySeasonId', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('topScorersBySeasonId', 'sport', sport)
+        topScorersBySeasonId: async (seasonId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'seasonId' is not null or undefined
             assertParamExists('topScorersBySeasonId', 'seasonId', seasonId)
             const localVarPath = `/{version}/{sport}/topscorers/seasons/{seasonId}`
@@ -4571,6 +4297,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -4591,17 +4318,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By Stage ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} stageId The ID of the stage you want to retrieve topscorers from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        topScorersByStageId: async (version: string, sport: string, stageId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('topScorersByStageId', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('topScorersByStageId', 'sport', sport)
+        topScorersByStageId: async (stageId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'stageId' is not null or undefined
             assertParamExists('topScorersByStageId', 'stageId', stageId)
             const localVarPath = `/{version}/{sport}/topscorers/stages/{stageId}`
@@ -4620,6 +4343,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -4640,18 +4364,14 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By Date Range
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {string} startDate The start date you want to retrieve transfers from.
          * @param {string} endDate The end date you want to retrieve transfers from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        tranfersByDateRange: async (version: string, sport: string, startDate: string, endDate: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('tranfersByDateRange', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('tranfersByDateRange', 'sport', sport)
+        tranfersByDateRange: async (startDate: string, endDate: string, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'startDate' is not null or undefined
             assertParamExists('tranfersByDateRange', 'startDate', startDate)
             // verify required parameter 'endDate' is not null or undefined
@@ -4673,6 +4393,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -4693,17 +4414,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} transferId 
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        transferById: async (version: string, sport: string, transferId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('transferById', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('transferById', 'sport', sport)
+        transferById: async (transferId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'transferId' is not null or undefined
             assertParamExists('transferById', 'transferId', transferId)
             const localVarPath = `/{version}/{sport}/transfers/{transferId}`
@@ -4722,6 +4439,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -4742,16 +4460,12 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary All
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        transfersAll: async (version: string, sport: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('transfersAll', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('transfersAll', 'sport', sport)
+        transfersAll: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/transfers`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)))
                 .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
@@ -4767,6 +4481,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -4787,17 +4502,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By Player ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} playerId The ID of the player you want to retrieve transfers from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        transfersByPlayerId: async (version: string, sport: string, playerId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('transfersByPlayerId', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('transfersByPlayerId', 'sport', sport)
+        transfersByPlayerId: async (playerId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'playerId' is not null or undefined
             assertParamExists('transfersByPlayerId', 'playerId', playerId)
             const localVarPath = `/{version}/{sport}/transfers/players/{playerId}`
@@ -4816,6 +4527,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -4836,17 +4548,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By Team ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} teamId The ID of the team you want to retrieve transfers from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        transfersByTeamId: async (version: string, sport: string, teamId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('transfersByTeamId', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('transfersByTeamId', 'sport', sport)
+        transfersByTeamId: async (teamId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'teamId' is not null or undefined
             assertParamExists('transfersByTeamId', 'teamId', teamId)
             const localVarPath = `/{version}/{sport}/transfers/teams/{teamId}`
@@ -4865,6 +4573,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -4885,16 +4594,12 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary Last Updated
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        transfersLatest: async (version: string, sport: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('transfersLatest', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('transfersLatest', 'sport', sport)
+        transfersLatest: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/transfers/latest`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)))
                 .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
@@ -4910,6 +4615,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -4930,17 +4636,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} tvStationId The ID of the tv station you want to retrieve.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        tvStationById: async (version: string, sport: string, tvStationId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('tvStationById', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('tvStationById', 'sport', sport)
+        tvStationById: async (tvStationId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'tvStationId' is not null or undefined
             assertParamExists('tvStationById', 'tvStationId', tvStationId)
             const localVarPath = `/{version}/{sport}/tv-stations/{tvStationId}`
@@ -4959,6 +4661,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -4979,16 +4682,12 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary All
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        tvStationsAll: async (version: string, sport: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('tvStationsAll', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('tvStationsAll', 'sport', sport)
+        tvStationsAll: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/tv-stations`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)))
                 .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
@@ -5004,6 +4703,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -5024,17 +4724,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By Fixture ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} fixtureId The ID of the fixture you want to retrieve tv-stations from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        tvStationsByFixtureId: async (version: string, sport: string, fixtureId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('tvStationsByFixtureId', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('tvStationsByFixtureId', 'sport', sport)
+        tvStationsByFixtureId: async (fixtureId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'fixtureId' is not null or undefined
             assertParamExists('tvStationsByFixtureId', 'fixtureId', fixtureId)
             const localVarPath = `/{version}/{sport}/tv-stations/fixtures/{fixtureId}`
@@ -5053,6 +4749,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -5073,17 +4770,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} venueId The ID of the venue you want to retrieve.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        venueById: async (version: string, sport: string, venueId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('venueById', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('venueById', 'sport', sport)
+        venueById: async (venueId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'venueId' is not null or undefined
             assertParamExists('venueById', 'venueId', venueId)
             const localVarPath = `/{version}/{sport}/venues/{venueId}`
@@ -5102,6 +4795,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -5122,16 +4816,12 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary All
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        venuesAll: async (version: string, sport: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('venuesAll', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('venuesAll', 'sport', sport)
+        venuesAll: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/venues`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)))
                 .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
@@ -5147,6 +4837,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -5167,17 +4858,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary By Season ID
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {number} seasonId The ID of the season you want to retrieve venues from.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        venuesBySeasonId: async (version: string, sport: string, seasonId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('venuesBySeasonId', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('venuesBySeasonId', 'sport', sport)
+        venuesBySeasonId: async (seasonId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'seasonId' is not null or undefined
             assertParamExists('venuesBySeasonId', 'seasonId', seasonId)
             const localVarPath = `/{version}/{sport}/venues/seasons/{seasonId}`
@@ -5196,6 +4883,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -5216,17 +4904,13 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * 
          * @summary Search
-         * @param {string} version The version of the API.
-         * @param {string} sport The sport you want retrieve entities from.
          * @param {string} name The name you want to search on.
+         * @param {string} [version] The version of the API.
+         * @param {string} [sport] The sport you want retrieve entities from.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        venuesSearch: async (version: string, sport: string, name: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('venuesSearch', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('venuesSearch', 'sport', sport)
+        venuesSearch: async (name: string, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'name' is not null or undefined
             assertParamExists('venuesSearch', 'name', name)
             const localVarPath = `/{version}/{sport}/venues/search/{name}`
@@ -5245,6 +4929,7 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -5280,7 +4965,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async coachById(requestParameters: SportApiCoachByIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportCoachByIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.coachById(requestParameters.version, requestParameters.sport, requestParameters.coachId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.coachById(requestParameters.coachId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5290,7 +4975,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async coachesAll(requestParameters: SportApiCoachesAllRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportCoachesAllResponse>> {
+        async coachesAll(requestParameters: SportApiCoachesAllRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportCoachesAllResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.coachesAll(requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -5302,7 +4987,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async coachesByCountryId(requestParameters: SportApiCoachesByCountryIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportCoachesByCountryIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.coachesByCountryId(requestParameters.version, requestParameters.sport, requestParameters.countryId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.coachesByCountryId(requestParameters.countryId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5312,7 +4997,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async coachesLatest(requestParameters: SportApiCoachesLatestRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportCoachesLatestResponse>> {
+        async coachesLatest(requestParameters: SportApiCoachesLatestRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportCoachesLatestResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.coachesLatest(requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -5324,7 +5009,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async coachesSearch(requestParameters: SportApiCoachesSearchRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportCoachesSearchResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.coachesSearch(requestParameters.version, requestParameters.sport, requestParameters.name, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.coachesSearch(requestParameters.name, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5334,7 +5019,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async commentariesAll(requestParameters: SportApiCommentariesAllRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportCommentariesAllResponse>> {
+        async commentariesAll(requestParameters: SportApiCommentariesAllRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportCommentariesAllResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.commentariesAll(requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -5346,7 +5031,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async commentariesByFixtureId(requestParameters: SportApiCommentariesByFixtureIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportCommentariesByFixtureIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.commentariesByFixtureId(requestParameters.version, requestParameters.sport, requestParameters.fixtureId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.commentariesByFixtureId(requestParameters.fixtureId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5357,7 +5042,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async fixtureByDateRangeForTeam(requestParameters: SportApiFixtureByDateRangeForTeamRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportFixtureByDateRangeForTeamResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.fixtureByDateRangeForTeam(requestParameters.version, requestParameters.sport, requestParameters.startDate, requestParameters.endDate, requestParameters.teamId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.fixtureByDateRangeForTeam(requestParameters.startDate, requestParameters.endDate, requestParameters.teamId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5368,7 +5053,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async fixtureById(requestParameters: SportApiFixtureByIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportFixtureByIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.fixtureById(requestParameters.version, requestParameters.sport, requestParameters.fixtureId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.fixtureById(requestParameters.fixtureId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5378,7 +5063,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async fixturesAll(requestParameters: SportApiFixturesAllRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportFixturesAllResponse>> {
+        async fixturesAll(requestParameters: SportApiFixturesAllRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportFixturesAllResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.fixturesAll(requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -5390,7 +5075,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async fixturesByDate(requestParameters: SportApiFixturesByDateRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportFixturesByDateResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.fixturesByDate(requestParameters.version, requestParameters.sport, requestParameters.date, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.fixturesByDate(requestParameters.date, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5401,7 +5086,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async fixturesByDateRange(requestParameters: SportApiFixturesByDateRangeRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportFixturesByDateRangeResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.fixturesByDateRange(requestParameters.version, requestParameters.sport, requestParameters.startDate, requestParameters.endDate, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.fixturesByDateRange(requestParameters.startDate, requestParameters.endDate, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5412,7 +5097,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async fixturesByIds(requestParameters: SportApiFixturesByIdsRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportFixturesByIdsResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.fixturesByIds(requestParameters.version, requestParameters.sport, requestParameters.fixtureIds, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.fixturesByIds(requestParameters.fixtureIds, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5423,7 +5108,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async fixturesHeadToHead(requestParameters: SportApiFixturesHeadToHeadRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportFixturesHeadToHeadResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.fixturesHeadToHead(requestParameters.version, requestParameters.sport, requestParameters.firstTeam, requestParameters.secondTeam, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.fixturesHeadToHead(requestParameters.firstTeam, requestParameters.secondTeam, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5433,7 +5118,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async fixturesLatest(requestParameters: SportApiFixturesLatestRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>> {
+        async fixturesLatest(requestParameters: SportApiFixturesLatestRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.fixturesLatest(requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -5445,7 +5130,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async fixturesSearch(requestParameters: SportApiFixturesSearchRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportFixturesSearchResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.fixturesSearch(requestParameters.version, requestParameters.sport, requestParameters.name, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.fixturesSearch(requestParameters.name, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5456,7 +5141,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async leagueById(requestParameters: SportApiLeagueByIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportLeagueByIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.leagueById(requestParameters.version, requestParameters.sport, requestParameters.leagueId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.leagueById(requestParameters.leagueId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5467,7 +5152,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async leagueEnrichments(requestParameters: SportApiLeagueEnrichmentsRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.leagueEnrichments(requestParameters.version, requestParameters.sport, requestParameters.leagueId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.leagueEnrichments(requestParameters.leagueId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5478,7 +5163,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async leagueShirts(requestParameters: SportApiLeagueShirtsRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.leagueShirts(requestParameters.version, requestParameters.sport, requestParameters.leagueId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.leagueShirts(requestParameters.leagueId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5488,7 +5173,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async leaguesAll(requestParameters: SportApiLeaguesAllRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportLeaguesAllResponse>> {
+        async leaguesAll(requestParameters: SportApiLeaguesAllRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportLeaguesAllResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.leaguesAll(requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -5500,7 +5185,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async leaguesByCountryId(requestParameters: SportApiLeaguesByCountryIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportLeaguesByCountryIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.leaguesByCountryId(requestParameters.version, requestParameters.sport, requestParameters.countryId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.leaguesByCountryId(requestParameters.countryId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5511,7 +5196,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async leaguesByDate(requestParameters: SportApiLeaguesByDateRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportLeaguesByDateResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.leaguesByDate(requestParameters.version, requestParameters.sport, requestParameters.date, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.leaguesByDate(requestParameters.date, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5522,7 +5207,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async leaguesByTeamId(requestParameters: SportApiLeaguesByTeamIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.leaguesByTeamId(requestParameters.version, requestParameters.sport, requestParameters.teamId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.leaguesByTeamId(requestParameters.teamId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5533,7 +5218,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async leaguesCurrentByTeamId(requestParameters: SportApiLeaguesCurrentByTeamIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.leaguesCurrentByTeamId(requestParameters.version, requestParameters.sport, requestParameters.teamId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.leaguesCurrentByTeamId(requestParameters.teamId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5543,7 +5228,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async leaguesLive(requestParameters: SportApiLeaguesLiveRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportLeaguesLiveResponse>> {
+        async leaguesLive(requestParameters: SportApiLeaguesLiveRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportLeaguesLiveResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.leaguesLive(requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -5555,7 +5240,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async leaguesSearch(requestParameters: SportApiLeaguesSearchRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportLeaguesSearchResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.leaguesSearch(requestParameters.version, requestParameters.sport, requestParameters.name, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.leaguesSearch(requestParameters.name, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5565,7 +5250,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async livescoresAll(requestParameters: SportApiLivescoresAllRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportLivescoresAllResponse>> {
+        async livescoresAll(requestParameters: SportApiLivescoresAllRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportLivescoresAllResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.livescoresAll(requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -5576,7 +5261,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async livescoresAllInPlay(requestParameters: SportApiLivescoresAllInPlayRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportLivescoresAllInPlayResponse>> {
+        async livescoresAllInPlay(requestParameters: SportApiLivescoresAllInPlayRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportLivescoresAllInPlayResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.livescoresAllInPlay(requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -5587,7 +5272,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async livescoresLatest(requestParameters: SportApiLivescoresLatestRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportLivescoresLatestResponse>> {
+        async livescoresLatest(requestParameters: SportApiLivescoresLatestRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportLivescoresLatestResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.livescoresLatest(requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -5598,7 +5283,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async newsAllPostMatch(requestParameters: SportApiNewsAllPostMatchRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>> {
+        async newsAllPostMatch(requestParameters: SportApiNewsAllPostMatchRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.newsAllPostMatch(requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -5609,7 +5294,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async newsAllPreMatch(requestParameters: SportApiNewsAllPreMatchRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportNewsAllPreMatchResponse>> {
+        async newsAllPreMatch(requestParameters: SportApiNewsAllPreMatchRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportNewsAllPreMatchResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.newsAllPreMatch(requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -5621,7 +5306,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async newsPostMatchBySeasonId(requestParameters: SportApiNewsPostMatchBySeasonIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.newsPostMatchBySeasonId(requestParameters.version, requestParameters.sport, requestParameters.seasonId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.newsPostMatchBySeasonId(requestParameters.seasonId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5632,7 +5317,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async newsPreMatchBySeasonId(requestParameters: SportApiNewsPreMatchBySeasonIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportNewsPreMatchBySeasonIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.newsPreMatchBySeasonId(requestParameters.version, requestParameters.sport, requestParameters.seasonId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.newsPreMatchBySeasonId(requestParameters.seasonId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5642,7 +5327,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async newsUpcomingPostMatch(requestParameters: SportApiNewsUpcomingPostMatchRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>> {
+        async newsUpcomingPostMatch(requestParameters: SportApiNewsUpcomingPostMatchRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.newsUpcomingPostMatch(requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -5653,7 +5338,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async newsUpcomingPreMatch(requestParameters: SportApiNewsUpcomingPreMatchRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportNewsUpcomingPreMatchResponse>> {
+        async newsUpcomingPreMatch(requestParameters: SportApiNewsUpcomingPreMatchRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportNewsUpcomingPreMatchResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.newsUpcomingPreMatch(requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -5664,7 +5349,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async oddsAllInPlay(requestParameters: SportApiOddsAllInPlayRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportOddsAllInPlayResponse>> {
+        async oddsAllInPlay(requestParameters: SportApiOddsAllInPlayRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportOddsAllInPlayResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.oddsAllInPlay(requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -5675,7 +5360,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async oddsAllPreMatch(requestParameters: SportApiOddsAllPreMatchRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportOddsAllPreMatchResponse>> {
+        async oddsAllPreMatch(requestParameters: SportApiOddsAllPreMatchRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportOddsAllPreMatchResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.oddsAllPreMatch(requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -5687,7 +5372,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async oddsInPlayByFixtureAndBookmakerId(requestParameters: SportApiOddsInPlayByFixtureAndBookmakerIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.oddsInPlayByFixtureAndBookmakerId(requestParameters.version, requestParameters.sport, requestParameters.fixtureId, requestParameters.bookmakerId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.oddsInPlayByFixtureAndBookmakerId(requestParameters.fixtureId, requestParameters.bookmakerId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5698,7 +5383,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async oddsInPlayByFixtureAndMarketId(requestParameters: SportApiOddsInPlayByFixtureAndMarketIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.oddsInPlayByFixtureAndMarketId(requestParameters.version, requestParameters.sport, requestParameters.fixtureId, requestParameters.marketId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.oddsInPlayByFixtureAndMarketId(requestParameters.fixtureId, requestParameters.marketId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5709,7 +5394,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async oddsInPlayByFixtureId(requestParameters: SportApiOddsInPlayByFixtureIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportOddsInPlayByFixtureIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.oddsInPlayByFixtureId(requestParameters.version, requestParameters.sport, requestParameters.fixtureId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.oddsInPlayByFixtureId(requestParameters.fixtureId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5719,7 +5404,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async oddsLatestInPlay(requestParameters: SportApiOddsLatestInPlayRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
+        async oddsLatestInPlay(requestParameters: SportApiOddsLatestInPlayRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.oddsLatestInPlay(requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -5730,7 +5415,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async oddsLatestPreMatch(requestParameters: SportApiOddsLatestPreMatchRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
+        async oddsLatestPreMatch(requestParameters: SportApiOddsLatestPreMatchRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.oddsLatestPreMatch(requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -5742,7 +5427,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async oddsPreMatchByFixtureAndBookmakerId(requestParameters: SportApiOddsPreMatchByFixtureAndBookmakerIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportOddsPreMatchByFixtureAndBookmakerIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.oddsPreMatchByFixtureAndBookmakerId(requestParameters.version, requestParameters.sport, requestParameters.fixtureId, requestParameters.bookmakerId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.oddsPreMatchByFixtureAndBookmakerId(requestParameters.fixtureId, requestParameters.bookmakerId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5753,7 +5438,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async oddsPreMatchByFixtureAndMarketId(requestParameters: SportApiOddsPreMatchByFixtureAndMarketIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportOddsPreMatchByFixtureAndMarketIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.oddsPreMatchByFixtureAndMarketId(requestParameters.version, requestParameters.sport, requestParameters.fixtureId, requestParameters.marketId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.oddsPreMatchByFixtureAndMarketId(requestParameters.fixtureId, requestParameters.marketId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5764,7 +5449,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async oddsPreMatchByFixtureId(requestParameters: SportApiOddsPreMatchByFixtureIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportOddsPreMatchByFixtureIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.oddsPreMatchByFixtureId(requestParameters.version, requestParameters.sport, requestParameters.fixtureId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.oddsPreMatchByFixtureId(requestParameters.fixtureId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5775,7 +5460,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async playerById(requestParameters: SportApiPlayerByIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportPlayerByIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.playerById(requestParameters.version, requestParameters.sport, requestParameters.playerId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.playerById(requestParameters.playerId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5785,7 +5470,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async playersAll(requestParameters: SportApiPlayersAllRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportPlayersAllResponse>> {
+        async playersAll(requestParameters: SportApiPlayersAllRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportPlayersAllResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.playersAll(requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -5797,7 +5482,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async playersByCountryId(requestParameters: SportApiPlayersByCountryIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportPlayersByCountryIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.playersByCountryId(requestParameters.version, requestParameters.sport, requestParameters.countryId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.playersByCountryId(requestParameters.countryId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5807,7 +5492,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async playersLatest(requestParameters: SportApiPlayersLatestRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportPlayersLatestResponse>> {
+        async playersLatest(requestParameters: SportApiPlayersLatestRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportPlayersLatestResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.playersLatest(requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -5819,7 +5504,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async playersSearch(requestParameters: SportApiPlayersSearchRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportPlayersSearchResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.playersSearch(requestParameters.version, requestParameters.sport, requestParameters.name, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.playersSearch(requestParameters.name, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5829,7 +5514,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async predictionsAll(requestParameters: SportApiPredictionsAllRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportPredictionsAllResponse>> {
+        async predictionsAll(requestParameters: SportApiPredictionsAllRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportPredictionsAllResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.predictionsAll(requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -5840,7 +5525,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async predictionsAllValueBets(requestParameters: SportApiPredictionsAllValueBetsRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportPredictionsAllValueBetsResponse>> {
+        async predictionsAllValueBets(requestParameters: SportApiPredictionsAllValueBetsRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportPredictionsAllValueBetsResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.predictionsAllValueBets(requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -5852,7 +5537,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async predictionsByFixtureId(requestParameters: SportApiPredictionsByFixtureIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportPredictionsByFixtureIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.predictionsByFixtureId(requestParameters.version, requestParameters.sport, requestParameters.fixtureId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.predictionsByFixtureId(requestParameters.fixtureId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5863,7 +5548,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async predictionsValueBetsByFixtureId(requestParameters: SportApiPredictionsValueBetsByFixtureIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.predictionsValueBetsByFixtureId(requestParameters.version, requestParameters.sport, requestParameters.fixtureId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.predictionsValueBetsByFixtureId(requestParameters.fixtureId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5874,7 +5559,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async refereeById(requestParameters: SportApiRefereeByIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportRefereeByIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.refereeById(requestParameters.version, requestParameters.sport, requestParameters.refereeId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.refereeById(requestParameters.refereeId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5884,7 +5569,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async refereesAll(requestParameters: SportApiRefereesAllRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportRefereesAllResponse>> {
+        async refereesAll(requestParameters: SportApiRefereesAllRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportRefereesAllResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.refereesAll(requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -5896,7 +5581,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async refereesByCountryId(requestParameters: SportApiRefereesByCountryIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportRefereesByCountryIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.refereesByCountryId(requestParameters.version, requestParameters.sport, requestParameters.countryId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.refereesByCountryId(requestParameters.countryId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5907,7 +5592,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async refereesBySeasonId(requestParameters: SportApiRefereesBySeasonIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportRefereesBySeasonIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.refereesBySeasonId(requestParameters.version, requestParameters.sport, requestParameters.seasonId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.refereesBySeasonId(requestParameters.seasonId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5918,7 +5603,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async refereesSearch(requestParameters: SportApiRefereesSearchRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportRefereesSearchResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.refereesSearch(requestParameters.version, requestParameters.sport, requestParameters.name, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.refereesSearch(requestParameters.name, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5928,7 +5613,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async rivalsAll(requestParameters: SportApiRivalsAllRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportRivalsAllResponse>> {
+        async rivalsAll(requestParameters: SportApiRivalsAllRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportRivalsAllResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.rivalsAll(requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -5940,7 +5625,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async rivalsByTeamId(requestParameters: SportApiRivalsByTeamIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportRivalsByTeamIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.rivalsByTeamId(requestParameters.version, requestParameters.sport, requestParameters.teamId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.rivalsByTeamId(requestParameters.teamId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5951,7 +5636,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async roundById(requestParameters: SportApiRoundByIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportRoundByIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.roundById(requestParameters.version, requestParameters.sport, requestParameters.roundId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.roundById(requestParameters.roundId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5961,7 +5646,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async roundsAll(requestParameters: SportApiRoundsAllRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportRoundsAllResponse>> {
+        async roundsAll(requestParameters: SportApiRoundsAllRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportRoundsAllResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.roundsAll(requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -5973,7 +5658,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async roundsBySeasonId(requestParameters: SportApiRoundsBySeasonIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportRoundsBySeasonIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.roundsBySeasonId(requestParameters.version, requestParameters.sport, requestParameters.seasonId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.roundsBySeasonId(requestParameters.seasonId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5984,7 +5669,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async roundsSearch(requestParameters: SportApiRoundsSearchRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportRoundsSearchResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.roundsSearch(requestParameters.version, requestParameters.sport, requestParameters.name, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.roundsSearch(requestParameters.name, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5995,7 +5680,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async schedulesBySeasonId(requestParameters: SportApiSchedulesBySeasonIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportSchedulesBySeasonIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.schedulesBySeasonId(requestParameters.version, requestParameters.sport, requestParameters.seasonId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.schedulesBySeasonId(requestParameters.seasonId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -6006,7 +5691,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async schedulesByTeamAndSeasonId(requestParameters: SportApiSchedulesByTeamAndSeasonIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportSchedulesByTeamAndSeasonIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.schedulesByTeamAndSeasonId(requestParameters.version, requestParameters.sport, requestParameters.seasonId, requestParameters.teamId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.schedulesByTeamAndSeasonId(requestParameters.seasonId, requestParameters.teamId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -6017,7 +5702,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async schedulesByTeamId(requestParameters: SportApiSchedulesByTeamIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportSchedulesByTeamIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.schedulesByTeamId(requestParameters.version, requestParameters.sport, requestParameters.teamId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.schedulesByTeamId(requestParameters.teamId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -6028,7 +5713,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async seasonById(requestParameters: SportApiSeasonByIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportSeasonByIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.seasonById(requestParameters.version, requestParameters.sport, requestParameters.seasonId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.seasonById(requestParameters.seasonId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -6038,7 +5723,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async seasonsAll(requestParameters: SportApiSeasonsAllRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportSeasonsAllResponse>> {
+        async seasonsAll(requestParameters: SportApiSeasonsAllRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportSeasonsAllResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.seasonsAll(requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -6050,7 +5735,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async seasonsByTeamId(requestParameters: SportApiSeasonsByTeamIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.seasonsByTeamId(requestParameters.version, requestParameters.sport, requestParameters.teamId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.seasonsByTeamId(requestParameters.teamId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -6061,7 +5746,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async seasonsSearch(requestParameters: SportApiSeasonsSearchRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportSeasonsSearchResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.seasonsSearch(requestParameters.version, requestParameters.sport, requestParameters.name, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.seasonsSearch(requestParameters.name, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -6072,7 +5757,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async squadsBySeasonAndTeamId(requestParameters: SportApiSquadsBySeasonAndTeamIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportSquadsBySeasonAndTeamIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.squadsBySeasonAndTeamId(requestParameters.version, requestParameters.sport, requestParameters.seasonId, requestParameters.teamId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.squadsBySeasonAndTeamId(requestParameters.seasonId, requestParameters.teamId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -6083,7 +5768,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async squadsByTeamId(requestParameters: SportApiSquadsByTeamIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportSquadsByTeamIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.squadsByTeamId(requestParameters.version, requestParameters.sport, requestParameters.teamId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.squadsByTeamId(requestParameters.teamId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -6094,7 +5779,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async stageById(requestParameters: SportApiStageByIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportStageByIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.stageById(requestParameters.version, requestParameters.sport, requestParameters.stageId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.stageById(requestParameters.stageId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -6104,7 +5789,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async stagesAll(requestParameters: SportApiStagesAllRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportStagesAllResponse>> {
+        async stagesAll(requestParameters: SportApiStagesAllRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportStagesAllResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.stagesAll(requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -6116,7 +5801,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async stagesBySeasonId(requestParameters: SportApiStagesBySeasonIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportStagesBySeasonIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.stagesBySeasonId(requestParameters.version, requestParameters.sport, requestParameters.seasonId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.stagesBySeasonId(requestParameters.seasonId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -6127,7 +5812,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async stagesSearch(requestParameters: SportApiStagesSearchRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportStagesSearchResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.stagesSearch(requestParameters.version, requestParameters.sport, requestParameters.name, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.stagesSearch(requestParameters.name, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -6138,7 +5823,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async standingCorrectionsBySeasonId(requestParameters: SportApiStandingCorrectionsBySeasonIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportStandingCorrectionsBySeasonIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.standingCorrectionsBySeasonId(requestParameters.version, requestParameters.sport, requestParameters.seasonId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.standingCorrectionsBySeasonId(requestParameters.seasonId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -6148,7 +5833,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async standingsAll(requestParameters: SportApiStandingsAllRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportStandingsAllResponse>> {
+        async standingsAll(requestParameters: SportApiStandingsAllRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportStandingsAllResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.standingsAll(requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -6160,7 +5845,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async standingsByRoundId(requestParameters: SportApiStandingsByRoundIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportStandingsByRoundIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.standingsByRoundId(requestParameters.version, requestParameters.sport, requestParameters.roundId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.standingsByRoundId(requestParameters.roundId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -6171,7 +5856,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async standingsBySeasonId(requestParameters: SportApiStandingsBySeasonIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportStandingsBySeasonIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.standingsBySeasonId(requestParameters.version, requestParameters.sport, requestParameters.seasonId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.standingsBySeasonId(requestParameters.seasonId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -6182,7 +5867,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async standingsLiveByLeagueId(requestParameters: SportApiStandingsLiveByLeagueIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportStandingsLiveByLeagueIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.standingsLiveByLeagueId(requestParameters.version, requestParameters.sport, requestParameters.leagueId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.standingsLiveByLeagueId(requestParameters.leagueId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -6193,7 +5878,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async stateById(requestParameters: SportApiStateByIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportStateByIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.stateById(requestParameters.version, requestParameters.sport, requestParameters.stateId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.stateById(requestParameters.stateId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -6203,7 +5888,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async statesBySport(requestParameters: SportApiStatesBySportRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportStatesBySportResponse>> {
+        async statesBySport(requestParameters: SportApiStatesBySportRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportStatesBySportResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.statesBySport(requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -6214,7 +5899,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async teamsAll(requestParameters: SportApiTeamsAllRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportTeamsAllResponse>> {
+        async teamsAll(requestParameters: SportApiTeamsAllRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportTeamsAllResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.teamsAll(requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -6226,7 +5911,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async teamsByCountryId(requestParameters: SportApiTeamsByCountryIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportTeamsByCountryIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.teamsByCountryId(requestParameters.version, requestParameters.sport, requestParameters.countryId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.teamsByCountryId(requestParameters.countryId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -6237,7 +5922,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async teamsById(requestParameters: SportApiTeamsByIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportTeamsByIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.teamsById(requestParameters.version, requestParameters.sport, requestParameters.teamId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.teamsById(requestParameters.teamId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -6248,7 +5933,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async teamsBySeasonId(requestParameters: SportApiTeamsBySeasonIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportTeamsBySeasonIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.teamsBySeasonId(requestParameters.version, requestParameters.sport, requestParameters.seasonId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.teamsBySeasonId(requestParameters.seasonId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -6259,7 +5944,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async teamsSearch(requestParameters: SportApiTeamsSearchRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportTeamsSearchResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.teamsSearch(requestParameters.version, requestParameters.sport, requestParameters.name, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.teamsSearch(requestParameters.name, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -6270,7 +5955,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async topScorersBySeasonId(requestParameters: SportApiTopScorersBySeasonIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportTopScorersBySeasonIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.topScorersBySeasonId(requestParameters.version, requestParameters.sport, requestParameters.seasonId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.topScorersBySeasonId(requestParameters.seasonId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -6281,7 +5966,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async topScorersByStageId(requestParameters: SportApiTopScorersByStageIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportTopScorersByStageIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.topScorersByStageId(requestParameters.version, requestParameters.sport, requestParameters.stageId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.topScorersByStageId(requestParameters.stageId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -6292,7 +5977,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async tranfersByDateRange(requestParameters: SportApiTranfersByDateRangeRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportTranfersByDateRangeResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.tranfersByDateRange(requestParameters.version, requestParameters.sport, requestParameters.startDate, requestParameters.endDate, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.tranfersByDateRange(requestParameters.startDate, requestParameters.endDate, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -6303,7 +5988,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async transferById(requestParameters: SportApiTransferByIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportTransferByIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.transferById(requestParameters.version, requestParameters.sport, requestParameters.transferId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.transferById(requestParameters.transferId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -6313,7 +5998,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async transfersAll(requestParameters: SportApiTransfersAllRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportTransfersAllResponse>> {
+        async transfersAll(requestParameters: SportApiTransfersAllRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportTransfersAllResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.transfersAll(requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -6325,7 +6010,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async transfersByPlayerId(requestParameters: SportApiTransfersByPlayerIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportTransfersByPlayerIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.transfersByPlayerId(requestParameters.version, requestParameters.sport, requestParameters.playerId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.transfersByPlayerId(requestParameters.playerId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -6336,7 +6021,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async transfersByTeamId(requestParameters: SportApiTransfersByTeamIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportTransfersByTeamIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.transfersByTeamId(requestParameters.version, requestParameters.sport, requestParameters.teamId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.transfersByTeamId(requestParameters.teamId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -6346,7 +6031,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async transfersLatest(requestParameters: SportApiTransfersLatestRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportTransfersLatestResponse>> {
+        async transfersLatest(requestParameters: SportApiTransfersLatestRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportTransfersLatestResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.transfersLatest(requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -6358,7 +6043,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async tvStationById(requestParameters: SportApiTvStationByIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportTvStationByIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.tvStationById(requestParameters.version, requestParameters.sport, requestParameters.tvStationId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.tvStationById(requestParameters.tvStationId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -6368,7 +6053,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async tvStationsAll(requestParameters: SportApiTvStationsAllRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportTvStationsAllResponse>> {
+        async tvStationsAll(requestParameters: SportApiTvStationsAllRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportTvStationsAllResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.tvStationsAll(requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -6380,7 +6065,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async tvStationsByFixtureId(requestParameters: SportApiTvStationsByFixtureIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportTvStationsByFixtureIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.tvStationsByFixtureId(requestParameters.version, requestParameters.sport, requestParameters.fixtureId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.tvStationsByFixtureId(requestParameters.fixtureId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -6391,7 +6076,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async venueById(requestParameters: SportApiVenueByIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportVenueByIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.venueById(requestParameters.version, requestParameters.sport, requestParameters.venueId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.venueById(requestParameters.venueId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -6401,7 +6086,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async venuesAll(requestParameters: SportApiVenuesAllRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportVenuesAllResponse>> {
+        async venuesAll(requestParameters: SportApiVenuesAllRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportVenuesAllResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.venuesAll(requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -6413,7 +6098,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async venuesBySeasonId(requestParameters: SportApiVenuesBySeasonIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportVenuesBySeasonIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.venuesBySeasonId(requestParameters.version, requestParameters.sport, requestParameters.seasonId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.venuesBySeasonId(requestParameters.seasonId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -6424,7 +6109,7 @@ export const SportApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async venuesSearch(requestParameters: SportApiVenuesSearchRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SportVenuesSearchResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.venuesSearch(requestParameters.version, requestParameters.sport, requestParameters.name, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.venuesSearch(requestParameters.name, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -6454,7 +6139,7 @@ export const SportApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        coachesAll(requestParameters: SportApiCoachesAllRequest, options?: AxiosRequestConfig): AxiosPromise<SportCoachesAllResponse> {
+        coachesAll(requestParameters: SportApiCoachesAllRequest = {}, options?: AxiosRequestConfig): AxiosPromise<SportCoachesAllResponse> {
             return localVarFp.coachesAll(requestParameters, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6474,7 +6159,7 @@ export const SportApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        coachesLatest(requestParameters: SportApiCoachesLatestRequest, options?: AxiosRequestConfig): AxiosPromise<SportCoachesLatestResponse> {
+        coachesLatest(requestParameters: SportApiCoachesLatestRequest = {}, options?: AxiosRequestConfig): AxiosPromise<SportCoachesLatestResponse> {
             return localVarFp.coachesLatest(requestParameters, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6494,7 +6179,7 @@ export const SportApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        commentariesAll(requestParameters: SportApiCommentariesAllRequest, options?: AxiosRequestConfig): AxiosPromise<SportCommentariesAllResponse> {
+        commentariesAll(requestParameters: SportApiCommentariesAllRequest = {}, options?: AxiosRequestConfig): AxiosPromise<SportCommentariesAllResponse> {
             return localVarFp.commentariesAll(requestParameters, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6534,7 +6219,7 @@ export const SportApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        fixturesAll(requestParameters: SportApiFixturesAllRequest, options?: AxiosRequestConfig): AxiosPromise<SportFixturesAllResponse> {
+        fixturesAll(requestParameters: SportApiFixturesAllRequest = {}, options?: AxiosRequestConfig): AxiosPromise<SportFixturesAllResponse> {
             return localVarFp.fixturesAll(requestParameters, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6584,7 +6269,7 @@ export const SportApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        fixturesLatest(requestParameters: SportApiFixturesLatestRequest, options?: AxiosRequestConfig): AxiosPromise<string> {
+        fixturesLatest(requestParameters: SportApiFixturesLatestRequest = {}, options?: AxiosRequestConfig): AxiosPromise<string> {
             return localVarFp.fixturesLatest(requestParameters, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6634,7 +6319,7 @@ export const SportApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        leaguesAll(requestParameters: SportApiLeaguesAllRequest, options?: AxiosRequestConfig): AxiosPromise<SportLeaguesAllResponse> {
+        leaguesAll(requestParameters: SportApiLeaguesAllRequest = {}, options?: AxiosRequestConfig): AxiosPromise<SportLeaguesAllResponse> {
             return localVarFp.leaguesAll(requestParameters, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6684,7 +6369,7 @@ export const SportApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        leaguesLive(requestParameters: SportApiLeaguesLiveRequest, options?: AxiosRequestConfig): AxiosPromise<SportLeaguesLiveResponse> {
+        leaguesLive(requestParameters: SportApiLeaguesLiveRequest = {}, options?: AxiosRequestConfig): AxiosPromise<SportLeaguesLiveResponse> {
             return localVarFp.leaguesLive(requestParameters, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6704,7 +6389,7 @@ export const SportApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        livescoresAll(requestParameters: SportApiLivescoresAllRequest, options?: AxiosRequestConfig): AxiosPromise<SportLivescoresAllResponse> {
+        livescoresAll(requestParameters: SportApiLivescoresAllRequest = {}, options?: AxiosRequestConfig): AxiosPromise<SportLivescoresAllResponse> {
             return localVarFp.livescoresAll(requestParameters, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6714,7 +6399,7 @@ export const SportApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        livescoresAllInPlay(requestParameters: SportApiLivescoresAllInPlayRequest, options?: AxiosRequestConfig): AxiosPromise<SportLivescoresAllInPlayResponse> {
+        livescoresAllInPlay(requestParameters: SportApiLivescoresAllInPlayRequest = {}, options?: AxiosRequestConfig): AxiosPromise<SportLivescoresAllInPlayResponse> {
             return localVarFp.livescoresAllInPlay(requestParameters, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6724,7 +6409,7 @@ export const SportApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        livescoresLatest(requestParameters: SportApiLivescoresLatestRequest, options?: AxiosRequestConfig): AxiosPromise<SportLivescoresLatestResponse> {
+        livescoresLatest(requestParameters: SportApiLivescoresLatestRequest = {}, options?: AxiosRequestConfig): AxiosPromise<SportLivescoresLatestResponse> {
             return localVarFp.livescoresLatest(requestParameters, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6734,7 +6419,7 @@ export const SportApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        newsAllPostMatch(requestParameters: SportApiNewsAllPostMatchRequest, options?: AxiosRequestConfig): AxiosPromise<string> {
+        newsAllPostMatch(requestParameters: SportApiNewsAllPostMatchRequest = {}, options?: AxiosRequestConfig): AxiosPromise<string> {
             return localVarFp.newsAllPostMatch(requestParameters, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6744,7 +6429,7 @@ export const SportApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        newsAllPreMatch(requestParameters: SportApiNewsAllPreMatchRequest, options?: AxiosRequestConfig): AxiosPromise<SportNewsAllPreMatchResponse> {
+        newsAllPreMatch(requestParameters: SportApiNewsAllPreMatchRequest = {}, options?: AxiosRequestConfig): AxiosPromise<SportNewsAllPreMatchResponse> {
             return localVarFp.newsAllPreMatch(requestParameters, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6774,7 +6459,7 @@ export const SportApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        newsUpcomingPostMatch(requestParameters: SportApiNewsUpcomingPostMatchRequest, options?: AxiosRequestConfig): AxiosPromise<string> {
+        newsUpcomingPostMatch(requestParameters: SportApiNewsUpcomingPostMatchRequest = {}, options?: AxiosRequestConfig): AxiosPromise<string> {
             return localVarFp.newsUpcomingPostMatch(requestParameters, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6784,7 +6469,7 @@ export const SportApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        newsUpcomingPreMatch(requestParameters: SportApiNewsUpcomingPreMatchRequest, options?: AxiosRequestConfig): AxiosPromise<SportNewsUpcomingPreMatchResponse> {
+        newsUpcomingPreMatch(requestParameters: SportApiNewsUpcomingPreMatchRequest = {}, options?: AxiosRequestConfig): AxiosPromise<SportNewsUpcomingPreMatchResponse> {
             return localVarFp.newsUpcomingPreMatch(requestParameters, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6794,7 +6479,7 @@ export const SportApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        oddsAllInPlay(requestParameters: SportApiOddsAllInPlayRequest, options?: AxiosRequestConfig): AxiosPromise<SportOddsAllInPlayResponse> {
+        oddsAllInPlay(requestParameters: SportApiOddsAllInPlayRequest = {}, options?: AxiosRequestConfig): AxiosPromise<SportOddsAllInPlayResponse> {
             return localVarFp.oddsAllInPlay(requestParameters, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6804,7 +6489,7 @@ export const SportApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        oddsAllPreMatch(requestParameters: SportApiOddsAllPreMatchRequest, options?: AxiosRequestConfig): AxiosPromise<SportOddsAllPreMatchResponse> {
+        oddsAllPreMatch(requestParameters: SportApiOddsAllPreMatchRequest = {}, options?: AxiosRequestConfig): AxiosPromise<SportOddsAllPreMatchResponse> {
             return localVarFp.oddsAllPreMatch(requestParameters, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6844,7 +6529,7 @@ export const SportApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        oddsLatestInPlay(requestParameters: SportApiOddsLatestInPlayRequest, options?: AxiosRequestConfig): AxiosPromise<object> {
+        oddsLatestInPlay(requestParameters: SportApiOddsLatestInPlayRequest = {}, options?: AxiosRequestConfig): AxiosPromise<object> {
             return localVarFp.oddsLatestInPlay(requestParameters, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6854,7 +6539,7 @@ export const SportApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        oddsLatestPreMatch(requestParameters: SportApiOddsLatestPreMatchRequest, options?: AxiosRequestConfig): AxiosPromise<object> {
+        oddsLatestPreMatch(requestParameters: SportApiOddsLatestPreMatchRequest = {}, options?: AxiosRequestConfig): AxiosPromise<object> {
             return localVarFp.oddsLatestPreMatch(requestParameters, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6904,7 +6589,7 @@ export const SportApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        playersAll(requestParameters: SportApiPlayersAllRequest, options?: AxiosRequestConfig): AxiosPromise<SportPlayersAllResponse> {
+        playersAll(requestParameters: SportApiPlayersAllRequest = {}, options?: AxiosRequestConfig): AxiosPromise<SportPlayersAllResponse> {
             return localVarFp.playersAll(requestParameters, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6924,7 +6609,7 @@ export const SportApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        playersLatest(requestParameters: SportApiPlayersLatestRequest, options?: AxiosRequestConfig): AxiosPromise<SportPlayersLatestResponse> {
+        playersLatest(requestParameters: SportApiPlayersLatestRequest = {}, options?: AxiosRequestConfig): AxiosPromise<SportPlayersLatestResponse> {
             return localVarFp.playersLatest(requestParameters, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6944,7 +6629,7 @@ export const SportApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        predictionsAll(requestParameters: SportApiPredictionsAllRequest, options?: AxiosRequestConfig): AxiosPromise<SportPredictionsAllResponse> {
+        predictionsAll(requestParameters: SportApiPredictionsAllRequest = {}, options?: AxiosRequestConfig): AxiosPromise<SportPredictionsAllResponse> {
             return localVarFp.predictionsAll(requestParameters, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6954,7 +6639,7 @@ export const SportApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        predictionsAllValueBets(requestParameters: SportApiPredictionsAllValueBetsRequest, options?: AxiosRequestConfig): AxiosPromise<SportPredictionsAllValueBetsResponse> {
+        predictionsAllValueBets(requestParameters: SportApiPredictionsAllValueBetsRequest = {}, options?: AxiosRequestConfig): AxiosPromise<SportPredictionsAllValueBetsResponse> {
             return localVarFp.predictionsAllValueBets(requestParameters, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6994,7 +6679,7 @@ export const SportApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        refereesAll(requestParameters: SportApiRefereesAllRequest, options?: AxiosRequestConfig): AxiosPromise<SportRefereesAllResponse> {
+        refereesAll(requestParameters: SportApiRefereesAllRequest = {}, options?: AxiosRequestConfig): AxiosPromise<SportRefereesAllResponse> {
             return localVarFp.refereesAll(requestParameters, options).then((request) => request(axios, basePath));
         },
         /**
@@ -7034,7 +6719,7 @@ export const SportApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        rivalsAll(requestParameters: SportApiRivalsAllRequest, options?: AxiosRequestConfig): AxiosPromise<SportRivalsAllResponse> {
+        rivalsAll(requestParameters: SportApiRivalsAllRequest = {}, options?: AxiosRequestConfig): AxiosPromise<SportRivalsAllResponse> {
             return localVarFp.rivalsAll(requestParameters, options).then((request) => request(axios, basePath));
         },
         /**
@@ -7064,7 +6749,7 @@ export const SportApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        roundsAll(requestParameters: SportApiRoundsAllRequest, options?: AxiosRequestConfig): AxiosPromise<SportRoundsAllResponse> {
+        roundsAll(requestParameters: SportApiRoundsAllRequest = {}, options?: AxiosRequestConfig): AxiosPromise<SportRoundsAllResponse> {
             return localVarFp.roundsAll(requestParameters, options).then((request) => request(axios, basePath));
         },
         /**
@@ -7134,7 +6819,7 @@ export const SportApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        seasonsAll(requestParameters: SportApiSeasonsAllRequest, options?: AxiosRequestConfig): AxiosPromise<SportSeasonsAllResponse> {
+        seasonsAll(requestParameters: SportApiSeasonsAllRequest = {}, options?: AxiosRequestConfig): AxiosPromise<SportSeasonsAllResponse> {
             return localVarFp.seasonsAll(requestParameters, options).then((request) => request(axios, basePath));
         },
         /**
@@ -7194,7 +6879,7 @@ export const SportApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        stagesAll(requestParameters: SportApiStagesAllRequest, options?: AxiosRequestConfig): AxiosPromise<SportStagesAllResponse> {
+        stagesAll(requestParameters: SportApiStagesAllRequest = {}, options?: AxiosRequestConfig): AxiosPromise<SportStagesAllResponse> {
             return localVarFp.stagesAll(requestParameters, options).then((request) => request(axios, basePath));
         },
         /**
@@ -7234,7 +6919,7 @@ export const SportApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        standingsAll(requestParameters: SportApiStandingsAllRequest, options?: AxiosRequestConfig): AxiosPromise<SportStandingsAllResponse> {
+        standingsAll(requestParameters: SportApiStandingsAllRequest = {}, options?: AxiosRequestConfig): AxiosPromise<SportStandingsAllResponse> {
             return localVarFp.standingsAll(requestParameters, options).then((request) => request(axios, basePath));
         },
         /**
@@ -7284,7 +6969,7 @@ export const SportApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        statesBySport(requestParameters: SportApiStatesBySportRequest, options?: AxiosRequestConfig): AxiosPromise<SportStatesBySportResponse> {
+        statesBySport(requestParameters: SportApiStatesBySportRequest = {}, options?: AxiosRequestConfig): AxiosPromise<SportStatesBySportResponse> {
             return localVarFp.statesBySport(requestParameters, options).then((request) => request(axios, basePath));
         },
         /**
@@ -7294,7 +6979,7 @@ export const SportApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        teamsAll(requestParameters: SportApiTeamsAllRequest, options?: AxiosRequestConfig): AxiosPromise<SportTeamsAllResponse> {
+        teamsAll(requestParameters: SportApiTeamsAllRequest = {}, options?: AxiosRequestConfig): AxiosPromise<SportTeamsAllResponse> {
             return localVarFp.teamsAll(requestParameters, options).then((request) => request(axios, basePath));
         },
         /**
@@ -7384,7 +7069,7 @@ export const SportApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        transfersAll(requestParameters: SportApiTransfersAllRequest, options?: AxiosRequestConfig): AxiosPromise<SportTransfersAllResponse> {
+        transfersAll(requestParameters: SportApiTransfersAllRequest = {}, options?: AxiosRequestConfig): AxiosPromise<SportTransfersAllResponse> {
             return localVarFp.transfersAll(requestParameters, options).then((request) => request(axios, basePath));
         },
         /**
@@ -7414,7 +7099,7 @@ export const SportApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        transfersLatest(requestParameters: SportApiTransfersLatestRequest, options?: AxiosRequestConfig): AxiosPromise<SportTransfersLatestResponse> {
+        transfersLatest(requestParameters: SportApiTransfersLatestRequest = {}, options?: AxiosRequestConfig): AxiosPromise<SportTransfersLatestResponse> {
             return localVarFp.transfersLatest(requestParameters, options).then((request) => request(axios, basePath));
         },
         /**
@@ -7434,7 +7119,7 @@ export const SportApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        tvStationsAll(requestParameters: SportApiTvStationsAllRequest, options?: AxiosRequestConfig): AxiosPromise<SportTvStationsAllResponse> {
+        tvStationsAll(requestParameters: SportApiTvStationsAllRequest = {}, options?: AxiosRequestConfig): AxiosPromise<SportTvStationsAllResponse> {
             return localVarFp.tvStationsAll(requestParameters, options).then((request) => request(axios, basePath));
         },
         /**
@@ -7464,7 +7149,7 @@ export const SportApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        venuesAll(requestParameters: SportApiVenuesAllRequest, options?: AxiosRequestConfig): AxiosPromise<SportVenuesAllResponse> {
+        venuesAll(requestParameters: SportApiVenuesAllRequest = {}, options?: AxiosRequestConfig): AxiosPromise<SportVenuesAllResponse> {
             return localVarFp.venuesAll(requestParameters, options).then((request) => request(axios, basePath));
         },
         /**
@@ -7498,25 +7183,25 @@ export const SportApiFactory = function (configuration?: Configuration, basePath
 export type SportApiCoachByIdRequest = {
     
     /**
+    * The ID of the coach you want to retrieve.
+    * @type {number}
+    * @memberof SportApiCoachById
+    */
+    readonly coachId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiCoachById
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiCoachById
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the coach you want to retrieve.
-    * @type {number}
-    * @memberof SportApiCoachById
-    */
-    readonly coachId: number
+    readonly sport?: string
     
 }
 
@@ -7532,14 +7217,14 @@ export type SportApiCoachesAllRequest = {
     * @type {string}
     * @memberof SportApiCoachesAll
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiCoachesAll
     */
-    readonly sport: string
+    readonly sport?: string
     
 }
 
@@ -7551,25 +7236,25 @@ export type SportApiCoachesAllRequest = {
 export type SportApiCoachesByCountryIdRequest = {
     
     /**
+    * The ID of the country you want to retrieve coaches from.
+    * @type {number}
+    * @memberof SportApiCoachesByCountryId
+    */
+    readonly countryId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiCoachesByCountryId
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiCoachesByCountryId
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the country you want to retrieve coaches from.
-    * @type {number}
-    * @memberof SportApiCoachesByCountryId
-    */
-    readonly countryId: number
+    readonly sport?: string
     
 }
 
@@ -7585,14 +7270,14 @@ export type SportApiCoachesLatestRequest = {
     * @type {string}
     * @memberof SportApiCoachesLatest
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiCoachesLatest
     */
-    readonly sport: string
+    readonly sport?: string
     
 }
 
@@ -7604,25 +7289,25 @@ export type SportApiCoachesLatestRequest = {
 export type SportApiCoachesSearchRequest = {
     
     /**
+    * The name you want to search on.
+    * @type {string}
+    * @memberof SportApiCoachesSearch
+    */
+    readonly name: string
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiCoachesSearch
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiCoachesSearch
     */
-    readonly sport: string
-    
-    /**
-    * The name you want to search on.
-    * @type {string}
-    * @memberof SportApiCoachesSearch
-    */
-    readonly name: string
+    readonly sport?: string
     
 }
 
@@ -7638,14 +7323,14 @@ export type SportApiCommentariesAllRequest = {
     * @type {string}
     * @memberof SportApiCommentariesAll
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiCommentariesAll
     */
-    readonly sport: string
+    readonly sport?: string
     
 }
 
@@ -7657,25 +7342,25 @@ export type SportApiCommentariesAllRequest = {
 export type SportApiCommentariesByFixtureIdRequest = {
     
     /**
+    * The ID of the fixture you want to retrieve commentaries from.
+    * @type {number}
+    * @memberof SportApiCommentariesByFixtureId
+    */
+    readonly fixtureId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiCommentariesByFixtureId
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiCommentariesByFixtureId
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the fixture you want to retrieve commentaries from.
-    * @type {number}
-    * @memberof SportApiCommentariesByFixtureId
-    */
-    readonly fixtureId: number
+    readonly sport?: string
     
 }
 
@@ -7685,20 +7370,6 @@ export type SportApiCommentariesByFixtureIdRequest = {
  * @interface SportApiFixtureByDateRangeForTeamRequest
  */
 export type SportApiFixtureByDateRangeForTeamRequest = {
-    
-    /**
-    * The version of the API.
-    * @type {string}
-    * @memberof SportApiFixtureByDateRangeForTeam
-    */
-    readonly version: string
-    
-    /**
-    * The sport you want retrieve entities from.
-    * @type {string}
-    * @memberof SportApiFixtureByDateRangeForTeam
-    */
-    readonly sport: string
     
     /**
     * 
@@ -7721,6 +7392,20 @@ export type SportApiFixtureByDateRangeForTeamRequest = {
     */
     readonly teamId: string
     
+    /**
+    * The version of the API.
+    * @type {string}
+    * @memberof SportApiFixtureByDateRangeForTeam
+    */
+    readonly version?: string
+    
+    /**
+    * The sport you want retrieve entities from.
+    * @type {string}
+    * @memberof SportApiFixtureByDateRangeForTeam
+    */
+    readonly sport?: string
+    
 }
 
 /**
@@ -7731,25 +7416,25 @@ export type SportApiFixtureByDateRangeForTeamRequest = {
 export type SportApiFixtureByIdRequest = {
     
     /**
+    * The ID of the fixture you want to retrieve.
+    * @type {number}
+    * @memberof SportApiFixtureById
+    */
+    readonly fixtureId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiFixtureById
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiFixtureById
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the fixture you want to retrieve.
-    * @type {number}
-    * @memberof SportApiFixtureById
-    */
-    readonly fixtureId: number
+    readonly sport?: string
     
 }
 
@@ -7765,14 +7450,14 @@ export type SportApiFixturesAllRequest = {
     * @type {string}
     * @memberof SportApiFixturesAll
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiFixturesAll
     */
-    readonly sport: string
+    readonly sport?: string
     
 }
 
@@ -7784,25 +7469,25 @@ export type SportApiFixturesAllRequest = {
 export type SportApiFixturesByDateRequest = {
     
     /**
+    * The date you want to retrieve fixtures from.
+    * @type {string}
+    * @memberof SportApiFixturesByDate
+    */
+    readonly date: string
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiFixturesByDate
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiFixturesByDate
     */
-    readonly sport: string
-    
-    /**
-    * The date you want to retrieve fixtures from.
-    * @type {string}
-    * @memberof SportApiFixturesByDate
-    */
-    readonly date: string
+    readonly sport?: string
     
 }
 
@@ -7812,20 +7497,6 @@ export type SportApiFixturesByDateRequest = {
  * @interface SportApiFixturesByDateRangeRequest
  */
 export type SportApiFixturesByDateRangeRequest = {
-    
-    /**
-    * The version of the API.
-    * @type {string}
-    * @memberof SportApiFixturesByDateRange
-    */
-    readonly version: string
-    
-    /**
-    * The sport you want retrieve entities from.
-    * @type {string}
-    * @memberof SportApiFixturesByDateRange
-    */
-    readonly sport: string
     
     /**
     * The start date you want to retrieve fixtures from.
@@ -7841,6 +7512,20 @@ export type SportApiFixturesByDateRangeRequest = {
     */
     readonly endDate: string
     
+    /**
+    * The version of the API.
+    * @type {string}
+    * @memberof SportApiFixturesByDateRange
+    */
+    readonly version?: string
+    
+    /**
+    * The sport you want retrieve entities from.
+    * @type {string}
+    * @memberof SportApiFixturesByDateRange
+    */
+    readonly sport?: string
+    
 }
 
 /**
@@ -7851,25 +7536,25 @@ export type SportApiFixturesByDateRangeRequest = {
 export type SportApiFixturesByIdsRequest = {
     
     /**
+    * The IDs you want to retrieve.
+    * @type {string}
+    * @memberof SportApiFixturesByIds
+    */
+    readonly fixtureIds: string
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiFixturesByIds
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiFixturesByIds
     */
-    readonly sport: string
-    
-    /**
-    * The IDs you want to retrieve.
-    * @type {string}
-    * @memberof SportApiFixturesByIds
-    */
-    readonly fixtureIds: string
+    readonly sport?: string
     
 }
 
@@ -7879,20 +7564,6 @@ export type SportApiFixturesByIdsRequest = {
  * @interface SportApiFixturesHeadToHeadRequest
  */
 export type SportApiFixturesHeadToHeadRequest = {
-    
-    /**
-    * The version of the API.
-    * @type {string}
-    * @memberof SportApiFixturesHeadToHead
-    */
-    readonly version: string
-    
-    /**
-    * The sport you want retrieve entities from.
-    * @type {string}
-    * @memberof SportApiFixturesHeadToHead
-    */
-    readonly sport: string
     
     /**
     * The ID of the first team retrieve fixtures from.
@@ -7908,6 +7579,20 @@ export type SportApiFixturesHeadToHeadRequest = {
     */
     readonly secondTeam: number
     
+    /**
+    * The version of the API.
+    * @type {string}
+    * @memberof SportApiFixturesHeadToHead
+    */
+    readonly version?: string
+    
+    /**
+    * The sport you want retrieve entities from.
+    * @type {string}
+    * @memberof SportApiFixturesHeadToHead
+    */
+    readonly sport?: string
+    
 }
 
 /**
@@ -7922,14 +7607,14 @@ export type SportApiFixturesLatestRequest = {
     * @type {string}
     * @memberof SportApiFixturesLatest
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiFixturesLatest
     */
-    readonly sport: string
+    readonly sport?: string
     
 }
 
@@ -7941,25 +7626,25 @@ export type SportApiFixturesLatestRequest = {
 export type SportApiFixturesSearchRequest = {
     
     /**
+    * The name you want search on.
+    * @type {string}
+    * @memberof SportApiFixturesSearch
+    */
+    readonly name: string
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiFixturesSearch
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiFixturesSearch
     */
-    readonly sport: string
-    
-    /**
-    * The name you want search on.
-    * @type {string}
-    * @memberof SportApiFixturesSearch
-    */
-    readonly name: string
+    readonly sport?: string
     
 }
 
@@ -7971,25 +7656,25 @@ export type SportApiFixturesSearchRequest = {
 export type SportApiLeagueByIdRequest = {
     
     /**
+    * The ID of the league you want to retrieve.
+    * @type {number}
+    * @memberof SportApiLeagueById
+    */
+    readonly leagueId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiLeagueById
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiLeagueById
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the league you want to retrieve.
-    * @type {number}
-    * @memberof SportApiLeagueById
-    */
-    readonly leagueId: number
+    readonly sport?: string
     
 }
 
@@ -8001,25 +7686,25 @@ export type SportApiLeagueByIdRequest = {
 export type SportApiLeagueEnrichmentsRequest = {
     
     /**
+    * The ID of the league you want to retrieve enrichments from.
+    * @type {number}
+    * @memberof SportApiLeagueEnrichments
+    */
+    readonly leagueId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiLeagueEnrichments
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiLeagueEnrichments
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the league you want to retrieve enrichments from.
-    * @type {number}
-    * @memberof SportApiLeagueEnrichments
-    */
-    readonly leagueId: number
+    readonly sport?: string
     
 }
 
@@ -8031,25 +7716,25 @@ export type SportApiLeagueEnrichmentsRequest = {
 export type SportApiLeagueShirtsRequest = {
     
     /**
+    * The ID of the league you want to retrieve.
+    * @type {number}
+    * @memberof SportApiLeagueShirts
+    */
+    readonly leagueId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiLeagueShirts
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiLeagueShirts
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the league you want to retrieve.
-    * @type {number}
-    * @memberof SportApiLeagueShirts
-    */
-    readonly leagueId: number
+    readonly sport?: string
     
 }
 
@@ -8065,14 +7750,14 @@ export type SportApiLeaguesAllRequest = {
     * @type {string}
     * @memberof SportApiLeaguesAll
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiLeaguesAll
     */
-    readonly sport: string
+    readonly sport?: string
     
 }
 
@@ -8084,25 +7769,25 @@ export type SportApiLeaguesAllRequest = {
 export type SportApiLeaguesByCountryIdRequest = {
     
     /**
+    * The ID of the country you want to retrieve leagues from.
+    * @type {number}
+    * @memberof SportApiLeaguesByCountryId
+    */
+    readonly countryId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiLeaguesByCountryId
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiLeaguesByCountryId
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the country you want to retrieve leagues from.
-    * @type {number}
-    * @memberof SportApiLeaguesByCountryId
-    */
-    readonly countryId: number
+    readonly sport?: string
     
 }
 
@@ -8114,25 +7799,25 @@ export type SportApiLeaguesByCountryIdRequest = {
 export type SportApiLeaguesByDateRequest = {
     
     /**
+    * The date of fixtures you want to retrieve leagues from.
+    * @type {string}
+    * @memberof SportApiLeaguesByDate
+    */
+    readonly date: string
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiLeaguesByDate
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiLeaguesByDate
     */
-    readonly sport: string
-    
-    /**
-    * The date of fixtures you want to retrieve leagues from.
-    * @type {string}
-    * @memberof SportApiLeaguesByDate
-    */
-    readonly date: string
+    readonly sport?: string
     
 }
 
@@ -8144,25 +7829,25 @@ export type SportApiLeaguesByDateRequest = {
 export type SportApiLeaguesByTeamIdRequest = {
     
     /**
+    * The ID of the team you want to retrieve leagues from.
+    * @type {number}
+    * @memberof SportApiLeaguesByTeamId
+    */
+    readonly teamId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiLeaguesByTeamId
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiLeaguesByTeamId
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the team you want to retrieve leagues from.
-    * @type {number}
-    * @memberof SportApiLeaguesByTeamId
-    */
-    readonly teamId: number
+    readonly sport?: string
     
 }
 
@@ -8174,25 +7859,25 @@ export type SportApiLeaguesByTeamIdRequest = {
 export type SportApiLeaguesCurrentByTeamIdRequest = {
     
     /**
+    * The ID of the team you want to retrieve current leagues from.
+    * @type {number}
+    * @memberof SportApiLeaguesCurrentByTeamId
+    */
+    readonly teamId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiLeaguesCurrentByTeamId
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiLeaguesCurrentByTeamId
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the team you want to retrieve current leagues from.
-    * @type {number}
-    * @memberof SportApiLeaguesCurrentByTeamId
-    */
-    readonly teamId: number
+    readonly sport?: string
     
 }
 
@@ -8208,14 +7893,14 @@ export type SportApiLeaguesLiveRequest = {
     * @type {string}
     * @memberof SportApiLeaguesLive
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiLeaguesLive
     */
-    readonly sport: string
+    readonly sport?: string
     
 }
 
@@ -8227,25 +7912,25 @@ export type SportApiLeaguesLiveRequest = {
 export type SportApiLeaguesSearchRequest = {
     
     /**
+    * The name you want to search on.
+    * @type {string}
+    * @memberof SportApiLeaguesSearch
+    */
+    readonly name: string
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiLeaguesSearch
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiLeaguesSearch
     */
-    readonly sport: string
-    
-    /**
-    * The name you want to search on.
-    * @type {string}
-    * @memberof SportApiLeaguesSearch
-    */
-    readonly name: string
+    readonly sport?: string
     
 }
 
@@ -8261,14 +7946,14 @@ export type SportApiLivescoresAllRequest = {
     * @type {string}
     * @memberof SportApiLivescoresAll
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiLivescoresAll
     */
-    readonly sport: string
+    readonly sport?: string
     
 }
 
@@ -8284,14 +7969,14 @@ export type SportApiLivescoresAllInPlayRequest = {
     * @type {string}
     * @memberof SportApiLivescoresAllInPlay
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiLivescoresAllInPlay
     */
-    readonly sport: string
+    readonly sport?: string
     
 }
 
@@ -8307,14 +7992,14 @@ export type SportApiLivescoresLatestRequest = {
     * @type {string}
     * @memberof SportApiLivescoresLatest
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiLivescoresLatest
     */
-    readonly sport: string
+    readonly sport?: string
     
 }
 
@@ -8330,14 +8015,14 @@ export type SportApiNewsAllPostMatchRequest = {
     * @type {string}
     * @memberof SportApiNewsAllPostMatch
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiNewsAllPostMatch
     */
-    readonly sport: string
+    readonly sport?: string
     
 }
 
@@ -8353,14 +8038,14 @@ export type SportApiNewsAllPreMatchRequest = {
     * @type {string}
     * @memberof SportApiNewsAllPreMatch
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiNewsAllPreMatch
     */
-    readonly sport: string
+    readonly sport?: string
     
 }
 
@@ -8372,25 +8057,25 @@ export type SportApiNewsAllPreMatchRequest = {
 export type SportApiNewsPostMatchBySeasonIdRequest = {
     
     /**
+    * The ID of the season you want to retrieve post-match news from.
+    * @type {number}
+    * @memberof SportApiNewsPostMatchBySeasonId
+    */
+    readonly seasonId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiNewsPostMatchBySeasonId
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiNewsPostMatchBySeasonId
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the season you want to retrieve post-match news from.
-    * @type {number}
-    * @memberof SportApiNewsPostMatchBySeasonId
-    */
-    readonly seasonId: number
+    readonly sport?: string
     
 }
 
@@ -8402,25 +8087,25 @@ export type SportApiNewsPostMatchBySeasonIdRequest = {
 export type SportApiNewsPreMatchBySeasonIdRequest = {
     
     /**
+    * The ID of the season you want to retrieve post-match news from.
+    * @type {number}
+    * @memberof SportApiNewsPreMatchBySeasonId
+    */
+    readonly seasonId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiNewsPreMatchBySeasonId
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiNewsPreMatchBySeasonId
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the season you want to retrieve post-match news from.
-    * @type {number}
-    * @memberof SportApiNewsPreMatchBySeasonId
-    */
-    readonly seasonId: number
+    readonly sport?: string
     
 }
 
@@ -8436,14 +8121,14 @@ export type SportApiNewsUpcomingPostMatchRequest = {
     * @type {string}
     * @memberof SportApiNewsUpcomingPostMatch
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiNewsUpcomingPostMatch
     */
-    readonly sport: string
+    readonly sport?: string
     
 }
 
@@ -8459,14 +8144,14 @@ export type SportApiNewsUpcomingPreMatchRequest = {
     * @type {string}
     * @memberof SportApiNewsUpcomingPreMatch
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiNewsUpcomingPreMatch
     */
-    readonly sport: string
+    readonly sport?: string
     
 }
 
@@ -8482,14 +8167,14 @@ export type SportApiOddsAllInPlayRequest = {
     * @type {string}
     * @memberof SportApiOddsAllInPlay
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiOddsAllInPlay
     */
-    readonly sport: string
+    readonly sport?: string
     
 }
 
@@ -8505,14 +8190,14 @@ export type SportApiOddsAllPreMatchRequest = {
     * @type {string}
     * @memberof SportApiOddsAllPreMatch
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiOddsAllPreMatch
     */
-    readonly sport: string
+    readonly sport?: string
     
 }
 
@@ -8522,20 +8207,6 @@ export type SportApiOddsAllPreMatchRequest = {
  * @interface SportApiOddsInPlayByFixtureAndBookmakerIdRequest
  */
 export type SportApiOddsInPlayByFixtureAndBookmakerIdRequest = {
-    
-    /**
-    * The version of the API.
-    * @type {string}
-    * @memberof SportApiOddsInPlayByFixtureAndBookmakerId
-    */
-    readonly version: string
-    
-    /**
-    * The sport you want retrieve entities from.
-    * @type {string}
-    * @memberof SportApiOddsInPlayByFixtureAndBookmakerId
-    */
-    readonly sport: string
     
     /**
     * The ID of the fixture you want to retrieve in-play odds from.
@@ -8551,6 +8222,20 @@ export type SportApiOddsInPlayByFixtureAndBookmakerIdRequest = {
     */
     readonly bookmakerId: number
     
+    /**
+    * The version of the API.
+    * @type {string}
+    * @memberof SportApiOddsInPlayByFixtureAndBookmakerId
+    */
+    readonly version?: string
+    
+    /**
+    * The sport you want retrieve entities from.
+    * @type {string}
+    * @memberof SportApiOddsInPlayByFixtureAndBookmakerId
+    */
+    readonly sport?: string
+    
 }
 
 /**
@@ -8559,20 +8244,6 @@ export type SportApiOddsInPlayByFixtureAndBookmakerIdRequest = {
  * @interface SportApiOddsInPlayByFixtureAndMarketIdRequest
  */
 export type SportApiOddsInPlayByFixtureAndMarketIdRequest = {
-    
-    /**
-    * The version of the API.
-    * @type {string}
-    * @memberof SportApiOddsInPlayByFixtureAndMarketId
-    */
-    readonly version: string
-    
-    /**
-    * The sport you want retrieve entities from.
-    * @type {string}
-    * @memberof SportApiOddsInPlayByFixtureAndMarketId
-    */
-    readonly sport: string
     
     /**
     * The ID of the fixture you want to retrieve in-play odds from.
@@ -8588,6 +8259,20 @@ export type SportApiOddsInPlayByFixtureAndMarketIdRequest = {
     */
     readonly marketId: number
     
+    /**
+    * The version of the API.
+    * @type {string}
+    * @memberof SportApiOddsInPlayByFixtureAndMarketId
+    */
+    readonly version?: string
+    
+    /**
+    * The sport you want retrieve entities from.
+    * @type {string}
+    * @memberof SportApiOddsInPlayByFixtureAndMarketId
+    */
+    readonly sport?: string
+    
 }
 
 /**
@@ -8598,25 +8283,25 @@ export type SportApiOddsInPlayByFixtureAndMarketIdRequest = {
 export type SportApiOddsInPlayByFixtureIdRequest = {
     
     /**
+    * The ID of the fixture you want to retrieve in-play odds from.
+    * @type {number}
+    * @memberof SportApiOddsInPlayByFixtureId
+    */
+    readonly fixtureId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiOddsInPlayByFixtureId
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiOddsInPlayByFixtureId
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the fixture you want to retrieve in-play odds from.
-    * @type {number}
-    * @memberof SportApiOddsInPlayByFixtureId
-    */
-    readonly fixtureId: number
+    readonly sport?: string
     
 }
 
@@ -8632,14 +8317,14 @@ export type SportApiOddsLatestInPlayRequest = {
     * @type {string}
     * @memberof SportApiOddsLatestInPlay
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiOddsLatestInPlay
     */
-    readonly sport: string
+    readonly sport?: string
     
 }
 
@@ -8655,14 +8340,14 @@ export type SportApiOddsLatestPreMatchRequest = {
     * @type {string}
     * @memberof SportApiOddsLatestPreMatch
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiOddsLatestPreMatch
     */
-    readonly sport: string
+    readonly sport?: string
     
 }
 
@@ -8672,20 +8357,6 @@ export type SportApiOddsLatestPreMatchRequest = {
  * @interface SportApiOddsPreMatchByFixtureAndBookmakerIdRequest
  */
 export type SportApiOddsPreMatchByFixtureAndBookmakerIdRequest = {
-    
-    /**
-    * The version of the API.
-    * @type {string}
-    * @memberof SportApiOddsPreMatchByFixtureAndBookmakerId
-    */
-    readonly version: string
-    
-    /**
-    * The sport you want retrieve entities from.
-    * @type {string}
-    * @memberof SportApiOddsPreMatchByFixtureAndBookmakerId
-    */
-    readonly sport: string
     
     /**
     * The ID of the fixture you want to retrieve pre-match odds from.
@@ -8701,6 +8372,20 @@ export type SportApiOddsPreMatchByFixtureAndBookmakerIdRequest = {
     */
     readonly bookmakerId: number
     
+    /**
+    * The version of the API.
+    * @type {string}
+    * @memberof SportApiOddsPreMatchByFixtureAndBookmakerId
+    */
+    readonly version?: string
+    
+    /**
+    * The sport you want retrieve entities from.
+    * @type {string}
+    * @memberof SportApiOddsPreMatchByFixtureAndBookmakerId
+    */
+    readonly sport?: string
+    
 }
 
 /**
@@ -8709,20 +8394,6 @@ export type SportApiOddsPreMatchByFixtureAndBookmakerIdRequest = {
  * @interface SportApiOddsPreMatchByFixtureAndMarketIdRequest
  */
 export type SportApiOddsPreMatchByFixtureAndMarketIdRequest = {
-    
-    /**
-    * The version of the API.
-    * @type {string}
-    * @memberof SportApiOddsPreMatchByFixtureAndMarketId
-    */
-    readonly version: string
-    
-    /**
-    * The sport you want retrieve entities from.
-    * @type {string}
-    * @memberof SportApiOddsPreMatchByFixtureAndMarketId
-    */
-    readonly sport: string
     
     /**
     * The ID of the fixture you want to retrieve pre-match odds from.
@@ -8738,6 +8409,20 @@ export type SportApiOddsPreMatchByFixtureAndMarketIdRequest = {
     */
     readonly marketId: number
     
+    /**
+    * The version of the API.
+    * @type {string}
+    * @memberof SportApiOddsPreMatchByFixtureAndMarketId
+    */
+    readonly version?: string
+    
+    /**
+    * The sport you want retrieve entities from.
+    * @type {string}
+    * @memberof SportApiOddsPreMatchByFixtureAndMarketId
+    */
+    readonly sport?: string
+    
 }
 
 /**
@@ -8748,25 +8433,25 @@ export type SportApiOddsPreMatchByFixtureAndMarketIdRequest = {
 export type SportApiOddsPreMatchByFixtureIdRequest = {
     
     /**
+    * The ID of the fixture you want to retrieve pre-match odds from.
+    * @type {number}
+    * @memberof SportApiOddsPreMatchByFixtureId
+    */
+    readonly fixtureId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiOddsPreMatchByFixtureId
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiOddsPreMatchByFixtureId
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the fixture you want to retrieve pre-match odds from.
-    * @type {number}
-    * @memberof SportApiOddsPreMatchByFixtureId
-    */
-    readonly fixtureId: number
+    readonly sport?: string
     
 }
 
@@ -8778,25 +8463,25 @@ export type SportApiOddsPreMatchByFixtureIdRequest = {
 export type SportApiPlayerByIdRequest = {
     
     /**
+    * The ID of the player you want to retrieve.
+    * @type {number}
+    * @memberof SportApiPlayerById
+    */
+    readonly playerId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiPlayerById
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiPlayerById
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the player you want to retrieve.
-    * @type {number}
-    * @memberof SportApiPlayerById
-    */
-    readonly playerId: number
+    readonly sport?: string
     
 }
 
@@ -8812,14 +8497,14 @@ export type SportApiPlayersAllRequest = {
     * @type {string}
     * @memberof SportApiPlayersAll
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiPlayersAll
     */
-    readonly sport: string
+    readonly sport?: string
     
 }
 
@@ -8831,25 +8516,25 @@ export type SportApiPlayersAllRequest = {
 export type SportApiPlayersByCountryIdRequest = {
     
     /**
+    * The ID of the country you want to retrieve players from.
+    * @type {number}
+    * @memberof SportApiPlayersByCountryId
+    */
+    readonly countryId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiPlayersByCountryId
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiPlayersByCountryId
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the country you want to retrieve players from.
-    * @type {number}
-    * @memberof SportApiPlayersByCountryId
-    */
-    readonly countryId: number
+    readonly sport?: string
     
 }
 
@@ -8865,14 +8550,14 @@ export type SportApiPlayersLatestRequest = {
     * @type {string}
     * @memberof SportApiPlayersLatest
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiPlayersLatest
     */
-    readonly sport: string
+    readonly sport?: string
     
 }
 
@@ -8884,25 +8569,25 @@ export type SportApiPlayersLatestRequest = {
 export type SportApiPlayersSearchRequest = {
     
     /**
+    * The name you want to search on.
+    * @type {string}
+    * @memberof SportApiPlayersSearch
+    */
+    readonly name: string
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiPlayersSearch
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiPlayersSearch
     */
-    readonly sport: string
-    
-    /**
-    * The name you want to search on.
-    * @type {string}
-    * @memberof SportApiPlayersSearch
-    */
-    readonly name: string
+    readonly sport?: string
     
 }
 
@@ -8918,14 +8603,14 @@ export type SportApiPredictionsAllRequest = {
     * @type {string}
     * @memberof SportApiPredictionsAll
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiPredictionsAll
     */
-    readonly sport: string
+    readonly sport?: string
     
 }
 
@@ -8941,14 +8626,14 @@ export type SportApiPredictionsAllValueBetsRequest = {
     * @type {string}
     * @memberof SportApiPredictionsAllValueBets
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiPredictionsAllValueBets
     */
-    readonly sport: string
+    readonly sport?: string
     
 }
 
@@ -8960,25 +8645,25 @@ export type SportApiPredictionsAllValueBetsRequest = {
 export type SportApiPredictionsByFixtureIdRequest = {
     
     /**
+    * The ID of the fixture you want to retrieve predictions from.
+    * @type {number}
+    * @memberof SportApiPredictionsByFixtureId
+    */
+    readonly fixtureId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiPredictionsByFixtureId
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiPredictionsByFixtureId
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the fixture you want to retrieve predictions from.
-    * @type {number}
-    * @memberof SportApiPredictionsByFixtureId
-    */
-    readonly fixtureId: number
+    readonly sport?: string
     
 }
 
@@ -8990,25 +8675,25 @@ export type SportApiPredictionsByFixtureIdRequest = {
 export type SportApiPredictionsValueBetsByFixtureIdRequest = {
     
     /**
+    * The ID of the fixture you want to retrieve value bets from.
+    * @type {number}
+    * @memberof SportApiPredictionsValueBetsByFixtureId
+    */
+    readonly fixtureId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiPredictionsValueBetsByFixtureId
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiPredictionsValueBetsByFixtureId
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the fixture you want to retrieve value bets from.
-    * @type {number}
-    * @memberof SportApiPredictionsValueBetsByFixtureId
-    */
-    readonly fixtureId: number
+    readonly sport?: string
     
 }
 
@@ -9020,25 +8705,25 @@ export type SportApiPredictionsValueBetsByFixtureIdRequest = {
 export type SportApiRefereeByIdRequest = {
     
     /**
+    * The ID of the referee you want to retrieve.
+    * @type {number}
+    * @memberof SportApiRefereeById
+    */
+    readonly refereeId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiRefereeById
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiRefereeById
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the referee you want to retrieve.
-    * @type {number}
-    * @memberof SportApiRefereeById
-    */
-    readonly refereeId: number
+    readonly sport?: string
     
 }
 
@@ -9054,14 +8739,14 @@ export type SportApiRefereesAllRequest = {
     * @type {string}
     * @memberof SportApiRefereesAll
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiRefereesAll
     */
-    readonly sport: string
+    readonly sport?: string
     
 }
 
@@ -9073,25 +8758,25 @@ export type SportApiRefereesAllRequest = {
 export type SportApiRefereesByCountryIdRequest = {
     
     /**
+    * The ID of the country you want to retrieve referees from.
+    * @type {number}
+    * @memberof SportApiRefereesByCountryId
+    */
+    readonly countryId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiRefereesByCountryId
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiRefereesByCountryId
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the country you want to retrieve referees from.
-    * @type {number}
-    * @memberof SportApiRefereesByCountryId
-    */
-    readonly countryId: number
+    readonly sport?: string
     
 }
 
@@ -9103,25 +8788,25 @@ export type SportApiRefereesByCountryIdRequest = {
 export type SportApiRefereesBySeasonIdRequest = {
     
     /**
+    * The ID of the season you want to retrieve referees from.
+    * @type {number}
+    * @memberof SportApiRefereesBySeasonId
+    */
+    readonly seasonId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiRefereesBySeasonId
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiRefereesBySeasonId
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the season you want to retrieve referees from.
-    * @type {number}
-    * @memberof SportApiRefereesBySeasonId
-    */
-    readonly seasonId: number
+    readonly sport?: string
     
 }
 
@@ -9133,25 +8818,25 @@ export type SportApiRefereesBySeasonIdRequest = {
 export type SportApiRefereesSearchRequest = {
     
     /**
+    * The name you want to search on.
+    * @type {string}
+    * @memberof SportApiRefereesSearch
+    */
+    readonly name: string
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiRefereesSearch
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiRefereesSearch
     */
-    readonly sport: string
-    
-    /**
-    * The name you want to search on.
-    * @type {string}
-    * @memberof SportApiRefereesSearch
-    */
-    readonly name: string
+    readonly sport?: string
     
 }
 
@@ -9167,14 +8852,14 @@ export type SportApiRivalsAllRequest = {
     * @type {string}
     * @memberof SportApiRivalsAll
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiRivalsAll
     */
-    readonly sport: string
+    readonly sport?: string
     
 }
 
@@ -9186,25 +8871,25 @@ export type SportApiRivalsAllRequest = {
 export type SportApiRivalsByTeamIdRequest = {
     
     /**
+    * The ID of the team you want to retrieve rivals from.
+    * @type {number}
+    * @memberof SportApiRivalsByTeamId
+    */
+    readonly teamId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiRivalsByTeamId
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiRivalsByTeamId
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the team you want to retrieve rivals from.
-    * @type {number}
-    * @memberof SportApiRivalsByTeamId
-    */
-    readonly teamId: number
+    readonly sport?: string
     
 }
 
@@ -9216,25 +8901,25 @@ export type SportApiRivalsByTeamIdRequest = {
 export type SportApiRoundByIdRequest = {
     
     /**
+    * The ID of the round you want to retrieve.
+    * @type {number}
+    * @memberof SportApiRoundById
+    */
+    readonly roundId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiRoundById
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiRoundById
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the round you want to retrieve.
-    * @type {number}
-    * @memberof SportApiRoundById
-    */
-    readonly roundId: number
+    readonly sport?: string
     
 }
 
@@ -9250,14 +8935,14 @@ export type SportApiRoundsAllRequest = {
     * @type {string}
     * @memberof SportApiRoundsAll
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiRoundsAll
     */
-    readonly sport: string
+    readonly sport?: string
     
 }
 
@@ -9269,25 +8954,25 @@ export type SportApiRoundsAllRequest = {
 export type SportApiRoundsBySeasonIdRequest = {
     
     /**
+    * The ID of the season you want to retrieve rounds from.
+    * @type {number}
+    * @memberof SportApiRoundsBySeasonId
+    */
+    readonly seasonId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiRoundsBySeasonId
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiRoundsBySeasonId
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the season you want to retrieve rounds from.
-    * @type {number}
-    * @memberof SportApiRoundsBySeasonId
-    */
-    readonly seasonId: number
+    readonly sport?: string
     
 }
 
@@ -9299,25 +8984,25 @@ export type SportApiRoundsBySeasonIdRequest = {
 export type SportApiRoundsSearchRequest = {
     
     /**
+    * The name you want to search on.
+    * @type {number}
+    * @memberof SportApiRoundsSearch
+    */
+    readonly name: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiRoundsSearch
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiRoundsSearch
     */
-    readonly sport: string
-    
-    /**
-    * The name you want to search on.
-    * @type {number}
-    * @memberof SportApiRoundsSearch
-    */
-    readonly name: number
+    readonly sport?: string
     
 }
 
@@ -9329,25 +9014,25 @@ export type SportApiRoundsSearchRequest = {
 export type SportApiSchedulesBySeasonIdRequest = {
     
     /**
+    * 
+    * @type {number}
+    * @memberof SportApiSchedulesBySeasonId
+    */
+    readonly seasonId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiSchedulesBySeasonId
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiSchedulesBySeasonId
     */
-    readonly sport: string
-    
-    /**
-    * 
-    * @type {number}
-    * @memberof SportApiSchedulesBySeasonId
-    */
-    readonly seasonId: number
+    readonly sport?: string
     
 }
 
@@ -9357,20 +9042,6 @@ export type SportApiSchedulesBySeasonIdRequest = {
  * @interface SportApiSchedulesByTeamAndSeasonIdRequest
  */
 export type SportApiSchedulesByTeamAndSeasonIdRequest = {
-    
-    /**
-    * The version of the API.
-    * @type {string}
-    * @memberof SportApiSchedulesByTeamAndSeasonId
-    */
-    readonly version: string
-    
-    /**
-    * The sport you want retrieve entities from.
-    * @type {string}
-    * @memberof SportApiSchedulesByTeamAndSeasonId
-    */
-    readonly sport: string
     
     /**
     * The ID of the season you want to retrieve schedule from.
@@ -9386,6 +9057,20 @@ export type SportApiSchedulesByTeamAndSeasonIdRequest = {
     */
     readonly teamId: number
     
+    /**
+    * The version of the API.
+    * @type {string}
+    * @memberof SportApiSchedulesByTeamAndSeasonId
+    */
+    readonly version?: string
+    
+    /**
+    * The sport you want retrieve entities from.
+    * @type {string}
+    * @memberof SportApiSchedulesByTeamAndSeasonId
+    */
+    readonly sport?: string
+    
 }
 
 /**
@@ -9396,25 +9081,25 @@ export type SportApiSchedulesByTeamAndSeasonIdRequest = {
 export type SportApiSchedulesByTeamIdRequest = {
     
     /**
+    * The ID of the team you want to retrieve schedule from.
+    * @type {number}
+    * @memberof SportApiSchedulesByTeamId
+    */
+    readonly teamId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiSchedulesByTeamId
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiSchedulesByTeamId
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the team you want to retrieve schedule from.
-    * @type {number}
-    * @memberof SportApiSchedulesByTeamId
-    */
-    readonly teamId: number
+    readonly sport?: string
     
 }
 
@@ -9426,25 +9111,25 @@ export type SportApiSchedulesByTeamIdRequest = {
 export type SportApiSeasonByIdRequest = {
     
     /**
+    * The ID of the season you want to retrieve.
+    * @type {number}
+    * @memberof SportApiSeasonById
+    */
+    readonly seasonId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiSeasonById
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiSeasonById
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the season you want to retrieve.
-    * @type {number}
-    * @memberof SportApiSeasonById
-    */
-    readonly seasonId: number
+    readonly sport?: string
     
 }
 
@@ -9460,14 +9145,14 @@ export type SportApiSeasonsAllRequest = {
     * @type {string}
     * @memberof SportApiSeasonsAll
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiSeasonsAll
     */
-    readonly sport: string
+    readonly sport?: string
     
 }
 
@@ -9479,25 +9164,25 @@ export type SportApiSeasonsAllRequest = {
 export type SportApiSeasonsByTeamIdRequest = {
     
     /**
+    * The ID of the team you want to retrieve seasons from.
+    * @type {number}
+    * @memberof SportApiSeasonsByTeamId
+    */
+    readonly teamId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiSeasonsByTeamId
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiSeasonsByTeamId
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the team you want to retrieve seasons from.
-    * @type {number}
-    * @memberof SportApiSeasonsByTeamId
-    */
-    readonly teamId: number
+    readonly sport?: string
     
 }
 
@@ -9509,25 +9194,25 @@ export type SportApiSeasonsByTeamIdRequest = {
 export type SportApiSeasonsSearchRequest = {
     
     /**
+    * The name you want to search on.
+    * @type {number}
+    * @memberof SportApiSeasonsSearch
+    */
+    readonly name: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiSeasonsSearch
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiSeasonsSearch
     */
-    readonly sport: string
-    
-    /**
-    * The name you want to search on.
-    * @type {number}
-    * @memberof SportApiSeasonsSearch
-    */
-    readonly name: number
+    readonly sport?: string
     
 }
 
@@ -9537,20 +9222,6 @@ export type SportApiSeasonsSearchRequest = {
  * @interface SportApiSquadsBySeasonAndTeamIdRequest
  */
 export type SportApiSquadsBySeasonAndTeamIdRequest = {
-    
-    /**
-    * The version of the API.
-    * @type {string}
-    * @memberof SportApiSquadsBySeasonAndTeamId
-    */
-    readonly version: string
-    
-    /**
-    * The sport you want retrieve entities from.
-    * @type {string}
-    * @memberof SportApiSquadsBySeasonAndTeamId
-    */
-    readonly sport: string
     
     /**
     * The ID of the season you want to retrieve squads from.
@@ -9566,6 +9237,20 @@ export type SportApiSquadsBySeasonAndTeamIdRequest = {
     */
     readonly teamId: number
     
+    /**
+    * The version of the API.
+    * @type {string}
+    * @memberof SportApiSquadsBySeasonAndTeamId
+    */
+    readonly version?: string
+    
+    /**
+    * The sport you want retrieve entities from.
+    * @type {string}
+    * @memberof SportApiSquadsBySeasonAndTeamId
+    */
+    readonly sport?: string
+    
 }
 
 /**
@@ -9576,25 +9261,25 @@ export type SportApiSquadsBySeasonAndTeamIdRequest = {
 export type SportApiSquadsByTeamIdRequest = {
     
     /**
+    * The ID of the team you want to retrieve squads from.
+    * @type {number}
+    * @memberof SportApiSquadsByTeamId
+    */
+    readonly teamId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiSquadsByTeamId
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiSquadsByTeamId
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the team you want to retrieve squads from.
-    * @type {number}
-    * @memberof SportApiSquadsByTeamId
-    */
-    readonly teamId: number
+    readonly sport?: string
     
 }
 
@@ -9606,25 +9291,25 @@ export type SportApiSquadsByTeamIdRequest = {
 export type SportApiStageByIdRequest = {
     
     /**
+    * The ID of the stage you want to retrieve.
+    * @type {number}
+    * @memberof SportApiStageById
+    */
+    readonly stageId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiStageById
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiStageById
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the stage you want to retrieve.
-    * @type {number}
-    * @memberof SportApiStageById
-    */
-    readonly stageId: number
+    readonly sport?: string
     
 }
 
@@ -9640,14 +9325,14 @@ export type SportApiStagesAllRequest = {
     * @type {string}
     * @memberof SportApiStagesAll
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiStagesAll
     */
-    readonly sport: string
+    readonly sport?: string
     
 }
 
@@ -9659,25 +9344,25 @@ export type SportApiStagesAllRequest = {
 export type SportApiStagesBySeasonIdRequest = {
     
     /**
+    * The ID of the season you want to retrieve stages from.
+    * @type {number}
+    * @memberof SportApiStagesBySeasonId
+    */
+    readonly seasonId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiStagesBySeasonId
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiStagesBySeasonId
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the season you want to retrieve stages from.
-    * @type {number}
-    * @memberof SportApiStagesBySeasonId
-    */
-    readonly seasonId: number
+    readonly sport?: string
     
 }
 
@@ -9689,25 +9374,25 @@ export type SportApiStagesBySeasonIdRequest = {
 export type SportApiStagesSearchRequest = {
     
     /**
+    * The name you want to search on.
+    * @type {string}
+    * @memberof SportApiStagesSearch
+    */
+    readonly name: string
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiStagesSearch
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiStagesSearch
     */
-    readonly sport: string
-    
-    /**
-    * The name you want to search on.
-    * @type {string}
-    * @memberof SportApiStagesSearch
-    */
-    readonly name: string
+    readonly sport?: string
     
 }
 
@@ -9719,25 +9404,25 @@ export type SportApiStagesSearchRequest = {
 export type SportApiStandingCorrectionsBySeasonIdRequest = {
     
     /**
+    * The ID of the season you want to retrieve standing corrections from.
+    * @type {number}
+    * @memberof SportApiStandingCorrectionsBySeasonId
+    */
+    readonly seasonId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiStandingCorrectionsBySeasonId
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiStandingCorrectionsBySeasonId
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the season you want to retrieve standing corrections from.
-    * @type {number}
-    * @memberof SportApiStandingCorrectionsBySeasonId
-    */
-    readonly seasonId: number
+    readonly sport?: string
     
 }
 
@@ -9753,14 +9438,14 @@ export type SportApiStandingsAllRequest = {
     * @type {string}
     * @memberof SportApiStandingsAll
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiStandingsAll
     */
-    readonly sport: string
+    readonly sport?: string
     
 }
 
@@ -9772,25 +9457,25 @@ export type SportApiStandingsAllRequest = {
 export type SportApiStandingsByRoundIdRequest = {
     
     /**
+    * The ID of the round you want to retrieve standing from.
+    * @type {number}
+    * @memberof SportApiStandingsByRoundId
+    */
+    readonly roundId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiStandingsByRoundId
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiStandingsByRoundId
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the round you want to retrieve standing from.
-    * @type {number}
-    * @memberof SportApiStandingsByRoundId
-    */
-    readonly roundId: number
+    readonly sport?: string
     
 }
 
@@ -9802,25 +9487,25 @@ export type SportApiStandingsByRoundIdRequest = {
 export type SportApiStandingsBySeasonIdRequest = {
     
     /**
+    * The ID of the season you want to retrieve standing from.
+    * @type {number}
+    * @memberof SportApiStandingsBySeasonId
+    */
+    readonly seasonId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiStandingsBySeasonId
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiStandingsBySeasonId
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the season you want to retrieve standing from.
-    * @type {number}
-    * @memberof SportApiStandingsBySeasonId
-    */
-    readonly seasonId: number
+    readonly sport?: string
     
 }
 
@@ -9832,25 +9517,25 @@ export type SportApiStandingsBySeasonIdRequest = {
 export type SportApiStandingsLiveByLeagueIdRequest = {
     
     /**
+    * The ID of the league you want to retrieve standings from.
+    * @type {number}
+    * @memberof SportApiStandingsLiveByLeagueId
+    */
+    readonly leagueId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiStandingsLiveByLeagueId
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiStandingsLiveByLeagueId
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the league you want to retrieve standings from.
-    * @type {number}
-    * @memberof SportApiStandingsLiveByLeagueId
-    */
-    readonly leagueId: number
+    readonly sport?: string
     
 }
 
@@ -9862,25 +9547,25 @@ export type SportApiStandingsLiveByLeagueIdRequest = {
 export type SportApiStateByIdRequest = {
     
     /**
+    * The ID of the state you want to retrieve.
+    * @type {number}
+    * @memberof SportApiStateById
+    */
+    readonly stateId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiStateById
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiStateById
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the state you want to retrieve.
-    * @type {number}
-    * @memberof SportApiStateById
-    */
-    readonly stateId: number
+    readonly sport?: string
     
 }
 
@@ -9896,14 +9581,14 @@ export type SportApiStatesBySportRequest = {
     * @type {string}
     * @memberof SportApiStatesBySport
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiStatesBySport
     */
-    readonly sport: string
+    readonly sport?: string
     
 }
 
@@ -9919,14 +9604,14 @@ export type SportApiTeamsAllRequest = {
     * @type {string}
     * @memberof SportApiTeamsAll
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiTeamsAll
     */
-    readonly sport: string
+    readonly sport?: string
     
 }
 
@@ -9938,25 +9623,25 @@ export type SportApiTeamsAllRequest = {
 export type SportApiTeamsByCountryIdRequest = {
     
     /**
+    * The ID of the country you want to retrieve teams from.
+    * @type {number}
+    * @memberof SportApiTeamsByCountryId
+    */
+    readonly countryId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiTeamsByCountryId
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiTeamsByCountryId
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the country you want to retrieve teams from.
-    * @type {number}
-    * @memberof SportApiTeamsByCountryId
-    */
-    readonly countryId: number
+    readonly sport?: string
     
 }
 
@@ -9968,25 +9653,25 @@ export type SportApiTeamsByCountryIdRequest = {
 export type SportApiTeamsByIdRequest = {
     
     /**
+    * The ID of the team you want to retrieve.
+    * @type {number}
+    * @memberof SportApiTeamsById
+    */
+    readonly teamId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiTeamsById
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiTeamsById
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the team you want to retrieve.
-    * @type {number}
-    * @memberof SportApiTeamsById
-    */
-    readonly teamId: number
+    readonly sport?: string
     
 }
 
@@ -9998,25 +9683,25 @@ export type SportApiTeamsByIdRequest = {
 export type SportApiTeamsBySeasonIdRequest = {
     
     /**
+    * The ID of the season you want to retrieve teams from.
+    * @type {number}
+    * @memberof SportApiTeamsBySeasonId
+    */
+    readonly seasonId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiTeamsBySeasonId
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiTeamsBySeasonId
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the season you want to retrieve teams from.
-    * @type {number}
-    * @memberof SportApiTeamsBySeasonId
-    */
-    readonly seasonId: number
+    readonly sport?: string
     
 }
 
@@ -10028,25 +9713,25 @@ export type SportApiTeamsBySeasonIdRequest = {
 export type SportApiTeamsSearchRequest = {
     
     /**
+    * The name you want to search on.
+    * @type {string}
+    * @memberof SportApiTeamsSearch
+    */
+    readonly name: string
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiTeamsSearch
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiTeamsSearch
     */
-    readonly sport: string
-    
-    /**
-    * The name you want to search on.
-    * @type {string}
-    * @memberof SportApiTeamsSearch
-    */
-    readonly name: string
+    readonly sport?: string
     
 }
 
@@ -10058,25 +9743,25 @@ export type SportApiTeamsSearchRequest = {
 export type SportApiTopScorersBySeasonIdRequest = {
     
     /**
+    * The ID of the season you want to retrieve topscorers from.
+    * @type {number}
+    * @memberof SportApiTopScorersBySeasonId
+    */
+    readonly seasonId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiTopScorersBySeasonId
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiTopScorersBySeasonId
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the season you want to retrieve topscorers from.
-    * @type {number}
-    * @memberof SportApiTopScorersBySeasonId
-    */
-    readonly seasonId: number
+    readonly sport?: string
     
 }
 
@@ -10088,25 +9773,25 @@ export type SportApiTopScorersBySeasonIdRequest = {
 export type SportApiTopScorersByStageIdRequest = {
     
     /**
+    * The ID of the stage you want to retrieve topscorers from.
+    * @type {number}
+    * @memberof SportApiTopScorersByStageId
+    */
+    readonly stageId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiTopScorersByStageId
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiTopScorersByStageId
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the stage you want to retrieve topscorers from.
-    * @type {number}
-    * @memberof SportApiTopScorersByStageId
-    */
-    readonly stageId: number
+    readonly sport?: string
     
 }
 
@@ -10116,20 +9801,6 @@ export type SportApiTopScorersByStageIdRequest = {
  * @interface SportApiTranfersByDateRangeRequest
  */
 export type SportApiTranfersByDateRangeRequest = {
-    
-    /**
-    * The version of the API.
-    * @type {string}
-    * @memberof SportApiTranfersByDateRange
-    */
-    readonly version: string
-    
-    /**
-    * The sport you want retrieve entities from.
-    * @type {string}
-    * @memberof SportApiTranfersByDateRange
-    */
-    readonly sport: string
     
     /**
     * The start date you want to retrieve transfers from.
@@ -10145,6 +9816,20 @@ export type SportApiTranfersByDateRangeRequest = {
     */
     readonly endDate: string
     
+    /**
+    * The version of the API.
+    * @type {string}
+    * @memberof SportApiTranfersByDateRange
+    */
+    readonly version?: string
+    
+    /**
+    * The sport you want retrieve entities from.
+    * @type {string}
+    * @memberof SportApiTranfersByDateRange
+    */
+    readonly sport?: string
+    
 }
 
 /**
@@ -10155,25 +9840,25 @@ export type SportApiTranfersByDateRangeRequest = {
 export type SportApiTransferByIdRequest = {
     
     /**
+    * 
+    * @type {number}
+    * @memberof SportApiTransferById
+    */
+    readonly transferId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiTransferById
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiTransferById
     */
-    readonly sport: string
-    
-    /**
-    * 
-    * @type {number}
-    * @memberof SportApiTransferById
-    */
-    readonly transferId: number
+    readonly sport?: string
     
 }
 
@@ -10189,14 +9874,14 @@ export type SportApiTransfersAllRequest = {
     * @type {string}
     * @memberof SportApiTransfersAll
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiTransfersAll
     */
-    readonly sport: string
+    readonly sport?: string
     
 }
 
@@ -10208,25 +9893,25 @@ export type SportApiTransfersAllRequest = {
 export type SportApiTransfersByPlayerIdRequest = {
     
     /**
+    * The ID of the player you want to retrieve transfers from.
+    * @type {number}
+    * @memberof SportApiTransfersByPlayerId
+    */
+    readonly playerId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiTransfersByPlayerId
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiTransfersByPlayerId
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the player you want to retrieve transfers from.
-    * @type {number}
-    * @memberof SportApiTransfersByPlayerId
-    */
-    readonly playerId: number
+    readonly sport?: string
     
 }
 
@@ -10238,25 +9923,25 @@ export type SportApiTransfersByPlayerIdRequest = {
 export type SportApiTransfersByTeamIdRequest = {
     
     /**
+    * The ID of the team you want to retrieve transfers from.
+    * @type {number}
+    * @memberof SportApiTransfersByTeamId
+    */
+    readonly teamId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiTransfersByTeamId
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiTransfersByTeamId
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the team you want to retrieve transfers from.
-    * @type {number}
-    * @memberof SportApiTransfersByTeamId
-    */
-    readonly teamId: number
+    readonly sport?: string
     
 }
 
@@ -10272,14 +9957,14 @@ export type SportApiTransfersLatestRequest = {
     * @type {string}
     * @memberof SportApiTransfersLatest
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiTransfersLatest
     */
-    readonly sport: string
+    readonly sport?: string
     
 }
 
@@ -10291,25 +9976,25 @@ export type SportApiTransfersLatestRequest = {
 export type SportApiTvStationByIdRequest = {
     
     /**
+    * The ID of the tv station you want to retrieve.
+    * @type {number}
+    * @memberof SportApiTvStationById
+    */
+    readonly tvStationId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiTvStationById
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiTvStationById
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the tv station you want to retrieve.
-    * @type {number}
-    * @memberof SportApiTvStationById
-    */
-    readonly tvStationId: number
+    readonly sport?: string
     
 }
 
@@ -10325,14 +10010,14 @@ export type SportApiTvStationsAllRequest = {
     * @type {string}
     * @memberof SportApiTvStationsAll
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiTvStationsAll
     */
-    readonly sport: string
+    readonly sport?: string
     
 }
 
@@ -10344,25 +10029,25 @@ export type SportApiTvStationsAllRequest = {
 export type SportApiTvStationsByFixtureIdRequest = {
     
     /**
+    * The ID of the fixture you want to retrieve tv-stations from.
+    * @type {number}
+    * @memberof SportApiTvStationsByFixtureId
+    */
+    readonly fixtureId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiTvStationsByFixtureId
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiTvStationsByFixtureId
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the fixture you want to retrieve tv-stations from.
-    * @type {number}
-    * @memberof SportApiTvStationsByFixtureId
-    */
-    readonly fixtureId: number
+    readonly sport?: string
     
 }
 
@@ -10374,25 +10059,25 @@ export type SportApiTvStationsByFixtureIdRequest = {
 export type SportApiVenueByIdRequest = {
     
     /**
+    * The ID of the venue you want to retrieve.
+    * @type {number}
+    * @memberof SportApiVenueById
+    */
+    readonly venueId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiVenueById
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiVenueById
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the venue you want to retrieve.
-    * @type {number}
-    * @memberof SportApiVenueById
-    */
-    readonly venueId: number
+    readonly sport?: string
     
 }
 
@@ -10408,14 +10093,14 @@ export type SportApiVenuesAllRequest = {
     * @type {string}
     * @memberof SportApiVenuesAll
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiVenuesAll
     */
-    readonly sport: string
+    readonly sport?: string
     
 }
 
@@ -10427,25 +10112,25 @@ export type SportApiVenuesAllRequest = {
 export type SportApiVenuesBySeasonIdRequest = {
     
     /**
+    * The ID of the season you want to retrieve venues from.
+    * @type {number}
+    * @memberof SportApiVenuesBySeasonId
+    */
+    readonly seasonId: number
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiVenuesBySeasonId
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiVenuesBySeasonId
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the season you want to retrieve venues from.
-    * @type {number}
-    * @memberof SportApiVenuesBySeasonId
-    */
-    readonly seasonId: number
+    readonly sport?: string
     
 }
 
@@ -10457,25 +10142,25 @@ export type SportApiVenuesBySeasonIdRequest = {
 export type SportApiVenuesSearchRequest = {
     
     /**
+    * The name you want to search on.
+    * @type {string}
+    * @memberof SportApiVenuesSearch
+    */
+    readonly name: string
+    
+    /**
     * The version of the API.
     * @type {string}
     * @memberof SportApiVenuesSearch
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * The sport you want retrieve entities from.
     * @type {string}
     * @memberof SportApiVenuesSearch
     */
-    readonly sport: string
-    
-    /**
-    * The name you want to search on.
-    * @type {string}
-    * @memberof SportApiVenuesSearch
-    */
-    readonly name: string
+    readonly sport?: string
     
 }
 
@@ -10506,7 +10191,7 @@ export class SportApi extends SportApiCustom {
      * @throws {RequiredError}
      * @memberof SportApi
      */
-    public coachesAll(requestParameters: SportApiCoachesAllRequest, options?: AxiosRequestConfig) {
+    public coachesAll(requestParameters: SportApiCoachesAllRequest = {}, options?: AxiosRequestConfig) {
         return SportApiFp(this.configuration).coachesAll(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -10530,7 +10215,7 @@ export class SportApi extends SportApiCustom {
      * @throws {RequiredError}
      * @memberof SportApi
      */
-    public coachesLatest(requestParameters: SportApiCoachesLatestRequest, options?: AxiosRequestConfig) {
+    public coachesLatest(requestParameters: SportApiCoachesLatestRequest = {}, options?: AxiosRequestConfig) {
         return SportApiFp(this.configuration).coachesLatest(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -10554,7 +10239,7 @@ export class SportApi extends SportApiCustom {
      * @throws {RequiredError}
      * @memberof SportApi
      */
-    public commentariesAll(requestParameters: SportApiCommentariesAllRequest, options?: AxiosRequestConfig) {
+    public commentariesAll(requestParameters: SportApiCommentariesAllRequest = {}, options?: AxiosRequestConfig) {
         return SportApiFp(this.configuration).commentariesAll(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -10602,7 +10287,7 @@ export class SportApi extends SportApiCustom {
      * @throws {RequiredError}
      * @memberof SportApi
      */
-    public fixturesAll(requestParameters: SportApiFixturesAllRequest, options?: AxiosRequestConfig) {
+    public fixturesAll(requestParameters: SportApiFixturesAllRequest = {}, options?: AxiosRequestConfig) {
         return SportApiFp(this.configuration).fixturesAll(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -10662,7 +10347,7 @@ export class SportApi extends SportApiCustom {
      * @throws {RequiredError}
      * @memberof SportApi
      */
-    public fixturesLatest(requestParameters: SportApiFixturesLatestRequest, options?: AxiosRequestConfig) {
+    public fixturesLatest(requestParameters: SportApiFixturesLatestRequest = {}, options?: AxiosRequestConfig) {
         return SportApiFp(this.configuration).fixturesLatest(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -10722,7 +10407,7 @@ export class SportApi extends SportApiCustom {
      * @throws {RequiredError}
      * @memberof SportApi
      */
-    public leaguesAll(requestParameters: SportApiLeaguesAllRequest, options?: AxiosRequestConfig) {
+    public leaguesAll(requestParameters: SportApiLeaguesAllRequest = {}, options?: AxiosRequestConfig) {
         return SportApiFp(this.configuration).leaguesAll(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -10782,7 +10467,7 @@ export class SportApi extends SportApiCustom {
      * @throws {RequiredError}
      * @memberof SportApi
      */
-    public leaguesLive(requestParameters: SportApiLeaguesLiveRequest, options?: AxiosRequestConfig) {
+    public leaguesLive(requestParameters: SportApiLeaguesLiveRequest = {}, options?: AxiosRequestConfig) {
         return SportApiFp(this.configuration).leaguesLive(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -10806,7 +10491,7 @@ export class SportApi extends SportApiCustom {
      * @throws {RequiredError}
      * @memberof SportApi
      */
-    public livescoresAll(requestParameters: SportApiLivescoresAllRequest, options?: AxiosRequestConfig) {
+    public livescoresAll(requestParameters: SportApiLivescoresAllRequest = {}, options?: AxiosRequestConfig) {
         return SportApiFp(this.configuration).livescoresAll(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -10818,7 +10503,7 @@ export class SportApi extends SportApiCustom {
      * @throws {RequiredError}
      * @memberof SportApi
      */
-    public livescoresAllInPlay(requestParameters: SportApiLivescoresAllInPlayRequest, options?: AxiosRequestConfig) {
+    public livescoresAllInPlay(requestParameters: SportApiLivescoresAllInPlayRequest = {}, options?: AxiosRequestConfig) {
         return SportApiFp(this.configuration).livescoresAllInPlay(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -10830,7 +10515,7 @@ export class SportApi extends SportApiCustom {
      * @throws {RequiredError}
      * @memberof SportApi
      */
-    public livescoresLatest(requestParameters: SportApiLivescoresLatestRequest, options?: AxiosRequestConfig) {
+    public livescoresLatest(requestParameters: SportApiLivescoresLatestRequest = {}, options?: AxiosRequestConfig) {
         return SportApiFp(this.configuration).livescoresLatest(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -10842,7 +10527,7 @@ export class SportApi extends SportApiCustom {
      * @throws {RequiredError}
      * @memberof SportApi
      */
-    public newsAllPostMatch(requestParameters: SportApiNewsAllPostMatchRequest, options?: AxiosRequestConfig) {
+    public newsAllPostMatch(requestParameters: SportApiNewsAllPostMatchRequest = {}, options?: AxiosRequestConfig) {
         return SportApiFp(this.configuration).newsAllPostMatch(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -10854,7 +10539,7 @@ export class SportApi extends SportApiCustom {
      * @throws {RequiredError}
      * @memberof SportApi
      */
-    public newsAllPreMatch(requestParameters: SportApiNewsAllPreMatchRequest, options?: AxiosRequestConfig) {
+    public newsAllPreMatch(requestParameters: SportApiNewsAllPreMatchRequest = {}, options?: AxiosRequestConfig) {
         return SportApiFp(this.configuration).newsAllPreMatch(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -10890,7 +10575,7 @@ export class SportApi extends SportApiCustom {
      * @throws {RequiredError}
      * @memberof SportApi
      */
-    public newsUpcomingPostMatch(requestParameters: SportApiNewsUpcomingPostMatchRequest, options?: AxiosRequestConfig) {
+    public newsUpcomingPostMatch(requestParameters: SportApiNewsUpcomingPostMatchRequest = {}, options?: AxiosRequestConfig) {
         return SportApiFp(this.configuration).newsUpcomingPostMatch(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -10902,7 +10587,7 @@ export class SportApi extends SportApiCustom {
      * @throws {RequiredError}
      * @memberof SportApi
      */
-    public newsUpcomingPreMatch(requestParameters: SportApiNewsUpcomingPreMatchRequest, options?: AxiosRequestConfig) {
+    public newsUpcomingPreMatch(requestParameters: SportApiNewsUpcomingPreMatchRequest = {}, options?: AxiosRequestConfig) {
         return SportApiFp(this.configuration).newsUpcomingPreMatch(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -10914,7 +10599,7 @@ export class SportApi extends SportApiCustom {
      * @throws {RequiredError}
      * @memberof SportApi
      */
-    public oddsAllInPlay(requestParameters: SportApiOddsAllInPlayRequest, options?: AxiosRequestConfig) {
+    public oddsAllInPlay(requestParameters: SportApiOddsAllInPlayRequest = {}, options?: AxiosRequestConfig) {
         return SportApiFp(this.configuration).oddsAllInPlay(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -10926,7 +10611,7 @@ export class SportApi extends SportApiCustom {
      * @throws {RequiredError}
      * @memberof SportApi
      */
-    public oddsAllPreMatch(requestParameters: SportApiOddsAllPreMatchRequest, options?: AxiosRequestConfig) {
+    public oddsAllPreMatch(requestParameters: SportApiOddsAllPreMatchRequest = {}, options?: AxiosRequestConfig) {
         return SportApiFp(this.configuration).oddsAllPreMatch(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -10974,7 +10659,7 @@ export class SportApi extends SportApiCustom {
      * @throws {RequiredError}
      * @memberof SportApi
      */
-    public oddsLatestInPlay(requestParameters: SportApiOddsLatestInPlayRequest, options?: AxiosRequestConfig) {
+    public oddsLatestInPlay(requestParameters: SportApiOddsLatestInPlayRequest = {}, options?: AxiosRequestConfig) {
         return SportApiFp(this.configuration).oddsLatestInPlay(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -10986,7 +10671,7 @@ export class SportApi extends SportApiCustom {
      * @throws {RequiredError}
      * @memberof SportApi
      */
-    public oddsLatestPreMatch(requestParameters: SportApiOddsLatestPreMatchRequest, options?: AxiosRequestConfig) {
+    public oddsLatestPreMatch(requestParameters: SportApiOddsLatestPreMatchRequest = {}, options?: AxiosRequestConfig) {
         return SportApiFp(this.configuration).oddsLatestPreMatch(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -11046,7 +10731,7 @@ export class SportApi extends SportApiCustom {
      * @throws {RequiredError}
      * @memberof SportApi
      */
-    public playersAll(requestParameters: SportApiPlayersAllRequest, options?: AxiosRequestConfig) {
+    public playersAll(requestParameters: SportApiPlayersAllRequest = {}, options?: AxiosRequestConfig) {
         return SportApiFp(this.configuration).playersAll(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -11070,7 +10755,7 @@ export class SportApi extends SportApiCustom {
      * @throws {RequiredError}
      * @memberof SportApi
      */
-    public playersLatest(requestParameters: SportApiPlayersLatestRequest, options?: AxiosRequestConfig) {
+    public playersLatest(requestParameters: SportApiPlayersLatestRequest = {}, options?: AxiosRequestConfig) {
         return SportApiFp(this.configuration).playersLatest(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -11094,7 +10779,7 @@ export class SportApi extends SportApiCustom {
      * @throws {RequiredError}
      * @memberof SportApi
      */
-    public predictionsAll(requestParameters: SportApiPredictionsAllRequest, options?: AxiosRequestConfig) {
+    public predictionsAll(requestParameters: SportApiPredictionsAllRequest = {}, options?: AxiosRequestConfig) {
         return SportApiFp(this.configuration).predictionsAll(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -11106,7 +10791,7 @@ export class SportApi extends SportApiCustom {
      * @throws {RequiredError}
      * @memberof SportApi
      */
-    public predictionsAllValueBets(requestParameters: SportApiPredictionsAllValueBetsRequest, options?: AxiosRequestConfig) {
+    public predictionsAllValueBets(requestParameters: SportApiPredictionsAllValueBetsRequest = {}, options?: AxiosRequestConfig) {
         return SportApiFp(this.configuration).predictionsAllValueBets(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -11154,7 +10839,7 @@ export class SportApi extends SportApiCustom {
      * @throws {RequiredError}
      * @memberof SportApi
      */
-    public refereesAll(requestParameters: SportApiRefereesAllRequest, options?: AxiosRequestConfig) {
+    public refereesAll(requestParameters: SportApiRefereesAllRequest = {}, options?: AxiosRequestConfig) {
         return SportApiFp(this.configuration).refereesAll(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -11202,7 +10887,7 @@ export class SportApi extends SportApiCustom {
      * @throws {RequiredError}
      * @memberof SportApi
      */
-    public rivalsAll(requestParameters: SportApiRivalsAllRequest, options?: AxiosRequestConfig) {
+    public rivalsAll(requestParameters: SportApiRivalsAllRequest = {}, options?: AxiosRequestConfig) {
         return SportApiFp(this.configuration).rivalsAll(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -11238,7 +10923,7 @@ export class SportApi extends SportApiCustom {
      * @throws {RequiredError}
      * @memberof SportApi
      */
-    public roundsAll(requestParameters: SportApiRoundsAllRequest, options?: AxiosRequestConfig) {
+    public roundsAll(requestParameters: SportApiRoundsAllRequest = {}, options?: AxiosRequestConfig) {
         return SportApiFp(this.configuration).roundsAll(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -11322,7 +11007,7 @@ export class SportApi extends SportApiCustom {
      * @throws {RequiredError}
      * @memberof SportApi
      */
-    public seasonsAll(requestParameters: SportApiSeasonsAllRequest, options?: AxiosRequestConfig) {
+    public seasonsAll(requestParameters: SportApiSeasonsAllRequest = {}, options?: AxiosRequestConfig) {
         return SportApiFp(this.configuration).seasonsAll(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -11394,7 +11079,7 @@ export class SportApi extends SportApiCustom {
      * @throws {RequiredError}
      * @memberof SportApi
      */
-    public stagesAll(requestParameters: SportApiStagesAllRequest, options?: AxiosRequestConfig) {
+    public stagesAll(requestParameters: SportApiStagesAllRequest = {}, options?: AxiosRequestConfig) {
         return SportApiFp(this.configuration).stagesAll(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -11442,7 +11127,7 @@ export class SportApi extends SportApiCustom {
      * @throws {RequiredError}
      * @memberof SportApi
      */
-    public standingsAll(requestParameters: SportApiStandingsAllRequest, options?: AxiosRequestConfig) {
+    public standingsAll(requestParameters: SportApiStandingsAllRequest = {}, options?: AxiosRequestConfig) {
         return SportApiFp(this.configuration).standingsAll(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -11502,7 +11187,7 @@ export class SportApi extends SportApiCustom {
      * @throws {RequiredError}
      * @memberof SportApi
      */
-    public statesBySport(requestParameters: SportApiStatesBySportRequest, options?: AxiosRequestConfig) {
+    public statesBySport(requestParameters: SportApiStatesBySportRequest = {}, options?: AxiosRequestConfig) {
         return SportApiFp(this.configuration).statesBySport(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -11514,7 +11199,7 @@ export class SportApi extends SportApiCustom {
      * @throws {RequiredError}
      * @memberof SportApi
      */
-    public teamsAll(requestParameters: SportApiTeamsAllRequest, options?: AxiosRequestConfig) {
+    public teamsAll(requestParameters: SportApiTeamsAllRequest = {}, options?: AxiosRequestConfig) {
         return SportApiFp(this.configuration).teamsAll(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -11622,7 +11307,7 @@ export class SportApi extends SportApiCustom {
      * @throws {RequiredError}
      * @memberof SportApi
      */
-    public transfersAll(requestParameters: SportApiTransfersAllRequest, options?: AxiosRequestConfig) {
+    public transfersAll(requestParameters: SportApiTransfersAllRequest = {}, options?: AxiosRequestConfig) {
         return SportApiFp(this.configuration).transfersAll(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -11658,7 +11343,7 @@ export class SportApi extends SportApiCustom {
      * @throws {RequiredError}
      * @memberof SportApi
      */
-    public transfersLatest(requestParameters: SportApiTransfersLatestRequest, options?: AxiosRequestConfig) {
+    public transfersLatest(requestParameters: SportApiTransfersLatestRequest = {}, options?: AxiosRequestConfig) {
         return SportApiFp(this.configuration).transfersLatest(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -11682,7 +11367,7 @@ export class SportApi extends SportApiCustom {
      * @throws {RequiredError}
      * @memberof SportApi
      */
-    public tvStationsAll(requestParameters: SportApiTvStationsAllRequest, options?: AxiosRequestConfig) {
+    public tvStationsAll(requestParameters: SportApiTvStationsAllRequest = {}, options?: AxiosRequestConfig) {
         return SportApiFp(this.configuration).tvStationsAll(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -11718,7 +11403,7 @@ export class SportApi extends SportApiCustom {
      * @throws {RequiredError}
      * @memberof SportApi
      */
-    public venuesAll(requestParameters: SportApiVenuesAllRequest, options?: AxiosRequestConfig) {
+    public venuesAll(requestParameters: SportApiVenuesAllRequest = {}, options?: AxiosRequestConfig) {
         return SportApiFp(this.configuration).venuesAll(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 

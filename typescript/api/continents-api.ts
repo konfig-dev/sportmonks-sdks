@@ -34,13 +34,11 @@ export const ContinentsApiAxiosParamCreator = function (configuration?: Configur
         /**
          * 
          * @summary All
-         * @param {string} version The version of the API.
+         * @param {string} [version] The version of the API.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        all: async (version: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('all', 'version', version)
+        all: async (version?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/core/continents`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -55,6 +53,7 @@ export const ContinentsApiAxiosParamCreator = function (configuration?: Configur
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -75,14 +74,12 @@ export const ContinentsApiAxiosParamCreator = function (configuration?: Configur
         /**
          * 
          * @summary By ID
-         * @param {string} version The version of the API.
          * @param {number} continentId The ID of the continent you want to retrieve
+         * @param {string} [version] The version of the API.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getById: async (version: string, continentId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('getById', 'version', version)
+        getById: async (continentId: number, version?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'continentId' is not null or undefined
             assertParamExists('getById', 'continentId', continentId)
             const localVarPath = `/{version}/core/continents/{continentId}`
@@ -100,6 +97,7 @@ export const ContinentsApiAxiosParamCreator = function (configuration?: Configur
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -134,7 +132,7 @@ export const ContinentsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async all(requestParameters: ContinentsApiAllRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContinentsAllResponse>> {
+        async all(requestParameters: ContinentsApiAllRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContinentsAllResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.all(requestParameters.version, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -146,7 +144,7 @@ export const ContinentsApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async getById(requestParameters: ContinentsApiGetByIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ContinentsGetByIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.getById(requestParameters.version, requestParameters.continentId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.getById(requestParameters.continentId, requestParameters.version, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -166,7 +164,7 @@ export const ContinentsApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        all(requestParameters: ContinentsApiAllRequest, options?: AxiosRequestConfig): AxiosPromise<ContinentsAllResponse> {
+        all(requestParameters: ContinentsApiAllRequest = {}, options?: AxiosRequestConfig): AxiosPromise<ContinentsAllResponse> {
             return localVarFp.all(requestParameters, options).then((request) => request(axios, basePath));
         },
         /**
@@ -194,7 +192,7 @@ export type ContinentsApiAllRequest = {
     * @type {string}
     * @memberof ContinentsApiAll
     */
-    readonly version: string
+    readonly version?: string
     
 }
 
@@ -206,18 +204,18 @@ export type ContinentsApiAllRequest = {
 export type ContinentsApiGetByIdRequest = {
     
     /**
-    * The version of the API.
-    * @type {string}
-    * @memberof ContinentsApiGetById
-    */
-    readonly version: string
-    
-    /**
     * The ID of the continent you want to retrieve
     * @type {number}
     * @memberof ContinentsApiGetById
     */
     readonly continentId: number
+    
+    /**
+    * The version of the API.
+    * @type {string}
+    * @memberof ContinentsApiGetById
+    */
+    readonly version?: string
     
 }
 
@@ -236,7 +234,7 @@ export class ContinentsApi extends ContinentsApiCustom {
      * @throws {RequiredError}
      * @memberof ContinentsApi
      */
-    public all(requestParameters: ContinentsApiAllRequest, options?: AxiosRequestConfig) {
+    public all(requestParameters: ContinentsApiAllRequest = {}, options?: AxiosRequestConfig) {
         return ContinentsApiFp(this.configuration).all(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 

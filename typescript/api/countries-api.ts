@@ -36,13 +36,11 @@ export const CountriesApiAxiosParamCreator = function (configuration?: Configura
         /**
          * 
          * @summary All
-         * @param {string} version The version of the API.
+         * @param {string} [version] The version of the API.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        all: async (version: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('all', 'version', version)
+        all: async (version?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/core/countries`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -57,6 +55,7 @@ export const CountriesApiAxiosParamCreator = function (configuration?: Configura
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -77,14 +76,12 @@ export const CountriesApiAxiosParamCreator = function (configuration?: Configura
         /**
          * 
          * @summary By ID
-         * @param {string} version The version of the API.
          * @param {number} countryId The ID of the country you want to retrieve.
+         * @param {string} [version] The version of the API.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getById: async (version: string, countryId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('getById', 'version', version)
+        getById: async (countryId: number, version?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'countryId' is not null or undefined
             assertParamExists('getById', 'countryId', countryId)
             const localVarPath = `/{version}/core/countries/{countryId}`
@@ -102,6 +99,7 @@ export const CountriesApiAxiosParamCreator = function (configuration?: Configura
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -122,14 +120,12 @@ export const CountriesApiAxiosParamCreator = function (configuration?: Configura
         /**
          * 
          * @summary Search
-         * @param {string} version The version of the API.
          * @param {string} name The name you want to search on
+         * @param {string} [version] The version of the API.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        search: async (version: string, name: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('search', 'version', version)
+        search: async (name: string, version?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'name' is not null or undefined
             assertParamExists('search', 'name', name)
             const localVarPath = `/{version}/core/countries/search/{name}`
@@ -147,6 +143,7 @@ export const CountriesApiAxiosParamCreator = function (configuration?: Configura
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -181,7 +178,7 @@ export const CountriesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async all(requestParameters: CountriesApiAllRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CountriesAllResponse>> {
+        async all(requestParameters: CountriesApiAllRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CountriesAllResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.all(requestParameters.version, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -193,7 +190,7 @@ export const CountriesApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async getById(requestParameters: CountriesApiGetByIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CountriesGetByIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.getById(requestParameters.version, requestParameters.countryId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.getById(requestParameters.countryId, requestParameters.version, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -204,7 +201,7 @@ export const CountriesApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async search(requestParameters: CountriesApiSearchRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CountriesSearchResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.search(requestParameters.version, requestParameters.name, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.search(requestParameters.name, requestParameters.version, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -224,7 +221,7 @@ export const CountriesApiFactory = function (configuration?: Configuration, base
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        all(requestParameters: CountriesApiAllRequest, options?: AxiosRequestConfig): AxiosPromise<CountriesAllResponse> {
+        all(requestParameters: CountriesApiAllRequest = {}, options?: AxiosRequestConfig): AxiosPromise<CountriesAllResponse> {
             return localVarFp.all(requestParameters, options).then((request) => request(axios, basePath));
         },
         /**
@@ -262,7 +259,7 @@ export type CountriesApiAllRequest = {
     * @type {string}
     * @memberof CountriesApiAll
     */
-    readonly version: string
+    readonly version?: string
     
 }
 
@@ -274,18 +271,18 @@ export type CountriesApiAllRequest = {
 export type CountriesApiGetByIdRequest = {
     
     /**
-    * The version of the API.
-    * @type {string}
-    * @memberof CountriesApiGetById
-    */
-    readonly version: string
-    
-    /**
     * The ID of the country you want to retrieve.
     * @type {number}
     * @memberof CountriesApiGetById
     */
     readonly countryId: number
+    
+    /**
+    * The version of the API.
+    * @type {string}
+    * @memberof CountriesApiGetById
+    */
+    readonly version?: string
     
 }
 
@@ -297,18 +294,18 @@ export type CountriesApiGetByIdRequest = {
 export type CountriesApiSearchRequest = {
     
     /**
-    * The version of the API.
-    * @type {string}
-    * @memberof CountriesApiSearch
-    */
-    readonly version: string
-    
-    /**
     * The name you want to search on
     * @type {string}
     * @memberof CountriesApiSearch
     */
     readonly name: string
+    
+    /**
+    * The version of the API.
+    * @type {string}
+    * @memberof CountriesApiSearch
+    */
+    readonly version?: string
     
 }
 
@@ -327,7 +324,7 @@ export class CountriesApi extends CountriesApiCustom {
      * @throws {RequiredError}
      * @memberof CountriesApi
      */
-    public all(requestParameters: CountriesApiAllRequest, options?: AxiosRequestConfig) {
+    public all(requestParameters: CountriesApiAllRequest = {}, options?: AxiosRequestConfig) {
         return CountriesApiFp(this.configuration).all(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 

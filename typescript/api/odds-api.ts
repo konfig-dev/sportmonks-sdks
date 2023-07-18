@@ -48,14 +48,12 @@ export const OddsApiAxiosParamCreator = function (configuration?: Configuration)
         /**
          * 
          * @summary By ID
-         * @param {string} version The version of the API.
          * @param {number} bookmakerId The ID of the bookmaker you want to retrieve.
+         * @param {string} [version] The version of the API.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        bookmakerById: async (version: string, bookmakerId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('bookmakerById', 'version', version)
+        bookmakerById: async (bookmakerId: number, version?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'bookmakerId' is not null or undefined
             assertParamExists('bookmakerById', 'bookmakerId', bookmakerId)
             const localVarPath = `/{version}/odds/bookmakers/{bookmakerId}`
@@ -73,6 +71,7 @@ export const OddsApiAxiosParamCreator = function (configuration?: Configuration)
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -93,13 +92,11 @@ export const OddsApiAxiosParamCreator = function (configuration?: Configuration)
         /**
          * 
          * @summary All
-         * @param {string} version The version of the API.
+         * @param {string} [version] The version of the API.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        bookmakersAll: async (version: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('bookmakersAll', 'version', version)
+        bookmakersAll: async (version?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/odds/bookmakers`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -114,6 +111,7 @@ export const OddsApiAxiosParamCreator = function (configuration?: Configuration)
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -134,14 +132,12 @@ export const OddsApiAxiosParamCreator = function (configuration?: Configuration)
         /**
          * 
          * @summary By Fixture ID
-         * @param {string} version The version of the API.
          * @param {number} fixtureId The ID of the bookmaker you want to retrieve.
+         * @param {string} [version] The version of the API.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        bookmakersByFixtureId: async (version: string, fixtureId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('bookmakersByFixtureId', 'version', version)
+        bookmakersByFixtureId: async (fixtureId: number, version?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'fixtureId' is not null or undefined
             assertParamExists('bookmakersByFixtureId', 'fixtureId', fixtureId)
             const localVarPath = `/{version}/odds/bookmakers/fixtures/{fixtureId}`
@@ -159,6 +155,7 @@ export const OddsApiAxiosParamCreator = function (configuration?: Configuration)
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -179,14 +176,12 @@ export const OddsApiAxiosParamCreator = function (configuration?: Configuration)
         /**
          * 
          * @summary Mapping by Fixture ID
-         * @param {string} version The version of the API.
          * @param {number} fixtureId The fixtureId you want to retrieve the bookmaker mapping from.
+         * @param {string} [version] The version of the API.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        bookmakersMappingByFixtureId: async (version: string, fixtureId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('bookmakersMappingByFixtureId', 'version', version)
+        bookmakersMappingByFixtureId: async (fixtureId: number, version?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'fixtureId' is not null or undefined
             assertParamExists('bookmakersMappingByFixtureId', 'fixtureId', fixtureId)
             const localVarPath = `/{version}/odds/bookmakers/fixtures/{fixtureId}/mapping`
@@ -204,6 +199,7 @@ export const OddsApiAxiosParamCreator = function (configuration?: Configuration)
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -224,14 +220,12 @@ export const OddsApiAxiosParamCreator = function (configuration?: Configuration)
         /**
          * 
          * @summary Search
-         * @param {string} version The version of the API.
          * @param {string} name The name you want to search on
+         * @param {string} [version] The version of the API.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        bookmakersSearch: async (version: string, name: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('bookmakersSearch', 'version', version)
+        bookmakersSearch: async (name: string, version?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'name' is not null or undefined
             assertParamExists('bookmakersSearch', 'name', name)
             const localVarPath = `/{version}/odds/bookmakers/search/{name}`
@@ -249,6 +243,7 @@ export const OddsApiAxiosParamCreator = function (configuration?: Configuration)
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -269,17 +264,13 @@ export const OddsApiAxiosParamCreator = function (configuration?: Configuration)
         /**
          * 
          * @summary Upcoming Fixtures by Market ID
-         * @param {string} version The sport you want to retrieve upcoming fixtures from.
-         * @param {string} sport 
          * @param {number} marketId The ID of the market you want to retrieve upcoming fixtures from.
+         * @param {string} [version] The sport you want to retrieve upcoming fixtures from.
+         * @param {string} [sport] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        fixturesUpcomingByMarketId: async (version: string, sport: string, marketId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('fixturesUpcomingByMarketId', 'version', version)
-            // verify required parameter 'sport' is not null or undefined
-            assertParamExists('fixturesUpcomingByMarketId', 'sport', sport)
+        fixturesUpcomingByMarketId: async (marketId: number, version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'marketId' is not null or undefined
             assertParamExists('fixturesUpcomingByMarketId', 'marketId', marketId)
             const localVarPath = `/{version}/{sport}/fixtures/upcoming/markets/{marketId}`
@@ -298,6 +289,7 @@ export const OddsApiAxiosParamCreator = function (configuration?: Configuration)
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -318,14 +310,12 @@ export const OddsApiAxiosParamCreator = function (configuration?: Configuration)
         /**
          * 
          * @summary By ID
-         * @param {string} version The version of the API.
          * @param {number} marketId The ID of the market you want to retrieve.
+         * @param {string} [version] The version of the API.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        marketById: async (version: string, marketId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('marketById', 'version', version)
+        marketById: async (marketId: number, version?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'marketId' is not null or undefined
             assertParamExists('marketById', 'marketId', marketId)
             const localVarPath = `/{version}/odds/markets/{marketId}`
@@ -343,6 +333,7 @@ export const OddsApiAxiosParamCreator = function (configuration?: Configuration)
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -363,13 +354,11 @@ export const OddsApiAxiosParamCreator = function (configuration?: Configuration)
         /**
          * 
          * @summary All
-         * @param {string} version The version of the API.
+         * @param {string} [version] The version of the API.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        marketsAll: async (version: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('marketsAll', 'version', version)
+        marketsAll: async (version?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/odds/markets`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -384,6 +373,7 @@ export const OddsApiAxiosParamCreator = function (configuration?: Configuration)
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -404,14 +394,12 @@ export const OddsApiAxiosParamCreator = function (configuration?: Configuration)
         /**
          * 
          * @summary Search
-         * @param {string} version The version of the API.
          * @param {string} name The name you want to search on
+         * @param {string} [version] The version of the API.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        marketsSearch: async (version: string, name: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('marketsSearch', 'version', version)
+        marketsSearch: async (name: string, version?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'name' is not null or undefined
             assertParamExists('marketsSearch', 'name', name)
             const localVarPath = `/{version}/odds/markets/search/{name}`
@@ -429,6 +417,7 @@ export const OddsApiAxiosParamCreator = function (configuration?: Configuration)
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -464,7 +453,7 @@ export const OddsApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async bookmakerById(requestParameters: OddsApiBookmakerByIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OddsBookmakerByIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.bookmakerById(requestParameters.version, requestParameters.bookmakerId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.bookmakerById(requestParameters.bookmakerId, requestParameters.version, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -474,7 +463,7 @@ export const OddsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async bookmakersAll(requestParameters: OddsApiBookmakersAllRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OddsBookmakersAllResponse>> {
+        async bookmakersAll(requestParameters: OddsApiBookmakersAllRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OddsBookmakersAllResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.bookmakersAll(requestParameters.version, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -486,7 +475,7 @@ export const OddsApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async bookmakersByFixtureId(requestParameters: OddsApiBookmakersByFixtureIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OddsBookmakersByFixtureIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.bookmakersByFixtureId(requestParameters.version, requestParameters.fixtureId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.bookmakersByFixtureId(requestParameters.fixtureId, requestParameters.version, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -497,7 +486,7 @@ export const OddsApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async bookmakersMappingByFixtureId(requestParameters: OddsApiBookmakersMappingByFixtureIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OddsBookmakersMappingByFixtureIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.bookmakersMappingByFixtureId(requestParameters.version, requestParameters.fixtureId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.bookmakersMappingByFixtureId(requestParameters.fixtureId, requestParameters.version, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -508,7 +497,7 @@ export const OddsApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async bookmakersSearch(requestParameters: OddsApiBookmakersSearchRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OddsBookmakersSearchResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.bookmakersSearch(requestParameters.version, requestParameters.name, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.bookmakersSearch(requestParameters.name, requestParameters.version, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -519,7 +508,7 @@ export const OddsApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async fixturesUpcomingByMarketId(requestParameters: OddsApiFixturesUpcomingByMarketIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OddsFixturesUpcomingByMarketIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.fixturesUpcomingByMarketId(requestParameters.version, requestParameters.sport, requestParameters.marketId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.fixturesUpcomingByMarketId(requestParameters.marketId, requestParameters.version, requestParameters.sport, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -530,7 +519,7 @@ export const OddsApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async marketById(requestParameters: OddsApiMarketByIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OddsMarketByIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.marketById(requestParameters.version, requestParameters.marketId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.marketById(requestParameters.marketId, requestParameters.version, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -540,7 +529,7 @@ export const OddsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async marketsAll(requestParameters: OddsApiMarketsAllRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OddsMarketsAllResponse>> {
+        async marketsAll(requestParameters: OddsApiMarketsAllRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OddsMarketsAllResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.marketsAll(requestParameters.version, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -552,7 +541,7 @@ export const OddsApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async marketsSearch(requestParameters: OddsApiMarketsSearchRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OddsMarketsSearchResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.marketsSearch(requestParameters.version, requestParameters.name, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.marketsSearch(requestParameters.name, requestParameters.version, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -582,7 +571,7 @@ export const OddsApiFactory = function (configuration?: Configuration, basePath?
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        bookmakersAll(requestParameters: OddsApiBookmakersAllRequest, options?: AxiosRequestConfig): AxiosPromise<OddsBookmakersAllResponse> {
+        bookmakersAll(requestParameters: OddsApiBookmakersAllRequest = {}, options?: AxiosRequestConfig): AxiosPromise<OddsBookmakersAllResponse> {
             return localVarFp.bookmakersAll(requestParameters, options).then((request) => request(axios, basePath));
         },
         /**
@@ -642,7 +631,7 @@ export const OddsApiFactory = function (configuration?: Configuration, basePath?
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        marketsAll(requestParameters: OddsApiMarketsAllRequest, options?: AxiosRequestConfig): AxiosPromise<OddsMarketsAllResponse> {
+        marketsAll(requestParameters: OddsApiMarketsAllRequest = {}, options?: AxiosRequestConfig): AxiosPromise<OddsMarketsAllResponse> {
             return localVarFp.marketsAll(requestParameters, options).then((request) => request(axios, basePath));
         },
         /**
@@ -666,18 +655,18 @@ export const OddsApiFactory = function (configuration?: Configuration, basePath?
 export type OddsApiBookmakerByIdRequest = {
     
     /**
-    * The version of the API.
-    * @type {string}
-    * @memberof OddsApiBookmakerById
-    */
-    readonly version: string
-    
-    /**
     * The ID of the bookmaker you want to retrieve.
     * @type {number}
     * @memberof OddsApiBookmakerById
     */
     readonly bookmakerId: number
+    
+    /**
+    * The version of the API.
+    * @type {string}
+    * @memberof OddsApiBookmakerById
+    */
+    readonly version?: string
     
 }
 
@@ -693,7 +682,7 @@ export type OddsApiBookmakersAllRequest = {
     * @type {string}
     * @memberof OddsApiBookmakersAll
     */
-    readonly version: string
+    readonly version?: string
     
 }
 
@@ -705,18 +694,18 @@ export type OddsApiBookmakersAllRequest = {
 export type OddsApiBookmakersByFixtureIdRequest = {
     
     /**
-    * The version of the API.
-    * @type {string}
-    * @memberof OddsApiBookmakersByFixtureId
-    */
-    readonly version: string
-    
-    /**
     * The ID of the bookmaker you want to retrieve.
     * @type {number}
     * @memberof OddsApiBookmakersByFixtureId
     */
     readonly fixtureId: number
+    
+    /**
+    * The version of the API.
+    * @type {string}
+    * @memberof OddsApiBookmakersByFixtureId
+    */
+    readonly version?: string
     
 }
 
@@ -728,18 +717,18 @@ export type OddsApiBookmakersByFixtureIdRequest = {
 export type OddsApiBookmakersMappingByFixtureIdRequest = {
     
     /**
-    * The version of the API.
-    * @type {string}
-    * @memberof OddsApiBookmakersMappingByFixtureId
-    */
-    readonly version: string
-    
-    /**
     * The fixtureId you want to retrieve the bookmaker mapping from.
     * @type {number}
     * @memberof OddsApiBookmakersMappingByFixtureId
     */
     readonly fixtureId: number
+    
+    /**
+    * The version of the API.
+    * @type {string}
+    * @memberof OddsApiBookmakersMappingByFixtureId
+    */
+    readonly version?: string
     
 }
 
@@ -751,18 +740,18 @@ export type OddsApiBookmakersMappingByFixtureIdRequest = {
 export type OddsApiBookmakersSearchRequest = {
     
     /**
-    * The version of the API.
-    * @type {string}
-    * @memberof OddsApiBookmakersSearch
-    */
-    readonly version: string
-    
-    /**
     * The name you want to search on
     * @type {string}
     * @memberof OddsApiBookmakersSearch
     */
     readonly name: string
+    
+    /**
+    * The version of the API.
+    * @type {string}
+    * @memberof OddsApiBookmakersSearch
+    */
+    readonly version?: string
     
 }
 
@@ -774,25 +763,25 @@ export type OddsApiBookmakersSearchRequest = {
 export type OddsApiFixturesUpcomingByMarketIdRequest = {
     
     /**
+    * The ID of the market you want to retrieve upcoming fixtures from.
+    * @type {number}
+    * @memberof OddsApiFixturesUpcomingByMarketId
+    */
+    readonly marketId: number
+    
+    /**
     * The sport you want to retrieve upcoming fixtures from.
     * @type {string}
     * @memberof OddsApiFixturesUpcomingByMarketId
     */
-    readonly version: string
+    readonly version?: string
     
     /**
     * 
     * @type {string}
     * @memberof OddsApiFixturesUpcomingByMarketId
     */
-    readonly sport: string
-    
-    /**
-    * The ID of the market you want to retrieve upcoming fixtures from.
-    * @type {number}
-    * @memberof OddsApiFixturesUpcomingByMarketId
-    */
-    readonly marketId: number
+    readonly sport?: string
     
 }
 
@@ -804,18 +793,18 @@ export type OddsApiFixturesUpcomingByMarketIdRequest = {
 export type OddsApiMarketByIdRequest = {
     
     /**
-    * The version of the API.
-    * @type {string}
-    * @memberof OddsApiMarketById
-    */
-    readonly version: string
-    
-    /**
     * The ID of the market you want to retrieve.
     * @type {number}
     * @memberof OddsApiMarketById
     */
     readonly marketId: number
+    
+    /**
+    * The version of the API.
+    * @type {string}
+    * @memberof OddsApiMarketById
+    */
+    readonly version?: string
     
 }
 
@@ -831,7 +820,7 @@ export type OddsApiMarketsAllRequest = {
     * @type {string}
     * @memberof OddsApiMarketsAll
     */
-    readonly version: string
+    readonly version?: string
     
 }
 
@@ -843,18 +832,18 @@ export type OddsApiMarketsAllRequest = {
 export type OddsApiMarketsSearchRequest = {
     
     /**
-    * The version of the API.
-    * @type {string}
-    * @memberof OddsApiMarketsSearch
-    */
-    readonly version: string
-    
-    /**
     * The name you want to search on
     * @type {string}
     * @memberof OddsApiMarketsSearch
     */
     readonly name: string
+    
+    /**
+    * The version of the API.
+    * @type {string}
+    * @memberof OddsApiMarketsSearch
+    */
+    readonly version?: string
     
 }
 
@@ -885,7 +874,7 @@ export class OddsApi extends OddsApiCustom {
      * @throws {RequiredError}
      * @memberof OddsApi
      */
-    public bookmakersAll(requestParameters: OddsApiBookmakersAllRequest, options?: AxiosRequestConfig) {
+    public bookmakersAll(requestParameters: OddsApiBookmakersAllRequest = {}, options?: AxiosRequestConfig) {
         return OddsApiFp(this.configuration).bookmakersAll(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -957,7 +946,7 @@ export class OddsApi extends OddsApiCustom {
      * @throws {RequiredError}
      * @memberof OddsApi
      */
-    public marketsAll(requestParameters: OddsApiMarketsAllRequest, options?: AxiosRequestConfig) {
+    public marketsAll(requestParameters: OddsApiMarketsAllRequest = {}, options?: AxiosRequestConfig) {
         return OddsApiFp(this.configuration).marketsAll(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 

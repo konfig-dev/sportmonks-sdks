@@ -2,6 +2,11 @@
 
 outputDirectory: /tmp/sportmonks-sdks-out
 specPath: api.yaml
+optionalParameters:
+  - name: version
+    in: path
+  - name: sport
+    in: path
 generators:
   csharp:
     version: 1.0.0
@@ -24,6 +29,9 @@ generators:
     clientName: Sportmonks
     npmName: sportmonks
     outputDirectory: typescript
+    clientState:
+      - version
+      - sport
     git:
       userId: konfig-dev
       repoId: sportmonks-sdks/tree/main/typescript

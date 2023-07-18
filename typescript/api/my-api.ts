@@ -36,13 +36,11 @@ export const MyApiAxiosParamCreator = function (configuration?: Configuration) {
         /**
          * 
          * @summary All
-         * @param {string} version The version of the API.
+         * @param {string} [version] The version of the API.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        enrichments: async (version: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('enrichments', 'version', version)
+        enrichments: async (version?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/my/enrichments`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -57,6 +55,7 @@ export const MyApiAxiosParamCreator = function (configuration?: Configuration) {
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -77,13 +76,11 @@ export const MyApiAxiosParamCreator = function (configuration?: Configuration) {
         /**
          * 
          * @summary All
-         * @param {string} version The version of the API.
+         * @param {string} [version] The version of the API.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        leagues: async (version: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('leagues', 'version', version)
+        leagues: async (version?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/my/leagues`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -98,6 +95,7 @@ export const MyApiAxiosParamCreator = function (configuration?: Configuration) {
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -118,13 +116,11 @@ export const MyApiAxiosParamCreator = function (configuration?: Configuration) {
         /**
          * 
          * @summary All
-         * @param {string} version The version of the API.
+         * @param {string} [version] The version of the API.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        resources: async (version: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('resources', 'version', version)
+        resources: async (version?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/my/resources`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -139,6 +135,7 @@ export const MyApiAxiosParamCreator = function (configuration?: Configuration) {
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -173,7 +170,7 @@ export const MyApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async enrichments(requestParameters: MyApiEnrichmentsRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MyEnrichmentsResponse>> {
+        async enrichments(requestParameters: MyApiEnrichmentsRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MyEnrichmentsResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.enrichments(requestParameters.version, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -184,7 +181,7 @@ export const MyApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async leagues(requestParameters: MyApiLeaguesRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MyLeaguesResponse>> {
+        async leagues(requestParameters: MyApiLeaguesRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MyLeaguesResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.leagues(requestParameters.version, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -195,7 +192,7 @@ export const MyApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async resources(requestParameters: MyApiResourcesRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MyResourcesResponse>> {
+        async resources(requestParameters: MyApiResourcesRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MyResourcesResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.resources(requestParameters.version, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -216,7 +213,7 @@ export const MyApiFactory = function (configuration?: Configuration, basePath?: 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        enrichments(requestParameters: MyApiEnrichmentsRequest, options?: AxiosRequestConfig): AxiosPromise<MyEnrichmentsResponse> {
+        enrichments(requestParameters: MyApiEnrichmentsRequest = {}, options?: AxiosRequestConfig): AxiosPromise<MyEnrichmentsResponse> {
             return localVarFp.enrichments(requestParameters, options).then((request) => request(axios, basePath));
         },
         /**
@@ -226,7 +223,7 @@ export const MyApiFactory = function (configuration?: Configuration, basePath?: 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        leagues(requestParameters: MyApiLeaguesRequest, options?: AxiosRequestConfig): AxiosPromise<MyLeaguesResponse> {
+        leagues(requestParameters: MyApiLeaguesRequest = {}, options?: AxiosRequestConfig): AxiosPromise<MyLeaguesResponse> {
             return localVarFp.leagues(requestParameters, options).then((request) => request(axios, basePath));
         },
         /**
@@ -236,7 +233,7 @@ export const MyApiFactory = function (configuration?: Configuration, basePath?: 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        resources(requestParameters: MyApiResourcesRequest, options?: AxiosRequestConfig): AxiosPromise<MyResourcesResponse> {
+        resources(requestParameters: MyApiResourcesRequest = {}, options?: AxiosRequestConfig): AxiosPromise<MyResourcesResponse> {
             return localVarFp.resources(requestParameters, options).then((request) => request(axios, basePath));
         },
     };
@@ -254,7 +251,7 @@ export type MyApiEnrichmentsRequest = {
     * @type {string}
     * @memberof MyApiEnrichments
     */
-    readonly version: string
+    readonly version?: string
     
 }
 
@@ -270,7 +267,7 @@ export type MyApiLeaguesRequest = {
     * @type {string}
     * @memberof MyApiLeagues
     */
-    readonly version: string
+    readonly version?: string
     
 }
 
@@ -286,7 +283,7 @@ export type MyApiResourcesRequest = {
     * @type {string}
     * @memberof MyApiResources
     */
-    readonly version: string
+    readonly version?: string
     
 }
 
@@ -305,7 +302,7 @@ export class MyApi extends MyApiCustom {
      * @throws {RequiredError}
      * @memberof MyApi
      */
-    public enrichments(requestParameters: MyApiEnrichmentsRequest, options?: AxiosRequestConfig) {
+    public enrichments(requestParameters: MyApiEnrichmentsRequest = {}, options?: AxiosRequestConfig) {
         return MyApiFp(this.configuration).enrichments(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -317,7 +314,7 @@ export class MyApi extends MyApiCustom {
      * @throws {RequiredError}
      * @memberof MyApi
      */
-    public leagues(requestParameters: MyApiLeaguesRequest, options?: AxiosRequestConfig) {
+    public leagues(requestParameters: MyApiLeaguesRequest = {}, options?: AxiosRequestConfig) {
         return MyApiFp(this.configuration).leagues(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 
@@ -329,7 +326,7 @@ export class MyApi extends MyApiCustom {
      * @throws {RequiredError}
      * @memberof MyApi
      */
-    public resources(requestParameters: MyApiResourcesRequest, options?: AxiosRequestConfig) {
+    public resources(requestParameters: MyApiResourcesRequest = {}, options?: AxiosRequestConfig) {
         return MyApiFp(this.configuration).resources(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 }

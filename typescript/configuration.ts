@@ -19,6 +19,8 @@ type ApiKey =
   | { [apiKeyName: string]: string | undefined };
 
 export interface ConfigurationParameters {
+    version?: string;
+    sport?: string;
     apiKey?: ApiKey;
     username?: string;
     password?: string;
@@ -30,6 +32,14 @@ export interface ConfigurationParameters {
 }
 
 export class Configuration {
+    /**
+    * Client state
+    */
+    version?: string;
+    /**
+    * Client state
+    */
+    sport?: string;
     /**
      * parameter for apiKey security
      * @param name security name
@@ -85,6 +95,8 @@ export class Configuration {
     userAgent: string;
 
     constructor(param: ConfigurationParameters = {}) {
+        this.version = param.version
+        this.sport = param.sport
         this.apiKey = param.apiKey
         if (this.apiKey === undefined) {
             this.apiKey = {}

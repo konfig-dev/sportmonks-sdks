@@ -26,11 +26,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
-const allResponse = await sportmonks.cities.all({
-  version: "version_example",
-});
+const allResponse = await sportmonks.cities.all({});
 
 console.log(allResponse);
 ```

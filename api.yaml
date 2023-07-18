@@ -4619,8 +4619,9 @@ paths:
 components:
   securitySchemes:
     apikeyAuth:
-      type: http
-      scheme: apikey
+      type: apiKey
+      in: header
+      name: Authorization
   schemas:
     ContinentsAllResponse:
       type: object

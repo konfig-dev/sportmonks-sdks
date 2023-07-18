@@ -36,13 +36,11 @@ export const RegionsApiAxiosParamCreator = function (configuration?: Configurati
         /**
          * 
          * @summary All
-         * @param {string} version The version of the API.
+         * @param {string} [version] The version of the API.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        all: async (version: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('all', 'version', version)
+        all: async (version?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/core/regions`
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -57,6 +55,7 @@ export const RegionsApiAxiosParamCreator = function (configuration?: Configurati
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -77,14 +76,12 @@ export const RegionsApiAxiosParamCreator = function (configuration?: Configurati
         /**
          * 
          * @summary By ID
-         * @param {string} version The version of the API.
          * @param {number} regionId The ID of the region you want to retrieve.
+         * @param {string} [version] The version of the API.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getById: async (version: string, regionId: number, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('getById', 'version', version)
+        getById: async (regionId: number, version?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'regionId' is not null or undefined
             assertParamExists('getById', 'regionId', regionId)
             const localVarPath = `/{version}/core/regions/{regionId}`
@@ -102,6 +99,7 @@ export const RegionsApiAxiosParamCreator = function (configuration?: Configurati
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -122,14 +120,12 @@ export const RegionsApiAxiosParamCreator = function (configuration?: Configurati
         /**
          * 
          * @summary Search
-         * @param {string} version The version of the API.
          * @param {string} name The name you want to search on
+         * @param {string} [version] The version of the API.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        search: async (version: string, name: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'version' is not null or undefined
-            assertParamExists('search', 'version', version)
+        search: async (name: string, version?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'name' is not null or undefined
             assertParamExists('search', 'name', name)
             const localVarPath = `/{version}/core/regions/search/{name}`
@@ -147,6 +143,7 @@ export const RegionsApiAxiosParamCreator = function (configuration?: Configurati
             const localVarQueryParameter = {} as any;
 
             // authentication apikeyAuth required
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "Authorization", configuration })
 
     
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -181,7 +178,7 @@ export const RegionsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async all(requestParameters: RegionsApiAllRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RegionsAllResponse>> {
+        async all(requestParameters: RegionsApiAllRequest = {}, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RegionsAllResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.all(requestParameters.version, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -193,7 +190,7 @@ export const RegionsApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async getById(requestParameters: RegionsApiGetByIdRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RegionsGetByIdResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.getById(requestParameters.version, requestParameters.regionId, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.getById(requestParameters.regionId, requestParameters.version, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -204,7 +201,7 @@ export const RegionsApiFp = function(configuration?: Configuration) {
          * @throws {RequiredError}
          */
         async search(requestParameters: RegionsApiSearchRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<RegionsSearchResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.search(requestParameters.version, requestParameters.name, options);
+            const localVarAxiosArgs = await localVarAxiosParamCreator.search(requestParameters.name, requestParameters.version, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -224,7 +221,7 @@ export const RegionsApiFactory = function (configuration?: Configuration, basePa
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        all(requestParameters: RegionsApiAllRequest, options?: AxiosRequestConfig): AxiosPromise<RegionsAllResponse> {
+        all(requestParameters: RegionsApiAllRequest = {}, options?: AxiosRequestConfig): AxiosPromise<RegionsAllResponse> {
             return localVarFp.all(requestParameters, options).then((request) => request(axios, basePath));
         },
         /**
@@ -262,7 +259,7 @@ export type RegionsApiAllRequest = {
     * @type {string}
     * @memberof RegionsApiAll
     */
-    readonly version: string
+    readonly version?: string
     
 }
 
@@ -274,18 +271,18 @@ export type RegionsApiAllRequest = {
 export type RegionsApiGetByIdRequest = {
     
     /**
-    * The version of the API.
-    * @type {string}
-    * @memberof RegionsApiGetById
-    */
-    readonly version: string
-    
-    /**
     * The ID of the region you want to retrieve.
     * @type {number}
     * @memberof RegionsApiGetById
     */
     readonly regionId: number
+    
+    /**
+    * The version of the API.
+    * @type {string}
+    * @memberof RegionsApiGetById
+    */
+    readonly version?: string
     
 }
 
@@ -297,18 +294,18 @@ export type RegionsApiGetByIdRequest = {
 export type RegionsApiSearchRequest = {
     
     /**
-    * The version of the API.
-    * @type {string}
-    * @memberof RegionsApiSearch
-    */
-    readonly version: string
-    
-    /**
     * The name you want to search on
     * @type {string}
     * @memberof RegionsApiSearch
     */
     readonly name: string
+    
+    /**
+    * The version of the API.
+    * @type {string}
+    * @memberof RegionsApiSearch
+    */
+    readonly version?: string
     
 }
 
@@ -327,7 +324,7 @@ export class RegionsApi extends RegionsApiCustom {
      * @throws {RequiredError}
      * @memberof RegionsApi
      */
-    public all(requestParameters: RegionsApiAllRequest, options?: AxiosRequestConfig) {
+    public all(requestParameters: RegionsApiAllRequest = {}, options?: AxiosRequestConfig) {
         return RegionsApiFp(this.configuration).all(requestParameters, options).then((request) => request(this.axios, this.basePath));
     }
 

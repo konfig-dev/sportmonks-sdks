@@ -23,11 +23,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
-const allResponse = await sportmonks.regions.all({
-  version: "version_example",
-});
+const allResponse = await sportmonks.regions.all({});
 
 console.log(allResponse);
 ```
@@ -37,7 +38,7 @@ console.log(allResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
 
 
 ### Return type
@@ -71,10 +72,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const getByIdResponse = await sportmonks.regions.getById({
-  version: "version_example",
   regionId: 1,
 });
 
@@ -86,8 +89,8 @@ console.log(getByIdResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
  **regionId** | [**number**] | The ID of the region you want to retrieve. | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
 
 
 ### Return type
@@ -121,10 +124,12 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
+  version: "version",
+  sport: "sport",
+  apiKey: "API_KEY",
 });
 
 const searchResponse = await sportmonks.regions.search({
-  version: "version_example",
   name: "name_example",
 });
 
@@ -136,8 +141,8 @@ console.log(searchResponse);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | [**string**] | The version of the API. | defaults to undefined
  **name** | [**string**] | The name you want to search on | defaults to undefined
+ **version** | [**string**] | The version of the API. | (optional) defaults to undefined
 
 
 ### Return type
