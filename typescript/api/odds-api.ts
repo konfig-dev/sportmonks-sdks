@@ -57,8 +57,8 @@ export const OddsApiAxiosParamCreator = function (configuration?: Configuration)
             // verify required parameter 'bookmakerId' is not null or undefined
             assertParamExists('bookmakerById', 'bookmakerId', bookmakerId)
             const localVarPath = `/{version}/odds/bookmakers/{bookmakerId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"bookmakerId"}}`, encodeURIComponent(String(bookmakerId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"bookmakerId"}}`, encodeURIComponent(String(bookmakerId !== undefined ? bookmakerId : `-bookmakerId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -98,7 +98,7 @@ export const OddsApiAxiosParamCreator = function (configuration?: Configuration)
          */
         bookmakersAll: async (version?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/odds/bookmakers`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -141,8 +141,8 @@ export const OddsApiAxiosParamCreator = function (configuration?: Configuration)
             // verify required parameter 'fixtureId' is not null or undefined
             assertParamExists('bookmakersByFixtureId', 'fixtureId', fixtureId)
             const localVarPath = `/{version}/odds/bookmakers/fixtures/{fixtureId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"fixtureId"}}`, encodeURIComponent(String(fixtureId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"fixtureId"}}`, encodeURIComponent(String(fixtureId !== undefined ? fixtureId : `-fixtureId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -185,8 +185,8 @@ export const OddsApiAxiosParamCreator = function (configuration?: Configuration)
             // verify required parameter 'fixtureId' is not null or undefined
             assertParamExists('bookmakersMappingByFixtureId', 'fixtureId', fixtureId)
             const localVarPath = `/{version}/odds/bookmakers/fixtures/{fixtureId}/mapping`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"fixtureId"}}`, encodeURIComponent(String(fixtureId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"fixtureId"}}`, encodeURIComponent(String(fixtureId !== undefined ? fixtureId : `-fixtureId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -229,8 +229,8 @@ export const OddsApiAxiosParamCreator = function (configuration?: Configuration)
             // verify required parameter 'name' is not null or undefined
             assertParamExists('bookmakersSearch', 'name', name)
             const localVarPath = `/{version}/odds/bookmakers/search/{name}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"name"}}`, encodeURIComponent(String(name)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"name"}}`, encodeURIComponent(String(name !== undefined ? name : `-name-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -274,9 +274,9 @@ export const OddsApiAxiosParamCreator = function (configuration?: Configuration)
             // verify required parameter 'marketId' is not null or undefined
             assertParamExists('fixturesUpcomingByMarketId', 'marketId', marketId)
             const localVarPath = `/{version}/{sport}/fixtures/upcoming/markets/{marketId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"marketId"}}`, encodeURIComponent(String(marketId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"marketId"}}`, encodeURIComponent(String(marketId !== undefined ? marketId : `-marketId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -319,8 +319,8 @@ export const OddsApiAxiosParamCreator = function (configuration?: Configuration)
             // verify required parameter 'marketId' is not null or undefined
             assertParamExists('marketById', 'marketId', marketId)
             const localVarPath = `/{version}/odds/markets/{marketId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"marketId"}}`, encodeURIComponent(String(marketId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"marketId"}}`, encodeURIComponent(String(marketId !== undefined ? marketId : `-marketId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -360,7 +360,7 @@ export const OddsApiAxiosParamCreator = function (configuration?: Configuration)
          */
         marketsAll: async (version?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/odds/markets`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -403,8 +403,8 @@ export const OddsApiAxiosParamCreator = function (configuration?: Configuration)
             // verify required parameter 'name' is not null or undefined
             assertParamExists('marketsSearch', 'name', name)
             const localVarPath = `/{version}/odds/markets/search/{name}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"name"}}`, encodeURIComponent(String(name)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"name"}}`, encodeURIComponent(String(name !== undefined ? name : `-name-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;

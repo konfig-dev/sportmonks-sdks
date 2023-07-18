@@ -222,9 +222,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'coachId' is not null or undefined
             assertParamExists('coachById', 'coachId', coachId)
             const localVarPath = `/{version}/{sport}/coaches/{coachId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"coachId"}}`, encodeURIComponent(String(coachId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"coachId"}}`, encodeURIComponent(String(coachId !== undefined ? coachId : `-coachId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -265,8 +265,8 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
          */
         coachesAll: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/coaches`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -310,9 +310,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'countryId' is not null or undefined
             assertParamExists('coachesByCountryId', 'countryId', countryId)
             const localVarPath = `/{version}/{sport}/coaches/countries/{countryId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"countryId"}}`, encodeURIComponent(String(countryId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"countryId"}}`, encodeURIComponent(String(countryId !== undefined ? countryId : `-countryId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -353,8 +353,8 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
          */
         coachesLatest: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/coaches/latest`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -398,9 +398,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'name' is not null or undefined
             assertParamExists('coachesSearch', 'name', name)
             const localVarPath = `/{version}/{sport}/coaches/search/{name}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"name"}}`, encodeURIComponent(String(name)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"name"}}`, encodeURIComponent(String(name !== undefined ? name : `-name-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -441,8 +441,8 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
          */
         commentariesAll: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/commentaries`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -486,9 +486,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'fixtureId' is not null or undefined
             assertParamExists('commentariesByFixtureId', 'fixtureId', fixtureId)
             const localVarPath = `/{version}/{sport}/commentaries/fixtures/{fixtureId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"fixtureId"}}`, encodeURIComponent(String(fixtureId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"fixtureId"}}`, encodeURIComponent(String(fixtureId !== undefined ? fixtureId : `-fixtureId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -538,11 +538,11 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'teamId' is not null or undefined
             assertParamExists('fixtureByDateRangeForTeam', 'teamId', teamId)
             const localVarPath = `/{version}/{sport}/fixtures/between/{startDate}/{endDate}/{teamId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"startDate"}}`, encodeURIComponent(String(startDate)))
-                .replace(`{${"endDate"}}`, encodeURIComponent(String(endDate)))
-                .replace(`{${"teamId"}}`, encodeURIComponent(String(teamId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"startDate"}}`, encodeURIComponent(String(startDate !== undefined ? startDate : `-startDate-`)))
+                .replace(`{${"endDate"}}`, encodeURIComponent(String(endDate !== undefined ? endDate : `-endDate-`)))
+                .replace(`{${"teamId"}}`, encodeURIComponent(String(teamId !== undefined ? teamId : `-teamId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -586,9 +586,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'fixtureId' is not null or undefined
             assertParamExists('fixtureById', 'fixtureId', fixtureId)
             const localVarPath = `/{version}/{sport}/fixtures/{fixtureId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"fixtureId"}}`, encodeURIComponent(String(fixtureId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"fixtureId"}}`, encodeURIComponent(String(fixtureId !== undefined ? fixtureId : `-fixtureId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -629,8 +629,8 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
          */
         fixturesAll: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/fixtures`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -674,9 +674,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'date' is not null or undefined
             assertParamExists('fixturesByDate', 'date', date)
             const localVarPath = `/{version}/{sport}/fixtures/date/{date}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"date"}}`, encodeURIComponent(String(date)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"date"}}`, encodeURIComponent(String(date !== undefined ? date : `-date-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -723,10 +723,10 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'endDate' is not null or undefined
             assertParamExists('fixturesByDateRange', 'endDate', endDate)
             const localVarPath = `/{version}/{sport}/fixtures/between/{startDate}/{endDate}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"startDate"}}`, encodeURIComponent(String(startDate)))
-                .replace(`{${"endDate"}}`, encodeURIComponent(String(endDate)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"startDate"}}`, encodeURIComponent(String(startDate !== undefined ? startDate : `-startDate-`)))
+                .replace(`{${"endDate"}}`, encodeURIComponent(String(endDate !== undefined ? endDate : `-endDate-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -770,9 +770,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'fixtureIds' is not null or undefined
             assertParamExists('fixturesByIds', 'fixtureIds', fixtureIds)
             const localVarPath = `/{version}/{sport}/fixtures/multi/{fixtureIds}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"fixtureIds"}}`, encodeURIComponent(String(fixtureIds)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"fixtureIds"}}`, encodeURIComponent(String(fixtureIds !== undefined ? fixtureIds : `-fixtureIds-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -819,10 +819,10 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'secondTeam' is not null or undefined
             assertParamExists('fixturesHeadToHead', 'secondTeam', secondTeam)
             const localVarPath = `/{version}/{sport}/fixtures/head-to-head/{firstTeam}/{secondTeam}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"firstTeam"}}`, encodeURIComponent(String(firstTeam)))
-                .replace(`{${"secondTeam"}}`, encodeURIComponent(String(secondTeam)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"firstTeam"}}`, encodeURIComponent(String(firstTeam !== undefined ? firstTeam : `-firstTeam-`)))
+                .replace(`{${"secondTeam"}}`, encodeURIComponent(String(secondTeam !== undefined ? secondTeam : `-secondTeam-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -863,8 +863,8 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
          */
         fixturesLatest: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/fixtures/latest`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -908,9 +908,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'name' is not null or undefined
             assertParamExists('fixturesSearch', 'name', name)
             const localVarPath = `/{version}/{sport}/fixtures/search/{name}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"name"}}`, encodeURIComponent(String(name)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"name"}}`, encodeURIComponent(String(name !== undefined ? name : `-name-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -954,9 +954,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'leagueId' is not null or undefined
             assertParamExists('leagueById', 'leagueId', leagueId)
             const localVarPath = `/{version}/{sport}/leagues/{leagueId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"leagueId"}}`, encodeURIComponent(String(leagueId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"leagueId"}}`, encodeURIComponent(String(leagueId !== undefined ? leagueId : `-leagueId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -1000,9 +1000,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'leagueId' is not null or undefined
             assertParamExists('leagueEnrichments', 'leagueId', leagueId)
             const localVarPath = `/{version}/{sport}/leagues/{leagueId}/includes`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"leagueId"}}`, encodeURIComponent(String(leagueId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"leagueId"}}`, encodeURIComponent(String(leagueId !== undefined ? leagueId : `-leagueId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -1046,9 +1046,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'leagueId' is not null or undefined
             assertParamExists('leagueShirts', 'leagueId', leagueId)
             const localVarPath = `/{version}/{sport}/leagues/{leagueId}/jerseys`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"leagueId"}}`, encodeURIComponent(String(leagueId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"leagueId"}}`, encodeURIComponent(String(leagueId !== undefined ? leagueId : `-leagueId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -1089,8 +1089,8 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
          */
         leaguesAll: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/leagues`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -1134,9 +1134,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'countryId' is not null or undefined
             assertParamExists('leaguesByCountryId', 'countryId', countryId)
             const localVarPath = `/{version}/{sport}/leagues/countries/{countryId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"countryId"}}`, encodeURIComponent(String(countryId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"countryId"}}`, encodeURIComponent(String(countryId !== undefined ? countryId : `-countryId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -1180,9 +1180,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'date' is not null or undefined
             assertParamExists('leaguesByDate', 'date', date)
             const localVarPath = `/{version}/{sport}/leagues/date/{date}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"date"}}`, encodeURIComponent(String(date)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"date"}}`, encodeURIComponent(String(date !== undefined ? date : `-date-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -1226,9 +1226,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'teamId' is not null or undefined
             assertParamExists('leaguesByTeamId', 'teamId', teamId)
             const localVarPath = `/{version}/{sport}/teams/{teamId}/leagues`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"teamId"}}`, encodeURIComponent(String(teamId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"teamId"}}`, encodeURIComponent(String(teamId !== undefined ? teamId : `-teamId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -1272,9 +1272,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'teamId' is not null or undefined
             assertParamExists('leaguesCurrentByTeamId', 'teamId', teamId)
             const localVarPath = `/{version}/{sport}/teams/{teamId}/leagues/current`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"teamId"}}`, encodeURIComponent(String(teamId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"teamId"}}`, encodeURIComponent(String(teamId !== undefined ? teamId : `-teamId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -1315,8 +1315,8 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
          */
         leaguesLive: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/leagues/live`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -1360,9 +1360,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'name' is not null or undefined
             assertParamExists('leaguesSearch', 'name', name)
             const localVarPath = `/{version}/{sport}/leagues/search/{name}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"name"}}`, encodeURIComponent(String(name)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"name"}}`, encodeURIComponent(String(name !== undefined ? name : `-name-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -1403,8 +1403,8 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
          */
         livescoresAll: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/livescores`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -1445,8 +1445,8 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
          */
         livescoresAllInPlay: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/livescores/inplay`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -1487,8 +1487,8 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
          */
         livescoresLatest: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/livescores/latest`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -1529,8 +1529,8 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
          */
         newsAllPostMatch: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/news/post-match`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -1571,8 +1571,8 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
          */
         newsAllPreMatch: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/news/pre-match`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -1616,9 +1616,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'seasonId' is not null or undefined
             assertParamExists('newsPostMatchBySeasonId', 'seasonId', seasonId)
             const localVarPath = `/{version}/{sport}/news/post-match/seasons/{seasonId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"seasonId"}}`, encodeURIComponent(String(seasonId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"seasonId"}}`, encodeURIComponent(String(seasonId !== undefined ? seasonId : `-seasonId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -1662,9 +1662,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'seasonId' is not null or undefined
             assertParamExists('newsPreMatchBySeasonId', 'seasonId', seasonId)
             const localVarPath = `/{version}/{sport}/news/pre-match/seasons/{seasonId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"seasonId"}}`, encodeURIComponent(String(seasonId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"seasonId"}}`, encodeURIComponent(String(seasonId !== undefined ? seasonId : `-seasonId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -1705,8 +1705,8 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
          */
         newsUpcomingPostMatch: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/news/post-match/upcoming`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -1747,8 +1747,8 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
          */
         newsUpcomingPreMatch: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/news/pre-match/upcoming`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -1789,8 +1789,8 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
          */
         oddsAllInPlay: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/odds/inplay`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -1831,8 +1831,8 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
          */
         oddsAllPreMatch: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/odds/pre-match`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -1879,10 +1879,10 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'bookmakerId' is not null or undefined
             assertParamExists('oddsInPlayByFixtureAndBookmakerId', 'bookmakerId', bookmakerId)
             const localVarPath = `/{version}/{sport}/odds/inplay/fixtures/{fixtureId}/bookmakers/{bookmakerId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"fixtureId"}}`, encodeURIComponent(String(fixtureId)))
-                .replace(`{${"bookmakerId"}}`, encodeURIComponent(String(bookmakerId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"fixtureId"}}`, encodeURIComponent(String(fixtureId !== undefined ? fixtureId : `-fixtureId-`)))
+                .replace(`{${"bookmakerId"}}`, encodeURIComponent(String(bookmakerId !== undefined ? bookmakerId : `-bookmakerId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -1929,10 +1929,10 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'marketId' is not null or undefined
             assertParamExists('oddsInPlayByFixtureAndMarketId', 'marketId', marketId)
             const localVarPath = `/{version}/{sport}/odds/inplay/fixtures/{fixtureId}/markets/{marketId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"fixtureId"}}`, encodeURIComponent(String(fixtureId)))
-                .replace(`{${"marketId"}}`, encodeURIComponent(String(marketId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"fixtureId"}}`, encodeURIComponent(String(fixtureId !== undefined ? fixtureId : `-fixtureId-`)))
+                .replace(`{${"marketId"}}`, encodeURIComponent(String(marketId !== undefined ? marketId : `-marketId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -1976,9 +1976,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'fixtureId' is not null or undefined
             assertParamExists('oddsInPlayByFixtureId', 'fixtureId', fixtureId)
             const localVarPath = `/{version}/{sport}/odds/inplay/fixtures/{fixtureId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"fixtureId"}}`, encodeURIComponent(String(fixtureId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"fixtureId"}}`, encodeURIComponent(String(fixtureId !== undefined ? fixtureId : `-fixtureId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -2019,8 +2019,8 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
          */
         oddsLatestInPlay: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/odds/inplay/latest`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -2061,8 +2061,8 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
          */
         oddsLatestPreMatch: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/odds/pre-match/latest`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -2109,10 +2109,10 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'bookmakerId' is not null or undefined
             assertParamExists('oddsPreMatchByFixtureAndBookmakerId', 'bookmakerId', bookmakerId)
             const localVarPath = `/{version}/{sport}/odds/pre-match/fixtures/{fixtureId}/bookmakers/{bookmakerId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"fixtureId"}}`, encodeURIComponent(String(fixtureId)))
-                .replace(`{${"bookmakerId"}}`, encodeURIComponent(String(bookmakerId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"fixtureId"}}`, encodeURIComponent(String(fixtureId !== undefined ? fixtureId : `-fixtureId-`)))
+                .replace(`{${"bookmakerId"}}`, encodeURIComponent(String(bookmakerId !== undefined ? bookmakerId : `-bookmakerId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -2159,10 +2159,10 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'marketId' is not null or undefined
             assertParamExists('oddsPreMatchByFixtureAndMarketId', 'marketId', marketId)
             const localVarPath = `/{version}/{sport}/odds/pre-match/fixtures/{fixtureId}/markets/{marketId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"fixtureId"}}`, encodeURIComponent(String(fixtureId)))
-                .replace(`{${"marketId"}}`, encodeURIComponent(String(marketId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"fixtureId"}}`, encodeURIComponent(String(fixtureId !== undefined ? fixtureId : `-fixtureId-`)))
+                .replace(`{${"marketId"}}`, encodeURIComponent(String(marketId !== undefined ? marketId : `-marketId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -2206,9 +2206,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'fixtureId' is not null or undefined
             assertParamExists('oddsPreMatchByFixtureId', 'fixtureId', fixtureId)
             const localVarPath = `/{version}/{sport}/odds/pre-match/fixtures/{fixtureId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"fixtureId"}}`, encodeURIComponent(String(fixtureId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"fixtureId"}}`, encodeURIComponent(String(fixtureId !== undefined ? fixtureId : `-fixtureId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -2252,9 +2252,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'playerId' is not null or undefined
             assertParamExists('playerById', 'playerId', playerId)
             const localVarPath = `/{version}/{sport}/players/{playerId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"playerId"}}`, encodeURIComponent(String(playerId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"playerId"}}`, encodeURIComponent(String(playerId !== undefined ? playerId : `-playerId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -2295,8 +2295,8 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
          */
         playersAll: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/players`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -2340,9 +2340,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'countryId' is not null or undefined
             assertParamExists('playersByCountryId', 'countryId', countryId)
             const localVarPath = `/{version}/{sport}/players/countries/{countryId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"countryId"}}`, encodeURIComponent(String(countryId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"countryId"}}`, encodeURIComponent(String(countryId !== undefined ? countryId : `-countryId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -2383,8 +2383,8 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
          */
         playersLatest: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/players/latest`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -2428,9 +2428,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'name' is not null or undefined
             assertParamExists('playersSearch', 'name', name)
             const localVarPath = `/{version}/{sport}/players/search/{name}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"name"}}`, encodeURIComponent(String(name)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"name"}}`, encodeURIComponent(String(name !== undefined ? name : `-name-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -2471,8 +2471,8 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
          */
         predictionsAll: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/predictions/probabilities`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -2513,8 +2513,8 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
          */
         predictionsAllValueBets: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/predictions/value-bets`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -2558,9 +2558,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'fixtureId' is not null or undefined
             assertParamExists('predictionsByFixtureId', 'fixtureId', fixtureId)
             const localVarPath = `/{version}/{sport}/predictions/probabilities/fixtures/{fixtureId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"fixtureId"}}`, encodeURIComponent(String(fixtureId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"fixtureId"}}`, encodeURIComponent(String(fixtureId !== undefined ? fixtureId : `-fixtureId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -2604,9 +2604,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'fixtureId' is not null or undefined
             assertParamExists('predictionsValueBetsByFixtureId', 'fixtureId', fixtureId)
             const localVarPath = `/{version}/{sport}/predictions/value-bets/fixtures/{fixtureId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"fixtureId"}}`, encodeURIComponent(String(fixtureId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"fixtureId"}}`, encodeURIComponent(String(fixtureId !== undefined ? fixtureId : `-fixtureId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -2650,9 +2650,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'refereeId' is not null or undefined
             assertParamExists('refereeById', 'refereeId', refereeId)
             const localVarPath = `/{version}/{sport}/referees/{refereeId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"refereeId"}}`, encodeURIComponent(String(refereeId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"refereeId"}}`, encodeURIComponent(String(refereeId !== undefined ? refereeId : `-refereeId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -2693,8 +2693,8 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
          */
         refereesAll: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/referees`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -2738,9 +2738,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'countryId' is not null or undefined
             assertParamExists('refereesByCountryId', 'countryId', countryId)
             const localVarPath = `/{version}/{sport}/referees/countries/{countryId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"countryId"}}`, encodeURIComponent(String(countryId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"countryId"}}`, encodeURIComponent(String(countryId !== undefined ? countryId : `-countryId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -2784,9 +2784,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'seasonId' is not null or undefined
             assertParamExists('refereesBySeasonId', 'seasonId', seasonId)
             const localVarPath = `/{version}/{sport}/referees/seasons/{seasonId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"seasonId"}}`, encodeURIComponent(String(seasonId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"seasonId"}}`, encodeURIComponent(String(seasonId !== undefined ? seasonId : `-seasonId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -2830,9 +2830,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'name' is not null or undefined
             assertParamExists('refereesSearch', 'name', name)
             const localVarPath = `/{version}/{sport}/referees/search/{name}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"name"}}`, encodeURIComponent(String(name)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"name"}}`, encodeURIComponent(String(name !== undefined ? name : `-name-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -2873,8 +2873,8 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
          */
         rivalsAll: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/rivals`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -2918,9 +2918,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'teamId' is not null or undefined
             assertParamExists('rivalsByTeamId', 'teamId', teamId)
             const localVarPath = `/{version}/{sport}/rivals/teams/{teamId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"teamId"}}`, encodeURIComponent(String(teamId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"teamId"}}`, encodeURIComponent(String(teamId !== undefined ? teamId : `-teamId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -2964,9 +2964,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'roundId' is not null or undefined
             assertParamExists('roundById', 'roundId', roundId)
             const localVarPath = `/{version}/{sport}/rounds/{roundId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"roundId"}}`, encodeURIComponent(String(roundId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"roundId"}}`, encodeURIComponent(String(roundId !== undefined ? roundId : `-roundId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3007,8 +3007,8 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
          */
         roundsAll: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/rounds`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3052,9 +3052,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'seasonId' is not null or undefined
             assertParamExists('roundsBySeasonId', 'seasonId', seasonId)
             const localVarPath = `/{version}/{sport}/rounds/seasons/{seasonId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"seasonId"}}`, encodeURIComponent(String(seasonId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"seasonId"}}`, encodeURIComponent(String(seasonId !== undefined ? seasonId : `-seasonId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3098,9 +3098,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'name' is not null or undefined
             assertParamExists('roundsSearch', 'name', name)
             const localVarPath = `/{version}/{sport}/rounds/search/{name}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"name"}}`, encodeURIComponent(String(name)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"name"}}`, encodeURIComponent(String(name !== undefined ? name : `-name-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3144,9 +3144,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'seasonId' is not null or undefined
             assertParamExists('schedulesBySeasonId', 'seasonId', seasonId)
             const localVarPath = `/{version}/{sport}/schedules/seasons/{seasonId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"seasonId"}}`, encodeURIComponent(String(seasonId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"seasonId"}}`, encodeURIComponent(String(seasonId !== undefined ? seasonId : `-seasonId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3193,10 +3193,10 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'teamId' is not null or undefined
             assertParamExists('schedulesByTeamAndSeasonId', 'teamId', teamId)
             const localVarPath = `/{version}/{sport}/schedules/seasons/{seasonId}/teams/{teamId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"seasonId"}}`, encodeURIComponent(String(seasonId)))
-                .replace(`{${"teamId"}}`, encodeURIComponent(String(teamId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"seasonId"}}`, encodeURIComponent(String(seasonId !== undefined ? seasonId : `-seasonId-`)))
+                .replace(`{${"teamId"}}`, encodeURIComponent(String(teamId !== undefined ? teamId : `-teamId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3240,9 +3240,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'teamId' is not null or undefined
             assertParamExists('schedulesByTeamId', 'teamId', teamId)
             const localVarPath = `/{version}/{sport}/schedules/teams/{teamId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"teamId"}}`, encodeURIComponent(String(teamId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"teamId"}}`, encodeURIComponent(String(teamId !== undefined ? teamId : `-teamId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3286,9 +3286,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'seasonId' is not null or undefined
             assertParamExists('seasonById', 'seasonId', seasonId)
             const localVarPath = `/{version}/{sport}/seasons/{seasonId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"seasonId"}}`, encodeURIComponent(String(seasonId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"seasonId"}}`, encodeURIComponent(String(seasonId !== undefined ? seasonId : `-seasonId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3329,8 +3329,8 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
          */
         seasonsAll: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/seasons`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3374,9 +3374,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'teamId' is not null or undefined
             assertParamExists('seasonsByTeamId', 'teamId', teamId)
             const localVarPath = `/{version}/{sport}/seasons/teams/{teamId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"teamId"}}`, encodeURIComponent(String(teamId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"teamId"}}`, encodeURIComponent(String(teamId !== undefined ? teamId : `-teamId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3420,9 +3420,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'name' is not null or undefined
             assertParamExists('seasonsSearch', 'name', name)
             const localVarPath = `/{version}/{sport}/seasons/search/{name}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"name"}}`, encodeURIComponent(String(name)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"name"}}`, encodeURIComponent(String(name !== undefined ? name : `-name-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3469,10 +3469,10 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'teamId' is not null or undefined
             assertParamExists('squadsBySeasonAndTeamId', 'teamId', teamId)
             const localVarPath = `/{version}/{sport}/squads/seasons/{seasonId}/teams/{teamId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"seasonId"}}`, encodeURIComponent(String(seasonId)))
-                .replace(`{${"teamId"}}`, encodeURIComponent(String(teamId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"seasonId"}}`, encodeURIComponent(String(seasonId !== undefined ? seasonId : `-seasonId-`)))
+                .replace(`{${"teamId"}}`, encodeURIComponent(String(teamId !== undefined ? teamId : `-teamId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3516,9 +3516,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'teamId' is not null or undefined
             assertParamExists('squadsByTeamId', 'teamId', teamId)
             const localVarPath = `/{version}/{sport}/squads/teams/{teamId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"teamId"}}`, encodeURIComponent(String(teamId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"teamId"}}`, encodeURIComponent(String(teamId !== undefined ? teamId : `-teamId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3562,9 +3562,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'stageId' is not null or undefined
             assertParamExists('stageById', 'stageId', stageId)
             const localVarPath = `/{version}/{sport}/stages/{stageId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"stageId"}}`, encodeURIComponent(String(stageId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"stageId"}}`, encodeURIComponent(String(stageId !== undefined ? stageId : `-stageId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3605,8 +3605,8 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
          */
         stagesAll: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/stages`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3650,9 +3650,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'seasonId' is not null or undefined
             assertParamExists('stagesBySeasonId', 'seasonId', seasonId)
             const localVarPath = `/{version}/{sport}/stages/seasons/{seasonId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"seasonId"}}`, encodeURIComponent(String(seasonId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"seasonId"}}`, encodeURIComponent(String(seasonId !== undefined ? seasonId : `-seasonId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3696,9 +3696,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'name' is not null or undefined
             assertParamExists('stagesSearch', 'name', name)
             const localVarPath = `/{version}/{sport}/stages/search/{name}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"name"}}`, encodeURIComponent(String(name)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"name"}}`, encodeURIComponent(String(name !== undefined ? name : `-name-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3742,9 +3742,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'seasonId' is not null or undefined
             assertParamExists('standingCorrectionsBySeasonId', 'seasonId', seasonId)
             const localVarPath = `/{version}/{sport}/standings/corrections/seasons/{seasonId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"seasonId"}}`, encodeURIComponent(String(seasonId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"seasonId"}}`, encodeURIComponent(String(seasonId !== undefined ? seasonId : `-seasonId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3785,8 +3785,8 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
          */
         standingsAll: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/standings`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3830,9 +3830,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'roundId' is not null or undefined
             assertParamExists('standingsByRoundId', 'roundId', roundId)
             const localVarPath = `/{version}/{sport}/standings/rounds/{roundId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"roundId"}}`, encodeURIComponent(String(roundId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"roundId"}}`, encodeURIComponent(String(roundId !== undefined ? roundId : `-roundId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3876,9 +3876,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'seasonId' is not null or undefined
             assertParamExists('standingsBySeasonId', 'seasonId', seasonId)
             const localVarPath = `/{version}/{sport}/standings/seasons/{seasonId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"seasonId"}}`, encodeURIComponent(String(seasonId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"seasonId"}}`, encodeURIComponent(String(seasonId !== undefined ? seasonId : `-seasonId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3922,9 +3922,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'leagueId' is not null or undefined
             assertParamExists('standingsLiveByLeagueId', 'leagueId', leagueId)
             const localVarPath = `/{version}/{sport}/standings/live/leagues/{leagueId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"leagueId"}}`, encodeURIComponent(String(leagueId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"leagueId"}}`, encodeURIComponent(String(leagueId !== undefined ? leagueId : `-leagueId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3968,9 +3968,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'stateId' is not null or undefined
             assertParamExists('stateById', 'stateId', stateId)
             const localVarPath = `/{version}/{sport}/states/{stateId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"stateId"}}`, encodeURIComponent(String(stateId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"stateId"}}`, encodeURIComponent(String(stateId !== undefined ? stateId : `-stateId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -4011,8 +4011,8 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
          */
         statesBySport: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/states`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -4053,8 +4053,8 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
          */
         teamsAll: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/teams`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -4098,9 +4098,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'countryId' is not null or undefined
             assertParamExists('teamsByCountryId', 'countryId', countryId)
             const localVarPath = `/{version}/{sport}/teams/countries/{countryId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"countryId"}}`, encodeURIComponent(String(countryId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"countryId"}}`, encodeURIComponent(String(countryId !== undefined ? countryId : `-countryId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -4144,9 +4144,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'teamId' is not null or undefined
             assertParamExists('teamsById', 'teamId', teamId)
             const localVarPath = `/{version}/{sport}/teams/{teamId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"teamId"}}`, encodeURIComponent(String(teamId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"teamId"}}`, encodeURIComponent(String(teamId !== undefined ? teamId : `-teamId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -4190,9 +4190,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'seasonId' is not null or undefined
             assertParamExists('teamsBySeasonId', 'seasonId', seasonId)
             const localVarPath = `/{version}/{sport}/teams/seasons/{seasonId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"seasonId"}}`, encodeURIComponent(String(seasonId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"seasonId"}}`, encodeURIComponent(String(seasonId !== undefined ? seasonId : `-seasonId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -4236,9 +4236,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'name' is not null or undefined
             assertParamExists('teamsSearch', 'name', name)
             const localVarPath = `/{version}/{sport}/teams/search/{name}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"name"}}`, encodeURIComponent(String(name)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"name"}}`, encodeURIComponent(String(name !== undefined ? name : `-name-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -4282,9 +4282,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'seasonId' is not null or undefined
             assertParamExists('topScorersBySeasonId', 'seasonId', seasonId)
             const localVarPath = `/{version}/{sport}/topscorers/seasons/{seasonId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"seasonId"}}`, encodeURIComponent(String(seasonId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"seasonId"}}`, encodeURIComponent(String(seasonId !== undefined ? seasonId : `-seasonId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -4328,9 +4328,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'stageId' is not null or undefined
             assertParamExists('topScorersByStageId', 'stageId', stageId)
             const localVarPath = `/{version}/{sport}/topscorers/stages/{stageId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"stageId"}}`, encodeURIComponent(String(stageId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"stageId"}}`, encodeURIComponent(String(stageId !== undefined ? stageId : `-stageId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -4377,10 +4377,10 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'endDate' is not null or undefined
             assertParamExists('tranfersByDateRange', 'endDate', endDate)
             const localVarPath = `/{version}/{sport}/transfers/between/{startDate}/{endDate}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"startDate"}}`, encodeURIComponent(String(startDate)))
-                .replace(`{${"endDate"}}`, encodeURIComponent(String(endDate)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"startDate"}}`, encodeURIComponent(String(startDate !== undefined ? startDate : `-startDate-`)))
+                .replace(`{${"endDate"}}`, encodeURIComponent(String(endDate !== undefined ? endDate : `-endDate-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -4424,9 +4424,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'transferId' is not null or undefined
             assertParamExists('transferById', 'transferId', transferId)
             const localVarPath = `/{version}/{sport}/transfers/{transferId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"transferId"}}`, encodeURIComponent(String(transferId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"transferId"}}`, encodeURIComponent(String(transferId !== undefined ? transferId : `-transferId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -4467,8 +4467,8 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
          */
         transfersAll: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/transfers`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -4512,9 +4512,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'playerId' is not null or undefined
             assertParamExists('transfersByPlayerId', 'playerId', playerId)
             const localVarPath = `/{version}/{sport}/transfers/players/{playerId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"playerId"}}`, encodeURIComponent(String(playerId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"playerId"}}`, encodeURIComponent(String(playerId !== undefined ? playerId : `-playerId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -4558,9 +4558,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'teamId' is not null or undefined
             assertParamExists('transfersByTeamId', 'teamId', teamId)
             const localVarPath = `/{version}/{sport}/transfers/teams/{teamId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"teamId"}}`, encodeURIComponent(String(teamId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"teamId"}}`, encodeURIComponent(String(teamId !== undefined ? teamId : `-teamId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -4601,8 +4601,8 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
          */
         transfersLatest: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/transfers/latest`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -4646,9 +4646,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'tvStationId' is not null or undefined
             assertParamExists('tvStationById', 'tvStationId', tvStationId)
             const localVarPath = `/{version}/{sport}/tv-stations/{tvStationId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"tvStationId"}}`, encodeURIComponent(String(tvStationId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"tvStationId"}}`, encodeURIComponent(String(tvStationId !== undefined ? tvStationId : `-tvStationId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -4689,8 +4689,8 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
          */
         tvStationsAll: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/tv-stations`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -4734,9 +4734,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'fixtureId' is not null or undefined
             assertParamExists('tvStationsByFixtureId', 'fixtureId', fixtureId)
             const localVarPath = `/{version}/{sport}/tv-stations/fixtures/{fixtureId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"fixtureId"}}`, encodeURIComponent(String(fixtureId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"fixtureId"}}`, encodeURIComponent(String(fixtureId !== undefined ? fixtureId : `-fixtureId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -4780,9 +4780,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'venueId' is not null or undefined
             assertParamExists('venueById', 'venueId', venueId)
             const localVarPath = `/{version}/{sport}/venues/{venueId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"venueId"}}`, encodeURIComponent(String(venueId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"venueId"}}`, encodeURIComponent(String(venueId !== undefined ? venueId : `-venueId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -4823,8 +4823,8 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
          */
         venuesAll: async (version?: string, sport?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/{sport}/venues`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -4868,9 +4868,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'seasonId' is not null or undefined
             assertParamExists('venuesBySeasonId', 'seasonId', seasonId)
             const localVarPath = `/{version}/{sport}/venues/seasons/{seasonId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"seasonId"}}`, encodeURIComponent(String(seasonId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"seasonId"}}`, encodeURIComponent(String(seasonId !== undefined ? seasonId : `-seasonId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -4914,9 +4914,9 @@ export const SportApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'name' is not null or undefined
             assertParamExists('venuesSearch', 'name', name)
             const localVarPath = `/{version}/{sport}/venues/search/{name}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"sport"}}`, encodeURIComponent(String(sport)))
-                .replace(`{${"name"}}`, encodeURIComponent(String(name)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"sport"}}`, encodeURIComponent(String(sport !== undefined ? sport : `-sport-`)))
+                .replace(`{${"name"}}`, encodeURIComponent(String(name !== undefined ? name : `-name-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;

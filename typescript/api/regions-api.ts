@@ -42,7 +42,7 @@ export const RegionsApiAxiosParamCreator = function (configuration?: Configurati
          */
         all: async (version?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/core/regions`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -85,8 +85,8 @@ export const RegionsApiAxiosParamCreator = function (configuration?: Configurati
             // verify required parameter 'regionId' is not null or undefined
             assertParamExists('getById', 'regionId', regionId)
             const localVarPath = `/{version}/core/regions/{regionId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"regionId"}}`, encodeURIComponent(String(regionId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"regionId"}}`, encodeURIComponent(String(regionId !== undefined ? regionId : `-regionId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -129,8 +129,8 @@ export const RegionsApiAxiosParamCreator = function (configuration?: Configurati
             // verify required parameter 'name' is not null or undefined
             assertParamExists('search', 'name', name)
             const localVarPath = `/{version}/core/regions/search/{name}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"name"}}`, encodeURIComponent(String(name)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"name"}}`, encodeURIComponent(String(name !== undefined ? name : `-name-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;

@@ -40,7 +40,7 @@ export const TypesApiAxiosParamCreator = function (configuration?: Configuration
          */
         all: async (version?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/core/types`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -83,8 +83,8 @@ export const TypesApiAxiosParamCreator = function (configuration?: Configuration
             // verify required parameter 'typeId' is not null or undefined
             assertParamExists('getById', 'typeId', typeId)
             const localVarPath = `/{version}/core/types/{typeId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"typeId"}}`, encodeURIComponent(String(typeId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"typeId"}}`, encodeURIComponent(String(typeId !== undefined ? typeId : `-typeId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;

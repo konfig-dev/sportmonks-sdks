@@ -40,7 +40,7 @@ export const ContinentsApiAxiosParamCreator = function (configuration?: Configur
          */
         all: async (version?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/{version}/core/continents`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -83,8 +83,8 @@ export const ContinentsApiAxiosParamCreator = function (configuration?: Configur
             // verify required parameter 'continentId' is not null or undefined
             assertParamExists('getById', 'continentId', continentId)
             const localVarPath = `/{version}/core/continents/{continentId}`
-                .replace(`{${"version"}}`, encodeURIComponent(String(version)))
-                .replace(`{${"continentId"}}`, encodeURIComponent(String(continentId)));
+                .replace(`{${"version"}}`, encodeURIComponent(String(version !== undefined ? version : `-version-`)))
+                .replace(`{${"continentId"}}`, encodeURIComponent(String(continentId !== undefined ? continentId : `-continentId-`)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
