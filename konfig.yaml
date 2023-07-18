@@ -19,3 +19,21 @@ generators:
     git:
       userId: konfig-dev
       repoId: sportmonks-php-sdk
+  typescript:
+    version: 1.0.0
+    clientName: Sportmonks
+    npmName: sportmonks
+    outputDirectory: typescript
+    git:
+      userId: konfig-dev
+      repoId: sportmonks-sdks/tree/main/typescript
+  python:
+    version: 1.0.0
+    outputDirectory: python
+    clientName: Sportmonks
+    setSkipSerializationToTrueByDefault: true
+    git:
+      userId: konfig-dev
+      repoId: sportmonks-sdks/tree/main/python
+    packageName: sportmonks
+    projectName: sportmonks
