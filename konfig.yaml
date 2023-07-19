@@ -9,7 +9,7 @@ optionalParameters:
     in: path
 generators:
   csharp:
-    version: 1.0.0
+    version: 0.1.0
     packageName: Sportmonks.Net
     outputDirectory: csharp
     logoPath: logo.png
@@ -21,7 +21,7 @@ generators:
       userId: konfig-dev
       repoId: sportmonks-sdks/tree/main/csharp
   php:
-    version: 1.0.0
+    version: 0.1.0
     packageName: sportmonks-php
     outputDirectory: php
     invokerPackage: Sportmonks
@@ -32,7 +32,7 @@ generators:
       userId: konfig-dev
       repoId: sportmonks-php-sdk
   typescript:
-    version: 1.0.0
+    version: 0.1.0
     clientName: Sportmonks
     npmName: sportmonks
     outputDirectory: typescript
@@ -43,7 +43,7 @@ generators:
       userId: konfig-dev
       repoId: sportmonks-sdks/tree/main/typescript
   python:
-    version: 1.0.0
+    version: 0.1.0
     outputDirectory: python
     clientName: Sportmonks
     setSkipSerializationToTrueByDefault: true
