@@ -11,12 +11,6 @@
  * Do not edit the class manually.
  */
 
-// May contain unused imports in some cases
-// @ts-ignore
-import { SportVenuesBySeasonIdResponseDataInnerCityId } from './sport-venues-by-season-id-response-data-inner-city-id';
-// May contain unused imports in some cases
-// @ts-ignore
-import { SportVenuesBySeasonIdResponseDataInnerCountryId } from './sport-venues-by-season-id-response-data-inner-country-id';
 
 /**
  * 
@@ -32,16 +26,16 @@ export interface SportVenuesBySeasonIdResponseDataInner {
     'id'?: number;
     /**
      * 
-     * @type {SportVenuesBySeasonIdResponseDataInnerCountryId}
+     * @type {number}
      * @memberof SportVenuesBySeasonIdResponseDataInner
      */
-    'country_id'?: SportVenuesBySeasonIdResponseDataInnerCountryId;
+    'country_id'?: number | null;
     /**
      * 
-     * @type {SportVenuesBySeasonIdResponseDataInnerCityId}
+     * @type {number}
      * @memberof SportVenuesBySeasonIdResponseDataInner
      */
-    'city_id'?: SportVenuesBySeasonIdResponseDataInnerCityId;
+    'city_id'?: number | null;
     /**
      * 
      * @type {string}

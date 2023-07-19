@@ -11,12 +11,6 @@
  * Do not edit the class manually.
  */
 
-// May contain unused imports in some cases
-// @ts-ignore
-import { SportCoachesAllResponseDataInnerHeight } from './sport-coaches-all-response-data-inner-height';
-// May contain unused imports in some cases
-// @ts-ignore
-import { SportCoachesAllResponseDataInnerWeight } from './sport-coaches-all-response-data-inner-weight';
 
 /**
  * 
@@ -98,16 +92,16 @@ export interface SportCoachesAllResponseDataInner {
     'image_path'?: string;
     /**
      * 
-     * @type {SportCoachesAllResponseDataInnerHeight}
+     * @type {number}
      * @memberof SportCoachesAllResponseDataInner
      */
-    'height'?: SportCoachesAllResponseDataInnerHeight;
+    'height'?: number | null;
     /**
      * 
-     * @type {SportCoachesAllResponseDataInnerWeight}
+     * @type {number}
      * @memberof SportCoachesAllResponseDataInner
      */
-    'weight'?: SportCoachesAllResponseDataInnerWeight;
+    'weight'?: number | null;
     /**
      * 
      * @type {string}

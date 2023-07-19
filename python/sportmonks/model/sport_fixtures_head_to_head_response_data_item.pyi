@@ -42,60 +42,22 @@ class SportFixturesHeadToHeadResponseDataItem(
             
             
             class group_id(
-                schemas.ComposedSchema,
+                schemas.NumberBase,
+                schemas.NoneBase,
+                schemas.Schema,
+                schemas.NoneDecimalMixin
             ):
-            
-            
-                class MetaOapg:
-                    
-                    
-                    class one_of_0(
-                        schemas.StrBase,
-                        schemas.NoneBase,
-                        schemas.Schema,
-                        schemas.NoneStrMixin
-                    ):
-                    
-                    
-                        def __new__(
-                            cls,
-                            *args: typing.Union[None, str, ],
-                            _configuration: typing.Optional[schemas.Configuration] = None,
-                        ) -> 'one_of_0':
-                            return super().__new__(
-                                cls,
-                                *args,
-                                _configuration=_configuration,
-                            )
-                    one_of_1 = schemas.NumberSchema
-                    
-                    @classmethod
-                    @functools.lru_cache()
-                    def one_of(cls):
-                        # we need this here to make our import statements work
-                        # we must store _composed_schemas in here so the code is only run
-                        # when we invoke this method. If we kept this at the class
-                        # level we would get an error because the class level
-                        # code would be run when this module is imported, and these composed
-                        # classes don't exist yet because their module has not finished
-                        # loading
-                        return [
-                            cls.one_of_0,
-                            cls.one_of_1,
-                        ]
             
             
                 def __new__(
                     cls,
-                    *args: typing.Union[dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
+                    *args: typing.Union[None, decimal.Decimal, int, float, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
-                    **kwargs: typing.Union[schemas.AnyTypeSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, None, list, tuple, bytes],
                 ) -> 'group_id':
                     return super().__new__(
                         cls,
                         *args,
                         _configuration=_configuration,
-                        **kwargs,
                     )
             
             
@@ -361,7 +323,7 @@ class SportFixturesHeadToHeadResponseDataItem(
         league_id: typing.Union[MetaOapg.properties.league_id, decimal.Decimal, int, float, schemas.Unset] = schemas.unset,
         season_id: typing.Union[MetaOapg.properties.season_id, decimal.Decimal, int, float, schemas.Unset] = schemas.unset,
         stage_id: typing.Union[MetaOapg.properties.stage_id, decimal.Decimal, int, float, schemas.Unset] = schemas.unset,
-        group_id: typing.Union[MetaOapg.properties.group_id, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, schemas.Unset] = schemas.unset,
+        group_id: typing.Union[MetaOapg.properties.group_id, None, decimal.Decimal, int, float, schemas.Unset] = schemas.unset,
         aggregate_id: typing.Union[MetaOapg.properties.aggregate_id, None, str, schemas.Unset] = schemas.unset,
         round_id: typing.Union[MetaOapg.properties.round_id, decimal.Decimal, int, float, schemas.Unset] = schemas.unset,
         state_id: typing.Union[MetaOapg.properties.state_id, decimal.Decimal, int, float, schemas.Unset] = schemas.unset,

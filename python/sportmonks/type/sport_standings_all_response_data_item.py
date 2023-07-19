@@ -35,7 +35,7 @@ class OptionalSportStandingsAllResponseDataItem(TypedDict, total=False):
 
     round_id: typing.Union[int, float]
 
-    standing_rule_id: typing.Union[typing.Union[int, float], typing.Optional[str]]
+    standing_rule_id: typing.Optional[typing.Union[int, float]]
 
     position: typing.Union[int, float]
 

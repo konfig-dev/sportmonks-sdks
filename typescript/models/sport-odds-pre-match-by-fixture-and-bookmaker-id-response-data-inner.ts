@@ -11,9 +11,6 @@
  * Do not edit the class manually.
  */
 
-// May contain unused imports in some cases
-// @ts-ignore
-import { SportOddsPreMatchByFixtureAndBookmakerIdResponseDataInnerWinning } from './sport-odds-pre-match-by-fixture-and-bookmaker-id-response-data-inner-winning';
 
 /**
  * 
@@ -101,10 +98,10 @@ export interface SportOddsPreMatchByFixtureAndBookmakerIdResponseDataInner {
     'american'?: string;
     /**
      * 
-     * @type {SportOddsPreMatchByFixtureAndBookmakerIdResponseDataInnerWinning}
+     * @type {boolean}
      * @memberof SportOddsPreMatchByFixtureAndBookmakerIdResponseDataInner
      */
-    'winning'?: SportOddsPreMatchByFixtureAndBookmakerIdResponseDataInnerWinning;
+    'winning'?: boolean | null;
     /**
      * 
      * @type {boolean}

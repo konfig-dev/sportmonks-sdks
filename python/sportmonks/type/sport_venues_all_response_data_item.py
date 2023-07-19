@@ -21,9 +21,9 @@ class RequiredSportVenuesAllResponseDataItem(TypedDict):
 class OptionalSportVenuesAllResponseDataItem(TypedDict, total=False):
     id: typing.Union[int, float]
 
-    country_id: typing.Union[typing.Union[int, float], typing.Optional[str]]
+    country_id: typing.Optional[typing.Union[int, float]]
 
-    city_id: typing.Union[typing.Union[int, float], typing.Optional[str]]
+    city_id: typing.Optional[typing.Union[int, float]]
 
     name: str
 
@@ -35,7 +35,7 @@ class OptionalSportVenuesAllResponseDataItem(TypedDict, total=False):
 
     longitude: str
 
-    capacity: typing.Union[typing.Union[int, float], typing.Optional[str]]
+    capacity: typing.Optional[typing.Union[int, float]]
 
     image_path: typing.Optional[str]
 

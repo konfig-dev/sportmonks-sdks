@@ -21,7 +21,7 @@ Key | Input Type | Accessed Type | Description | Notes
 **dp3** | str,  | str,  |  | [optional] 
 **fractional** | str,  | str,  |  | [optional] 
 **american** | str,  | str,  |  | [optional] 
-**[winning](#winning)** | dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader,  | frozendict.frozendict, str, decimal.Decimal, BoolClass, NoneClass, tuple, bytes, FileIO |  | [optional] 
+**winning** | None, bool,  | NoneClass, BoolClass,  |  | [optional] 
 **stopped** | bool,  | BoolClass,  |  | [optional] 
 **total** | None, str,  | NoneClass, str,  |  | [optional] 
 **handicap** | None, str,  | NoneClass, str,  |  | [optional] 
@@ -31,34 +31,6 @@ Key | Input Type | Accessed Type | Description | Notes
 **original_label** | None, str,  | NoneClass, str,  |  | [optional] 
 **latest_bookmaker_update** | str,  | str,  |  | [optional] 
 **any_string_name** | dict, frozendict.frozendict, str, date, datetime, int, float, bool, decimal.Decimal, None, list, tuple, bytes, io.FileIO, io.BufferedReader | frozendict.frozendict, str, BoolClass, decimal.Decimal, NoneClass, tuple, bytes, FileIO | any string name can be used but the value must be the correct type | [optional]
-
-# winning
-
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader,  | frozendict.frozendict, str, decimal.Decimal, BoolClass, NoneClass, tuple, bytes, FileIO |  | 
-
-### Composed Schemas (allOf/anyOf/oneOf/not)
-#### oneOf
-Class Name | Input Type | Accessed Type | Description | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-[one_of_0](#one_of_0) | bool,  | BoolClass,  |  | 
-[one_of_1](#one_of_1) | None, str,  | NoneClass, str,  |  | 
-
-# one_of_0
-
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-bool,  | BoolClass,  |  | 
-
-# one_of_1
-
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-None, str,  | NoneClass, str,  |  | 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

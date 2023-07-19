@@ -11,9 +11,6 @@
  * Do not edit the class manually.
  */
 
-// May contain unused imports in some cases
-// @ts-ignore
-import { SportRefereesAllResponseDataInnerCountryId } from './sport-referees-all-response-data-inner-country-id';
 
 /**
  * 
@@ -35,10 +32,10 @@ export interface SportRefereesAllResponseDataInner {
     'sport_id'?: number;
     /**
      * 
-     * @type {SportRefereesAllResponseDataInnerCountryId}
+     * @type {number}
      * @memberof SportRefereesAllResponseDataInner
      */
-    'country_id'?: SportRefereesAllResponseDataInnerCountryId;
+    'country_id'?: number | null;
     /**
      * 
      * @type {string}

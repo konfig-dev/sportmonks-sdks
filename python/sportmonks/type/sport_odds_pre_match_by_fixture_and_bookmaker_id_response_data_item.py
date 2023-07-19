@@ -45,7 +45,7 @@ class OptionalSportOddsPreMatchByFixtureAndBookmakerIdResponseDataItem(TypedDict
 
     american: str
 
-    winning: typing.Union[bool, typing.Optional[str]]
+    winning: typing.Optional[bool]
 
     stopped: bool
 

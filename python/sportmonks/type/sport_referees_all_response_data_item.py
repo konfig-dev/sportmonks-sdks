@@ -23,7 +23,7 @@ class OptionalSportRefereesAllResponseDataItem(TypedDict, total=False):
 
     sport_id: typing.Union[int, float]
 
-    country_id: typing.Union[typing.Optional[str], typing.Union[int, float]]
+    country_id: typing.Optional[typing.Union[int, float]]
 
     city_id: typing.Optional[str]
 

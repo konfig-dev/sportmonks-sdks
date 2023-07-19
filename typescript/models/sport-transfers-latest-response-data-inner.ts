@@ -11,12 +11,6 @@
  * Do not edit the class manually.
  */
 
-// May contain unused imports in some cases
-// @ts-ignore
-import { SportTransfersLatestResponseDataInnerDetailedPositionId } from './sport-transfers-latest-response-data-inner-detailed-position-id';
-// May contain unused imports in some cases
-// @ts-ignore
-import { SportTransfersLatestResponseDataInnerPositionId } from './sport-transfers-latest-response-data-inner-position-id';
 
 /**
  * 
@@ -62,16 +56,16 @@ export interface SportTransfersLatestResponseDataInner {
     'to_team_id'?: number;
     /**
      * 
-     * @type {SportTransfersLatestResponseDataInnerPositionId}
+     * @type {number}
      * @memberof SportTransfersLatestResponseDataInner
      */
-    'position_id'?: SportTransfersLatestResponseDataInnerPositionId;
+    'position_id'?: number | null;
     /**
      * 
-     * @type {SportTransfersLatestResponseDataInnerDetailedPositionId}
+     * @type {number}
      * @memberof SportTransfersLatestResponseDataInner
      */
-    'detailed_position_id'?: SportTransfersLatestResponseDataInnerDetailedPositionId;
+    'detailed_position_id'?: number | null;
     /**
      * 
      * @type {string}

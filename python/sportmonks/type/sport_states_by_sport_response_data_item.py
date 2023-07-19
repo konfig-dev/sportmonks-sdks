@@ -43,7 +43,7 @@ class OptionalSportStatesBySportResponseDataItem(TypedDict, total=False):
 
     is_completed: bool
 
-    type_id: typing.Union[typing.Optional[str], typing.Union[int, float]]
+    type_id: typing.Optional[typing.Union[int, float]]
 
     is_deleted: bool
 

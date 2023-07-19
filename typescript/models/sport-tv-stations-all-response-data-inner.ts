@@ -11,9 +11,6 @@
  * Do not edit the class manually.
  */
 
-// May contain unused imports in some cases
-// @ts-ignore
-import { SportTvStationsAllResponseDataInnerRelatedId } from './sport-tv-stations-all-response-data-inner-related-id';
 
 /**
  * 
@@ -53,9 +50,9 @@ export interface SportTvStationsAllResponseDataInner {
     'type'?: string;
     /**
      * 
-     * @type {SportTvStationsAllResponseDataInnerRelatedId}
+     * @type {number}
      * @memberof SportTvStationsAllResponseDataInner
      */
-    'related_id'?: SportTvStationsAllResponseDataInnerRelatedId;
+    'related_id'?: number | null;
 }
 

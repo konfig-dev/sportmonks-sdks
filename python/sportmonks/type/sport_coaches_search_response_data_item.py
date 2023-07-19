@@ -43,9 +43,9 @@ class OptionalSportCoachesSearchResponseDataItem(TypedDict, total=False):
 
     image_path: str
 
-    height: typing.Union[typing.Union[int, float], typing.Optional[str]]
+    height: typing.Optional[typing.Union[int, float]]
 
-    weight: typing.Union[typing.Union[int, float], typing.Optional[str]]
+    weight: typing.Optional[typing.Union[int, float]]
 
     date_of_birth: str
 

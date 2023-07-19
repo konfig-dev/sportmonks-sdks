@@ -21,9 +21,9 @@ class RequiredSportVenuesBySeasonIdResponseDataItem(TypedDict):
 class OptionalSportVenuesBySeasonIdResponseDataItem(TypedDict, total=False):
     id: typing.Union[int, float]
 
-    country_id: typing.Union[typing.Union[int, float], typing.Optional[str]]
+    country_id: typing.Optional[typing.Union[int, float]]
 
-    city_id: typing.Union[typing.Union[int, float], typing.Optional[str]]
+    city_id: typing.Optional[typing.Union[int, float]]
 
     name: str
 

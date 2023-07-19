@@ -29,7 +29,7 @@ class OptionalSportFixturesHeadToHeadResponseDataItem(TypedDict, total=False):
 
     stage_id: typing.Union[int, float]
 
-    group_id: typing.Union[typing.Optional[str], typing.Union[int, float]]
+    group_id: typing.Optional[typing.Union[int, float]]
 
     aggregate_id: typing.Optional[str]
 

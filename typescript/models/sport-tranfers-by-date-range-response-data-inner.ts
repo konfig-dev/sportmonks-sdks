@@ -11,12 +11,6 @@
  * Do not edit the class manually.
  */
 
-// May contain unused imports in some cases
-// @ts-ignore
-import { SportTranfersByDateRangeResponseDataInnerDetailedPositionId } from './sport-tranfers-by-date-range-response-data-inner-detailed-position-id';
-// May contain unused imports in some cases
-// @ts-ignore
-import { SportTranfersByDateRangeResponseDataInnerPositionId } from './sport-tranfers-by-date-range-response-data-inner-position-id';
 
 /**
  * 
@@ -62,16 +56,16 @@ export interface SportTranfersByDateRangeResponseDataInner {
     'to_team_id'?: number;
     /**
      * 
-     * @type {SportTranfersByDateRangeResponseDataInnerPositionId}
+     * @type {number}
      * @memberof SportTranfersByDateRangeResponseDataInner
      */
-    'position_id'?: SportTranfersByDateRangeResponseDataInnerPositionId;
+    'position_id'?: number | null;
     /**
      * 
-     * @type {SportTranfersByDateRangeResponseDataInnerDetailedPositionId}
+     * @type {number}
      * @memberof SportTranfersByDateRangeResponseDataInner
      */
-    'detailed_position_id'?: SportTranfersByDateRangeResponseDataInnerDetailedPositionId;
+    'detailed_position_id'?: number | null;
     /**
      * 
      * @type {string}

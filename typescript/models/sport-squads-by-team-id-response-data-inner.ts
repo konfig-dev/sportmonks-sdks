@@ -11,12 +11,6 @@
  * Do not edit the class manually.
  */
 
-// May contain unused imports in some cases
-// @ts-ignore
-import { SportSquadsByTeamIdResponseDataInnerTransferId } from './sport-squads-by-team-id-response-data-inner-transfer-id';
-// May contain unused imports in some cases
-// @ts-ignore
-import { SportSquadsByTeamIdResponseDataInnerYerseyNumber } from './sport-squads-by-team-id-response-data-inner-yersey-number';
 
 /**
  * 
@@ -32,10 +26,10 @@ export interface SportSquadsByTeamIdResponseDataInner {
     'id'?: number;
     /**
      * 
-     * @type {SportSquadsByTeamIdResponseDataInnerTransferId}
+     * @type {number}
      * @memberof SportSquadsByTeamIdResponseDataInner
      */
-    'transfer_id'?: SportSquadsByTeamIdResponseDataInnerTransferId;
+    'transfer_id'?: number | null;
     /**
      * 
      * @type {number}
@@ -68,10 +62,10 @@ export interface SportSquadsByTeamIdResponseDataInner {
     'active'?: boolean;
     /**
      * 
-     * @type {SportSquadsByTeamIdResponseDataInnerYerseyNumber}
+     * @type {number}
      * @memberof SportSquadsByTeamIdResponseDataInner
      */
-    'yersey_number'?: SportSquadsByTeamIdResponseDataInnerYerseyNumber;
+    'yersey_number'?: number | null;
     /**
      * 
      * @type {string}

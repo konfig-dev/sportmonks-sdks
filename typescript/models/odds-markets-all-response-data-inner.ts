@@ -11,9 +11,6 @@
  * Do not edit the class manually.
  */
 
-// May contain unused imports in some cases
-// @ts-ignore
-import { OddsMarketsAllResponseDataInnerLegacyId } from './odds-markets-all-response-data-inner-legacy-id';
 
 /**
  * 
@@ -29,10 +26,10 @@ export interface OddsMarketsAllResponseDataInner {
     'id'?: number;
     /**
      * 
-     * @type {OddsMarketsAllResponseDataInnerLegacyId}
+     * @type {number}
      * @memberof OddsMarketsAllResponseDataInner
      */
-    'legacy_id'?: OddsMarketsAllResponseDataInnerLegacyId;
+    'legacy_id'?: number | null;
     /**
      * 
      * @type {string}

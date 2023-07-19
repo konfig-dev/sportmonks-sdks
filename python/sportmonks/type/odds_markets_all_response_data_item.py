@@ -21,7 +21,7 @@ class RequiredOddsMarketsAllResponseDataItem(TypedDict):
 class OptionalOddsMarketsAllResponseDataItem(TypedDict, total=False):
     id: typing.Union[int, float]
 
-    legacy_id: typing.Union[typing.Optional[str], typing.Union[int, float]]
+    legacy_id: typing.Optional[typing.Union[int, float]]
 
     name: str
 

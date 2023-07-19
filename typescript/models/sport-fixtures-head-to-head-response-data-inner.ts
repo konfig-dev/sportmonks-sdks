@@ -11,9 +11,6 @@
  * Do not edit the class manually.
  */
 
-// May contain unused imports in some cases
-// @ts-ignore
-import { SportFixturesHeadToHeadResponseDataInnerGroupId } from './sport-fixtures-head-to-head-response-data-inner-group-id';
 
 /**
  * 
@@ -53,10 +50,10 @@ export interface SportFixturesHeadToHeadResponseDataInner {
     'stage_id'?: number;
     /**
      * 
-     * @type {SportFixturesHeadToHeadResponseDataInnerGroupId}
+     * @type {number}
      * @memberof SportFixturesHeadToHeadResponseDataInner
      */
-    'group_id'?: SportFixturesHeadToHeadResponseDataInnerGroupId;
+    'group_id'?: number | null;
     /**
      * 
      * @type {string}

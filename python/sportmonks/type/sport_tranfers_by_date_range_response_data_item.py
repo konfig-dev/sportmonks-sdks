@@ -31,9 +31,9 @@ class OptionalSportTranfersByDateRangeResponseDataItem(TypedDict, total=False):
 
     to_team_id: typing.Union[int, float]
 
-    position_id: typing.Union[typing.Union[int, float], typing.Optional[str]]
+    position_id: typing.Optional[typing.Union[int, float]]
 
-    detailed_position_id: typing.Union[typing.Union[int, float], typing.Optional[str]]
+    detailed_position_id: typing.Optional[typing.Union[int, float]]
 
     date: str
 

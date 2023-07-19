@@ -11,9 +11,6 @@
  * Do not edit the class manually.
  */
 
-// May contain unused imports in some cases
-// @ts-ignore
-import { SportStandingsAllResponseDataInnerStandingRuleId } from './sport-standings-all-response-data-inner-standing-rule-id';
 
 /**
  * 
@@ -71,10 +68,10 @@ export interface SportStandingsAllResponseDataInner {
     'round_id'?: number;
     /**
      * 
-     * @type {SportStandingsAllResponseDataInnerStandingRuleId}
+     * @type {number}
      * @memberof SportStandingsAllResponseDataInner
      */
-    'standing_rule_id'?: SportStandingsAllResponseDataInnerStandingRuleId;
+    'standing_rule_id'?: number | null;
     /**
      * 
      * @type {number}

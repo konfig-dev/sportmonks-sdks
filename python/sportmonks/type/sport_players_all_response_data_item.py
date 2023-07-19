@@ -31,7 +31,7 @@ class OptionalSportPlayersAllResponseDataItem(TypedDict, total=False):
 
     position_id: typing.Union[int, float]
 
-    detailed_position_id: typing.Union[typing.Optional[str], typing.Union[int, float]]
+    detailed_position_id: typing.Optional[typing.Union[int, float]]
 
     type_id: typing.Union[int, float]
 

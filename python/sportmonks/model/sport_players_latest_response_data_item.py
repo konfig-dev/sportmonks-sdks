@@ -62,60 +62,22 @@ class SportPlayersLatestResponseDataItem(
             
             
             class detailed_position_id(
-                schemas.ComposedSchema,
+                schemas.NumberBase,
+                schemas.NoneBase,
+                schemas.Schema,
+                schemas.NoneDecimalMixin
             ):
-            
-            
-                class MetaOapg:
-                    
-                    
-                    class one_of_0(
-                        schemas.StrBase,
-                        schemas.NoneBase,
-                        schemas.Schema,
-                        schemas.NoneStrMixin
-                    ):
-                    
-                    
-                        def __new__(
-                            cls,
-                            *args: typing.Union[None, str, ],
-                            _configuration: typing.Optional[schemas.Configuration] = None,
-                        ) -> 'one_of_0':
-                            return super().__new__(
-                                cls,
-                                *args,
-                                _configuration=_configuration,
-                            )
-                    one_of_1 = schemas.NumberSchema
-                    
-                    @classmethod
-                    @functools.lru_cache()
-                    def one_of(cls):
-                        # we need this here to make our import statements work
-                        # we must store _composed_schemas in here so the code is only run
-                        # when we invoke this method. If we kept this at the class
-                        # level we would get an error because the class level
-                        # code would be run when this module is imported, and these composed
-                        # classes don't exist yet because their module has not finished
-                        # loading
-                        return [
-                            cls.one_of_0,
-                            cls.one_of_1,
-                        ]
             
             
                 def __new__(
                     cls,
-                    *args: typing.Union[dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
+                    *args: typing.Union[None, decimal.Decimal, int, float, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
-                    **kwargs: typing.Union[schemas.AnyTypeSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, None, list, tuple, bytes],
                 ) -> 'detailed_position_id':
                     return super().__new__(
                         cls,
                         *args,
                         _configuration=_configuration,
-                        **kwargs,
                     )
             type_id = schemas.NumberSchema
             common_name = schemas.StrSchema
@@ -127,118 +89,42 @@ class SportPlayersLatestResponseDataItem(
             
             
             class height(
-                schemas.ComposedSchema,
+                schemas.NumberBase,
+                schemas.NoneBase,
+                schemas.Schema,
+                schemas.NoneDecimalMixin
             ):
-            
-            
-                class MetaOapg:
-                    
-                    
-                    class one_of_0(
-                        schemas.StrBase,
-                        schemas.NoneBase,
-                        schemas.Schema,
-                        schemas.NoneStrMixin
-                    ):
-                    
-                    
-                        def __new__(
-                            cls,
-                            *args: typing.Union[None, str, ],
-                            _configuration: typing.Optional[schemas.Configuration] = None,
-                        ) -> 'one_of_0':
-                            return super().__new__(
-                                cls,
-                                *args,
-                                _configuration=_configuration,
-                            )
-                    one_of_1 = schemas.NumberSchema
-                    
-                    @classmethod
-                    @functools.lru_cache()
-                    def one_of(cls):
-                        # we need this here to make our import statements work
-                        # we must store _composed_schemas in here so the code is only run
-                        # when we invoke this method. If we kept this at the class
-                        # level we would get an error because the class level
-                        # code would be run when this module is imported, and these composed
-                        # classes don't exist yet because their module has not finished
-                        # loading
-                        return [
-                            cls.one_of_0,
-                            cls.one_of_1,
-                        ]
             
             
                 def __new__(
                     cls,
-                    *args: typing.Union[dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
+                    *args: typing.Union[None, decimal.Decimal, int, float, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
-                    **kwargs: typing.Union[schemas.AnyTypeSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, None, list, tuple, bytes],
                 ) -> 'height':
                     return super().__new__(
                         cls,
                         *args,
                         _configuration=_configuration,
-                        **kwargs,
                     )
             
             
             class weight(
-                schemas.ComposedSchema,
+                schemas.NumberBase,
+                schemas.NoneBase,
+                schemas.Schema,
+                schemas.NoneDecimalMixin
             ):
-            
-            
-                class MetaOapg:
-                    one_of_0 = schemas.NumberSchema
-                    
-                    
-                    class one_of_1(
-                        schemas.StrBase,
-                        schemas.NoneBase,
-                        schemas.Schema,
-                        schemas.NoneStrMixin
-                    ):
-                    
-                    
-                        def __new__(
-                            cls,
-                            *args: typing.Union[None, str, ],
-                            _configuration: typing.Optional[schemas.Configuration] = None,
-                        ) -> 'one_of_1':
-                            return super().__new__(
-                                cls,
-                                *args,
-                                _configuration=_configuration,
-                            )
-                    
-                    @classmethod
-                    @functools.lru_cache()
-                    def one_of(cls):
-                        # we need this here to make our import statements work
-                        # we must store _composed_schemas in here so the code is only run
-                        # when we invoke this method. If we kept this at the class
-                        # level we would get an error because the class level
-                        # code would be run when this module is imported, and these composed
-                        # classes don't exist yet because their module has not finished
-                        # loading
-                        return [
-                            cls.one_of_0,
-                            cls.one_of_1,
-                        ]
             
             
                 def __new__(
                     cls,
-                    *args: typing.Union[dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
+                    *args: typing.Union[None, decimal.Decimal, int, float, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
-                    **kwargs: typing.Union[schemas.AnyTypeSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, None, list, tuple, bytes],
                 ) -> 'weight':
                     return super().__new__(
                         cls,
                         *args,
                         _configuration=_configuration,
-                        **kwargs,
                     )
             
             
@@ -414,7 +300,7 @@ class SportPlayersLatestResponseDataItem(
         nationality_id: typing.Union[MetaOapg.properties.nationality_id, decimal.Decimal, int, float, schemas.Unset] = schemas.unset,
         city_id: typing.Union[MetaOapg.properties.city_id, None, str, schemas.Unset] = schemas.unset,
         position_id: typing.Union[MetaOapg.properties.position_id, decimal.Decimal, int, float, schemas.Unset] = schemas.unset,
-        detailed_position_id: typing.Union[MetaOapg.properties.detailed_position_id, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, schemas.Unset] = schemas.unset,
+        detailed_position_id: typing.Union[MetaOapg.properties.detailed_position_id, None, decimal.Decimal, int, float, schemas.Unset] = schemas.unset,
         type_id: typing.Union[MetaOapg.properties.type_id, decimal.Decimal, int, float, schemas.Unset] = schemas.unset,
         common_name: typing.Union[MetaOapg.properties.common_name, str, schemas.Unset] = schemas.unset,
         firstname: typing.Union[MetaOapg.properties.firstname, str, schemas.Unset] = schemas.unset,
@@ -422,8 +308,8 @@ class SportPlayersLatestResponseDataItem(
         name: typing.Union[MetaOapg.properties.name, str, schemas.Unset] = schemas.unset,
         display_name: typing.Union[MetaOapg.properties.display_name, str, schemas.Unset] = schemas.unset,
         image_path: typing.Union[MetaOapg.properties.image_path, str, schemas.Unset] = schemas.unset,
-        height: typing.Union[MetaOapg.properties.height, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, schemas.Unset] = schemas.unset,
-        weight: typing.Union[MetaOapg.properties.weight, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, schemas.Unset] = schemas.unset,
+        height: typing.Union[MetaOapg.properties.height, None, decimal.Decimal, int, float, schemas.Unset] = schemas.unset,
+        weight: typing.Union[MetaOapg.properties.weight, None, decimal.Decimal, int, float, schemas.Unset] = schemas.unset,
         date_of_birth: typing.Union[MetaOapg.properties.date_of_birth, None, str, schemas.Unset] = schemas.unset,
         gender: typing.Union[MetaOapg.properties.gender, str, schemas.Unset] = schemas.unset,
         _configuration: typing.Optional[schemas.Configuration] = None,

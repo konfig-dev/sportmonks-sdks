@@ -31,7 +31,7 @@ class OptionalSportStagesAllResponseDataItem(TypedDict, total=False):
 
     name: str
 
-    sort_order: typing.Union[typing.Optional[str], typing.Union[int, float]]
+    sort_order: typing.Optional[typing.Union[int, float]]
 
     finished: bool
 

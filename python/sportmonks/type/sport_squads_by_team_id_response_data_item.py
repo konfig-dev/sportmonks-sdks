@@ -21,7 +21,7 @@ class RequiredSportSquadsByTeamIdResponseDataItem(TypedDict):
 class OptionalSportSquadsByTeamIdResponseDataItem(TypedDict, total=False):
     id: typing.Union[int, float]
 
-    transfer_id: typing.Union[typing.Union[int, float], typing.Optional[str]]
+    transfer_id: typing.Optional[typing.Union[int, float]]
 
     player_id: typing.Union[int, float]
 
@@ -33,7 +33,7 @@ class OptionalSportSquadsByTeamIdResponseDataItem(TypedDict, total=False):
 
     active: bool
 
-    yersey_number: typing.Union[typing.Union[int, float], typing.Optional[str]]
+    yersey_number: typing.Optional[typing.Union[int, float]]
 
     start: str
 

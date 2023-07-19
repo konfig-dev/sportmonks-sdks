@@ -11,15 +11,6 @@
  * Do not edit the class manually.
  */
 
-// May contain unused imports in some cases
-// @ts-ignore
-import { SportPlayersLatestResponseDataInnerDetailedPositionId } from './sport-players-latest-response-data-inner-detailed-position-id';
-// May contain unused imports in some cases
-// @ts-ignore
-import { SportPlayersLatestResponseDataInnerHeight } from './sport-players-latest-response-data-inner-height';
-// May contain unused imports in some cases
-// @ts-ignore
-import { SportPlayersLatestResponseDataInnerWeight } from './sport-players-latest-response-data-inner-weight';
 
 /**
  * 
@@ -65,10 +56,10 @@ export interface SportPlayersLatestResponseDataInner {
     'position_id'?: number;
     /**
      * 
-     * @type {SportPlayersLatestResponseDataInnerDetailedPositionId}
+     * @type {number}
      * @memberof SportPlayersLatestResponseDataInner
      */
-    'detailed_position_id'?: SportPlayersLatestResponseDataInnerDetailedPositionId;
+    'detailed_position_id'?: number | null;
     /**
      * 
      * @type {number}
@@ -113,16 +104,16 @@ export interface SportPlayersLatestResponseDataInner {
     'image_path'?: string;
     /**
      * 
-     * @type {SportPlayersLatestResponseDataInnerHeight}
+     * @type {number}
      * @memberof SportPlayersLatestResponseDataInner
      */
-    'height'?: SportPlayersLatestResponseDataInnerHeight;
+    'height'?: number | null;
     /**
      * 
-     * @type {SportPlayersLatestResponseDataInnerWeight}
+     * @type {number}
      * @memberof SportPlayersLatestResponseDataInner
      */
-    'weight'?: SportPlayersLatestResponseDataInnerWeight;
+    'weight'?: number | null;
     /**
      * 
      * @type {string}

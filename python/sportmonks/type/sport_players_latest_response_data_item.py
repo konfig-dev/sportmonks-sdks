@@ -31,7 +31,7 @@ class OptionalSportPlayersLatestResponseDataItem(TypedDict, total=False):
 
     position_id: typing.Union[int, float]
 
-    detailed_position_id: typing.Union[typing.Optional[str], typing.Union[int, float]]
+    detailed_position_id: typing.Optional[typing.Union[int, float]]
 
     type_id: typing.Union[int, float]
 
@@ -47,9 +47,9 @@ class OptionalSportPlayersLatestResponseDataItem(TypedDict, total=False):
 
     image_path: str
 
-    height: typing.Union[typing.Optional[str], typing.Union[int, float]]
+    height: typing.Optional[typing.Union[int, float]]
 
-    weight: typing.Union[typing.Union[int, float], typing.Optional[str]]
+    weight: typing.Optional[typing.Union[int, float]]
 
     date_of_birth: typing.Optional[str]
 

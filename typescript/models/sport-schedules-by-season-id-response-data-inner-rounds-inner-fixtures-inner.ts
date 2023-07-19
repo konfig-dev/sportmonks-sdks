@@ -13,12 +13,6 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import { SportSchedulesBySeasonIdResponseDataInnerRoundsInnerFixturesInnerAwayScore } from './sport-schedules-by-season-id-response-data-inner-rounds-inner-fixtures-inner-away-score';
-// May contain unused imports in some cases
-// @ts-ignore
-import { SportSchedulesBySeasonIdResponseDataInnerRoundsInnerFixturesInnerHomeScore } from './sport-schedules-by-season-id-response-data-inner-rounds-inner-fixtures-inner-home-score';
-// May contain unused imports in some cases
-// @ts-ignore
 import { SportSchedulesBySeasonIdResponseDataInnerRoundsInnerFixturesInnerParticipantsInner } from './sport-schedules-by-season-id-response-data-inner-rounds-inner-fixtures-inner-participants-inner';
 
 /**
@@ -95,16 +89,16 @@ export interface SportSchedulesBySeasonIdResponseDataInnerRoundsInnerFixturesInn
     'name'?: string;
     /**
      * 
-     * @type {SportSchedulesBySeasonIdResponseDataInnerRoundsInnerFixturesInnerHomeScore}
+     * @type {number}
      * @memberof SportSchedulesBySeasonIdResponseDataInnerRoundsInnerFixturesInner
      */
-    'home_score'?: SportSchedulesBySeasonIdResponseDataInnerRoundsInnerFixturesInnerHomeScore;
+    'home_score'?: number | null;
     /**
      * 
-     * @type {SportSchedulesBySeasonIdResponseDataInnerRoundsInnerFixturesInnerAwayScore}
+     * @type {number}
      * @memberof SportSchedulesBySeasonIdResponseDataInnerRoundsInnerFixturesInner
      */
-    'away_score'?: SportSchedulesBySeasonIdResponseDataInnerRoundsInnerFixturesInnerAwayScore;
+    'away_score'?: number | null;
     /**
      * 
      * @type {string}

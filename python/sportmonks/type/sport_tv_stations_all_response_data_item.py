@@ -29,7 +29,7 @@ class OptionalSportTvStationsAllResponseDataItem(TypedDict, total=False):
 
     type: str
 
-    related_id: typing.Union[typing.Optional[str], typing.Union[int, float]]
+    related_id: typing.Optional[typing.Union[int, float]]
 
 class SportTvStationsAllResponseDataItem(RequiredSportTvStationsAllResponseDataItem, OptionalSportTvStationsAllResponseDataItem):
     pass

@@ -11,9 +11,6 @@
  * Do not edit the class manually.
  */
 
-// May contain unused imports in some cases
-// @ts-ignore
-import { SportStatesBySportResponseDataInnerTypeId } from './sport-states-by-sport-response-data-inner-type-id';
 
 /**
  * 
@@ -95,10 +92,10 @@ export interface SportStatesBySportResponseDataInner {
     'is_completed'?: boolean;
     /**
      * 
-     * @type {SportStatesBySportResponseDataInnerTypeId}
+     * @type {number}
      * @memberof SportStatesBySportResponseDataInner
      */
-    'type_id'?: SportStatesBySportResponseDataInnerTypeId;
+    'type_id'?: number | null;
     /**
      * 
      * @type {boolean}

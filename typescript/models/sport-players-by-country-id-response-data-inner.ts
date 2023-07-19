@@ -11,18 +11,6 @@
  * Do not edit the class manually.
  */
 
-// May contain unused imports in some cases
-// @ts-ignore
-import { SportPlayersByCountryIdResponseDataInnerDetailedPositionId } from './sport-players-by-country-id-response-data-inner-detailed-position-id';
-// May contain unused imports in some cases
-// @ts-ignore
-import { SportPlayersByCountryIdResponseDataInnerHeight } from './sport-players-by-country-id-response-data-inner-height';
-// May contain unused imports in some cases
-// @ts-ignore
-import { SportPlayersByCountryIdResponseDataInnerPositionId } from './sport-players-by-country-id-response-data-inner-position-id';
-// May contain unused imports in some cases
-// @ts-ignore
-import { SportPlayersByCountryIdResponseDataInnerWeight } from './sport-players-by-country-id-response-data-inner-weight';
 
 /**
  * 
@@ -62,16 +50,16 @@ export interface SportPlayersByCountryIdResponseDataInner {
     'city_id'?: string | null;
     /**
      * 
-     * @type {SportPlayersByCountryIdResponseDataInnerPositionId}
+     * @type {number}
      * @memberof SportPlayersByCountryIdResponseDataInner
      */
-    'position_id'?: SportPlayersByCountryIdResponseDataInnerPositionId;
+    'position_id'?: number | null;
     /**
      * 
-     * @type {SportPlayersByCountryIdResponseDataInnerDetailedPositionId}
+     * @type {number}
      * @memberof SportPlayersByCountryIdResponseDataInner
      */
-    'detailed_position_id'?: SportPlayersByCountryIdResponseDataInnerDetailedPositionId;
+    'detailed_position_id'?: number | null;
     /**
      * 
      * @type {number}
@@ -116,16 +104,16 @@ export interface SportPlayersByCountryIdResponseDataInner {
     'image_path'?: string;
     /**
      * 
-     * @type {SportPlayersByCountryIdResponseDataInnerHeight}
+     * @type {number}
      * @memberof SportPlayersByCountryIdResponseDataInner
      */
-    'height'?: SportPlayersByCountryIdResponseDataInnerHeight;
+    'height'?: number | null;
     /**
      * 
-     * @type {SportPlayersByCountryIdResponseDataInnerWeight}
+     * @type {number}
      * @memberof SportPlayersByCountryIdResponseDataInner
      */
-    'weight'?: SportPlayersByCountryIdResponseDataInnerWeight;
+    'weight'?: number | null;
     /**
      * 
      * @type {string}

@@ -42,9 +42,9 @@ class OptionalSportSchedulesBySeasonIdResponseDataItemRoundsItemFixturesItem(Typ
 
     name: str
 
-    home_score: typing.Union[typing.Union[int, float], typing.Optional[str]]
+    home_score: typing.Optional[typing.Union[int, float]]
 
-    away_score: typing.Union[typing.Union[int, float], typing.Optional[str]]
+    away_score: typing.Optional[typing.Union[int, float]]
 
     starting_at: str
 

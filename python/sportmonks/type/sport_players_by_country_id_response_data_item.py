@@ -29,9 +29,9 @@ class OptionalSportPlayersByCountryIdResponseDataItem(TypedDict, total=False):
 
     city_id: typing.Optional[str]
 
-    position_id: typing.Union[typing.Union[int, float], typing.Optional[str]]
+    position_id: typing.Optional[typing.Union[int, float]]
 
-    detailed_position_id: typing.Union[typing.Optional[str], typing.Union[int, float]]
+    detailed_position_id: typing.Optional[typing.Union[int, float]]
 
     type_id: typing.Union[int, float]
 
@@ -47,9 +47,9 @@ class OptionalSportPlayersByCountryIdResponseDataItem(TypedDict, total=False):
 
     image_path: str
 
-    height: typing.Union[typing.Union[int, float], typing.Optional[str]]
+    height: typing.Optional[typing.Union[int, float]]
 
-    weight: typing.Union[typing.Union[int, float], typing.Optional[str]]
+    weight: typing.Optional[typing.Union[int, float]]
 
     date_of_birth: str
 

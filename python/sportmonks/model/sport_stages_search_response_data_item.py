@@ -43,60 +43,22 @@ class SportStagesSearchResponseDataItem(
             
             
             class sort_order(
-                schemas.ComposedSchema,
+                schemas.NumberBase,
+                schemas.NoneBase,
+                schemas.Schema,
+                schemas.NoneDecimalMixin
             ):
-            
-            
-                class MetaOapg:
-                    
-                    
-                    class one_of_0(
-                        schemas.StrBase,
-                        schemas.NoneBase,
-                        schemas.Schema,
-                        schemas.NoneStrMixin
-                    ):
-                    
-                    
-                        def __new__(
-                            cls,
-                            *args: typing.Union[None, str, ],
-                            _configuration: typing.Optional[schemas.Configuration] = None,
-                        ) -> 'one_of_0':
-                            return super().__new__(
-                                cls,
-                                *args,
-                                _configuration=_configuration,
-                            )
-                    one_of_1 = schemas.NumberSchema
-                    
-                    @classmethod
-                    @functools.lru_cache()
-                    def one_of(cls):
-                        # we need this here to make our import statements work
-                        # we must store _composed_schemas in here so the code is only run
-                        # when we invoke this method. If we kept this at the class
-                        # level we would get an error because the class level
-                        # code would be run when this module is imported, and these composed
-                        # classes don't exist yet because their module has not finished
-                        # loading
-                        return [
-                            cls.one_of_0,
-                            cls.one_of_1,
-                        ]
             
             
                 def __new__(
                     cls,
-                    *args: typing.Union[dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
+                    *args: typing.Union[None, decimal.Decimal, int, float, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
-                    **kwargs: typing.Union[schemas.AnyTypeSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, None, list, tuple, bytes],
                 ) -> 'sort_order':
                     return super().__new__(
                         cls,
                         *args,
                         _configuration=_configuration,
-                        **kwargs,
                     )
             finished = schemas.BoolSchema
             is_current = schemas.BoolSchema
@@ -244,7 +206,7 @@ class SportStagesSearchResponseDataItem(
         season_id: typing.Union[MetaOapg.properties.season_id, decimal.Decimal, int, float, schemas.Unset] = schemas.unset,
         type_id: typing.Union[MetaOapg.properties.type_id, decimal.Decimal, int, float, schemas.Unset] = schemas.unset,
         name: typing.Union[MetaOapg.properties.name, str, schemas.Unset] = schemas.unset,
-        sort_order: typing.Union[MetaOapg.properties.sort_order, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, schemas.Unset] = schemas.unset,
+        sort_order: typing.Union[MetaOapg.properties.sort_order, None, decimal.Decimal, int, float, schemas.Unset] = schemas.unset,
         finished: typing.Union[MetaOapg.properties.finished, bool, schemas.Unset] = schemas.unset,
         is_current: typing.Union[MetaOapg.properties.is_current, bool, schemas.Unset] = schemas.unset,
         starting_at: typing.Union[MetaOapg.properties.starting_at, None, str, schemas.Unset] = schemas.unset,

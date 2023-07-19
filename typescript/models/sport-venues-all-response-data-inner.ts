@@ -11,15 +11,6 @@
  * Do not edit the class manually.
  */
 
-// May contain unused imports in some cases
-// @ts-ignore
-import { SportVenuesAllResponseDataInnerCapacity } from './sport-venues-all-response-data-inner-capacity';
-// May contain unused imports in some cases
-// @ts-ignore
-import { SportVenuesAllResponseDataInnerCityId } from './sport-venues-all-response-data-inner-city-id';
-// May contain unused imports in some cases
-// @ts-ignore
-import { SportVenuesAllResponseDataInnerCountryId } from './sport-venues-all-response-data-inner-country-id';
 
 /**
  * 
@@ -35,16 +26,16 @@ export interface SportVenuesAllResponseDataInner {
     'id'?: number;
     /**
      * 
-     * @type {SportVenuesAllResponseDataInnerCountryId}
+     * @type {number}
      * @memberof SportVenuesAllResponseDataInner
      */
-    'country_id'?: SportVenuesAllResponseDataInnerCountryId;
+    'country_id'?: number | null;
     /**
      * 
-     * @type {SportVenuesAllResponseDataInnerCityId}
+     * @type {number}
      * @memberof SportVenuesAllResponseDataInner
      */
-    'city_id'?: SportVenuesAllResponseDataInnerCityId;
+    'city_id'?: number | null;
     /**
      * 
      * @type {string}
@@ -77,10 +68,10 @@ export interface SportVenuesAllResponseDataInner {
     'longitude'?: string;
     /**
      * 
-     * @type {SportVenuesAllResponseDataInnerCapacity}
+     * @type {number}
      * @memberof SportVenuesAllResponseDataInner
      */
-    'capacity'?: SportVenuesAllResponseDataInnerCapacity;
+    'capacity'?: number | null;
     /**
      * 
      * @type {string}

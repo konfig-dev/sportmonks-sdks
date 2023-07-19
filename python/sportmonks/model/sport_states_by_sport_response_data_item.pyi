@@ -49,60 +49,22 @@ class SportStatesBySportResponseDataItem(
             
             
             class type_id(
-                schemas.ComposedSchema,
+                schemas.NumberBase,
+                schemas.NoneBase,
+                schemas.Schema,
+                schemas.NoneDecimalMixin
             ):
-            
-            
-                class MetaOapg:
-                    
-                    
-                    class one_of_0(
-                        schemas.StrBase,
-                        schemas.NoneBase,
-                        schemas.Schema,
-                        schemas.NoneStrMixin
-                    ):
-                    
-                    
-                        def __new__(
-                            cls,
-                            *args: typing.Union[None, str, ],
-                            _configuration: typing.Optional[schemas.Configuration] = None,
-                        ) -> 'one_of_0':
-                            return super().__new__(
-                                cls,
-                                *args,
-                                _configuration=_configuration,
-                            )
-                    one_of_1 = schemas.NumberSchema
-                    
-                    @classmethod
-                    @functools.lru_cache()
-                    def one_of(cls):
-                        # we need this here to make our import statements work
-                        # we must store _composed_schemas in here so the code is only run
-                        # when we invoke this method. If we kept this at the class
-                        # level we would get an error because the class level
-                        # code would be run when this module is imported, and these composed
-                        # classes don't exist yet because their module has not finished
-                        # loading
-                        return [
-                            cls.one_of_0,
-                            cls.one_of_1,
-                        ]
             
             
                 def __new__(
                     cls,
-                    *args: typing.Union[dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, ],
+                    *args: typing.Union[None, decimal.Decimal, int, float, ],
                     _configuration: typing.Optional[schemas.Configuration] = None,
-                    **kwargs: typing.Union[schemas.AnyTypeSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, None, list, tuple, bytes],
                 ) -> 'type_id':
                     return super().__new__(
                         cls,
                         *args,
                         _configuration=_configuration,
-                        **kwargs,
                     )
             is_deleted = schemas.BoolSchema
             is_notstarted = schemas.BoolSchema
@@ -260,7 +222,7 @@ class SportStatesBySportResponseDataItem(
         is_cancelled: typing.Union[MetaOapg.properties.is_cancelled, bool, schemas.Unset] = schemas.unset,
         is_final_standing_state: typing.Union[MetaOapg.properties.is_final_standing_state, bool, schemas.Unset] = schemas.unset,
         is_completed: typing.Union[MetaOapg.properties.is_completed, bool, schemas.Unset] = schemas.unset,
-        type_id: typing.Union[MetaOapg.properties.type_id, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, bool, None, list, tuple, bytes, io.FileIO, io.BufferedReader, schemas.Unset] = schemas.unset,
+        type_id: typing.Union[MetaOapg.properties.type_id, None, decimal.Decimal, int, float, schemas.Unset] = schemas.unset,
         is_deleted: typing.Union[MetaOapg.properties.is_deleted, bool, schemas.Unset] = schemas.unset,
         is_notstarted: typing.Union[MetaOapg.properties.is_notstarted, bool, schemas.Unset] = schemas.unset,
         sections_active: typing.Union[MetaOapg.properties.sections_active, bool, schemas.Unset] = schemas.unset,

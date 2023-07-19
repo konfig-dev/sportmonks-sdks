@@ -11,9 +11,6 @@
  * Do not edit the class manually.
  */
 
-// May contain unused imports in some cases
-// @ts-ignore
-import { SportStagesAllResponseDataInnerSortOrder } from './sport-stages-all-response-data-inner-sort-order';
 
 /**
  * 
@@ -59,10 +56,10 @@ export interface SportStagesAllResponseDataInner {
     'name'?: string;
     /**
      * 
-     * @type {SportStagesAllResponseDataInnerSortOrder}
+     * @type {number}
      * @memberof SportStagesAllResponseDataInner
      */
-    'sort_order'?: SportStagesAllResponseDataInnerSortOrder;
+    'sort_order'?: number | null;
     /**
      * 
      * @type {boolean}

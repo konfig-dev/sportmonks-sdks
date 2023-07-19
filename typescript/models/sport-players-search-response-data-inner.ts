@@ -11,9 +11,6 @@
  * Do not edit the class manually.
  */
 
-// May contain unused imports in some cases
-// @ts-ignore
-import { SportPlayersSearchResponseDataInnerDetailedPositionId } from './sport-players-search-response-data-inner-detailed-position-id';
 
 /**
  * 
@@ -59,10 +56,10 @@ export interface SportPlayersSearchResponseDataInner {
     'position_id'?: number;
     /**
      * 
-     * @type {SportPlayersSearchResponseDataInnerDetailedPositionId}
+     * @type {number}
      * @memberof SportPlayersSearchResponseDataInner
      */
-    'detailed_position_id'?: SportPlayersSearchResponseDataInnerDetailedPositionId;
+    'detailed_position_id'?: number | null;
     /**
      * 
      * @type {number}
