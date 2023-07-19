@@ -5,13 +5,13 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **decimal** |  | [optional] 
-**TransferId** | [**SportSquadsByTeamIdResponseDataInnerTransferId**](SportSquadsByTeamIdResponseDataInnerTransferId.md) |  | [optional] 
+**TransferId** | **decimal?** |  | [optional] 
 **PlayerId** | **decimal** |  | [optional] 
 **TeamId** | **decimal** |  | [optional] 
 **PositionId** | **decimal** |  | [optional] 
 **DetailedPositionId** | **decimal** |  | [optional] 
 **Active** | **bool** |  | [optional] 
-**YerseyNumber** | [**SportSquadsByTeamIdResponseDataInnerYerseyNumber**](SportSquadsByTeamIdResponseDataInnerYerseyNumber.md) |  | [optional] 
+**YerseyNumber** | **decimal?** |  | [optional] 
 **Start** | **string** |  | [optional] 
 **End** | **string** |  | [optional] 
 

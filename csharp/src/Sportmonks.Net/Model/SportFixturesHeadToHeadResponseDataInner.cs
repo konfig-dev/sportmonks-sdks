@@ -55,7 +55,7 @@ namespace Sportmonks.Net.Model
         /// <param name="placeholder">placeholder.</param>
         /// <param name="lastProcessedAt">lastProcessedAt.</param>
         /// <param name="startingAtTimestamp">startingAtTimestamp.</param>
-        public SportFixturesHeadToHeadResponseDataInner(decimal id = default(decimal), decimal sportId = default(decimal), decimal leagueId = default(decimal), decimal seasonId = default(decimal), decimal stageId = default(decimal), SportFixturesHeadToHeadResponseDataInnerGroupId groupId = default(SportFixturesHeadToHeadResponseDataInnerGroupId), string aggregateId = default(string), decimal roundId = default(decimal), decimal stateId = default(decimal), decimal venueId = default(decimal), string name = default(string), decimal homeScore = default(decimal), decimal awayScore = default(decimal), string startingAt = default(string), string resultInfo = default(string), string leg = default(string), string details = default(string), decimal length = default(decimal), bool placeholder = default(bool), string lastProcessedAt = default(string), decimal startingAtTimestamp = default(decimal))
+        public SportFixturesHeadToHeadResponseDataInner(decimal id = default(decimal), decimal sportId = default(decimal), decimal leagueId = default(decimal), decimal seasonId = default(decimal), decimal stageId = default(decimal), decimal? groupId = default(decimal?), string aggregateId = default(string), decimal roundId = default(decimal), decimal stateId = default(decimal), decimal venueId = default(decimal), string name = default(string), decimal homeScore = default(decimal), decimal awayScore = default(decimal), string startingAt = default(string), string resultInfo = default(string), string leg = default(string), string details = default(string), decimal length = default(decimal), bool placeholder = default(bool), string lastProcessedAt = default(string), decimal startingAtTimestamp = default(decimal))
         {
             this.Id = id;
             this.SportId = sportId;
@@ -113,8 +113,8 @@ namespace Sportmonks.Net.Model
         /// <summary>
         /// Gets or Sets GroupId
         /// </summary>
-        [DataMember(Name = "group_id", EmitDefaultValue = false)]
-        public SportFixturesHeadToHeadResponseDataInnerGroupId GroupId { get; set; }
+        [DataMember(Name = "group_id", EmitDefaultValue = true)]
+        public decimal? GroupId { get; set; }
 
         /// <summary>
         /// Gets or Sets AggregateId

@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **decimal** |  | [optional] 
-**LegacyId** | [**OddsMarketsAllResponseDataInnerLegacyId**](OddsMarketsAllResponseDataInnerLegacyId.md) |  | [optional] 
+**LegacyId** | **decimal?** |  | [optional] 
 **Name** | **string** |  | [optional] 
 **DeveloperName** | **string** |  | [optional] 
 **HasWinningCalculations** | **bool** |  | [optional] 

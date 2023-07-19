@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **Dp3** | **string** |  | [optional] 
 **Fractional** | **string** |  | [optional] 
 **American** | **string** |  | [optional] 
-**Winning** | [**SportOddsPreMatchByFixtureIdResponseDataInnerWinning**](SportOddsPreMatchByFixtureIdResponseDataInnerWinning.md) |  | [optional] 
+**Winning** | **bool?** |  | [optional] 
 **Stopped** | **bool** |  | [optional] 
 **Total** | **string** |  | [optional] 
 **Handicap** | **string** |  | [optional] 

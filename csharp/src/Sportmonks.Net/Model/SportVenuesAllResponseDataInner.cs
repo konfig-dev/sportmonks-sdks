@@ -47,7 +47,7 @@ namespace Sportmonks.Net.Model
         /// <param name="cityName">cityName.</param>
         /// <param name="surface">surface.</param>
         /// <param name="nationalTeam">nationalTeam.</param>
-        public SportVenuesAllResponseDataInner(decimal id = default(decimal), SportVenuesAllResponseDataInnerCountryId countryId = default(SportVenuesAllResponseDataInnerCountryId), SportVenuesAllResponseDataInnerCityId cityId = default(SportVenuesAllResponseDataInnerCityId), string name = default(string), string address = default(string), string zipcode = default(string), string latitude = default(string), string longitude = default(string), SportVenuesAllResponseDataInnerCapacity capacity = default(SportVenuesAllResponseDataInnerCapacity), string imagePath = default(string), string cityName = default(string), string surface = default(string), bool nationalTeam = default(bool))
+        public SportVenuesAllResponseDataInner(decimal id = default(decimal), decimal? countryId = default(decimal?), decimal? cityId = default(decimal?), string name = default(string), string address = default(string), string zipcode = default(string), string latitude = default(string), string longitude = default(string), decimal? capacity = default(decimal?), string imagePath = default(string), string cityName = default(string), string surface = default(string), bool nationalTeam = default(bool))
         {
             this.Id = id;
             this.CountryId = countryId;
@@ -73,14 +73,14 @@ namespace Sportmonks.Net.Model
         /// <summary>
         /// Gets or Sets CountryId
         /// </summary>
-        [DataMember(Name = "country_id", EmitDefaultValue = false)]
-        public SportVenuesAllResponseDataInnerCountryId CountryId { get; set; }
+        [DataMember(Name = "country_id", EmitDefaultValue = true)]
+        public decimal? CountryId { get; set; }
 
         /// <summary>
         /// Gets or Sets CityId
         /// </summary>
-        [DataMember(Name = "city_id", EmitDefaultValue = false)]
-        public SportVenuesAllResponseDataInnerCityId CityId { get; set; }
+        [DataMember(Name = "city_id", EmitDefaultValue = true)]
+        public decimal? CityId { get; set; }
 
         /// <summary>
         /// Gets or Sets Name
@@ -115,8 +115,8 @@ namespace Sportmonks.Net.Model
         /// <summary>
         /// Gets or Sets Capacity
         /// </summary>
-        [DataMember(Name = "capacity", EmitDefaultValue = false)]
-        public SportVenuesAllResponseDataInnerCapacity Capacity { get; set; }
+        [DataMember(Name = "capacity", EmitDefaultValue = true)]
+        public decimal? Capacity { get; set; }
 
         /// <summary>
         /// Gets or Sets ImagePath

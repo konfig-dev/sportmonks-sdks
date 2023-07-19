@@ -48,7 +48,7 @@ namespace Sportmonks.Net.Model
         /// <param name="weight">weight.</param>
         /// <param name="dateOfBirth">dateOfBirth.</param>
         /// <param name="gender">gender.</param>
-        public SportRefereesAllResponseDataInner(decimal id = default(decimal), decimal sportId = default(decimal), SportRefereesAllResponseDataInnerCountryId countryId = default(SportRefereesAllResponseDataInnerCountryId), string cityId = default(string), string commonName = default(string), string firstname = default(string), string lastname = default(string), string name = default(string), string displayName = default(string), string imagePath = default(string), string height = default(string), string weight = default(string), string dateOfBirth = default(string), string gender = default(string))
+        public SportRefereesAllResponseDataInner(decimal id = default(decimal), decimal sportId = default(decimal), decimal? countryId = default(decimal?), string cityId = default(string), string commonName = default(string), string firstname = default(string), string lastname = default(string), string name = default(string), string displayName = default(string), string imagePath = default(string), string height = default(string), string weight = default(string), string dateOfBirth = default(string), string gender = default(string))
         {
             this.Id = id;
             this.SportId = sportId;
@@ -81,8 +81,8 @@ namespace Sportmonks.Net.Model
         /// <summary>
         /// Gets or Sets CountryId
         /// </summary>
-        [DataMember(Name = "country_id", EmitDefaultValue = false)]
-        public SportRefereesAllResponseDataInnerCountryId CountryId { get; set; }
+        [DataMember(Name = "country_id", EmitDefaultValue = true)]
+        public decimal? CountryId { get; set; }
 
         /// <summary>
         /// Gets or Sets CityId

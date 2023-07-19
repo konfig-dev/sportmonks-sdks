@@ -50,7 +50,7 @@ namespace Sportmonks.Net.Model
         /// <param name="weight">weight.</param>
         /// <param name="dateOfBirth">dateOfBirth.</param>
         /// <param name="gender">gender.</param>
-        public SportCoachesAllResponseDataInner(decimal id = default(decimal), decimal playerId = default(decimal), decimal sportId = default(decimal), decimal countryId = default(decimal), string nationalityId = default(string), string cityId = default(string), string commonName = default(string), string firstname = default(string), string lastname = default(string), string name = default(string), string displayName = default(string), string imagePath = default(string), SportCoachesAllResponseDataInnerHeight height = default(SportCoachesAllResponseDataInnerHeight), SportCoachesAllResponseDataInnerWeight weight = default(SportCoachesAllResponseDataInnerWeight), string dateOfBirth = default(string), string gender = default(string))
+        public SportCoachesAllResponseDataInner(decimal id = default(decimal), decimal playerId = default(decimal), decimal sportId = default(decimal), decimal countryId = default(decimal), string nationalityId = default(string), string cityId = default(string), string commonName = default(string), string firstname = default(string), string lastname = default(string), string name = default(string), string displayName = default(string), string imagePath = default(string), decimal? height = default(decimal?), decimal? weight = default(decimal?), string dateOfBirth = default(string), string gender = default(string))
         {
             this.Id = id;
             this.PlayerId = playerId;
@@ -145,14 +145,14 @@ namespace Sportmonks.Net.Model
         /// <summary>
         /// Gets or Sets Height
         /// </summary>
-        [DataMember(Name = "height", EmitDefaultValue = false)]
-        public SportCoachesAllResponseDataInnerHeight Height { get; set; }
+        [DataMember(Name = "height", EmitDefaultValue = true)]
+        public decimal? Height { get; set; }
 
         /// <summary>
         /// Gets or Sets Weight
         /// </summary>
-        [DataMember(Name = "weight", EmitDefaultValue = false)]
-        public SportCoachesAllResponseDataInnerWeight Weight { get; set; }
+        [DataMember(Name = "weight", EmitDefaultValue = true)]
+        public decimal? Weight { get; set; }
 
         /// <summary>
         /// Gets or Sets DateOfBirth

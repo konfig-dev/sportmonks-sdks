@@ -5,14 +5,14 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **decimal** |  | [optional] 
-**CountryId** | [**SportVenuesSearchResponseDataInnerCountryId**](SportVenuesSearchResponseDataInnerCountryId.md) |  | [optional] 
-**CityId** | [**SportVenuesSearchResponseDataInnerCityId**](SportVenuesSearchResponseDataInnerCityId.md) |  | [optional] 
+**CountryId** | **decimal?** |  | [optional] 
+**CityId** | **decimal?** |  | [optional] 
 **Name** | **string** |  | [optional] 
 **Address** | **string** |  | [optional] 
 **Zipcode** | **string** |  | [optional] 
 **Latitude** | **string** |  | [optional] 
 **Longitude** | **string** |  | [optional] 
-**Capacity** | [**SportVenuesSearchResponseDataInnerCapacity**](SportVenuesSearchResponseDataInnerCapacity.md) |  | [optional] 
+**Capacity** | **decimal?** |  | [optional] 
 **ImagePath** | **string** |  | [optional] 
 **CityName** | **string** |  | [optional] 
 **Surface** | **string** |  | [optional] 

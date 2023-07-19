@@ -52,7 +52,7 @@ namespace Sportmonks.Net.Model
         /// <param name="weight">weight.</param>
         /// <param name="dateOfBirth">dateOfBirth.</param>
         /// <param name="gender">gender.</param>
-        public SportPlayersSearchResponseDataInner(decimal id = default(decimal), decimal sportId = default(decimal), decimal countryId = default(decimal), decimal nationalityId = default(decimal), string cityId = default(string), decimal positionId = default(decimal), SportPlayersSearchResponseDataInnerDetailedPositionId detailedPositionId = default(SportPlayersSearchResponseDataInnerDetailedPositionId), decimal typeId = default(decimal), string commonName = default(string), string firstname = default(string), string lastname = default(string), string name = default(string), string displayName = default(string), string imagePath = default(string), decimal height = default(decimal), decimal weight = default(decimal), string dateOfBirth = default(string), string gender = default(string))
+        public SportPlayersSearchResponseDataInner(decimal id = default(decimal), decimal sportId = default(decimal), decimal countryId = default(decimal), decimal nationalityId = default(decimal), string cityId = default(string), decimal positionId = default(decimal), decimal? detailedPositionId = default(decimal?), decimal typeId = default(decimal), string commonName = default(string), string firstname = default(string), string lastname = default(string), string name = default(string), string displayName = default(string), string imagePath = default(string), decimal height = default(decimal), decimal weight = default(decimal), string dateOfBirth = default(string), string gender = default(string))
         {
             this.Id = id;
             this.SportId = sportId;
@@ -113,8 +113,8 @@ namespace Sportmonks.Net.Model
         /// <summary>
         /// Gets or Sets DetailedPositionId
         /// </summary>
-        [DataMember(Name = "detailed_position_id", EmitDefaultValue = false)]
-        public SportPlayersSearchResponseDataInnerDetailedPositionId DetailedPositionId { get; set; }
+        [DataMember(Name = "detailed_position_id", EmitDefaultValue = true)]
+        public decimal? DetailedPositionId { get; set; }
 
         /// <summary>
         /// Gets or Sets TypeId

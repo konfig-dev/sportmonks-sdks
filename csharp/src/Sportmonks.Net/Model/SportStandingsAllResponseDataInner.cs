@@ -46,7 +46,7 @@ namespace Sportmonks.Net.Model
         /// <param name="position">position.</param>
         /// <param name="result">result.</param>
         /// <param name="points">points.</param>
-        public SportStandingsAllResponseDataInner(decimal id = default(decimal), decimal participantId = default(decimal), decimal sportId = default(decimal), decimal leagueId = default(decimal), decimal seasonId = default(decimal), decimal stageId = default(decimal), string groupId = default(string), decimal roundId = default(decimal), SportStandingsAllResponseDataInnerStandingRuleId standingRuleId = default(SportStandingsAllResponseDataInnerStandingRuleId), decimal position = default(decimal), string result = default(string), decimal points = default(decimal))
+        public SportStandingsAllResponseDataInner(decimal id = default(decimal), decimal participantId = default(decimal), decimal sportId = default(decimal), decimal leagueId = default(decimal), decimal seasonId = default(decimal), decimal stageId = default(decimal), string groupId = default(string), decimal roundId = default(decimal), decimal? standingRuleId = default(decimal?), decimal position = default(decimal), string result = default(string), decimal points = default(decimal))
         {
             this.Id = id;
             this.ParticipantId = participantId;
@@ -113,8 +113,8 @@ namespace Sportmonks.Net.Model
         /// <summary>
         /// Gets or Sets StandingRuleId
         /// </summary>
-        [DataMember(Name = "standing_rule_id", EmitDefaultValue = false)]
-        public SportStandingsAllResponseDataInnerStandingRuleId StandingRuleId { get; set; }
+        [DataMember(Name = "standing_rule_id", EmitDefaultValue = true)]
+        public decimal? StandingRuleId { get; set; }
 
         /// <summary>
         /// Gets or Sets Position

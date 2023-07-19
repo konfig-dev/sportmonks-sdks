@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **StageId** | **decimal** |  | [optional] 
 **GroupId** | **string** |  | [optional] 
 **RoundId** | **decimal** |  | [optional] 
-**StandingRuleId** | [**SportStandingsAllResponseDataInnerStandingRuleId**](SportStandingsAllResponseDataInnerStandingRuleId.md) |  | [optional] 
+**StandingRuleId** | **decimal?** |  | [optional] 
 **Position** | **decimal** |  | [optional] 
 **Result** | **string** |  | [optional] 
 **Points** | **decimal** |  | [optional] 

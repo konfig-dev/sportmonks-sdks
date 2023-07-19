@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **NationalityId** | **decimal** |  | [optional] 
 **CityId** | **string** |  | [optional] 
 **PositionId** | **decimal** |  | [optional] 
-**DetailedPositionId** | [**SportPlayersAllResponseDataInnerDetailedPositionId**](SportPlayersAllResponseDataInnerDetailedPositionId.md) |  | [optional] 
+**DetailedPositionId** | **decimal?** |  | [optional] 
 **TypeId** | **decimal** |  | [optional] 
 **CommonName** | **string** |  | [optional] 
 **Firstname** | **string** |  | [optional] 

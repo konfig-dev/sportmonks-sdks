@@ -39,7 +39,7 @@ namespace Sportmonks.Net.Model
         /// <param name="name">name.</param>
         /// <param name="developerName">developerName.</param>
         /// <param name="hasWinningCalculations">hasWinningCalculations.</param>
-        public OddsMarketsAllResponseDataInner(decimal id = default(decimal), OddsMarketsAllResponseDataInnerLegacyId legacyId = default(OddsMarketsAllResponseDataInnerLegacyId), string name = default(string), string developerName = default(string), bool hasWinningCalculations = default(bool))
+        public OddsMarketsAllResponseDataInner(decimal id = default(decimal), decimal? legacyId = default(decimal?), string name = default(string), string developerName = default(string), bool hasWinningCalculations = default(bool))
         {
             this.Id = id;
             this.LegacyId = legacyId;
@@ -57,8 +57,8 @@ namespace Sportmonks.Net.Model
         /// <summary>
         /// Gets or Sets LegacyId
         /// </summary>
-        [DataMember(Name = "legacy_id", EmitDefaultValue = false)]
-        public OddsMarketsAllResponseDataInnerLegacyId LegacyId { get; set; }
+        [DataMember(Name = "legacy_id", EmitDefaultValue = true)]
+        public decimal? LegacyId { get; set; }
 
         /// <summary>
         /// Gets or Sets Name

@@ -16,8 +16,8 @@ Name | Type | Description | Notes
 **Name** | **string** |  | [optional] 
 **DisplayName** | **string** |  | [optional] 
 **ImagePath** | **string** |  | [optional] 
-**Height** | [**SportCoachesAllResponseDataInnerHeight**](SportCoachesAllResponseDataInnerHeight.md) |  | [optional] 
-**Weight** | [**SportCoachesAllResponseDataInnerWeight**](SportCoachesAllResponseDataInnerWeight.md) |  | [optional] 
+**Height** | **decimal?** |  | [optional] 
+**Weight** | **decimal?** |  | [optional] 
 **DateOfBirth** | **string** |  | [optional] 
 **Gender** | **string** |  | [optional] 
 

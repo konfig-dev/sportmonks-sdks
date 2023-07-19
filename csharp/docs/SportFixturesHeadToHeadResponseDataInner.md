@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **LeagueId** | **decimal** |  | [optional] 
 **SeasonId** | **decimal** |  | [optional] 
 **StageId** | **decimal** |  | [optional] 
-**GroupId** | [**SportFixturesHeadToHeadResponseDataInnerGroupId**](SportFixturesHeadToHeadResponseDataInnerGroupId.md) |  | [optional] 
+**GroupId** | **decimal?** |  | [optional] 
 **AggregateId** | **string** |  | [optional] 
 **RoundId** | **decimal** |  | [optional] 
 **StateId** | **decimal** |  | [optional] 

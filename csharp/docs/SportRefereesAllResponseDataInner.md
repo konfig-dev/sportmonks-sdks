@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **decimal** |  | [optional] 
 **SportId** | **decimal** |  | [optional] 
-**CountryId** | [**SportRefereesAllResponseDataInnerCountryId**](SportRefereesAllResponseDataInnerCountryId.md) |  | [optional] 
+**CountryId** | **decimal?** |  | [optional] 
 **CityId** | **string** |  | [optional] 
 **CommonName** | **string** |  | [optional] 
 **Firstname** | **string** |  | [optional] 

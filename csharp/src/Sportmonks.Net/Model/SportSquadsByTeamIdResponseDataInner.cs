@@ -44,7 +44,7 @@ namespace Sportmonks.Net.Model
         /// <param name="yerseyNumber">yerseyNumber.</param>
         /// <param name="start">start.</param>
         /// <param name="end">end.</param>
-        public SportSquadsByTeamIdResponseDataInner(decimal id = default(decimal), SportSquadsByTeamIdResponseDataInnerTransferId transferId = default(SportSquadsByTeamIdResponseDataInnerTransferId), decimal playerId = default(decimal), decimal teamId = default(decimal), decimal positionId = default(decimal), decimal detailedPositionId = default(decimal), bool active = default(bool), SportSquadsByTeamIdResponseDataInnerYerseyNumber yerseyNumber = default(SportSquadsByTeamIdResponseDataInnerYerseyNumber), string start = default(string), string end = default(string))
+        public SportSquadsByTeamIdResponseDataInner(decimal id = default(decimal), decimal? transferId = default(decimal?), decimal playerId = default(decimal), decimal teamId = default(decimal), decimal positionId = default(decimal), decimal detailedPositionId = default(decimal), bool active = default(bool), decimal? yerseyNumber = default(decimal?), string start = default(string), string end = default(string))
         {
             this.Id = id;
             this.TransferId = transferId;
@@ -67,8 +67,8 @@ namespace Sportmonks.Net.Model
         /// <summary>
         /// Gets or Sets TransferId
         /// </summary>
-        [DataMember(Name = "transfer_id", EmitDefaultValue = false)]
-        public SportSquadsByTeamIdResponseDataInnerTransferId TransferId { get; set; }
+        [DataMember(Name = "transfer_id", EmitDefaultValue = true)]
+        public decimal? TransferId { get; set; }
 
         /// <summary>
         /// Gets or Sets PlayerId
@@ -103,8 +103,8 @@ namespace Sportmonks.Net.Model
         /// <summary>
         /// Gets or Sets YerseyNumber
         /// </summary>
-        [DataMember(Name = "yersey_number", EmitDefaultValue = false)]
-        public SportSquadsByTeamIdResponseDataInnerYerseyNumber YerseyNumber { get; set; }
+        [DataMember(Name = "yersey_number", EmitDefaultValue = true)]
+        public decimal? YerseyNumber { get; set; }
 
         /// <summary>
         /// Gets or Sets Start

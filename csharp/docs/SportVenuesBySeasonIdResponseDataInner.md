@@ -5,8 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **decimal** |  | [optional] 
-**CountryId** | [**SportVenuesBySeasonIdResponseDataInnerCountryId**](SportVenuesBySeasonIdResponseDataInnerCountryId.md) |  | [optional] 
-**CityId** | [**SportVenuesBySeasonIdResponseDataInnerCityId**](SportVenuesBySeasonIdResponseDataInnerCityId.md) |  | [optional] 
+**CountryId** | **decimal?** |  | [optional] 
+**CityId** | **decimal?** |  | [optional] 
 **Name** | **string** |  | [optional] 
 **Address** | **string** |  | [optional] 
 **Zipcode** | **string** |  | [optional] 

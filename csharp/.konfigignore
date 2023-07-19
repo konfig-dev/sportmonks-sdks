@@ -1,1 +1,2 @@
 src/Sportmonks.Net.Test/SimpleTest.cs
+src/Sportmonks.Net/Client/ApiClientCustom.cs

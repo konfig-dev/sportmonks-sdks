@@ -56,7 +56,7 @@ namespace Sportmonks.Net.Model
         /// <param name="updatedAt">updatedAt.</param>
         /// <param name="originalLabel">originalLabel.</param>
         /// <param name="latestBookmakerUpdate">latestBookmakerUpdate.</param>
-        public SportOddsPreMatchByFixtureAndBookmakerIdResponseDataInner(decimal id = default(decimal), decimal fixtureId = default(decimal), decimal marketId = default(decimal), decimal bookmakerId = default(decimal), string label = default(string), string value = default(string), string name = default(string), string sortOrder = default(string), string marketDescription = default(string), string probability = default(string), string dp3 = default(string), string fractional = default(string), string american = default(string), SportOddsPreMatchByFixtureAndBookmakerIdResponseDataInnerWinning winning = default(SportOddsPreMatchByFixtureAndBookmakerIdResponseDataInnerWinning), bool stopped = default(bool), string total = default(string), string handicap = default(string), string participants = default(string), string createdAt = default(string), string updatedAt = default(string), string originalLabel = default(string), string latestBookmakerUpdate = default(string))
+        public SportOddsPreMatchByFixtureAndBookmakerIdResponseDataInner(decimal id = default(decimal), decimal fixtureId = default(decimal), decimal marketId = default(decimal), decimal bookmakerId = default(decimal), string label = default(string), string value = default(string), string name = default(string), string sortOrder = default(string), string marketDescription = default(string), string probability = default(string), string dp3 = default(string), string fractional = default(string), string american = default(string), bool? winning = default(bool?), bool stopped = default(bool), string total = default(string), string handicap = default(string), string participants = default(string), string createdAt = default(string), string updatedAt = default(string), string originalLabel = default(string), string latestBookmakerUpdate = default(string))
         {
             this.Id = id;
             this.FixtureId = fixtureId;
@@ -163,8 +163,8 @@ namespace Sportmonks.Net.Model
         /// <summary>
         /// Gets or Sets Winning
         /// </summary>
-        [DataMember(Name = "winning", EmitDefaultValue = false)]
-        public SportOddsPreMatchByFixtureAndBookmakerIdResponseDataInnerWinning Winning { get; set; }
+        [DataMember(Name = "winning", EmitDefaultValue = true)]
+        public bool? Winning { get; set; }
 
         /// <summary>
         /// Gets or Sets Stopped

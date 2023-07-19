@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **SeasonId** | **decimal** |  | [optional] 
 **TypeId** | **decimal** |  | [optional] 
 **Name** | **string** |  | [optional] 
-**SortOrder** | [**SportStagesAllResponseDataInnerSortOrder**](SportStagesAllResponseDataInnerSortOrder.md) |  | [optional] 
+**SortOrder** | **decimal?** |  | [optional] 
 **Finished** | **bool** |  | [optional] 
 **IsCurrent** | **bool** |  | [optional] 
 **StartingAt** | **string** |  | [optional] 

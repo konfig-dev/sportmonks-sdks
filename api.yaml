@@ -4655,6 +4655,7 @@ components:
             next_page:
               type: string
               nullable: true
+              x-konfig-null-placeholder: true
             has_more:
               type: boolean
               example: false
@@ -5536,6 +5537,7 @@ components:
             next_page:
               type: string
               nullable: true
+              x-konfig-null-placeholder: true
             has_more:
               type: boolean
               example: false
@@ -7080,6 +7082,7 @@ components:
             next_page:
               type: string
               nullable: true
+              x-konfig-null-placeholder: true
             has_more:
               type: boolean
               example: false
@@ -7506,6 +7509,7 @@ components:
             next_page:
               type: string
               nullable: true
+              x-konfig-null-placeholder: true
             has_more:
               type: boolean
               example: false
@@ -7616,8 +7620,8 @@ components:
                 example: true
               short_code:
                 type: string
-                nullable: true
                 example: DNK SL
+                nullable: true
               image_path:
                 type: string
                 example: https://cdn.sportmonks.com/images/soccer/leagues/27/1659.png
@@ -7651,6 +7655,7 @@ components:
             next_page:
               type: string
               nullable: true
+              x-konfig-null-placeholder: true
             has_more:
               type: boolean
               example: false
@@ -7808,6 +7813,7 @@ components:
             next_page:
               type: string
               nullable: true
+              x-konfig-null-placeholder: true
             has_more:
               type: boolean
               example: false
@@ -7931,9 +7937,11 @@ components:
               group_id:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               aggregate_id:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               round_id:
                 type: number
                 example: 199826
@@ -7957,14 +7965,15 @@ components:
                 example: '2011-05-18 16:30:00'
               result_info:
                 type: string
-                nullable: true
                 example: Randers won after full-time.
+                nullable: true
               leg:
                 type: string
                 example: 1/1
               details:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               length:
                 type: number
                 example: 90
@@ -8618,9 +8627,11 @@ components:
               group_id:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               aggregate_id:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               round_id:
                 type: number
                 example: 199826
@@ -8644,14 +8655,15 @@ components:
                 example: '2011-05-18 16:30:00'
               result_info:
                 type: string
-                nullable: true
                 example: Randers won after full-time.
+                nullable: true
               leg:
                 type: string
                 example: 1/1
               details:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               length:
                 type: number
                 example: 90
@@ -9303,9 +9315,11 @@ components:
               group_id:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               aggregate_id:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               round_id:
                 type: number
                 example: 23329
@@ -9330,12 +9344,14 @@ components:
               result_info:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               leg:
                 type: string
                 example: 1/1
               details:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               length:
                 type: number
                 example: 90
@@ -9988,9 +10004,11 @@ components:
               group_id:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               aggregate_id:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               round_id:
                 type: number
                 example: 273989
@@ -10021,6 +10039,7 @@ components:
               details:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               length:
                 type: number
                 example: 90
@@ -10048,6 +10067,7 @@ components:
             next_page:
               type: string
               nullable: true
+              x-konfig-null-placeholder: true
             has_more:
               type: boolean
               example: false
@@ -10231,9 +10251,11 @@ components:
               group_id:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               aggregate_id:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               round_id:
                 type: number
                 example: 273989
@@ -10264,6 +10286,7 @@ components:
               details:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               length:
                 type: number
                 example: 90
@@ -10408,9 +10431,11 @@ components:
               group_id:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               aggregate_id:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               round_id:
                 type: number
                 example: 273988
@@ -10441,6 +10466,7 @@ components:
               details:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               length:
                 type: number
                 example: 90
@@ -10468,6 +10494,7 @@ components:
             next_page:
               type: string
               nullable: true
+              x-konfig-null-placeholder: true
             has_more:
               type: boolean
               example: false
@@ -10798,9 +10825,11 @@ components:
               group_id:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               aggregate_id:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               round_id:
                 type: number
                 example: 273988
@@ -10831,6 +10860,7 @@ components:
               details:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               length:
                 type: number
                 example: 90
@@ -10858,6 +10888,7 @@ components:
             next_page:
               type: string
               nullable: true
+              x-konfig-null-placeholder: true
             has_more:
               type: boolean
               example: false
@@ -10997,14 +11028,13 @@ components:
                 type: number
                 example: 77457696
               group_id:
-                oneOf:
-                  - type: string
-                    nullable: true
-                  - type: number
-                    example: 243863
+                type: number
+                example: 243863
+                nullable: true
               aggregate_id:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               round_id:
                 type: number
                 example: 274247
@@ -11036,6 +11066,7 @@ components:
               details:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               length:
                 type: number
                 example: 90
@@ -11475,9 +11506,11 @@ components:
               group_id:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               aggregate_id:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               round_id:
                 type: number
                 example: 274733
@@ -11502,12 +11535,14 @@ components:
               result_info:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               leg:
                 type: string
                 example: 1/1
               details:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               length:
                 type: number
                 example: 90
@@ -11631,9 +11666,11 @@ components:
               group_id:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               aggregate_id:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               round_id:
                 type: number
                 example: 274733
@@ -11658,12 +11695,14 @@ components:
               result_info:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               leg:
                 type: string
                 example: 1/1
               details:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               length:
                 type: number
                 example: 90
@@ -11787,9 +11826,11 @@ components:
               group_id:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               aggregate_id:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               round_id:
                 type: number
                 example: 274733
@@ -11814,12 +11855,14 @@ components:
               result_info:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               leg:
                 type: string
                 example: 1/1
               details:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               length:
                 type: number
                 example: 90
@@ -12411,6 +12454,7 @@ components:
             next_page:
               type: string
               nullable: true
+              x-konfig-null-placeholder: true
             has_more:
               type: boolean
               example: false
@@ -12752,8 +12796,8 @@ components:
                 example: Viborg
               short_code:
                 type: string
-                nullable: true
                 example: LBB
+                nullable: true
               image_path:
                 type: string
                 example: https://cdn.sportmonks.com/images/soccer/teams/15/2447.png
@@ -13036,6 +13080,7 @@ components:
             next_page:
               type: string
               nullable: true
+              x-konfig-null-placeholder: true
             has_more:
               type: boolean
               example: false
@@ -13276,15 +13321,14 @@ components:
               group_id:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               round_id:
                 type: number
                 example: 274247
               standing_rule_id:
-                oneOf:
-                  - type: number
-                    example: 12893
-                  - type: string
-                    nullable: true
+                type: number
+                example: 12893
+                nullable: true
               position:
                 type: number
                 example: 7
@@ -13711,6 +13755,7 @@ components:
               group_id:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               round_id:
                 type: number
                 example: 274247
@@ -14122,6 +14167,7 @@ components:
               group_id:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               round_id:
                 type: number
                 example: 274247
@@ -14151,9 +14197,11 @@ components:
                   trial_ends_at:
                     type: string
                     nullable: true
+                    x-konfig-null-placeholder: true
                   ends_at:
                     type: string
                     nullable: true
+                    x-konfig-null-placeholder: true
               plans:
                 type: array
                 items:
@@ -14603,9 +14651,11 @@ components:
                           group_id:
                             type: string
                             nullable: true
+                            x-konfig-null-placeholder: true
                           aggregate_id:
                             type: string
                             nullable: true
+                            x-konfig-null-placeholder: true
                           round_id:
                             type: number
                             example: 273988
@@ -14619,17 +14669,13 @@ components:
                             type: string
                             example: Lyngby vs Silkeborg
                           home_score:
-                            oneOf:
-                              - type: number
-                                example: 2
-                              - type: string
-                                nullable: true
+                            type: number
+                            example: 2
+                            nullable: true
                           away_score:
-                            oneOf:
-                              - type: number
-                                example: 2
-                              - type: string
-                                nullable: true
+                            type: number
+                            example: 2
+                            nullable: true
                           starting_at:
                             type: string
                             example: '2022-07-17 12:00:00'
@@ -14643,6 +14689,7 @@ components:
                           details:
                             type: string
                             nullable: true
+                            x-konfig-null-placeholder: true
                           length:
                             type: number
                             example: 90
@@ -22398,9 +22445,11 @@ components:
                           group_id:
                             type: string
                             nullable: true
+                            x-konfig-null-placeholder: true
                           aggregate_id:
                             type: string
                             nullable: true
+                            x-konfig-null-placeholder: true
                           round_id:
                             type: number
                             example: 274717
@@ -22414,17 +22463,13 @@ components:
                             type: string
                             example: Dundee United vs St. Mirren
                           home_score:
-                            oneOf:
-                              - type: number
-                                example: 0
-                              - type: string
-                                nullable: true
+                            type: number
+                            example: 0
+                            nullable: true
                           away_score:
-                            oneOf:
-                              - type: number
-                                example: 3
-                              - type: string
-                                nullable: true
+                            type: number
+                            example: 3
+                            nullable: true
                           starting_at:
                             type: string
                             example: '2022-08-20 14:00:00'
@@ -22438,6 +22483,7 @@ components:
                           details:
                             type: string
                             nullable: true
+                            x-konfig-null-placeholder: true
                           length:
                             type: number
                             example: 90
@@ -24679,15 +24725,14 @@ components:
               city_id:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               position_id:
                 type: number
                 example: 221
               detailed_position_id:
-                oneOf:
-                  - type: string
-                    nullable: true
-                  - type: number
-                    example: 151
+                type: number
+                example: 151
+                nullable: true
               type_id:
                 type: number
                 example: 25
@@ -25282,15 +25327,14 @@ components:
               city_id:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               position_id:
                 type: number
                 example: 25
               detailed_position_id:
-                oneOf:
-                  - type: string
-                    nullable: true
-                  - type: number
-                    example: 148
+                type: number
+                example: 148
+                nullable: true
               type_id:
                 type: number
                 example: 25
@@ -25313,17 +25357,13 @@ components:
                 type: string
                 example: https://cdn.sportmonks.com/images/soccer/players/2/84642.png
               height:
-                oneOf:
-                  - type: string
-                    nullable: true
-                  - type: number
-                    example: 186
+                type: number
+                example: 186
+                nullable: true
               weight:
-                oneOf:
-                  - type: number
-                    example: 78
-                  - type: string
-                    nullable: true
+                type: number
+                example: 78
+                nullable: true
               date_of_birth:
                 type: string
                 example: '1998-08-03'
@@ -25542,12 +25582,14 @@ components:
             city_id:
               type: string
               nullable: true
+              x-konfig-null-placeholder: true
             position_id:
               type: number
               example: 221
             detailed_position_id:
               type: string
               nullable: true
+              x-konfig-null-placeholder: true
             type_id:
               type: number
               example: 25
@@ -25686,18 +25728,15 @@ components:
               city_id:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               position_id:
-                oneOf:
-                  - type: number
-                    example: 221
-                  - type: string
-                    nullable: true
+                type: number
+                example: 221
+                nullable: true
               detailed_position_id:
-                oneOf:
-                  - type: string
-                    nullable: true
-                  - type: number
-                    example: 148
+                type: number
+                example: 148
+                nullable: true
               type_id:
                 type: number
                 example: 25
@@ -25720,17 +25759,13 @@ components:
                 type: string
                 example: https://cdn.sportmonks.com/images/soccer/players/14/14.png
               height:
-                oneOf:
-                  - type: number
-                    example: 191
-                  - type: string
-                    nullable: true
+                type: number
+                example: 191
+                nullable: true
               weight:
-                oneOf:
-                  - type: number
-                    example: 84
-                  - type: string
-                    nullable: true
+                type: number
+                example: 84
+                nullable: true
               date_of_birth:
                 type: string
                 example: '1984-12-12'
@@ -26299,15 +26334,14 @@ components:
               city_id:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               position_id:
                 type: number
                 example: 221
               detailed_position_id:
-                oneOf:
-                  - type: string
-                    nullable: true
-                  - type: number
-                    example: 151
+                type: number
+                example: 151
+                nullable: true
               type_id:
                 type: number
                 example: 25
@@ -26356,6 +26390,7 @@ components:
             next_page:
               type: string
               nullable: true
+              x-konfig-null-placeholder: true
             has_more:
               type: boolean
               example: false
@@ -26589,9 +26624,11 @@ components:
                   trial_ends_at:
                     type: string
                     nullable: true
+                    x-konfig-null-placeholder: true
                   ends_at:
                     type: string
                     nullable: true
+                    x-konfig-null-placeholder: true
               plans:
                 type: array
                 items:
@@ -26838,9 +26875,11 @@ components:
                   trial_ends_at:
                     type: string
                     nullable: true
+                    x-konfig-null-placeholder: true
                   ends_at:
                     type: string
                     nullable: true
+                    x-konfig-null-placeholder: true
               plans:
                 type: array
                 items:
@@ -27077,6 +27116,7 @@ components:
             next_page:
               type: string
               nullable: true
+              x-konfig-null-placeholder: true
             has_more:
               type: boolean
               example: false
@@ -27091,9 +27131,11 @@ components:
                   trial_ends_at:
                     type: string
                     nullable: true
+                    x-konfig-null-placeholder: true
                   ends_at:
                     type: string
                     nullable: true
+                    x-konfig-null-placeholder: true
               plans:
                 type: array
                 items:
@@ -27256,17 +27298,13 @@ components:
                 type: number
                 example: 219
               country_id:
-                oneOf:
-                  - type: number
-                    example: 98
-                  - type: string
-                    nullable: true
+                type: number
+                example: 98
+                nullable: true
               city_id:
-                oneOf:
-                  - type: number
-                    example: 68322
-                  - type: string
-                    nullable: true
+                type: number
+                example: 68322
+                nullable: true
               name:
                 type: string
                 example: McDiarmid Park
@@ -27277,6 +27315,7 @@ components:
               zipcode:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               latitude:
                 type: string
                 example: '56.409686'
@@ -27284,11 +27323,9 @@ components:
                 type: string
                 example: '-3.476928'
               capacity:
-                oneOf:
-                  - type: number
-                    example: 10696
-                  - type: string
-                    nullable: true
+                type: number
+                example: 10696
+                nullable: true
               image_path:
                 type: string
                 example: https://cdn.sportmonks.com/images/soccer/venues/27/219.png
@@ -27740,6 +27777,7 @@ components:
             zipcode:
               type: string
               nullable: true
+              x-konfig-null-placeholder: true
             latitude:
               type: string
               example: '56.409686'
@@ -27850,17 +27888,13 @@ components:
                 type: number
                 example: 219
               country_id:
-                oneOf:
-                  - type: number
-                    example: 98
-                  - type: string
-                    nullable: true
+                type: number
+                example: 98
+                nullable: true
               city_id:
-                oneOf:
-                  - type: number
-                    example: 68322
-                  - type: string
-                    nullable: true
+                type: number
+                example: 68322
+                nullable: true
               name:
                 type: string
                 example: McDiarmid Park
@@ -27871,6 +27905,7 @@ components:
               zipcode:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               latitude:
                 type: string
                 example: '56.409686'
@@ -27878,11 +27913,9 @@ components:
                 type: string
                 example: '-3.476928'
               capacity:
-                oneOf:
-                  - type: number
-                    example: 10696
-                  - type: string
-                    nullable: true
+                type: number
+                example: 10696
+                nullable: true
               image_path:
                 type: string
                 example: https://cdn.sportmonks.com/images/soccer/venues/27/219.png
@@ -28322,17 +28355,13 @@ components:
                 type: number
                 example: 342
               country_id:
-                oneOf:
-                  - type: number
-                    example: 320
-                  - type: string
-                    nullable: true
+                type: number
+                example: 320
+                nullable: true
               city_id:
-                oneOf:
-                  - type: number
-                    example: 37168
-                  - type: string
-                    nullable: true
+                type: number
+                example: 37168
+                nullable: true
               name:
                 type: string
                 example: MCH Arena
@@ -28342,6 +28371,7 @@ components:
               zipcode:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               latitude:
                 type: string
                 example: '56.116910'
@@ -29025,6 +29055,7 @@ components:
             ending_at:
               type: string
               nullable: true
+              x-konfig-null-placeholder: true
             standings_recalculated_at:
               type: string
               example: '2022-12-21 11:35:16'
@@ -29145,6 +29176,7 @@ components:
               ending_at:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               standings_recalculated_at:
                 type: string
                 example: '2022-12-21 11:35:16'
@@ -29163,6 +29195,7 @@ components:
             next_page:
               type: string
               nullable: true
+              x-konfig-null-placeholder: true
             has_more:
               type: boolean
               example: false
@@ -29270,11 +29303,9 @@ components:
                 type: number
                 example: 6716
               transfer_id:
-                oneOf:
-                  - type: number
-                    example: 33603
-                  - type: string
-                    nullable: true
+                type: number
+                example: 33603
+                nullable: true
               player_id:
                 type: number
                 example: 518639
@@ -29291,11 +29322,9 @@ components:
                 type: boolean
                 example: false
               yersey_number:
-                oneOf:
-                  - type: number
-                    example: 23
-                  - type: string
-                    nullable: true
+                type: number
+                example: 23
+                nullable: true
               start:
                 type: string
                 example: '2019-01-15'
@@ -29733,11 +29762,9 @@ components:
                 type: string
                 example: channel
               related_id:
-                oneOf:
-                  - type: string
-                    nullable: true
-                  - type: number
-                    example: 37
+                type: number
+                example: 37
+                nullable: true
         pagination:
           type: object
           properties:
@@ -30000,6 +30027,7 @@ components:
             related_id:
               type: string
               nullable: true
+              x-konfig-null-placeholder: true
         subscription:
           type: array
           items:
@@ -30174,9 +30202,11 @@ components:
               nationality_id:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               city_id:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               common_name:
                 type: string
                 example: A. Johnston
@@ -30196,17 +30226,13 @@ components:
                 type: string
                 example: https://cdn.sportmonks.com/images/soccer/placeholder.png
               height:
-                oneOf:
-                  - type: number
-                    example: 180
-                  - type: string
-                    nullable: true
+                type: number
+                example: 180
+                nullable: true
               weight:
-                oneOf:
-                  - type: number
-                    example: 69
-                  - type: string
-                    nullable: true
+                type: number
+                example: 69
+                nullable: true
               date_of_birth:
                 type: string
                 example: '1973-12-14'
@@ -30804,9 +30830,11 @@ components:
             nationality_id:
               type: string
               nullable: true
+              x-konfig-null-placeholder: true
             city_id:
               type: string
               nullable: true
+              x-konfig-null-placeholder: true
             common_name:
               type: string
               example: A. Johnston
@@ -30940,9 +30968,11 @@ components:
               nationality_id:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               city_id:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               common_name:
                 type: string
                 example: M. Retov
@@ -30963,17 +30993,13 @@ components:
                 type: string
                 example: https://cdn.sportmonks.com/images/soccer/placeholder.png
               height:
-                oneOf:
-                  - type: number
-                    example: 178
-                  - type: string
-                    nullable: true
+                type: number
+                example: 178
+                nullable: true
               weight:
-                oneOf:
-                  - type: number
-                    example: 82
-                  - type: string
-                    nullable: true
+                type: number
+                example: 82
+                nullable: true
               date_of_birth:
                 type: string
                 example: '1980-05-05'
@@ -31493,9 +31519,11 @@ components:
               nationality_id:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               city_id:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               common_name:
                 type: string
                 example: L. Johnson
@@ -31515,17 +31543,13 @@ components:
                 type: string
                 example: https://cdn.sportmonks.com/images/soccer/placeholder.png
               height:
-                oneOf:
-                  - type: number
-                    example: 168
-                  - type: string
-                    nullable: true
+                type: number
+                example: 168
+                nullable: true
               weight:
-                oneOf:
-                  - type: number
-                    example: 66
-                  - type: string
-                    nullable: true
+                type: number
+                example: 66
+                nullable: true
               date_of_birth:
                 type: string
                 example: '1981-06-07'
@@ -31547,6 +31571,7 @@ components:
             next_page:
               type: string
               nullable: true
+              x-konfig-null-placeholder: true
             has_more:
               type: boolean
               example: false
@@ -31777,6 +31802,7 @@ components:
               points:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
         pagination:
           type: object
           properties:
@@ -32070,6 +32096,7 @@ components:
               points:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
         pagination:
           type: object
           properties:
@@ -33546,11 +33573,9 @@ components:
                 type: string
                 example: Championship Round
               sort_order:
-                oneOf:
-                  - type: string
-                    nullable: true
-                  - type: number
-                    example: 1
+                type: number
+                example: 1
+                nullable: true
               finished:
                 type: boolean
                 example: true
@@ -33560,9 +33585,11 @@ components:
               starting_at:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               ending_at:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
         pagination:
           type: object
           properties:
@@ -33953,6 +33980,7 @@ components:
             sort_order:
               type: string
               nullable: true
+              x-konfig-null-placeholder: true
             finished:
               type: boolean
               example: true
@@ -33962,9 +33990,11 @@ components:
             starting_at:
               type: string
               nullable: true
+              x-konfig-null-placeholder: true
             ending_at:
               type: string
               nullable: true
+              x-konfig-null-placeholder: true
         subscription:
           type: array
           items:
@@ -34067,11 +34097,9 @@ components:
                 type: string
                 example: Championship Round
               sort_order:
-                oneOf:
-                  - type: string
-                    nullable: true
-                  - type: number
-                    example: 3
+                type: number
+                example: 3
+                nullable: true
               finished:
                 type: boolean
                 example: true
@@ -34080,12 +34108,12 @@ components:
                 example: false
               starting_at:
                 type: string
-                nullable: true
                 example: '2021-04-04'
+                nullable: true
               ending_at:
                 type: string
-                nullable: true
                 example: '2021-05-24'
+                nullable: true
         pagination:
           type: object
           properties:
@@ -34101,6 +34129,7 @@ components:
             next_page:
               type: string
               nullable: true
+              x-konfig-null-placeholder: true
             has_more:
               type: boolean
               example: false
@@ -34288,12 +34317,12 @@ components:
                 example: false
               starting_at:
                 type: string
-                nullable: true
                 example: '2022-07-15'
+                nullable: true
               ending_at:
                 type: string
-                nullable: true
                 example: '2023-03-19'
+                nullable: true
         subscription:
           type: array
           items:
@@ -34451,9 +34480,11 @@ components:
                   trial_ends_at:
                     type: string
                     nullable: true
+                    x-konfig-null-placeholder: true
                   ends_at:
                     type: string
                     nullable: true
+                    x-konfig-null-placeholder: true
               plans:
                 type: array
                 items:
@@ -34653,9 +34684,11 @@ components:
                   trial_ends_at:
                     type: string
                     nullable: true
+                    x-konfig-null-placeholder: true
                   ends_at:
                     type: string
                     nullable: true
+                    x-konfig-null-placeholder: true
               plans:
                 type: array
                 items:
@@ -34739,9 +34772,11 @@ components:
               player_id:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               related_player_id:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               comment:
                 type: string
                 example: Jonas Bager (Randers FC) Substitution at 90'
@@ -34751,6 +34786,7 @@ components:
               extra_minute:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               is_goal:
                 type: boolean
                 example: false
@@ -35194,25 +35230,24 @@ components:
                 type: number
                 example: 1
               country_id:
-                oneOf:
-                  - type: string
-                    nullable: true
-                  - type: number
-                    example: 320
+                type: number
+                example: 320
+                nullable: true
               city_id:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               common_name:
                 type: string
                 example: Peter Munch Larsen
               firstname:
                 type: string
-                nullable: true
                 example: Ole
+                nullable: true
               lastname:
                 type: string
-                nullable: true
                 example: Kronlykke
+                nullable: true
               name:
                 type: string
                 example: Peter Munch Larsen
@@ -35225,15 +35260,19 @@ components:
               height:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               weight:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               date_of_birth:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               gender:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
         pagination:
           type: object
           properties:
@@ -35690,6 +35729,7 @@ components:
             city_id:
               type: string
               nullable: true
+              x-konfig-null-placeholder: true
             common_name:
               type: string
               example: D. Rasmussen
@@ -35711,15 +35751,19 @@ components:
             height:
               type: string
               nullable: true
+              x-konfig-null-placeholder: true
             weight:
               type: string
               nullable: true
+              x-konfig-null-placeholder: true
             date_of_birth:
               type: string
               nullable: true
+              x-konfig-null-placeholder: true
             gender:
               type: string
               nullable: true
+              x-konfig-null-placeholder: true
         subscription:
           type: array
           items:
@@ -35818,6 +35862,7 @@ components:
               city_id:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               common_name:
                 type: string
                 example: R. Risum
@@ -35839,15 +35884,19 @@ components:
               height:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               weight:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               date_of_birth:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               gender:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
         pagination:
           type: object
           properties:
@@ -36307,6 +36356,7 @@ components:
               city_id:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               common_name:
                 type: string
                 example: J. Larsen
@@ -36328,15 +36378,19 @@ components:
               height:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               weight:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               date_of_birth:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               gender:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
         pagination:
           type: object
           properties:
@@ -36796,6 +36850,7 @@ components:
               city_id:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               common_name:
                 type: string
                 example: P. Munch Larsen
@@ -36817,15 +36872,19 @@ components:
               height:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               weight:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               date_of_birth:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               gender:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
         pagination:
           type: object
           properties:
@@ -36841,6 +36900,7 @@ components:
             next_page:
               type: string
               nullable: true
+              x-konfig-null-placeholder: true
             has_more:
               type: boolean
               example: false
@@ -37387,17 +37447,13 @@ components:
                 type: number
                 example: 3480
               position_id:
-                oneOf:
-                  - type: number
-                    example: 27
-                  - type: string
-                    nullable: true
+                type: number
+                example: 27
+                nullable: true
               detailed_position_id:
-                oneOf:
-                  - type: number
-                    example: 151
-                  - type: string
-                    nullable: true
+                type: number
+                example: 151
+                nullable: true
               date:
                 type: string
                 example: '2023-01-01'
@@ -37851,9 +37907,11 @@ components:
                   trial_ends_at:
                     type: string
                     nullable: true
+                    x-konfig-null-placeholder: true
                   ends_at:
                     type: string
                     nullable: true
+                    x-konfig-null-placeholder: true
               plans:
                 type: array
                 items:
@@ -37955,17 +38013,13 @@ components:
                 type: number
                 example: 3736
               position_id:
-                oneOf:
-                  - type: number
-                    example: 25
-                  - type: string
-                    nullable: true
+                type: number
+                example: 25
+                nullable: true
               detailed_position_id:
-                oneOf:
-                  - type: number
-                    example: 154
-                  - type: string
-                    nullable: true
+                type: number
+                example: 154
+                nullable: true
               date:
                 type: string
                 example: '2021-12-27'
@@ -38395,17 +38449,13 @@ components:
                 type: number
                 example: 3736
               position_id:
-                oneOf:
-                  - type: number
-                    example: 25
-                  - type: string
-                    nullable: true
+                type: number
+                example: 25
+                nullable: true
               detailed_position_id:
-                oneOf:
-                  - type: number
-                    example: 154
-                  - type: string
-                    nullable: true
+                type: number
+                example: 154
+                nullable: true
               date:
                 type: string
                 example: '2021-12-27'
@@ -38866,6 +38916,7 @@ components:
             next_page:
               type: string
               nullable: true
+              x-konfig-null-placeholder: true
             has_more:
               type: boolean
               example: false
@@ -39008,11 +39059,9 @@ components:
                 type: boolean
                 example: false
               type_id:
-                oneOf:
-                  - type: string
-                    nullable: true
-                  - type: number
-                    example: 5
+                type: number
+                example: 5
+                nullable: true
               is_deleted:
                 type: boolean
                 example: false
@@ -39040,6 +39089,7 @@ components:
             next_page:
               type: string
               nullable: true
+              x-konfig-null-placeholder: true
             has_more:
               type: boolean
               example: false
@@ -39583,6 +39633,7 @@ components:
             type_id:
               type: string
               nullable: true
+              x-konfig-null-placeholder: true
             is_deleted:
               type: boolean
               example: false
@@ -39990,9 +40041,11 @@ components:
                   trial_ends_at:
                     type: string
                     nullable: true
+                    x-konfig-null-placeholder: true
                   ends_at:
                     type: string
                     nullable: true
+                    x-konfig-null-placeholder: true
               plans:
                 type: array
                 items:
@@ -40700,6 +40753,7 @@ components:
             next_page:
               type: string
               nullable: true
+              x-konfig-null-placeholder: true
             has_more:
               type: boolean
               example: false
@@ -40714,9 +40768,11 @@ components:
                   trial_ends_at:
                     type: string
                     nullable: true
+                    x-konfig-null-placeholder: true
                   ends_at:
                     type: string
                     nullable: true
+                    x-konfig-null-placeholder: true
               plans:
                 type: array
                 items:
@@ -40974,9 +41030,11 @@ components:
                   trial_ends_at:
                     type: string
                     nullable: true
+                    x-konfig-null-placeholder: true
                   ends_at:
                     type: string
                     nullable: true
+                    x-konfig-null-placeholder: true
               plans:
                 type: array
                 items:
@@ -41306,6 +41364,7 @@ components:
               sort_order:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               market_description:
                 type: string
                 example: Handicap Result
@@ -41324,18 +41383,22 @@ components:
               winning:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               stopped:
                 type: boolean
                 example: false
               total:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               handicap:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               participants:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               created_at:
                 type: string
                 example: '2017-09-13T18:55:45.000000Z'
@@ -41345,6 +41408,7 @@ components:
               original_label:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               latest_bookmaker_update:
                 type: string
                 example: '2017-05-12 18:50:49'
@@ -42022,6 +42086,7 @@ components:
               sort_order:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               market_description:
                 type: string
                 example: Fulltime Result
@@ -42038,22 +42103,20 @@ components:
                 type: string
                 example: '-186'
               winning:
-                oneOf:
-                  - type: boolean
-                    example: false
-                  - type: string
-                    nullable: true
+                type: boolean
+                example: false
+                nullable: true
               stopped:
                 type: boolean
                 example: false
               total:
                 type: string
-                nullable: true
                 example: '1.5'
+                nullable: true
               handicap:
                 type: string
-                nullable: true
                 example: '-1.0'
+                nullable: true
               participants:
                 type: string
                 example: '2601'
@@ -42067,6 +42130,7 @@ components:
               original_label:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               latest_bookmaker_update:
                 type: string
                 example: '2017-05-12 20:16:27'
@@ -60888,6 +60952,7 @@ components:
               sort_order:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               market_description:
                 type: string
                 example: Fulltime Result
@@ -60904,21 +60969,20 @@ components:
                 type: string
                 example: '-176'
               winning:
-                oneOf:
-                  - type: boolean
-                    example: false
-                  - type: string
-                    nullable: true
+                type: boolean
+                example: false
+                nullable: true
               stopped:
                 type: boolean
                 example: false
               total:
                 type: string
-                nullable: true
                 example: '0.5'
+                nullable: true
               handicap:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               participants:
                 type: string
                 example: '2601'
@@ -60932,6 +60996,7 @@ components:
               original_label:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               latest_bookmaker_update:
                 type: string
                 example: '2017-05-12 18:48:29'
@@ -61999,6 +62064,7 @@ components:
               sort_order:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               market_description:
                 type: string
                 example: Handicap Result
@@ -62017,18 +62083,22 @@ components:
               winning:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               stopped:
                 type: boolean
                 example: false
               total:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               handicap:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               participants:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               created_at:
                 type: string
                 example: '2017-09-13T18:55:45.000000Z'
@@ -62038,6 +62108,7 @@ components:
               original_label:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               latest_bookmaker_update:
                 type: string
                 example: '2017-05-12 18:50:49'
@@ -64911,8 +64982,8 @@ components:
                 example: '51.00'
               name:
                 type: string
-                nullable: true
                 example: Johor Darul Takzim or Kuala Lumpur FA
+                nullable: true
               sort_order:
                 type: number
                 example: 0
@@ -64942,16 +65013,16 @@ components:
                 example: true
               total:
                 type: string
-                nullable: true
                 example: '6.5'
+                nullable: true
               handicap:
                 type: string
-                nullable: true
                 example: '+2.25'
+                nullable: true
               participants:
                 type: string
-                nullable: true
                 example: 2276|8355
+                nullable: true
               created_at:
                 type: string
                 example: '2022-08-01T16:48:54.000000Z'
@@ -64987,9 +65058,11 @@ components:
                   trial_ends_at:
                     type: string
                     nullable: true
+                    x-konfig-null-placeholder: true
                   ends_at:
                     type: string
                     nullable: true
+                    x-konfig-null-placeholder: true
               plans:
                 type: array
                 items:
@@ -65671,8 +65744,8 @@ components:
                 example: '1.76'
               name:
                 type: string
-                nullable: true
                 example: Newcastle
+                nullable: true
               sort_order:
                 type: number
                 example: 2
@@ -65706,12 +65779,12 @@ components:
                 nullable: true
               handicap:
                 type: string
-                nullable: true
                 example: '-0.75'
+                nullable: true
               participants:
                 type: string
-                nullable: true
                 example: '20'
+                nullable: true
               created_at:
                 type: string
                 example: '2022-08-06T14:22:25.000000Z'
@@ -65729,9 +65802,11 @@ components:
                   trial_ends_at:
                     type: string
                     nullable: true
+                    x-konfig-null-placeholder: true
                   ends_at:
                     type: string
                     nullable: true
+                    x-konfig-null-placeholder: true
               plans:
                 type: array
                 items:
@@ -69921,9 +69996,11 @@ components:
               sport_id:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
               sport:
                 type: string
                 nullable: true
+                x-konfig-null-placeholder: true
         subscription:
           type: array
           items:
@@ -70814,11 +70891,9 @@ components:
                 type: number
                 example: 3
               legacy_id:
-                oneOf:
-                  - type: string
-                    nullable: true
-                  - type: number
-                    example: 136703842
+                type: number
+                example: 136703842
+                nullable: true
               name:
                 type: string
                 example: X Goal
@@ -71169,6 +71244,7 @@ components:
             next_page:
               type: string
               nullable: true
+              x-konfig-null-placeholder: true
             has_more:
               type: boolean
               example: false
@@ -71622,6 +71698,7 @@ components:
             next_page:
               type: string
               nullable: true
+              x-konfig-null-placeholder: true
             has_more:
               type: boolean
               example: false

@@ -40,7 +40,7 @@ namespace Sportmonks.Net.Model
         /// <param name="imagePath">imagePath.</param>
         /// <param name="type">type.</param>
         /// <param name="relatedId">relatedId.</param>
-        public SportTvStationsAllResponseDataInner(decimal id = default(decimal), string name = default(string), string url = default(string), string imagePath = default(string), string type = default(string), SportTvStationsAllResponseDataInnerRelatedId relatedId = default(SportTvStationsAllResponseDataInnerRelatedId))
+        public SportTvStationsAllResponseDataInner(decimal id = default(decimal), string name = default(string), string url = default(string), string imagePath = default(string), string type = default(string), decimal? relatedId = default(decimal?))
         {
             this.Id = id;
             this.Name = name;
@@ -83,8 +83,8 @@ namespace Sportmonks.Net.Model
         /// <summary>
         /// Gets or Sets RelatedId
         /// </summary>
-        [DataMember(Name = "related_id", EmitDefaultValue = false)]
-        public SportTvStationsAllResponseDataInnerRelatedId RelatedId { get; set; }
+        [DataMember(Name = "related_id", EmitDefaultValue = true)]
+        public decimal? RelatedId { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

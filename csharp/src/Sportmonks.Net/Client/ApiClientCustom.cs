@@ -14,6 +14,13 @@ namespace Sportmonks.Net.Client
 {
     public partial class ApiClient
     {
-        partial void InterceptRequest(RestRequest request) { }
+        partial void InterceptRequest(RestRequest request)
+        {
+            request.Resource = request.Resource.Replace(
+                "{version}",
+                this._configuration.VersionState
+            );
+            request.Resource = request.Resource.Replace("{sport}", this._configuration.SportState);
+        }
     }
 }

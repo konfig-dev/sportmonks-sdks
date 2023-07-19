@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **IsCancelled** | **bool** |  | [optional] 
 **IsFinalStandingState** | **bool** |  | [optional] 
 **IsCompleted** | **bool** |  | [optional] 
-**TypeId** | [**SportStatesBySportResponseDataInnerTypeId**](SportStatesBySportResponseDataInnerTypeId.md) |  | [optional] 
+**TypeId** | **decimal?** |  | [optional] 
 **IsDeleted** | **bool** |  | [optional] 
 **IsNotstarted** | **bool** |  | [optional] 
 **SectionsActive** | **bool** |  | [optional] 

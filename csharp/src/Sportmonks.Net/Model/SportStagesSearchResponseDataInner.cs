@@ -45,7 +45,7 @@ namespace Sportmonks.Net.Model
         /// <param name="isCurrent">isCurrent.</param>
         /// <param name="startingAt">startingAt.</param>
         /// <param name="endingAt">endingAt.</param>
-        public SportStagesSearchResponseDataInner(decimal id = default(decimal), decimal sportId = default(decimal), decimal leagueId = default(decimal), decimal seasonId = default(decimal), decimal typeId = default(decimal), string name = default(string), SportStagesSearchResponseDataInnerSortOrder sortOrder = default(SportStagesSearchResponseDataInnerSortOrder), bool finished = default(bool), bool isCurrent = default(bool), string startingAt = default(string), string endingAt = default(string))
+        public SportStagesSearchResponseDataInner(decimal id = default(decimal), decimal sportId = default(decimal), decimal leagueId = default(decimal), decimal seasonId = default(decimal), decimal typeId = default(decimal), string name = default(string), decimal? sortOrder = default(decimal?), bool finished = default(bool), bool isCurrent = default(bool), string startingAt = default(string), string endingAt = default(string))
         {
             this.Id = id;
             this.SportId = sportId;
@@ -99,8 +99,8 @@ namespace Sportmonks.Net.Model
         /// <summary>
         /// Gets or Sets SortOrder
         /// </summary>
-        [DataMember(Name = "sort_order", EmitDefaultValue = false)]
-        public SportStagesSearchResponseDataInnerSortOrder SortOrder { get; set; }
+        [DataMember(Name = "sort_order", EmitDefaultValue = true)]
+        public decimal? SortOrder { get; set; }
 
         /// <summary>
         /// Gets or Sets Finished

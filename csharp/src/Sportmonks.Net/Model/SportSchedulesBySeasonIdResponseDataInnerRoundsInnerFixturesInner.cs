@@ -56,7 +56,7 @@ namespace Sportmonks.Net.Model
         /// <param name="lastProcessedAt">lastProcessedAt.</param>
         /// <param name="startingAtTimestamp">startingAtTimestamp.</param>
         /// <param name="participants">participants.</param>
-        public SportSchedulesBySeasonIdResponseDataInnerRoundsInnerFixturesInner(decimal id = default(decimal), decimal sportId = default(decimal), decimal leagueId = default(decimal), decimal seasonId = default(decimal), decimal stageId = default(decimal), string groupId = default(string), string aggregateId = default(string), decimal roundId = default(decimal), decimal stateId = default(decimal), decimal venueId = default(decimal), string name = default(string), SportSchedulesBySeasonIdResponseDataInnerRoundsInnerFixturesInnerHomeScore homeScore = default(SportSchedulesBySeasonIdResponseDataInnerRoundsInnerFixturesInnerHomeScore), SportSchedulesBySeasonIdResponseDataInnerRoundsInnerFixturesInnerAwayScore awayScore = default(SportSchedulesBySeasonIdResponseDataInnerRoundsInnerFixturesInnerAwayScore), string startingAt = default(string), string resultInfo = default(string), string leg = default(string), string details = default(string), decimal length = default(decimal), bool placeholder = default(bool), string lastProcessedAt = default(string), decimal startingAtTimestamp = default(decimal), List<SportSchedulesBySeasonIdResponseDataInnerRoundsInnerFixturesInnerParticipantsInner> participants = default(List<SportSchedulesBySeasonIdResponseDataInnerRoundsInnerFixturesInnerParticipantsInner>))
+        public SportSchedulesBySeasonIdResponseDataInnerRoundsInnerFixturesInner(decimal id = default(decimal), decimal sportId = default(decimal), decimal leagueId = default(decimal), decimal seasonId = default(decimal), decimal stageId = default(decimal), string groupId = default(string), string aggregateId = default(string), decimal roundId = default(decimal), decimal stateId = default(decimal), decimal venueId = default(decimal), string name = default(string), decimal? homeScore = default(decimal?), decimal? awayScore = default(decimal?), string startingAt = default(string), string resultInfo = default(string), string leg = default(string), string details = default(string), decimal length = default(decimal), bool placeholder = default(bool), string lastProcessedAt = default(string), decimal startingAtTimestamp = default(decimal), List<SportSchedulesBySeasonIdResponseDataInnerRoundsInnerFixturesInnerParticipantsInner> participants = default(List<SportSchedulesBySeasonIdResponseDataInnerRoundsInnerFixturesInnerParticipantsInner>))
         {
             this.Id = id;
             this.SportId = sportId;
@@ -151,14 +151,14 @@ namespace Sportmonks.Net.Model
         /// <summary>
         /// Gets or Sets HomeScore
         /// </summary>
-        [DataMember(Name = "home_score", EmitDefaultValue = false)]
-        public SportSchedulesBySeasonIdResponseDataInnerRoundsInnerFixturesInnerHomeScore HomeScore { get; set; }
+        [DataMember(Name = "home_score", EmitDefaultValue = true)]
+        public decimal? HomeScore { get; set; }
 
         /// <summary>
         /// Gets or Sets AwayScore
         /// </summary>
-        [DataMember(Name = "away_score", EmitDefaultValue = false)]
-        public SportSchedulesBySeasonIdResponseDataInnerRoundsInnerFixturesInnerAwayScore AwayScore { get; set; }
+        [DataMember(Name = "away_score", EmitDefaultValue = true)]
+        public decimal? AwayScore { get; set; }
 
         /// <summary>
         /// Gets or Sets StartingAt

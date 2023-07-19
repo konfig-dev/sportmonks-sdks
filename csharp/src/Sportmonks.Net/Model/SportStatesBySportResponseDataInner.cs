@@ -51,7 +51,7 @@ namespace Sportmonks.Net.Model
         /// <param name="isNotstarted">isNotstarted.</param>
         /// <param name="sectionsActive">sectionsActive.</param>
         /// <param name="scheduleOverrule">scheduleOverrule.</param>
-        public SportStatesBySportResponseDataInner(decimal id = default(decimal), string state = default(string), string name = default(string), string shortName = default(string), string developerName = default(string), bool isLive = default(bool), bool isPending = default(bool), bool isPeriodEnd = default(bool), bool isFinalState = default(bool), bool isCancelled = default(bool), bool isFinalStandingState = default(bool), bool isCompleted = default(bool), SportStatesBySportResponseDataInnerTypeId typeId = default(SportStatesBySportResponseDataInnerTypeId), bool isDeleted = default(bool), bool isNotstarted = default(bool), bool sectionsActive = default(bool), bool scheduleOverrule = default(bool))
+        public SportStatesBySportResponseDataInner(decimal id = default(decimal), string state = default(string), string name = default(string), string shortName = default(string), string developerName = default(string), bool isLive = default(bool), bool isPending = default(bool), bool isPeriodEnd = default(bool), bool isFinalState = default(bool), bool isCancelled = default(bool), bool isFinalStandingState = default(bool), bool isCompleted = default(bool), decimal? typeId = default(decimal?), bool isDeleted = default(bool), bool isNotstarted = default(bool), bool sectionsActive = default(bool), bool scheduleOverrule = default(bool))
         {
             this.Id = id;
             this.State = state;
@@ -147,8 +147,8 @@ namespace Sportmonks.Net.Model
         /// <summary>
         /// Gets or Sets TypeId
         /// </summary>
-        [DataMember(Name = "type_id", EmitDefaultValue = false)]
-        public SportStatesBySportResponseDataInnerTypeId TypeId { get; set; }
+        [DataMember(Name = "type_id", EmitDefaultValue = true)]
+        public decimal? TypeId { get; set; }
 
         /// <summary>
         /// Gets or Sets IsDeleted

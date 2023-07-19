@@ -46,7 +46,7 @@ namespace Sportmonks.Net.Model
         /// <param name="careerEnded">careerEnded.</param>
         /// <param name="completed">completed.</param>
         /// <param name="completedAt">completedAt.</param>
-        public SportTransfersByTeamIdResponseDataInner(decimal id = default(decimal), decimal sportId = default(decimal), decimal playerId = default(decimal), decimal typeId = default(decimal), decimal fromTeamId = default(decimal), decimal toTeamId = default(decimal), SportTransfersByTeamIdResponseDataInnerPositionId positionId = default(SportTransfersByTeamIdResponseDataInnerPositionId), SportTransfersByTeamIdResponseDataInnerDetailedPositionId detailedPositionId = default(SportTransfersByTeamIdResponseDataInnerDetailedPositionId), string date = default(string), bool careerEnded = default(bool), bool completed = default(bool), string completedAt = default(string))
+        public SportTransfersByTeamIdResponseDataInner(decimal id = default(decimal), decimal sportId = default(decimal), decimal playerId = default(decimal), decimal typeId = default(decimal), decimal fromTeamId = default(decimal), decimal toTeamId = default(decimal), decimal? positionId = default(decimal?), decimal? detailedPositionId = default(decimal?), string date = default(string), bool careerEnded = default(bool), bool completed = default(bool), string completedAt = default(string))
         {
             this.Id = id;
             this.SportId = sportId;
@@ -101,14 +101,14 @@ namespace Sportmonks.Net.Model
         /// <summary>
         /// Gets or Sets PositionId
         /// </summary>
-        [DataMember(Name = "position_id", EmitDefaultValue = false)]
-        public SportTransfersByTeamIdResponseDataInnerPositionId PositionId { get; set; }
+        [DataMember(Name = "position_id", EmitDefaultValue = true)]
+        public decimal? PositionId { get; set; }
 
         /// <summary>
         /// Gets or Sets DetailedPositionId
         /// </summary>
-        [DataMember(Name = "detailed_position_id", EmitDefaultValue = false)]
-        public SportTransfersByTeamIdResponseDataInnerDetailedPositionId DetailedPositionId { get; set; }
+        [DataMember(Name = "detailed_position_id", EmitDefaultValue = true)]
+        public decimal? DetailedPositionId { get; set; }
 
         /// <summary>
         /// Gets or Sets Date
