@@ -13,9 +13,10 @@ generators:
     packageName: Sportmonks.Net
     outputDirectory: csharp
     logoPath: logo.png
+    clientName: SportmonksClient
     clientState:
-      - version
-      - sport
+      - Version
+      - Sport
     git:
       userId: konfig-dev
       repoId: sportmonks-sdks/tree/main/csharp

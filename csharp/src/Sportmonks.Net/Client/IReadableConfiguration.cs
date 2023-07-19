@@ -27,10 +27,10 @@ namespace Sportmonks.Net.Client
         string AccessToken { get; }
 
         /// <value>Client state</value>
-        string version { get; }
+        string VersionState { get; }
 
         /// <value>Client state</value>
-        string sport { get; }
+        string SportState { get; }
 
         /// <summary>
         /// Gets the API key.

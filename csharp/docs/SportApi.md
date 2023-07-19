@@ -131,15 +131,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var coachId = 171906;  // int | The ID of the coach you want to retrieve.
@@ -167,6 +166,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the CoachByIdWithHttpInfo variant
@@ -239,15 +239,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
@@ -274,6 +273,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the CoachesAllWithHttpInfo variant
@@ -345,15 +345,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var countryId = 320;  // int | The ID of the country you want to retrieve coaches from.
@@ -381,6 +380,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the CoachesByCountryIdWithHttpInfo variant
@@ -453,15 +453,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
@@ -488,6 +487,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the CoachesLatestWithHttpInfo variant
@@ -559,15 +559,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var name = "John";  // string | The name you want to search on.
@@ -595,6 +594,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the CoachesSearchWithHttpInfo variant
@@ -667,15 +667,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
@@ -702,6 +701,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the CommentariesAllWithHttpInfo variant
@@ -773,15 +773,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var fixtureId = 16808591;  // int | The ID of the fixture you want to retrieve commentaries from.
@@ -809,6 +808,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the CommentariesByFixtureIdWithHttpInfo variant
@@ -881,15 +881,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var startDate = "maiores";  // string | 
@@ -919,6 +918,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the FixtureByDateRangeForTeamWithHttpInfo variant
@@ -993,15 +993,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var fixtureId = 18528480;  // int | The ID of the fixture you want to retrieve.
@@ -1029,6 +1028,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the FixtureByIdWithHttpInfo variant
@@ -1101,15 +1101,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
@@ -1136,6 +1135,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the FixturesAllWithHttpInfo variant
@@ -1207,15 +1207,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var date = "2022-07-24";  // string | The date you want to retrieve fixtures from.
@@ -1243,6 +1242,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the FixturesByDateWithHttpInfo variant
@@ -1315,15 +1315,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var startDate = "2022-07-17";  // string | The start date you want to retrieve fixtures from.
@@ -1352,6 +1351,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the FixturesByDateRangeWithHttpInfo variant
@@ -1425,15 +1425,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var fixtureIds = "18528484%2C18531140";  // string | The IDs you want to retrieve.
@@ -1461,6 +1460,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the FixturesByIdsWithHttpInfo variant
@@ -1533,15 +1533,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var firstTeam = 2650;  // int | The ID of the first team retrieve fixtures from.
@@ -1570,6 +1569,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the FixturesHeadToHeadWithHttpInfo variant
@@ -1643,15 +1643,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
@@ -1678,6 +1677,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the FixturesLatestWithHttpInfo variant
@@ -1749,15 +1749,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var name = "havn";  // string | The name you want search on.
@@ -1785,6 +1784,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the FixturesSearchWithHttpInfo variant
@@ -1857,15 +1857,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var leagueId = 271;  // int | The ID of the league you want to retrieve.
@@ -1893,6 +1892,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the LeagueByIdWithHttpInfo variant
@@ -1965,15 +1965,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var leagueId = 271;  // int | The ID of the league you want to retrieve enrichments from.
@@ -2001,6 +2000,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the LeagueEnrichmentsWithHttpInfo variant
@@ -2073,15 +2073,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var leagueId = 271;  // int | The ID of the league you want to retrieve.
@@ -2109,6 +2108,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the LeagueShirtsWithHttpInfo variant
@@ -2181,15 +2181,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
@@ -2216,6 +2215,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the LeaguesAllWithHttpInfo variant
@@ -2287,15 +2287,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var countryId = 320;  // int | The ID of the country you want to retrieve leagues from.
@@ -2323,6 +2322,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the LeaguesByCountryIdWithHttpInfo variant
@@ -2395,15 +2395,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var date = "2022-07-15";  // string | The date of fixtures you want to retrieve leagues from.
@@ -2431,6 +2430,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the LeaguesByDateWithHttpInfo variant
@@ -2503,15 +2503,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var teamId = 180;  // int | The ID of the team you want to retrieve leagues from.
@@ -2539,6 +2538,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the LeaguesByTeamIdWithHttpInfo variant
@@ -2611,15 +2611,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var teamId = 180;  // int | The ID of the team you want to retrieve current leagues from.
@@ -2647,6 +2646,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the LeaguesCurrentByTeamIdWithHttpInfo variant
@@ -2719,15 +2719,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
@@ -2754,6 +2753,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the LeaguesLiveWithHttpInfo variant
@@ -2825,15 +2825,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var name = "Super";  // string | The name you want to search on.
@@ -2861,6 +2860,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the LeaguesSearchWithHttpInfo variant
@@ -2933,15 +2933,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
@@ -2968,6 +2967,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the LivescoresAllWithHttpInfo variant
@@ -3039,15 +3039,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
@@ -3074,6 +3073,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the LivescoresAllInPlayWithHttpInfo variant
@@ -3145,15 +3145,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
@@ -3180,6 +3179,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the LivescoresLatestWithHttpInfo variant
@@ -3251,15 +3251,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
@@ -3286,6 +3285,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the NewsAllPostMatchWithHttpInfo variant
@@ -3357,15 +3357,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
@@ -3392,6 +3391,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the NewsAllPreMatchWithHttpInfo variant
@@ -3463,15 +3463,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var seasonId = 19686;  // int | The ID of the season you want to retrieve post-match news from.
@@ -3499,6 +3498,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the NewsPostMatchBySeasonIdWithHttpInfo variant
@@ -3571,15 +3571,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var seasonId = 19734;  // int | The ID of the season you want to retrieve post-match news from.
@@ -3607,6 +3606,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the NewsPreMatchBySeasonIdWithHttpInfo variant
@@ -3679,15 +3679,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
@@ -3714,6 +3713,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the NewsUpcomingPostMatchWithHttpInfo variant
@@ -3785,15 +3785,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
@@ -3820,6 +3819,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the NewsUpcomingPreMatchWithHttpInfo variant
@@ -3891,15 +3891,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
@@ -3926,6 +3925,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the OddsAllInPlayWithHttpInfo variant
@@ -3997,15 +3997,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
@@ -4032,6 +4031,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the OddsAllPreMatchWithHttpInfo variant
@@ -4103,15 +4103,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var fixtureId = 18535046;  // int | The ID of the fixture you want to retrieve in-play odds from.
@@ -4140,6 +4139,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the OddsInPlayByFixtureAndBookmakerIdWithHttpInfo variant
@@ -4213,15 +4213,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var fixtureId = 233366;  // int | The ID of the fixture you want to retrieve in-play odds from.
@@ -4250,6 +4249,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the OddsInPlayByFixtureAndMarketIdWithHttpInfo variant
@@ -4323,15 +4323,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var fixtureId = 18535046;  // int | The ID of the fixture you want to retrieve in-play odds from.
@@ -4359,6 +4358,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the OddsInPlayByFixtureIdWithHttpInfo variant
@@ -4431,15 +4431,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
@@ -4466,6 +4465,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the OddsLatestInPlayWithHttpInfo variant
@@ -4537,15 +4537,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
@@ -4572,6 +4571,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the OddsLatestPreMatchWithHttpInfo variant
@@ -4643,15 +4643,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var fixtureId = 233366;  // int | The ID of the fixture you want to retrieve pre-match odds from.
@@ -4680,6 +4679,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the OddsPreMatchByFixtureAndBookmakerIdWithHttpInfo variant
@@ -4753,15 +4753,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var fixtureId = 233366;  // int | The ID of the fixture you want to retrieve pre-match odds from.
@@ -4790,6 +4789,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the OddsPreMatchByFixtureAndMarketIdWithHttpInfo variant
@@ -4863,15 +4863,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var fixtureId = 233366;  // int | The ID of the fixture you want to retrieve pre-match odds from.
@@ -4899,6 +4898,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the OddsPreMatchByFixtureIdWithHttpInfo variant
@@ -4971,15 +4971,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var playerId = 14;  // int | The ID of the player you want to retrieve.
@@ -5007,6 +5006,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the PlayerByIdWithHttpInfo variant
@@ -5079,15 +5079,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
@@ -5114,6 +5113,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the PlayersAllWithHttpInfo variant
@@ -5185,15 +5185,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var countryId = 320;  // int | The ID of the country you want to retrieve players from.
@@ -5221,6 +5220,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the PlayersByCountryIdWithHttpInfo variant
@@ -5293,15 +5293,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
@@ -5328,6 +5327,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the PlayersLatestWithHttpInfo variant
@@ -5399,15 +5399,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var name = "Agg";  // string | The name you want to search on.
@@ -5435,6 +5434,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the PlayersSearchWithHttpInfo variant
@@ -5507,15 +5507,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
@@ -5542,6 +5541,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the PredictionsAllWithHttpInfo variant
@@ -5613,15 +5613,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
@@ -5648,6 +5647,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the PredictionsAllValueBetsWithHttpInfo variant
@@ -5719,15 +5719,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var fixtureId = 16774022;  // int | The ID of the fixture you want to retrieve predictions from.
@@ -5755,6 +5754,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the PredictionsByFixtureIdWithHttpInfo variant
@@ -5827,15 +5827,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var fixtureId = 18535050;  // int | The ID of the fixture you want to retrieve value bets from.
@@ -5863,6 +5862,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the PredictionsValueBetsByFixtureIdWithHttpInfo variant
@@ -5935,15 +5935,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var refereeId = 11698;  // int | The ID of the referee you want to retrieve.
@@ -5971,6 +5970,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the RefereeByIdWithHttpInfo variant
@@ -6043,15 +6043,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
@@ -6078,6 +6077,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the RefereesAllWithHttpInfo variant
@@ -6149,15 +6149,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var countryId = 320;  // int | The ID of the country you want to retrieve referees from.
@@ -6185,6 +6184,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the RefereesByCountryIdWithHttpInfo variant
@@ -6257,15 +6257,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var seasonId = 19686;  // int | The ID of the season you want to retrieve referees from.
@@ -6293,6 +6292,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the RefereesBySeasonIdWithHttpInfo variant
@@ -6365,15 +6365,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var name = "Munch";  // string | The name you want to search on.
@@ -6401,6 +6400,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the RefereesSearchWithHttpInfo variant
@@ -6473,15 +6473,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
@@ -6508,6 +6507,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the RivalsAllWithHttpInfo variant
@@ -6579,15 +6579,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var teamId = 53;  // int | The ID of the team you want to retrieve rivals from.
@@ -6615,6 +6614,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the RivalsByTeamIdWithHttpInfo variant
@@ -6687,15 +6687,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var roundId = 23317;  // int | The ID of the round you want to retrieve.
@@ -6723,6 +6722,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the RoundByIdWithHttpInfo variant
@@ -6795,15 +6795,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
@@ -6830,6 +6829,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the RoundsAllWithHttpInfo variant
@@ -6901,15 +6901,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var seasonId = 19686;  // int | The ID of the season you want to retrieve rounds from.
@@ -6937,6 +6936,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the RoundsBySeasonIdWithHttpInfo variant
@@ -7009,15 +7009,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var name = 2;  // int | The name you want to search on.
@@ -7045,6 +7044,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the RoundsSearchWithHttpInfo variant
@@ -7117,15 +7117,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var seasonId = 19686;  // int | 
@@ -7153,6 +7152,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the SchedulesBySeasonIdWithHttpInfo variant
@@ -7225,15 +7225,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var seasonId = 19686;  // int | The ID of the season you want to retrieve schedule from.
@@ -7262,6 +7261,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the SchedulesByTeamAndSeasonIdWithHttpInfo variant
@@ -7335,15 +7335,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var teamId = 282;  // int | The ID of the team you want to retrieve schedule from.
@@ -7371,6 +7370,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the SchedulesByTeamIdWithHttpInfo variant
@@ -7443,15 +7443,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var seasonId = 19686;  // int | The ID of the season you want to retrieve.
@@ -7479,6 +7478,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the SeasonByIdWithHttpInfo variant
@@ -7551,15 +7551,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
@@ -7586,6 +7585,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the SeasonsAllWithHttpInfo variant
@@ -7657,15 +7657,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var teamId = 282;  // int | The ID of the team you want to retrieve seasons from.
@@ -7693,6 +7692,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the SeasonsByTeamIdWithHttpInfo variant
@@ -7765,15 +7765,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var name = 2022;  // int | The name you want to search on.
@@ -7801,6 +7800,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the SeasonsSearchWithHttpInfo variant
@@ -7873,15 +7873,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var seasonId = 19686;  // int | The ID of the season you want to retrieve squads from.
@@ -7910,6 +7909,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the SquadsBySeasonAndTeamIdWithHttpInfo variant
@@ -7983,15 +7983,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var teamId = 282;  // int | The ID of the team you want to retrieve squads from.
@@ -8019,6 +8018,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the SquadsByTeamIdWithHttpInfo variant
@@ -8091,15 +8091,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var stageId = 1100;  // int | The ID of the stage you want to retrieve.
@@ -8127,6 +8126,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the StageByIdWithHttpInfo variant
@@ -8199,15 +8199,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
@@ -8234,6 +8233,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the StagesAllWithHttpInfo variant
@@ -8305,15 +8305,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var seasonId = 19686;  // int | The ID of the season you want to retrieve stages from.
@@ -8341,6 +8340,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the StagesBySeasonIdWithHttpInfo variant
@@ -8413,15 +8413,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var name = "Championship";  // string | The name you want to search on.
@@ -8449,6 +8448,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the StagesSearchWithHttpInfo variant
@@ -8521,15 +8521,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var seasonId = 19686;  // int | The ID of the season you want to retrieve standing corrections from.
@@ -8557,6 +8556,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the StandingCorrectionsBySeasonIdWithHttpInfo variant
@@ -8629,15 +8629,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
@@ -8664,6 +8663,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the StandingsAllWithHttpInfo variant
@@ -8735,15 +8735,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var roundId = 23318;  // int | The ID of the round you want to retrieve standing from.
@@ -8771,6 +8770,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the StandingsByRoundIdWithHttpInfo variant
@@ -8843,15 +8843,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var seasonId = 19686;  // int | The ID of the season you want to retrieve standing from.
@@ -8879,6 +8878,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the StandingsBySeasonIdWithHttpInfo variant
@@ -8951,15 +8951,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var leagueId = 271;  // int | The ID of the league you want to retrieve standings from.
@@ -8987,6 +8986,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the StandingsLiveByLeagueIdWithHttpInfo variant
@@ -9059,15 +9059,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var stateId = 1;  // int | The ID of the state you want to retrieve.
@@ -9095,6 +9094,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the StateByIdWithHttpInfo variant
@@ -9167,15 +9167,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
@@ -9202,6 +9201,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the StatesBySportWithHttpInfo variant
@@ -9273,15 +9273,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
@@ -9308,6 +9307,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the TeamsAllWithHttpInfo variant
@@ -9379,15 +9379,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var countryId = 320;  // int | The ID of the country you want to retrieve teams from.
@@ -9415,6 +9414,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the TeamsByCountryIdWithHttpInfo variant
@@ -9487,15 +9487,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var teamId = 180;  // int | The ID of the team you want to retrieve.
@@ -9523,6 +9522,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the TeamsByIdWithHttpInfo variant
@@ -9595,15 +9595,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var seasonId = 19686;  // int | The ID of the season you want to retrieve teams from.
@@ -9631,6 +9630,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the TeamsBySeasonIdWithHttpInfo variant
@@ -9703,15 +9703,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var name = "Hors";  // string | The name you want to search on.
@@ -9739,6 +9738,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the TeamsSearchWithHttpInfo variant
@@ -9811,15 +9811,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var seasonId = 19686;  // int | The ID of the season you want to retrieve topscorers from.
@@ -9847,6 +9846,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the TopScorersBySeasonIdWithHttpInfo variant
@@ -9919,15 +9919,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var stageId = 1100;  // int | The ID of the stage you want to retrieve topscorers from.
@@ -9955,6 +9954,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the TopScorersByStageIdWithHttpInfo variant
@@ -10027,15 +10027,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var startDate = "2021-12-27";  // string | The start date you want to retrieve transfers from.
@@ -10064,6 +10063,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the TranfersByDateRangeWithHttpInfo variant
@@ -10137,15 +10137,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var transferId = 1;  // int | 
@@ -10173,6 +10172,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the TransferByIdWithHttpInfo variant
@@ -10245,15 +10245,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
@@ -10280,6 +10279,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the TransfersAllWithHttpInfo variant
@@ -10351,15 +10351,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var playerId = 35659846;  // int | The ID of the player you want to retrieve transfers from.
@@ -10387,6 +10386,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the TransfersByPlayerIdWithHttpInfo variant
@@ -10459,15 +10459,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var teamId = 3736;  // int | The ID of the team you want to retrieve transfers from.
@@ -10495,6 +10494,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the TransfersByTeamIdWithHttpInfo variant
@@ -10567,15 +10567,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
@@ -10602,6 +10601,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the TransfersLatestWithHttpInfo variant
@@ -10673,15 +10673,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var tvStationId = 33;  // int | The ID of the tv station you want to retrieve.
@@ -10709,6 +10708,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the TvStationByIdWithHttpInfo variant
@@ -10781,15 +10781,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
@@ -10816,6 +10815,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the TvStationsAllWithHttpInfo variant
@@ -10887,15 +10887,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var fixtureId = 16808591;  // int | The ID of the fixture you want to retrieve tv-stations from.
@@ -10923,6 +10922,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the TvStationsByFixtureIdWithHttpInfo variant
@@ -10995,15 +10995,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var venueId = 219;  // int | The ID of the venue you want to retrieve.
@@ -11031,6 +11030,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the VenueByIdWithHttpInfo variant
@@ -11103,15 +11103,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
@@ -11138,6 +11137,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the VenuesAllWithHttpInfo variant
@@ -11209,15 +11209,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var seasonId = 19686;  // int | The ID of the season you want to retrieve venues from.
@@ -11245,6 +11244,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the VenuesBySeasonIdWithHttpInfo variant
@@ -11317,15 +11317,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new SportApi(config);
             var name = "Park";  // string | The name you want to search on.
@@ -11353,6 +11352,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the VenuesSearchWithHttpInfo variant

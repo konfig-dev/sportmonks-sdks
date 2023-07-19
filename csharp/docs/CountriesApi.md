@@ -29,15 +29,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new CountriesApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
@@ -63,6 +62,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the AllWithHttpInfo variant
@@ -133,15 +133,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new CountriesApi(config);
             var countryId = 1161;  // int | The ID of the country you want to retrieve.
@@ -168,6 +167,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the GetByIdWithHttpInfo variant
@@ -239,15 +239,14 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
 
+            SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
-            // config.BasePath = "https://api.sportmonks.com";
-
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("VERSION");
+            client.SetSport("SPORT");
             // Configure API key authorization: apikeyAuth
-            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
+            client.SetApiKey("YOUR_API_KEY");
 
             var apiInstance = new CountriesApi(config);
             var name = "Fra";  // string | The name you want to search on
@@ -274,6 +273,7 @@ namespace Example
         }
     }
 }
+
 ```
 
 #### Using the SearchWithHttpInfo variant
