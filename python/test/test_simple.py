@@ -12,6 +12,7 @@
 import unittest
 
 import os
+from pprint import pprint
 from sportmonks import Sportmonks
 
 class TestSimple(unittest.TestCase):
@@ -20,18 +21,25 @@ class TestSimple(unittest.TestCase):
 
     def test_client(self):
         sportmonks = Sportmonks(
-            # Defining the host is optional and defaults to https://api.sportmonks.com
-            # See configuration.py for a list of all supported configuration parameters.
-            host = "https://api.sportmonks.com",
-            version = 'VERSION',
-            sport = 'SPORT',
-        
-            # Configure API key authorization: apikeyAuth
-            api_key = 'YOUR_API_KEY',
-            # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            # api_key_prefix = {'apikeyAuth': 'Bearer'},
+            version="VERSION",
+            sport="SPORT",
+            api_key=os.environ["SPORTMONKS_API_TOKEN"],
         )
         self.assertIsNotNone(sportmonks)
+
+    def test_simple(self):
+        sportmonks = Sportmonks(
+            version="v3",
+            sport="football",
+            api_key=os.environ["SPORTMONKS_API_TOKEN"],
+        )
+        cities = sportmonks.cities.all()
+        pprint(cities.body)
+
+        teams = sportmonks.sport.teams_all()
+        if "data" not in teams.body:
+            raise Exception('Missing "data"')
+        first_team = teams.body["data"]
 
     def tearDown(self):
         pass
