@@ -13,6 +13,9 @@ generators:
     packageName: Sportmonks.Net
     outputDirectory: csharp
     logoPath: logo.png
+    clientState:
+      - version
+      - sport
     git:
       userId: konfig-dev
       repoId: sportmonks-sdks/tree/main/csharp
@@ -21,6 +24,9 @@ generators:
     packageName: sportmonks-php
     outputDirectory: php
     invokerPackage: Sportmonks
+    clientState:
+      - version
+      - sport
     git:
       userId: konfig-dev
       repoId: sportmonks-php-sdk
