@@ -23,8 +23,8 @@ sportmonks = Sportmonks(
     # Defining the host is optional and defaults to https://api.sportmonks.com
     # See configuration.py for a list of all supported configuration parameters.
     host="https://api.sportmonks.com",
-    version="VERSION",
-    sport="SPORT",
+    version="v3",
+    sport="football",
     # Configure API key authorization: apikeyAuth
     api_key="YOUR_API_KEY",
     # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -116,8 +116,8 @@ sportmonks = Sportmonks(
     # Defining the host is optional and defaults to https://api.sportmonks.com
     # See configuration.py for a list of all supported configuration parameters.
     host="https://api.sportmonks.com",
-    version="VERSION",
-    sport="SPORT",
+    version="v3",
+    sport="football",
     # Configure API key authorization: apikeyAuth
     api_key="YOUR_API_KEY",
     # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -209,8 +209,8 @@ sportmonks = Sportmonks(
     # Defining the host is optional and defaults to https://api.sportmonks.com
     # See configuration.py for a list of all supported configuration parameters.
     host="https://api.sportmonks.com",
-    version="VERSION",
-    sport="SPORT",
+    version="v3",
+    sport="football",
     # Configure API key authorization: apikeyAuth
     api_key="YOUR_API_KEY",
     # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed

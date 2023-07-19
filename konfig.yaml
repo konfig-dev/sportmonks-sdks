@@ -14,9 +14,11 @@ generators:
     outputDirectory: csharp
     logoPath: logo.png
     clientName: SportmonksClient
-    clientState:
-      - Version
-      - Sport
+    clientStateWithExamples:
+      - name: Version
+        example: v3
+      - name: Sport
+        example: football
     git:
       userId: konfig-dev
       repoId: sportmonks-sdks/tree/main/csharp
@@ -25,9 +27,11 @@ generators:
     packageName: sportmonks-php
     outputDirectory: php
     invokerPackage: Sportmonks
-    clientState:
-      - version
-      - sport
+    clientStateWithExamples:
+      - name: version
+        example: v3
+      - name: sport
+        example: football
     git:
       userId: konfig-dev
       repoId: sportmonks-php-sdk
@@ -36,9 +40,11 @@ generators:
     clientName: Sportmonks
     npmName: sportmonks
     outputDirectory: typescript
-    clientState:
-      - version
-      - sport
+    clientStateWithExamples:
+      - name: version
+        example: v3
+      - name: sport
+        example: football
     git:
       userId: konfig-dev
       repoId: sportmonks-sdks/tree/main/typescript
@@ -48,9 +54,11 @@ generators:
     clientName: Sportmonks
     setSkipSerializationToTrueByDefault: true
     omitModelDocumentation: true
-    clientState:
-      - version
-      - sport
+    clientStateWithExamples:
+      - name: version
+        example: v3
+      - name: sport
+        example: football
     git:
       userId: konfig-dev
       repoId: sportmonks-sdks/tree/main/python

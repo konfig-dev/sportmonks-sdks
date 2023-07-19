@@ -31,8 +31,8 @@ namespace Example
             SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
             client.SetBasePath("https://api.sportmonks.com");
-            client.SetVersion("VERSION");
-            client.SetSport("SPORT");
+            client.SetVersion("v3");
+            client.SetSport("football");
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
@@ -133,8 +133,8 @@ namespace Example
             SportmonksClient client = new SportmonksClient();
             // Configure custom BasePath if desired
             client.SetBasePath("https://api.sportmonks.com");
-            client.SetVersion("VERSION");
-            client.SetSport("SPORT");
+            client.SetVersion("v3");
+            client.SetSport("football");
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 

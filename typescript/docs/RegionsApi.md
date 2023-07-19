@@ -23,8 +23,8 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
-  version: "version",
-  sport: "sport",
+  version: "v3",
+  sport: "football",
   apiKey: "API_KEY",
 });
 
@@ -72,8 +72,8 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
-  version: "version",
-  sport: "sport",
+  version: "v3",
+  sport: "football",
   apiKey: "API_KEY",
 });
 
@@ -124,8 +124,8 @@ import { Sportmonks } from "sportmonks";
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
   // basePath: "https://api.sportmonks.com",
-  version: "version",
-  sport: "sport",
+  version: "v3",
+  sport: "football",
   apiKey: "API_KEY",
 });
 
