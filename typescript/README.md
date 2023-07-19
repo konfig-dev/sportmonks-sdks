@@ -1,4 +1,4 @@
-# sportmonks@1.0.0
+# sportmonks@0.1.0
 
 Surpass the competition with superior sports data
 ## Installing
