@@ -27,4 +27,25 @@ describe("sportmonks", () => {
     });
     console.log(squads.data);
   });
+  it("seasons by team id", async () => {
+    const sportmonks = new Sportmonks({
+      // Defining the base path is optional and defaults to https://api.sportmonks.com
+      // basePath: "https://api.sportmonks.com",
+      version: "v3",
+      sport: "football",
+      apiKey: process.env.SPORTMONKS_API_TOKEN,
+    });
+
+    const teams = await sportmonks.sport.teamsAll();
+    const firstTeam = teams.data.data?.[0];
+    const firstTeamId = firstTeam?.id;
+    if (firstTeam === undefined || firstTeamId === undefined)
+      throw Error("Could not find team ID");
+
+    const seasons = await sportmonks.sport.seasonsByTeamId({
+      teamId: firstTeamId,
+    });
+
+    console.log(seasons.data);
+  });
 });
