@@ -41,13 +41,13 @@ NameSchema = schemas.StrSchema
 RequestRequiredPathParams = typing_extensions.TypedDict(
     'RequestRequiredPathParams',
     {
-        'version': typing.Union[VersionSchema, str, ],
         'name': typing.Union[NameSchema, str, ],
     }
 )
 RequestOptionalPathParams = typing_extensions.TypedDict(
     'RequestOptionalPathParams',
     {
+        'version': typing.Union[VersionSchema, str, ],
     },
     total=False
 )
@@ -61,7 +61,6 @@ request_path_version = api_client.PathParameter(
     name="version",
     style=api_client.ParameterStyle.SIMPLE,
     schema=VersionSchema,
-    required=True,
 )
 request_path_name = api_client.PathParameter(
     name="name",
@@ -98,8 +97,8 @@ class BaseApi(api_client.Api):
 
     def _search_mapped_args(
         self,
-        version: str,
         name: str,
+        version: typing.Optional[str] = None,
     ) -> api_client.MappedArgs:
         args: api_client.MappedArgs = api_client.MappedArgs()
         _path_params = {}
@@ -316,16 +315,16 @@ class Search(BaseApi):
 
     async def asearch(
         self,
-        version: str,
         name: str,
+        version: typing.Optional[str] = None,
     ) -> typing.Union[
         ApiResponseForDefaultAsync,
         api_client.ApiResponseWithoutDeserializationAsync,
         AsyncGeneratorResponse,
     ]:
         args = self._search_mapped_args(
-            version=version,
             name=name,
+            version=version,
         )
         return await self._asearch_oapg(
             path_params=args.path,
@@ -333,15 +332,15 @@ class Search(BaseApi):
     
     def search(
         self,
-        version: str,
         name: str,
+        version: typing.Optional[str] = None,
     ) -> typing.Union[
         ApiResponseForDefault,
         api_client.ApiResponseWithoutDeserialization,
     ]:
         args = self._search_mapped_args(
-            version=version,
             name=name,
+            version=version,
         )
         return self._search_oapg(
             path_params=args.path,
@@ -352,16 +351,16 @@ class ApiForget(BaseApi):
 
     async def aget(
         self,
-        version: str,
         name: str,
+        version: typing.Optional[str] = None,
     ) -> typing.Union[
         ApiResponseForDefaultAsync,
         api_client.ApiResponseWithoutDeserializationAsync,
         AsyncGeneratorResponse,
     ]:
         args = self._search_mapped_args(
-            version=version,
             name=name,
+            version=version,
         )
         return await self._asearch_oapg(
             path_params=args.path,
@@ -369,15 +368,15 @@ class ApiForget(BaseApi):
     
     def get(
         self,
-        version: str,
         name: str,
+        version: typing.Optional[str] = None,
     ) -> typing.Union[
         ApiResponseForDefault,
         api_client.ApiResponseWithoutDeserialization,
     ]:
         args = self._search_mapped_args(
-            version=version,
             name=name,
+            version=version,
         )
         return self._search_oapg(
             path_params=args.path,

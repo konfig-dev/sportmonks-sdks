@@ -40,6 +40,9 @@ generators:
     outputDirectory: python
     clientName: Sportmonks
     setSkipSerializationToTrueByDefault: true
+    clientState:
+      - version
+      - sport
     git:
       userId: konfig-dev
       repoId: sportmonks-sdks/tree/main/python

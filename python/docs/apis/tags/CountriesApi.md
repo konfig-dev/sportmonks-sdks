@@ -23,12 +23,18 @@ sportmonks = Sportmonks(
     # Defining the host is optional and defaults to https://api.sportmonks.com
     # See configuration.py for a list of all supported configuration parameters.
     host="https://api.sportmonks.com",
+    version="VERSION",
+    sport="SPORT",
+    # Configure API key authorization: apikeyAuth
+    api_key="YOUR_API_KEY",
+    # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+    # api_key_prefix = {'apikeyAuth': 'Bearer'},
 )
 
 try:
     # All
     all_response = sportmonks.countries.all(
-        version="v3",  # required
+        version="v3",  # optional
     )
     pprint(all_response.body)
     pprint(all_response.body["data"])
@@ -62,7 +68,7 @@ skip_deserialization | bool | default is False | when True, headers and body wil
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-version | VersionSchema | | 
+version | VersionSchema | | optional
 
 # VersionSchema
 
@@ -111,13 +117,19 @@ sportmonks = Sportmonks(
     # Defining the host is optional and defaults to https://api.sportmonks.com
     # See configuration.py for a list of all supported configuration parameters.
     host="https://api.sportmonks.com",
+    version="VERSION",
+    sport="SPORT",
+    # Configure API key authorization: apikeyAuth
+    api_key="YOUR_API_KEY",
+    # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+    # api_key_prefix = {'apikeyAuth': 'Bearer'},
 )
 
 try:
     # By ID
     get_by_id_response = sportmonks.countries.get_by_id(
-        version="v3",  # required
         country_id=1161,  # required
+        version="v3",  # optional
     )
     pprint(get_by_id_response.body)
     pprint(get_by_id_response.body["data"])
@@ -150,7 +162,7 @@ skip_deserialization | bool | default is False | when True, headers and body wil
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-version | VersionSchema | | 
+version | VersionSchema | | optional
 countryId | CountryIdSchema | | 
 
 # VersionSchema
@@ -207,13 +219,19 @@ sportmonks = Sportmonks(
     # Defining the host is optional and defaults to https://api.sportmonks.com
     # See configuration.py for a list of all supported configuration parameters.
     host="https://api.sportmonks.com",
+    version="VERSION",
+    sport="SPORT",
+    # Configure API key authorization: apikeyAuth
+    api_key="YOUR_API_KEY",
+    # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+    # api_key_prefix = {'apikeyAuth': 'Bearer'},
 )
 
 try:
     # Search
     search_response = sportmonks.countries.search(
-        version="v3",  # required
         name="Fra",  # required
+        version="v3",  # optional
     )
     pprint(search_response.body)
     pprint(search_response.body["data"])
@@ -247,7 +265,7 @@ skip_deserialization | bool | default is False | when True, headers and body wil
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-version | VersionSchema | | 
+version | VersionSchema | | optional
 name | NameSchema | | 
 
 # VersionSchema

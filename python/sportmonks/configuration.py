@@ -80,6 +80,25 @@ class Configuration(object):
       The validation of enums is performed for variables with defined enum values before.
 
     :Example:
+
+    API Key Authentication Example.
+    Given the following security scheme in the OpenAPI specification:
+      components:
+        securitySchemes:
+          cookieAuth:         # name for the security scheme
+            type: apiKey
+            in: cookie
+            name: JSESSIONID  # cookie name
+
+    You can programmatically set the cookie:
+
+conf = sportmonks.Configuration(
+    api_key={'cookieAuth': 'abc123'}
+    api_key_prefix={'cookieAuth': 'JSESSIONID'}
+)
+
+    The following cookie will be added to the HTTP request:
+       Cookie: JSESSIONID abc123
     """
 
     _default = None
@@ -88,6 +107,9 @@ class Configuration(object):
                  api_key=None, api_key_prefix=None,
                  username=None, password=None,
                  discard_unknown_keys=False,
+                 authorization=None,
+                 version=None,
+                 sport=None,
                  disabled_client_side_validations="",
                  server_index=None, server_variables=None,
                  server_operation_index=None, server_operation_variables=None,
@@ -101,6 +123,10 @@ class Configuration(object):
         self.server_operation_index = server_operation_index or {}
         """Default server index
         """
+        self.version = version
+        self.sport = sport
+        """Client State
+        """
         self.server_variables = server_variables or {}
         self.server_operation_variables = server_operation_variables or {}
         """Default server variables
@@ -111,7 +137,16 @@ class Configuration(object):
         # Authentication Settings
         self.api_key = {}
         if api_key:
-            self.api_key = api_key
+            if (isinstance(api_key, str)):
+                self.api_key = {'apikeyAuth': api_key}
+            else:
+                self.api_key = api_key
+        else:
+            raise ClientConfigurationError('API Key "apikeyAuth" is required')
+        if authorization:
+            self.api_key['apikeyAuth'] = authorization
+        elif api_key is None:
+            raise ClientConfigurationError('API Key "apikeyAuth" is required')
         """dict to store API key(s)
         """
         self.api_key_prefix = {}
@@ -367,6 +402,15 @@ class Configuration(object):
         :return: The Auth Settings information dict.
         """
         auth = {}
+        if 'apikeyAuth' in self.api_key:
+            auth['apikeyAuth'] = {
+                'type': 'api_key',
+                'in': 'header',
+                'key': 'Authorization',
+                'value': self.get_api_key_with_prefix(
+                    'apikeyAuth',
+                ),
+            }
         return auth
 
     def to_debug_report(self):

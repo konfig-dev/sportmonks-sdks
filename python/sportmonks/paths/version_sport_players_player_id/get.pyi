@@ -42,14 +42,14 @@ PlayerIdSchema = schemas.IntSchema
 RequestRequiredPathParams = typing_extensions.TypedDict(
     'RequestRequiredPathParams',
     {
-        'version': typing.Union[VersionSchema, str, ],
-        'sport': typing.Union[SportSchema, str, ],
         'playerId': typing.Union[PlayerIdSchema, decimal.Decimal, int, ],
     }
 )
 RequestOptionalPathParams = typing_extensions.TypedDict(
     'RequestOptionalPathParams',
     {
+        'version': typing.Union[VersionSchema, str, ],
+        'sport': typing.Union[SportSchema, str, ],
     },
     total=False
 )
@@ -63,13 +63,11 @@ request_path_version = api_client.PathParameter(
     name="version",
     style=api_client.ParameterStyle.SIMPLE,
     schema=VersionSchema,
-    required=True,
 )
 request_path_sport = api_client.PathParameter(
     name="sport",
     style=api_client.ParameterStyle.SIMPLE,
     schema=SportSchema,
-    required=True,
 )
 request_path_player_id = api_client.PathParameter(
     name="playerId",
@@ -106,9 +104,9 @@ class BaseApi(api_client.Api):
 
     def _player_by_id_mapped_args(
         self,
-        version: str,
-        sport: str,
         player_id: int,
+        version: typing.Optional[str] = None,
+        sport: typing.Optional[str] = None,
     ) -> api_client.MappedArgs:
         args: api_client.MappedArgs = api_client.MappedArgs()
         _path_params = {}
@@ -329,18 +327,18 @@ class PlayerById(BaseApi):
 
     async def aplayer_by_id(
         self,
-        version: str,
-        sport: str,
         player_id: int,
+        version: typing.Optional[str] = None,
+        sport: typing.Optional[str] = None,
     ) -> typing.Union[
         ApiResponseForDefaultAsync,
         api_client.ApiResponseWithoutDeserializationAsync,
         AsyncGeneratorResponse,
     ]:
         args = self._player_by_id_mapped_args(
+            player_id=player_id,
             version=version,
             sport=sport,
-            player_id=player_id,
         )
         return await self._aplayer_by_id_oapg(
             path_params=args.path,
@@ -348,17 +346,17 @@ class PlayerById(BaseApi):
     
     def player_by_id(
         self,
-        version: str,
-        sport: str,
         player_id: int,
+        version: typing.Optional[str] = None,
+        sport: typing.Optional[str] = None,
     ) -> typing.Union[
         ApiResponseForDefault,
         api_client.ApiResponseWithoutDeserialization,
     ]:
         args = self._player_by_id_mapped_args(
+            player_id=player_id,
             version=version,
             sport=sport,
-            player_id=player_id,
         )
         return self._player_by_id_oapg(
             path_params=args.path,
@@ -369,18 +367,18 @@ class ApiForget(BaseApi):
 
     async def aget(
         self,
-        version: str,
-        sport: str,
         player_id: int,
+        version: typing.Optional[str] = None,
+        sport: typing.Optional[str] = None,
     ) -> typing.Union[
         ApiResponseForDefaultAsync,
         api_client.ApiResponseWithoutDeserializationAsync,
         AsyncGeneratorResponse,
     ]:
         args = self._player_by_id_mapped_args(
+            player_id=player_id,
             version=version,
             sport=sport,
-            player_id=player_id,
         )
         return await self._aplayer_by_id_oapg(
             path_params=args.path,
@@ -388,17 +386,17 @@ class ApiForget(BaseApi):
     
     def get(
         self,
-        version: str,
-        sport: str,
         player_id: int,
+        version: typing.Optional[str] = None,
+        sport: typing.Optional[str] = None,
     ) -> typing.Union[
         ApiResponseForDefault,
         api_client.ApiResponseWithoutDeserialization,
     ]:
         args = self._player_by_id_mapped_args(
+            player_id=player_id,
             version=version,
             sport=sport,
-            player_id=player_id,
         )
         return self._player_by_id_oapg(
             path_params=args.path,

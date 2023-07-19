@@ -45,8 +45,6 @@ TeamIdSchema = schemas.IntSchema
 RequestRequiredPathParams = typing_extensions.TypedDict(
     'RequestRequiredPathParams',
     {
-        'version': typing.Union[VersionSchema, str, ],
-        'sport': typing.Union[SportSchema, str, ],
         'seasonId': typing.Union[SeasonIdSchema, decimal.Decimal, int, ],
         'teamId': typing.Union[TeamIdSchema, decimal.Decimal, int, ],
     }
@@ -54,6 +52,8 @@ RequestRequiredPathParams = typing_extensions.TypedDict(
 RequestOptionalPathParams = typing_extensions.TypedDict(
     'RequestOptionalPathParams',
     {
+        'version': typing.Union[VersionSchema, str, ],
+        'sport': typing.Union[SportSchema, str, ],
     },
     total=False
 )
@@ -67,13 +67,11 @@ request_path_version = api_client.PathParameter(
     name="version",
     style=api_client.ParameterStyle.SIMPLE,
     schema=VersionSchema,
-    required=True,
 )
 request_path_sport = api_client.PathParameter(
     name="sport",
     style=api_client.ParameterStyle.SIMPLE,
     schema=SportSchema,
-    required=True,
 )
 request_path_season_id = api_client.PathParameter(
     name="seasonId",
@@ -122,10 +120,10 @@ class BaseApi(api_client.Api):
 
     def _squads_by_season_and_team_id_mapped_args(
         self,
-        version: str,
-        sport: str,
         season_id: int,
         team_id: int,
+        version: typing.Optional[str] = None,
+        sport: typing.Optional[str] = None,
     ) -> api_client.MappedArgs:
         args: api_client.MappedArgs = api_client.MappedArgs()
         _path_params = {}
@@ -350,20 +348,20 @@ class SquadsBySeasonAndTeamId(BaseApi):
 
     async def asquads_by_season_and_team_id(
         self,
-        version: str,
-        sport: str,
         season_id: int,
         team_id: int,
+        version: typing.Optional[str] = None,
+        sport: typing.Optional[str] = None,
     ) -> typing.Union[
         ApiResponseForDefaultAsync,
         api_client.ApiResponseWithoutDeserializationAsync,
         AsyncGeneratorResponse,
     ]:
         args = self._squads_by_season_and_team_id_mapped_args(
-            version=version,
-            sport=sport,
             season_id=season_id,
             team_id=team_id,
+            version=version,
+            sport=sport,
         )
         return await self._asquads_by_season_and_team_id_oapg(
             path_params=args.path,
@@ -371,19 +369,19 @@ class SquadsBySeasonAndTeamId(BaseApi):
     
     def squads_by_season_and_team_id(
         self,
-        version: str,
-        sport: str,
         season_id: int,
         team_id: int,
+        version: typing.Optional[str] = None,
+        sport: typing.Optional[str] = None,
     ) -> typing.Union[
         ApiResponseForDefault,
         api_client.ApiResponseWithoutDeserialization,
     ]:
         args = self._squads_by_season_and_team_id_mapped_args(
-            version=version,
-            sport=sport,
             season_id=season_id,
             team_id=team_id,
+            version=version,
+            sport=sport,
         )
         return self._squads_by_season_and_team_id_oapg(
             path_params=args.path,
@@ -394,20 +392,20 @@ class ApiForget(BaseApi):
 
     async def aget(
         self,
-        version: str,
-        sport: str,
         season_id: int,
         team_id: int,
+        version: typing.Optional[str] = None,
+        sport: typing.Optional[str] = None,
     ) -> typing.Union[
         ApiResponseForDefaultAsync,
         api_client.ApiResponseWithoutDeserializationAsync,
         AsyncGeneratorResponse,
     ]:
         args = self._squads_by_season_and_team_id_mapped_args(
-            version=version,
-            sport=sport,
             season_id=season_id,
             team_id=team_id,
+            version=version,
+            sport=sport,
         )
         return await self._asquads_by_season_and_team_id_oapg(
             path_params=args.path,
@@ -415,19 +413,19 @@ class ApiForget(BaseApi):
     
     def get(
         self,
-        version: str,
-        sport: str,
         season_id: int,
         team_id: int,
+        version: typing.Optional[str] = None,
+        sport: typing.Optional[str] = None,
     ) -> typing.Union[
         ApiResponseForDefault,
         api_client.ApiResponseWithoutDeserialization,
     ]:
         args = self._squads_by_season_and_team_id_mapped_args(
-            version=version,
-            sport=sport,
             season_id=season_id,
             team_id=team_id,
+            version=version,
+            sport=sport,
         )
         return self._squads_by_season_and_team_id_oapg(
             path_params=args.path,

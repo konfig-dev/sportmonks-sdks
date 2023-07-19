@@ -44,14 +44,14 @@ NameSchema = schemas.IntSchema
 RequestRequiredPathParams = typing_extensions.TypedDict(
     'RequestRequiredPathParams',
     {
-        'version': typing.Union[VersionSchema, str, ],
-        'sport': typing.Union[SportSchema, str, ],
         'name': typing.Union[NameSchema, decimal.Decimal, int, ],
     }
 )
 RequestOptionalPathParams = typing_extensions.TypedDict(
     'RequestOptionalPathParams',
     {
+        'version': typing.Union[VersionSchema, str, ],
+        'sport': typing.Union[SportSchema, str, ],
     },
     total=False
 )
@@ -65,13 +65,11 @@ request_path_version = api_client.PathParameter(
     name="version",
     style=api_client.ParameterStyle.SIMPLE,
     schema=VersionSchema,
-    required=True,
 )
 request_path_sport = api_client.PathParameter(
     name="sport",
     style=api_client.ParameterStyle.SIMPLE,
     schema=SportSchema,
-    required=True,
 )
 request_path_name = api_client.PathParameter(
     name="name",
@@ -114,9 +112,9 @@ class BaseApi(api_client.Api):
 
     def _rounds_search_mapped_args(
         self,
-        version: str,
-        sport: str,
         name: int,
+        version: typing.Optional[str] = None,
+        sport: typing.Optional[str] = None,
     ) -> api_client.MappedArgs:
         args: api_client.MappedArgs = api_client.MappedArgs()
         _path_params = {}
@@ -337,18 +335,18 @@ class RoundsSearch(BaseApi):
 
     async def arounds_search(
         self,
-        version: str,
-        sport: str,
         name: int,
+        version: typing.Optional[str] = None,
+        sport: typing.Optional[str] = None,
     ) -> typing.Union[
         ApiResponseForDefaultAsync,
         api_client.ApiResponseWithoutDeserializationAsync,
         AsyncGeneratorResponse,
     ]:
         args = self._rounds_search_mapped_args(
+            name=name,
             version=version,
             sport=sport,
-            name=name,
         )
         return await self._arounds_search_oapg(
             path_params=args.path,
@@ -356,17 +354,17 @@ class RoundsSearch(BaseApi):
     
     def rounds_search(
         self,
-        version: str,
-        sport: str,
         name: int,
+        version: typing.Optional[str] = None,
+        sport: typing.Optional[str] = None,
     ) -> typing.Union[
         ApiResponseForDefault,
         api_client.ApiResponseWithoutDeserialization,
     ]:
         args = self._rounds_search_mapped_args(
+            name=name,
             version=version,
             sport=sport,
-            name=name,
         )
         return self._rounds_search_oapg(
             path_params=args.path,
@@ -377,18 +375,18 @@ class ApiForget(BaseApi):
 
     async def aget(
         self,
-        version: str,
-        sport: str,
         name: int,
+        version: typing.Optional[str] = None,
+        sport: typing.Optional[str] = None,
     ) -> typing.Union[
         ApiResponseForDefaultAsync,
         api_client.ApiResponseWithoutDeserializationAsync,
         AsyncGeneratorResponse,
     ]:
         args = self._rounds_search_mapped_args(
+            name=name,
             version=version,
             sport=sport,
-            name=name,
         )
         return await self._arounds_search_oapg(
             path_params=args.path,
@@ -396,17 +394,17 @@ class ApiForget(BaseApi):
     
     def get(
         self,
-        version: str,
-        sport: str,
         name: int,
+        version: typing.Optional[str] = None,
+        sport: typing.Optional[str] = None,
     ) -> typing.Union[
         ApiResponseForDefault,
         api_client.ApiResponseWithoutDeserialization,
     ]:
         args = self._rounds_search_mapped_args(
+            name=name,
             version=version,
             sport=sport,
-            name=name,
         )
         return self._rounds_search_oapg(
             path_params=args.path,

@@ -22,12 +22,18 @@ sportmonks = Sportmonks(
     # Defining the host is optional and defaults to https://api.sportmonks.com
     # See configuration.py for a list of all supported configuration parameters.
     host="https://api.sportmonks.com",
+    version="VERSION",
+    sport="SPORT",
+    # Configure API key authorization: apikeyAuth
+    api_key="YOUR_API_KEY",
+    # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+    # api_key_prefix = {'apikeyAuth': 'Bearer'},
 )
 
 try:
     # All
     all_response = sportmonks.cities.all(
-        version="v3",  # required
+        version="v3",  # optional
     )
     pprint(all_response.body)
     pprint(all_response.body["data"])
@@ -60,6 +66,12 @@ sportmonks = Sportmonks(
     # Defining the host is optional and defaults to https://api.sportmonks.com
     # See configuration.py for a list of all supported configuration parameters.
     host="https://api.sportmonks.com",
+    version="VERSION",
+    sport="SPORT",
+    # Configure API key authorization: apikeyAuth
+    api_key="YOUR_API_KEY",
+    # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+    # api_key_prefix = {'apikeyAuth': 'Bearer'},
 )
 
 
@@ -67,7 +79,7 @@ async def main():
     try:
         # All
         all_response = await sportmonks.cities.aall(
-            version="v3",  # required
+            version="v3",  # optional
         )
         pprint(all_response.body)
         pprint(all_response.body["data"])

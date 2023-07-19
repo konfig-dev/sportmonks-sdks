@@ -42,14 +42,14 @@ FixtureIdSchema = schemas.IntSchema
 RequestRequiredPathParams = typing_extensions.TypedDict(
     'RequestRequiredPathParams',
     {
-        'version': typing.Union[VersionSchema, str, ],
-        'sport': typing.Union[SportSchema, str, ],
         'fixtureId': typing.Union[FixtureIdSchema, decimal.Decimal, int, ],
     }
 )
 RequestOptionalPathParams = typing_extensions.TypedDict(
     'RequestOptionalPathParams',
     {
+        'version': typing.Union[VersionSchema, str, ],
+        'sport': typing.Union[SportSchema, str, ],
     },
     total=False
 )
@@ -63,13 +63,11 @@ request_path_version = api_client.PathParameter(
     name="version",
     style=api_client.ParameterStyle.SIMPLE,
     schema=VersionSchema,
-    required=True,
 )
 request_path_sport = api_client.PathParameter(
     name="sport",
     style=api_client.ParameterStyle.SIMPLE,
     schema=SportSchema,
-    required=True,
 )
 request_path_fixture_id = api_client.PathParameter(
     name="fixtureId",
@@ -141,9 +139,9 @@ class BaseApi(api_client.Api):
 
     def _predictions_by_fixture_id_mapped_args(
         self,
-        version: str,
-        sport: str,
         fixture_id: int,
+        version: typing.Optional[str] = None,
+        sport: typing.Optional[str] = None,
     ) -> api_client.MappedArgs:
         args: api_client.MappedArgs = api_client.MappedArgs()
         _path_params = {}
@@ -354,18 +352,18 @@ class PredictionsByFixtureId(BaseApi):
 
     async def apredictions_by_fixture_id(
         self,
-        version: str,
-        sport: str,
         fixture_id: int,
+        version: typing.Optional[str] = None,
+        sport: typing.Optional[str] = None,
     ) -> typing.Union[
         ApiResponseFor200Async,
         api_client.ApiResponseWithoutDeserializationAsync,
         AsyncGeneratorResponse,
     ]:
         args = self._predictions_by_fixture_id_mapped_args(
+            fixture_id=fixture_id,
             version=version,
             sport=sport,
-            fixture_id=fixture_id,
         )
         return await self._apredictions_by_fixture_id_oapg(
             path_params=args.path,
@@ -373,17 +371,17 @@ class PredictionsByFixtureId(BaseApi):
     
     def predictions_by_fixture_id(
         self,
-        version: str,
-        sport: str,
         fixture_id: int,
+        version: typing.Optional[str] = None,
+        sport: typing.Optional[str] = None,
     ) -> typing.Union[
         ApiResponseFor200,
         api_client.ApiResponseWithoutDeserialization,
     ]:
         args = self._predictions_by_fixture_id_mapped_args(
+            fixture_id=fixture_id,
             version=version,
             sport=sport,
-            fixture_id=fixture_id,
         )
         return self._predictions_by_fixture_id_oapg(
             path_params=args.path,
@@ -394,18 +392,18 @@ class ApiForget(BaseApi):
 
     async def aget(
         self,
-        version: str,
-        sport: str,
         fixture_id: int,
+        version: typing.Optional[str] = None,
+        sport: typing.Optional[str] = None,
     ) -> typing.Union[
         ApiResponseFor200Async,
         api_client.ApiResponseWithoutDeserializationAsync,
         AsyncGeneratorResponse,
     ]:
         args = self._predictions_by_fixture_id_mapped_args(
+            fixture_id=fixture_id,
             version=version,
             sport=sport,
-            fixture_id=fixture_id,
         )
         return await self._apredictions_by_fixture_id_oapg(
             path_params=args.path,
@@ -413,17 +411,17 @@ class ApiForget(BaseApi):
     
     def get(
         self,
-        version: str,
-        sport: str,
         fixture_id: int,
+        version: typing.Optional[str] = None,
+        sport: typing.Optional[str] = None,
     ) -> typing.Union[
         ApiResponseFor200,
         api_client.ApiResponseWithoutDeserialization,
     ]:
         args = self._predictions_by_fixture_id_mapped_args(
+            fixture_id=fixture_id,
             version=version,
             sport=sport,
-            fixture_id=fixture_id,
         )
         return self._predictions_by_fixture_id_oapg(
             path_params=args.path,

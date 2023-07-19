@@ -42,14 +42,14 @@ DateSchema = schemas.StrSchema
 RequestRequiredPathParams = typing_extensions.TypedDict(
     'RequestRequiredPathParams',
     {
-        'version': typing.Union[VersionSchema, str, ],
-        'sport': typing.Union[SportSchema, str, ],
         'date': typing.Union[DateSchema, str, ],
     }
 )
 RequestOptionalPathParams = typing_extensions.TypedDict(
     'RequestOptionalPathParams',
     {
+        'version': typing.Union[VersionSchema, str, ],
+        'sport': typing.Union[SportSchema, str, ],
     },
     total=False
 )
@@ -63,13 +63,11 @@ request_path_version = api_client.PathParameter(
     name="version",
     style=api_client.ParameterStyle.SIMPLE,
     schema=VersionSchema,
-    required=True,
 )
 request_path_sport = api_client.PathParameter(
     name="sport",
     style=api_client.ParameterStyle.SIMPLE,
     schema=SportSchema,
-    required=True,
 )
 request_path_date = api_client.PathParameter(
     name="date",
@@ -106,9 +104,9 @@ class BaseApi(api_client.Api):
 
     def _fixtures_by_date_mapped_args(
         self,
-        version: str,
-        sport: str,
         date: str,
+        version: typing.Optional[str] = None,
+        sport: typing.Optional[str] = None,
     ) -> api_client.MappedArgs:
         args: api_client.MappedArgs = api_client.MappedArgs()
         _path_params = {}
@@ -329,18 +327,18 @@ class FixturesByDate(BaseApi):
 
     async def afixtures_by_date(
         self,
-        version: str,
-        sport: str,
         date: str,
+        version: typing.Optional[str] = None,
+        sport: typing.Optional[str] = None,
     ) -> typing.Union[
         ApiResponseForDefaultAsync,
         api_client.ApiResponseWithoutDeserializationAsync,
         AsyncGeneratorResponse,
     ]:
         args = self._fixtures_by_date_mapped_args(
+            date=date,
             version=version,
             sport=sport,
-            date=date,
         )
         return await self._afixtures_by_date_oapg(
             path_params=args.path,
@@ -348,17 +346,17 @@ class FixturesByDate(BaseApi):
     
     def fixtures_by_date(
         self,
-        version: str,
-        sport: str,
         date: str,
+        version: typing.Optional[str] = None,
+        sport: typing.Optional[str] = None,
     ) -> typing.Union[
         ApiResponseForDefault,
         api_client.ApiResponseWithoutDeserialization,
     ]:
         args = self._fixtures_by_date_mapped_args(
+            date=date,
             version=version,
             sport=sport,
-            date=date,
         )
         return self._fixtures_by_date_oapg(
             path_params=args.path,
@@ -369,18 +367,18 @@ class ApiForget(BaseApi):
 
     async def aget(
         self,
-        version: str,
-        sport: str,
         date: str,
+        version: typing.Optional[str] = None,
+        sport: typing.Optional[str] = None,
     ) -> typing.Union[
         ApiResponseForDefaultAsync,
         api_client.ApiResponseWithoutDeserializationAsync,
         AsyncGeneratorResponse,
     ]:
         args = self._fixtures_by_date_mapped_args(
+            date=date,
             version=version,
             sport=sport,
-            date=date,
         )
         return await self._afixtures_by_date_oapg(
             path_params=args.path,
@@ -388,17 +386,17 @@ class ApiForget(BaseApi):
     
     def get(
         self,
-        version: str,
-        sport: str,
         date: str,
+        version: typing.Optional[str] = None,
+        sport: typing.Optional[str] = None,
     ) -> typing.Union[
         ApiResponseForDefault,
         api_client.ApiResponseWithoutDeserialization,
     ]:
         args = self._fixtures_by_date_mapped_args(
+            date=date,
             version=version,
             sport=sport,
-            date=date,
         )
         return self._fixtures_by_date_oapg(
             path_params=args.path,

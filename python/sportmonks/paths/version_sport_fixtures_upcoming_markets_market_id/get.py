@@ -44,14 +44,14 @@ MarketIdSchema = schemas.IntSchema
 RequestRequiredPathParams = typing_extensions.TypedDict(
     'RequestRequiredPathParams',
     {
-        'version': typing.Union[VersionSchema, str, ],
-        'sport': typing.Union[SportSchema, str, ],
         'marketId': typing.Union[MarketIdSchema, decimal.Decimal, int, ],
     }
 )
 RequestOptionalPathParams = typing_extensions.TypedDict(
     'RequestOptionalPathParams',
     {
+        'version': typing.Union[VersionSchema, str, ],
+        'sport': typing.Union[SportSchema, str, ],
     },
     total=False
 )
@@ -65,13 +65,11 @@ request_path_version = api_client.PathParameter(
     name="version",
     style=api_client.ParameterStyle.SIMPLE,
     schema=VersionSchema,
-    required=True,
 )
 request_path_sport = api_client.PathParameter(
     name="sport",
     style=api_client.ParameterStyle.SIMPLE,
     schema=SportSchema,
-    required=True,
 )
 request_path_market_id = api_client.PathParameter(
     name="marketId",
@@ -114,9 +112,9 @@ class BaseApi(api_client.Api):
 
     def _fixtures_upcoming_by_market_id_mapped_args(
         self,
-        version: str,
-        sport: str,
         market_id: int,
+        version: typing.Optional[str] = None,
+        sport: typing.Optional[str] = None,
     ) -> api_client.MappedArgs:
         args: api_client.MappedArgs = api_client.MappedArgs()
         _path_params = {}
@@ -337,18 +335,18 @@ class FixturesUpcomingByMarketId(BaseApi):
 
     async def afixtures_upcoming_by_market_id(
         self,
-        version: str,
-        sport: str,
         market_id: int,
+        version: typing.Optional[str] = None,
+        sport: typing.Optional[str] = None,
     ) -> typing.Union[
         ApiResponseForDefaultAsync,
         api_client.ApiResponseWithoutDeserializationAsync,
         AsyncGeneratorResponse,
     ]:
         args = self._fixtures_upcoming_by_market_id_mapped_args(
+            market_id=market_id,
             version=version,
             sport=sport,
-            market_id=market_id,
         )
         return await self._afixtures_upcoming_by_market_id_oapg(
             path_params=args.path,
@@ -356,17 +354,17 @@ class FixturesUpcomingByMarketId(BaseApi):
     
     def fixtures_upcoming_by_market_id(
         self,
-        version: str,
-        sport: str,
         market_id: int,
+        version: typing.Optional[str] = None,
+        sport: typing.Optional[str] = None,
     ) -> typing.Union[
         ApiResponseForDefault,
         api_client.ApiResponseWithoutDeserialization,
     ]:
         args = self._fixtures_upcoming_by_market_id_mapped_args(
+            market_id=market_id,
             version=version,
             sport=sport,
-            market_id=market_id,
         )
         return self._fixtures_upcoming_by_market_id_oapg(
             path_params=args.path,
@@ -377,18 +375,18 @@ class ApiForget(BaseApi):
 
     async def aget(
         self,
-        version: str,
-        sport: str,
         market_id: int,
+        version: typing.Optional[str] = None,
+        sport: typing.Optional[str] = None,
     ) -> typing.Union[
         ApiResponseForDefaultAsync,
         api_client.ApiResponseWithoutDeserializationAsync,
         AsyncGeneratorResponse,
     ]:
         args = self._fixtures_upcoming_by_market_id_mapped_args(
+            market_id=market_id,
             version=version,
             sport=sport,
-            market_id=market_id,
         )
         return await self._afixtures_upcoming_by_market_id_oapg(
             path_params=args.path,
@@ -396,17 +394,17 @@ class ApiForget(BaseApi):
     
     def get(
         self,
-        version: str,
-        sport: str,
         market_id: int,
+        version: typing.Optional[str] = None,
+        sport: typing.Optional[str] = None,
     ) -> typing.Union[
         ApiResponseForDefault,
         api_client.ApiResponseWithoutDeserialization,
     ]:
         args = self._fixtures_upcoming_by_market_id_mapped_args(
+            market_id=market_id,
             version=version,
             sport=sport,
-            market_id=market_id,
         )
         return self._fixtures_upcoming_by_market_id_oapg(
             path_params=args.path,

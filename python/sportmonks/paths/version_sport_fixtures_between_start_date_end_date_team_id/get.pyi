@@ -44,8 +44,6 @@ TeamIdSchema = schemas.StrSchema
 RequestRequiredPathParams = typing_extensions.TypedDict(
     'RequestRequiredPathParams',
     {
-        'version': typing.Union[VersionSchema, str, ],
-        'sport': typing.Union[SportSchema, str, ],
         'startDate': typing.Union[StartDateSchema, str, ],
         'endDate': typing.Union[EndDateSchema, str, ],
         'teamId': typing.Union[TeamIdSchema, str, ],
@@ -54,6 +52,8 @@ RequestRequiredPathParams = typing_extensions.TypedDict(
 RequestOptionalPathParams = typing_extensions.TypedDict(
     'RequestOptionalPathParams',
     {
+        'version': typing.Union[VersionSchema, str, ],
+        'sport': typing.Union[SportSchema, str, ],
     },
     total=False
 )
@@ -67,13 +67,11 @@ request_path_version = api_client.PathParameter(
     name="version",
     style=api_client.ParameterStyle.SIMPLE,
     schema=VersionSchema,
-    required=True,
 )
 request_path_sport = api_client.PathParameter(
     name="sport",
     style=api_client.ParameterStyle.SIMPLE,
     schema=SportSchema,
-    required=True,
 )
 request_path_start_date = api_client.PathParameter(
     name="startDate",
@@ -122,11 +120,11 @@ class BaseApi(api_client.Api):
 
     def _fixture_by_date_range_for_team_mapped_args(
         self,
-        version: str,
-        sport: str,
         start_date: str,
         end_date: str,
         team_id: str,
+        version: typing.Optional[str] = None,
+        sport: typing.Optional[str] = None,
     ) -> api_client.MappedArgs:
         args: api_client.MappedArgs = api_client.MappedArgs()
         _path_params = {}
@@ -355,22 +353,22 @@ class FixtureByDateRangeForTeam(BaseApi):
 
     async def afixture_by_date_range_for_team(
         self,
-        version: str,
-        sport: str,
         start_date: str,
         end_date: str,
         team_id: str,
+        version: typing.Optional[str] = None,
+        sport: typing.Optional[str] = None,
     ) -> typing.Union[
         ApiResponseForDefaultAsync,
         api_client.ApiResponseWithoutDeserializationAsync,
         AsyncGeneratorResponse,
     ]:
         args = self._fixture_by_date_range_for_team_mapped_args(
-            version=version,
-            sport=sport,
             start_date=start_date,
             end_date=end_date,
             team_id=team_id,
+            version=version,
+            sport=sport,
         )
         return await self._afixture_by_date_range_for_team_oapg(
             path_params=args.path,
@@ -378,21 +376,21 @@ class FixtureByDateRangeForTeam(BaseApi):
     
     def fixture_by_date_range_for_team(
         self,
-        version: str,
-        sport: str,
         start_date: str,
         end_date: str,
         team_id: str,
+        version: typing.Optional[str] = None,
+        sport: typing.Optional[str] = None,
     ) -> typing.Union[
         ApiResponseForDefault,
         api_client.ApiResponseWithoutDeserialization,
     ]:
         args = self._fixture_by_date_range_for_team_mapped_args(
-            version=version,
-            sport=sport,
             start_date=start_date,
             end_date=end_date,
             team_id=team_id,
+            version=version,
+            sport=sport,
         )
         return self._fixture_by_date_range_for_team_oapg(
             path_params=args.path,
@@ -403,22 +401,22 @@ class ApiForget(BaseApi):
 
     async def aget(
         self,
-        version: str,
-        sport: str,
         start_date: str,
         end_date: str,
         team_id: str,
+        version: typing.Optional[str] = None,
+        sport: typing.Optional[str] = None,
     ) -> typing.Union[
         ApiResponseForDefaultAsync,
         api_client.ApiResponseWithoutDeserializationAsync,
         AsyncGeneratorResponse,
     ]:
         args = self._fixture_by_date_range_for_team_mapped_args(
-            version=version,
-            sport=sport,
             start_date=start_date,
             end_date=end_date,
             team_id=team_id,
+            version=version,
+            sport=sport,
         )
         return await self._afixture_by_date_range_for_team_oapg(
             path_params=args.path,
@@ -426,21 +424,21 @@ class ApiForget(BaseApi):
     
     def get(
         self,
-        version: str,
-        sport: str,
         start_date: str,
         end_date: str,
         team_id: str,
+        version: typing.Optional[str] = None,
+        sport: typing.Optional[str] = None,
     ) -> typing.Union[
         ApiResponseForDefault,
         api_client.ApiResponseWithoutDeserialization,
     ]:
         args = self._fixture_by_date_range_for_team_mapped_args(
-            version=version,
-            sport=sport,
             start_date=start_date,
             end_date=end_date,
             team_id=team_id,
+            version=version,
+            sport=sport,
         )
         return self._fixture_by_date_range_for_team_oapg(
             path_params=args.path,

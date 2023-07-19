@@ -29,13 +29,19 @@ sportmonks = Sportmonks(
     # Defining the host is optional and defaults to https://api.sportmonks.com
     # See configuration.py for a list of all supported configuration parameters.
     host="https://api.sportmonks.com",
+    version="VERSION",
+    sport="SPORT",
+    # Configure API key authorization: apikeyAuth
+    api_key="YOUR_API_KEY",
+    # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+    # api_key_prefix = {'apikeyAuth': 'Bearer'},
 )
 
 try:
     # By ID
     bookmaker_by_id_response = sportmonks.odds.bookmaker_by_id(
-        version="v3",  # required
         bookmaker_id=1,  # required
+        version="v3",  # optional
     )
     pprint(bookmaker_by_id_response.body)
     pprint(bookmaker_by_id_response.body["data"])
@@ -68,7 +74,7 @@ skip_deserialization | bool | default is False | when True, headers and body wil
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-version | VersionSchema | | 
+version | VersionSchema | | optional
 bookmakerId | BookmakerIdSchema | | 
 
 # VersionSchema
@@ -125,12 +131,18 @@ sportmonks = Sportmonks(
     # Defining the host is optional and defaults to https://api.sportmonks.com
     # See configuration.py for a list of all supported configuration parameters.
     host="https://api.sportmonks.com",
+    version="VERSION",
+    sport="SPORT",
+    # Configure API key authorization: apikeyAuth
+    api_key="YOUR_API_KEY",
+    # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+    # api_key_prefix = {'apikeyAuth': 'Bearer'},
 )
 
 try:
     # All
     bookmakers_all_response = sportmonks.odds.bookmakers_all(
-        version="v3",  # required
+        version="v3",  # optional
     )
     pprint(bookmakers_all_response.body)
     pprint(bookmakers_all_response.body["data"])
@@ -164,7 +176,7 @@ skip_deserialization | bool | default is False | when True, headers and body wil
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-version | VersionSchema | | 
+version | VersionSchema | | optional
 
 # VersionSchema
 
@@ -213,13 +225,19 @@ sportmonks = Sportmonks(
     # Defining the host is optional and defaults to https://api.sportmonks.com
     # See configuration.py for a list of all supported configuration parameters.
     host="https://api.sportmonks.com",
+    version="VERSION",
+    sport="SPORT",
+    # Configure API key authorization: apikeyAuth
+    api_key="YOUR_API_KEY",
+    # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+    # api_key_prefix = {'apikeyAuth': 'Bearer'},
 )
 
 try:
     # By Fixture ID
     bookmakers_by_fixture_id_response = sportmonks.odds.bookmakers_by_fixture_id(
-        version="v3",  # required
         fixture_id=18528479,  # required
+        version="v3",  # optional
     )
     pprint(bookmakers_by_fixture_id_response.body)
     pprint(bookmakers_by_fixture_id_response.body["data"])
@@ -253,7 +271,7 @@ skip_deserialization | bool | default is False | when True, headers and body wil
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-version | VersionSchema | | 
+version | VersionSchema | | optional
 fixtureId | FixtureIdSchema | | 
 
 # VersionSchema
@@ -310,14 +328,20 @@ sportmonks = Sportmonks(
     # Defining the host is optional and defaults to https://api.sportmonks.com
     # See configuration.py for a list of all supported configuration parameters.
     host="https://api.sportmonks.com",
+    version="VERSION",
+    sport="SPORT",
+    # Configure API key authorization: apikeyAuth
+    api_key="YOUR_API_KEY",
+    # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+    # api_key_prefix = {'apikeyAuth': 'Bearer'},
 )
 
 try:
     # Mapping by Fixture ID
     bookmakers_mapping_by_fixture_id_response = (
         sportmonks.odds.bookmakers_mapping_by_fixture_id(
-            version="v3",  # required
             fixture_id=18528479,  # required
+            version="v3",  # optional
         )
     )
     pprint(bookmakers_mapping_by_fixture_id_response.body)
@@ -351,7 +375,7 @@ skip_deserialization | bool | default is False | when True, headers and body wil
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-version | VersionSchema | | 
+version | VersionSchema | | optional
 fixtureId | FixtureIdSchema | | 
 
 # VersionSchema
@@ -408,13 +432,19 @@ sportmonks = Sportmonks(
     # Defining the host is optional and defaults to https://api.sportmonks.com
     # See configuration.py for a list of all supported configuration parameters.
     host="https://api.sportmonks.com",
+    version="VERSION",
+    sport="SPORT",
+    # Configure API key authorization: apikeyAuth
+    api_key="YOUR_API_KEY",
+    # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+    # api_key_prefix = {'apikeyAuth': 'Bearer'},
 )
 
 try:
     # Search
     bookmakers_search_response = sportmonks.odds.bookmakers_search(
-        version="v3",  # required
         name="Bet",  # required
+        version="v3",  # optional
     )
     pprint(bookmakers_search_response.body)
     pprint(bookmakers_search_response.body["data"])
@@ -448,7 +478,7 @@ skip_deserialization | bool | default is False | when True, headers and body wil
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-version | VersionSchema | | 
+version | VersionSchema | | optional
 name | NameSchema | | 
 
 # VersionSchema
@@ -505,15 +535,21 @@ sportmonks = Sportmonks(
     # Defining the host is optional and defaults to https://api.sportmonks.com
     # See configuration.py for a list of all supported configuration parameters.
     host="https://api.sportmonks.com",
+    version="VERSION",
+    sport="SPORT",
+    # Configure API key authorization: apikeyAuth
+    api_key="YOUR_API_KEY",
+    # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+    # api_key_prefix = {'apikeyAuth': 'Bearer'},
 )
 
 try:
     # Upcoming Fixtures by Market ID
     fixtures_upcoming_by_market_id_response = (
         sportmonks.odds.fixtures_upcoming_by_market_id(
-            version="v3",  # required
-            sport="football",  # required
             market_id=1,  # required
+            version="v3",  # optional
+            sport="football",  # optional
         )
     )
     pprint(fixtures_upcoming_by_market_id_response.body)
@@ -548,8 +584,8 @@ skip_deserialization | bool | default is False | when True, headers and body wil
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-version | VersionSchema | | 
-sport | SportSchema | | 
+version | VersionSchema | | optional
+sport | SportSchema | | optional
 marketId | MarketIdSchema | | 
 
 # VersionSchema
@@ -613,13 +649,19 @@ sportmonks = Sportmonks(
     # Defining the host is optional and defaults to https://api.sportmonks.com
     # See configuration.py for a list of all supported configuration parameters.
     host="https://api.sportmonks.com",
+    version="VERSION",
+    sport="SPORT",
+    # Configure API key authorization: apikeyAuth
+    api_key="YOUR_API_KEY",
+    # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+    # api_key_prefix = {'apikeyAuth': 'Bearer'},
 )
 
 try:
     # By ID
     market_by_id_response = sportmonks.odds.market_by_id(
-        version="v3",  # required
         market_id=1,  # required
+        version="v3",  # optional
     )
     pprint(market_by_id_response.body)
     pprint(market_by_id_response.body["data"])
@@ -652,7 +694,7 @@ skip_deserialization | bool | default is False | when True, headers and body wil
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-version | VersionSchema | | 
+version | VersionSchema | | optional
 marketId | MarketIdSchema | | 
 
 # VersionSchema
@@ -709,12 +751,18 @@ sportmonks = Sportmonks(
     # Defining the host is optional and defaults to https://api.sportmonks.com
     # See configuration.py for a list of all supported configuration parameters.
     host="https://api.sportmonks.com",
+    version="VERSION",
+    sport="SPORT",
+    # Configure API key authorization: apikeyAuth
+    api_key="YOUR_API_KEY",
+    # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+    # api_key_prefix = {'apikeyAuth': 'Bearer'},
 )
 
 try:
     # All
     markets_all_response = sportmonks.odds.markets_all(
-        version="v3",  # required
+        version="v3",  # optional
     )
     pprint(markets_all_response.body)
     pprint(markets_all_response.body["data"])
@@ -748,7 +796,7 @@ skip_deserialization | bool | default is False | when True, headers and body wil
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-version | VersionSchema | | 
+version | VersionSchema | | optional
 
 # VersionSchema
 
@@ -797,13 +845,19 @@ sportmonks = Sportmonks(
     # Defining the host is optional and defaults to https://api.sportmonks.com
     # See configuration.py for a list of all supported configuration parameters.
     host="https://api.sportmonks.com",
+    version="VERSION",
+    sport="SPORT",
+    # Configure API key authorization: apikeyAuth
+    api_key="YOUR_API_KEY",
+    # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+    # api_key_prefix = {'apikeyAuth': 'Bearer'},
 )
 
 try:
     # Search
     markets_search_response = sportmonks.odds.markets_search(
-        version="v3",  # required
         name="Over",  # required
+        version="v3",  # optional
     )
     pprint(markets_search_response.body)
     pprint(markets_search_response.body["data"])
@@ -837,7 +891,7 @@ skip_deserialization | bool | default is False | when True, headers and body wil
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-version | VersionSchema | | 
+version | VersionSchema | | optional
 name | NameSchema | | 
 
 # VersionSchema

@@ -41,13 +41,13 @@ ContinentIdSchema = schemas.IntSchema
 RequestRequiredPathParams = typing_extensions.TypedDict(
     'RequestRequiredPathParams',
     {
-        'version': typing.Union[VersionSchema, str, ],
         'continentId': typing.Union[ContinentIdSchema, decimal.Decimal, int, ],
     }
 )
 RequestOptionalPathParams = typing_extensions.TypedDict(
     'RequestOptionalPathParams',
     {
+        'version': typing.Union[VersionSchema, str, ],
     },
     total=False
 )
@@ -61,7 +61,6 @@ request_path_version = api_client.PathParameter(
     name="version",
     style=api_client.ParameterStyle.SIMPLE,
     schema=VersionSchema,
-    required=True,
 )
 request_path_continent_id = api_client.PathParameter(
     name="continentId",
@@ -98,8 +97,8 @@ class BaseApi(api_client.Api):
 
     def _get_by_id_mapped_args(
         self,
-        version: str,
         continent_id: int,
+        version: typing.Optional[str] = None,
     ) -> api_client.MappedArgs:
         args: api_client.MappedArgs = api_client.MappedArgs()
         _path_params = {}
@@ -316,16 +315,16 @@ class GetById(BaseApi):
 
     async def aget_by_id(
         self,
-        version: str,
         continent_id: int,
+        version: typing.Optional[str] = None,
     ) -> typing.Union[
         ApiResponseForDefaultAsync,
         api_client.ApiResponseWithoutDeserializationAsync,
         AsyncGeneratorResponse,
     ]:
         args = self._get_by_id_mapped_args(
-            version=version,
             continent_id=continent_id,
+            version=version,
         )
         return await self._aget_by_id_oapg(
             path_params=args.path,
@@ -333,15 +332,15 @@ class GetById(BaseApi):
     
     def get_by_id(
         self,
-        version: str,
         continent_id: int,
+        version: typing.Optional[str] = None,
     ) -> typing.Union[
         ApiResponseForDefault,
         api_client.ApiResponseWithoutDeserialization,
     ]:
         args = self._get_by_id_mapped_args(
-            version=version,
             continent_id=continent_id,
+            version=version,
         )
         return self._get_by_id_oapg(
             path_params=args.path,
@@ -352,16 +351,16 @@ class ApiForget(BaseApi):
 
     async def aget(
         self,
-        version: str,
         continent_id: int,
+        version: typing.Optional[str] = None,
     ) -> typing.Union[
         ApiResponseForDefaultAsync,
         api_client.ApiResponseWithoutDeserializationAsync,
         AsyncGeneratorResponse,
     ]:
         args = self._get_by_id_mapped_args(
-            version=version,
             continent_id=continent_id,
+            version=version,
         )
         return await self._aget_by_id_oapg(
             path_params=args.path,
@@ -369,15 +368,15 @@ class ApiForget(BaseApi):
     
     def get(
         self,
-        version: str,
         continent_id: int,
+        version: typing.Optional[str] = None,
     ) -> typing.Union[
         ApiResponseForDefault,
         api_client.ApiResponseWithoutDeserialization,
     ]:
         args = self._get_by_id_mapped_args(
-            version=version,
             continent_id=continent_id,
+            version=version,
         )
         return self._get_by_id_oapg(
             path_params=args.path,
