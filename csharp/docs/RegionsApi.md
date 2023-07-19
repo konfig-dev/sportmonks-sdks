@@ -19,7 +19,6 @@ All
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -38,13 +37,12 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new RegionsApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
 
             try
             {
                 // All
-                RegionsAllResponse result = apiInstance.All(version);
+                RegionsAllResponse result = client.Regions.All(version);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -123,7 +121,6 @@ By ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -142,14 +139,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new RegionsApi(config);
             var regionId = 367;  // int | The ID of the region you want to retrieve.
             var version = "v3";  // string | The version of the API. (optional) 
 
             try
             {
                 // By ID
-                RegionsGetByIdResponse result = apiInstance.GetById(regionId, version);
+                RegionsGetByIdResponse result = client.Regions.GetById(regionId, version);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -229,7 +225,6 @@ Search
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -248,14 +243,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new RegionsApi(config);
             var name = "Br";  // string | The name you want to search on
             var version = "v3";  // string | The version of the API. (optional) 
 
             try
             {
                 // Search
-                RegionsSearchResponse result = apiInstance.Search(name, version);
+                RegionsSearchResponse result = client.Regions.Search(name, version);
                 Console.WriteLine(result);
             }
             catch (ApiException e)

@@ -121,7 +121,6 @@ By ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -140,7 +139,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var coachId = 171906;  // int | The ID of the coach you want to retrieve.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -148,7 +146,7 @@ namespace Example
             try
             {
                 // By ID
-                SportCoachByIdResponse result = apiInstance.CoachById(coachId, version, sport);
+                SportCoachByIdResponse result = client.Sport.CoachById(coachId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -229,7 +227,6 @@ All
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -248,14 +245,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // All
-                SportCoachesAllResponse result = apiInstance.CoachesAll(version, sport);
+                SportCoachesAllResponse result = client.Sport.CoachesAll(version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -335,7 +331,6 @@ By Country ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -354,7 +349,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var countryId = 320;  // int | The ID of the country you want to retrieve coaches from.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -362,7 +356,7 @@ namespace Example
             try
             {
                 // By Country ID
-                SportCoachesByCountryIdResponse result = apiInstance.CoachesByCountryId(countryId, version, sport);
+                SportCoachesByCountryIdResponse result = client.Sport.CoachesByCountryId(countryId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -443,7 +437,6 @@ Last updated
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -462,14 +455,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // Last updated
-                SportCoachesLatestResponse result = apiInstance.CoachesLatest(version, sport);
+                SportCoachesLatestResponse result = client.Sport.CoachesLatest(version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -549,7 +541,6 @@ Search
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -568,7 +559,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var name = "John";  // string | The name you want to search on.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -576,7 +566,7 @@ namespace Example
             try
             {
                 // Search
-                SportCoachesSearchResponse result = apiInstance.CoachesSearch(name, version, sport);
+                SportCoachesSearchResponse result = client.Sport.CoachesSearch(name, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -657,7 +647,6 @@ All
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -676,14 +665,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // All
-                SportCommentariesAllResponse result = apiInstance.CommentariesAll(version, sport);
+                SportCommentariesAllResponse result = client.Sport.CommentariesAll(version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -763,7 +751,6 @@ By Fixture ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -782,7 +769,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var fixtureId = 16808591;  // int | The ID of the fixture you want to retrieve commentaries from.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -790,7 +776,7 @@ namespace Example
             try
             {
                 // By Fixture ID
-                SportCommentariesByFixtureIdResponse result = apiInstance.CommentariesByFixtureId(fixtureId, version, sport);
+                SportCommentariesByFixtureIdResponse result = client.Sport.CommentariesByFixtureId(fixtureId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -871,7 +857,6 @@ By Date Range for Team
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -890,7 +875,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var startDate = "maiores";  // string | 
             var endDate = "voluptates";  // string | 
             var teamId = "ut";  // string | 
@@ -900,7 +884,7 @@ namespace Example
             try
             {
                 // By Date Range for Team
-                SportFixtureByDateRangeForTeamResponse result = apiInstance.FixtureByDateRangeForTeam(startDate, endDate, teamId, version, sport);
+                SportFixtureByDateRangeForTeamResponse result = client.Sport.FixtureByDateRangeForTeam(startDate, endDate, teamId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -983,7 +967,6 @@ Fixture ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -1002,7 +985,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var fixtureId = 18528480;  // int | The ID of the fixture you want to retrieve.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -1010,7 +992,7 @@ namespace Example
             try
             {
                 // Fixture ID
-                SportFixtureByIdResponse result = apiInstance.FixtureById(fixtureId, version, sport);
+                SportFixtureByIdResponse result = client.Sport.FixtureById(fixtureId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -1091,7 +1073,6 @@ All
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -1110,14 +1091,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // All
-                SportFixturesAllResponse result = apiInstance.FixturesAll(version, sport);
+                SportFixturesAllResponse result = client.Sport.FixturesAll(version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -1197,7 +1177,6 @@ By Date
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -1216,7 +1195,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var date = "2022-07-24";  // string | The date you want to retrieve fixtures from.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -1224,7 +1202,7 @@ namespace Example
             try
             {
                 // By Date
-                SportFixturesByDateResponse result = apiInstance.FixturesByDate(date, version, sport);
+                SportFixturesByDateResponse result = client.Sport.FixturesByDate(date, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -1305,7 +1283,6 @@ By Date Range
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -1324,7 +1301,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var startDate = "2022-07-17";  // string | The start date you want to retrieve fixtures from.
             var endDate = "2022-07-25";  // string | The end date you want to retrieve fixtures from.
             var version = "v3";  // string | The version of the API. (optional) 
@@ -1333,7 +1309,7 @@ namespace Example
             try
             {
                 // By Date Range
-                SportFixturesByDateRangeResponse result = apiInstance.FixturesByDateRange(startDate, endDate, version, sport);
+                SportFixturesByDateRangeResponse result = client.Sport.FixturesByDateRange(startDate, endDate, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -1415,7 +1391,6 @@ By IDs
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -1434,7 +1409,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var fixtureIds = "18528484%2C18531140";  // string | The IDs you want to retrieve.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -1442,7 +1416,7 @@ namespace Example
             try
             {
                 // By IDs
-                SportFixturesByIdsResponse result = apiInstance.FixturesByIds(fixtureIds, version, sport);
+                SportFixturesByIdsResponse result = client.Sport.FixturesByIds(fixtureIds, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -1523,7 +1497,6 @@ Head to Head
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -1542,7 +1515,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var firstTeam = 2650;  // int | The ID of the first team retrieve fixtures from.
             var secondTeam = 86;  // int | The ID of the second team retrieve fixtures from.
             var version = "v3";  // string | The version of the API. (optional) 
@@ -1551,7 +1523,7 @@ namespace Example
             try
             {
                 // Head to Head
-                SportFixturesHeadToHeadResponse result = apiInstance.FixturesHeadToHead(firstTeam, secondTeam, version, sport);
+                SportFixturesHeadToHeadResponse result = client.Sport.FixturesHeadToHead(firstTeam, secondTeam, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -1633,7 +1605,6 @@ Last Updated
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -1652,14 +1623,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // Last Updated
-                string result = apiInstance.FixturesLatest(version, sport);
+                string result = client.Sport.FixturesLatest(version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -1739,7 +1709,6 @@ Search
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -1758,7 +1727,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var name = "havn";  // string | The name you want search on.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -1766,7 +1734,7 @@ namespace Example
             try
             {
                 // Search
-                SportFixturesSearchResponse result = apiInstance.FixturesSearch(name, version, sport);
+                SportFixturesSearchResponse result = client.Sport.FixturesSearch(name, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -1847,7 +1815,6 @@ By ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -1866,7 +1833,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var leagueId = 271;  // int | The ID of the league you want to retrieve.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -1874,7 +1840,7 @@ namespace Example
             try
             {
                 // By ID
-                SportLeagueByIdResponse result = apiInstance.LeagueById(leagueId, version, sport);
+                SportLeagueByIdResponse result = client.Sport.LeagueById(leagueId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -1955,7 +1921,6 @@ Enrichments
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -1974,7 +1939,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var leagueId = 271;  // int | The ID of the league you want to retrieve enrichments from.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -1982,7 +1946,7 @@ namespace Example
             try
             {
                 // Enrichments
-                Object result = apiInstance.LeagueEnrichments(leagueId, version, sport);
+                Object result = client.Sport.LeagueEnrichments(leagueId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -2063,7 +2027,6 @@ Shirts By League ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -2082,7 +2045,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var leagueId = 271;  // int | The ID of the league you want to retrieve.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -2090,7 +2052,7 @@ namespace Example
             try
             {
                 // Shirts By League ID
-                Object result = apiInstance.LeagueShirts(leagueId, version, sport);
+                Object result = client.Sport.LeagueShirts(leagueId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -2171,7 +2133,6 @@ All
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -2190,14 +2151,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // All
-                SportLeaguesAllResponse result = apiInstance.LeaguesAll(version, sport);
+                SportLeaguesAllResponse result = client.Sport.LeaguesAll(version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -2277,7 +2237,6 @@ By Country ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -2296,7 +2255,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var countryId = 320;  // int | The ID of the country you want to retrieve leagues from.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -2304,7 +2262,7 @@ namespace Example
             try
             {
                 // By Country ID
-                SportLeaguesByCountryIdResponse result = apiInstance.LeaguesByCountryId(countryId, version, sport);
+                SportLeaguesByCountryIdResponse result = client.Sport.LeaguesByCountryId(countryId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -2385,7 +2343,6 @@ By Date
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -2404,7 +2361,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var date = "2022-07-15";  // string | The date of fixtures you want to retrieve leagues from.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -2412,7 +2368,7 @@ namespace Example
             try
             {
                 // By Date
-                SportLeaguesByDateResponse result = apiInstance.LeaguesByDate(date, version, sport);
+                SportLeaguesByDateResponse result = client.Sport.LeaguesByDate(date, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -2493,7 +2449,6 @@ Leagues By Team ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -2512,7 +2467,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var teamId = 180;  // int | The ID of the team you want to retrieve leagues from.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -2520,7 +2474,7 @@ namespace Example
             try
             {
                 // Leagues By Team ID
-                Object result = apiInstance.LeaguesByTeamId(teamId, version, sport);
+                Object result = client.Sport.LeaguesByTeamId(teamId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -2601,7 +2555,6 @@ Current Leagues By Team ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -2620,7 +2573,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var teamId = 180;  // int | The ID of the team you want to retrieve current leagues from.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -2628,7 +2580,7 @@ namespace Example
             try
             {
                 // Current Leagues By Team ID
-                Object result = apiInstance.LeaguesCurrentByTeamId(teamId, version, sport);
+                Object result = client.Sport.LeaguesCurrentByTeamId(teamId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -2709,7 +2661,6 @@ Live
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -2728,14 +2679,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // Live
-                SportLeaguesLiveResponse result = apiInstance.LeaguesLive(version, sport);
+                SportLeaguesLiveResponse result = client.Sport.LeaguesLive(version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -2815,7 +2765,6 @@ Search
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -2834,7 +2783,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var name = "Super";  // string | The name you want to search on.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -2842,7 +2790,7 @@ namespace Example
             try
             {
                 // Search
-                SportLeaguesSearchResponse result = apiInstance.LeaguesSearch(name, version, sport);
+                SportLeaguesSearchResponse result = client.Sport.LeaguesSearch(name, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -2923,7 +2871,6 @@ All
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -2942,14 +2889,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // All
-                SportLivescoresAllResponse result = apiInstance.LivescoresAll(version, sport);
+                SportLivescoresAllResponse result = client.Sport.LivescoresAll(version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -3029,7 +2975,6 @@ All In-play
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -3048,14 +2993,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // All In-play
-                SportLivescoresAllInPlayResponse result = apiInstance.LivescoresAllInPlay(version, sport);
+                SportLivescoresAllInPlayResponse result = client.Sport.LivescoresAllInPlay(version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -3135,7 +3079,6 @@ Last Updated In-play
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -3154,14 +3097,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // Last Updated In-play
-                SportLivescoresLatestResponse result = apiInstance.LivescoresLatest(version, sport);
+                SportLivescoresLatestResponse result = client.Sport.LivescoresLatest(version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -3241,7 +3183,6 @@ All Post Match
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -3260,14 +3201,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // All Post Match
-                string result = apiInstance.NewsAllPostMatch(version, sport);
+                string result = client.Sport.NewsAllPostMatch(version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -3347,7 +3287,6 @@ All Pre-match
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -3366,14 +3305,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // All Pre-match
-                SportNewsAllPreMatchResponse result = apiInstance.NewsAllPreMatch(version, sport);
+                SportNewsAllPreMatchResponse result = client.Sport.NewsAllPreMatch(version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -3453,7 +3391,6 @@ Post Match by Season ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -3472,7 +3409,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var seasonId = 19686;  // int | The ID of the season you want to retrieve post-match news from.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -3480,7 +3416,7 @@ namespace Example
             try
             {
                 // Post Match by Season ID
-                string result = apiInstance.NewsPostMatchBySeasonId(seasonId, version, sport);
+                string result = client.Sport.NewsPostMatchBySeasonId(seasonId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -3561,7 +3497,6 @@ Pre-match By Season ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -3580,7 +3515,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var seasonId = 19734;  // int | The ID of the season you want to retrieve post-match news from.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -3588,7 +3522,7 @@ namespace Example
             try
             {
                 // Pre-match By Season ID
-                SportNewsPreMatchBySeasonIdResponse result = apiInstance.NewsPreMatchBySeasonId(seasonId, version, sport);
+                SportNewsPreMatchBySeasonIdResponse result = client.Sport.NewsPreMatchBySeasonId(seasonId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -3669,7 +3603,6 @@ Upcoming Post Match
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -3688,14 +3621,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // Upcoming Post Match
-                string result = apiInstance.NewsUpcomingPostMatch(version, sport);
+                string result = client.Sport.NewsUpcomingPostMatch(version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -3775,7 +3707,6 @@ Upcoming Pre-match
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -3794,14 +3725,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // Upcoming Pre-match
-                SportNewsUpcomingPreMatchResponse result = apiInstance.NewsUpcomingPreMatch(version, sport);
+                SportNewsUpcomingPreMatchResponse result = client.Sport.NewsUpcomingPreMatch(version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -3881,7 +3811,6 @@ All In-play
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -3900,14 +3829,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // All In-play
-                SportOddsAllInPlayResponse result = apiInstance.OddsAllInPlay(version, sport);
+                SportOddsAllInPlayResponse result = client.Sport.OddsAllInPlay(version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -3987,7 +3915,6 @@ All Pre-match
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -4006,14 +3933,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // All Pre-match
-                SportOddsAllPreMatchResponse result = apiInstance.OddsAllPreMatch(version, sport);
+                SportOddsAllPreMatchResponse result = client.Sport.OddsAllPreMatch(version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -4093,7 +4019,6 @@ In-play by Fixture and Bookmaker ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -4112,7 +4037,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var fixtureId = 18535046;  // int | The ID of the fixture you want to retrieve in-play odds from.
             var bookmakerId = 6;  // int | The ID of the bookmaker you want to retrieve in-play odds from.
             var version = "v3";  // string | The version of the API. (optional) 
@@ -4121,7 +4045,7 @@ namespace Example
             try
             {
                 // In-play by Fixture and Bookmaker ID
-                Object result = apiInstance.OddsInPlayByFixtureAndBookmakerId(fixtureId, bookmakerId, version, sport);
+                Object result = client.Sport.OddsInPlayByFixtureAndBookmakerId(fixtureId, bookmakerId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -4203,7 +4127,6 @@ In-play by Fixture and Market ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -4222,7 +4145,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var fixtureId = 233366;  // int | The ID of the fixture you want to retrieve in-play odds from.
             var marketId = 56;  // int | The ID of the market you want to retrieve in-play odds from.
             var version = "v3";  // string | The version of the API. (optional) 
@@ -4231,7 +4153,7 @@ namespace Example
             try
             {
                 // In-play by Fixture and Market ID
-                Object result = apiInstance.OddsInPlayByFixtureAndMarketId(fixtureId, marketId, version, sport);
+                Object result = client.Sport.OddsInPlayByFixtureAndMarketId(fixtureId, marketId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -4313,7 +4235,6 @@ In-play by Fixture ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -4332,7 +4253,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var fixtureId = 18535046;  // int | The ID of the fixture you want to retrieve in-play odds from.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -4340,7 +4260,7 @@ namespace Example
             try
             {
                 // In-play by Fixture ID
-                SportOddsInPlayByFixtureIdResponse result = apiInstance.OddsInPlayByFixtureId(fixtureId, version, sport);
+                SportOddsInPlayByFixtureIdResponse result = client.Sport.OddsInPlayByFixtureId(fixtureId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -4421,7 +4341,6 @@ Latest In-play
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -4440,14 +4359,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // Latest In-play
-                Object result = apiInstance.OddsLatestInPlay(version, sport);
+                Object result = client.Sport.OddsLatestInPlay(version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -4527,7 +4445,6 @@ Last Updated Pre-match
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -4546,14 +4463,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // Last Updated Pre-match
-                Object result = apiInstance.OddsLatestPreMatch(version, sport);
+                Object result = client.Sport.OddsLatestPreMatch(version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -4633,7 +4549,6 @@ Pre-match by Fixture and Bookmaker ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -4652,7 +4567,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var fixtureId = 233366;  // int | The ID of the fixture you want to retrieve pre-match odds from.
             var bookmakerId = 6;  // int | The ID of the bookmaker you want to retrieve pre-match odds from.
             var version = "v3";  // string | The version of the API. (optional) 
@@ -4661,7 +4575,7 @@ namespace Example
             try
             {
                 // Pre-match by Fixture and Bookmaker ID
-                SportOddsPreMatchByFixtureAndBookmakerIdResponse result = apiInstance.OddsPreMatchByFixtureAndBookmakerId(fixtureId, bookmakerId, version, sport);
+                SportOddsPreMatchByFixtureAndBookmakerIdResponse result = client.Sport.OddsPreMatchByFixtureAndBookmakerId(fixtureId, bookmakerId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -4743,7 +4657,6 @@ Pre-match by Fixture and Market ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -4762,7 +4675,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var fixtureId = 233366;  // int | The ID of the fixture you want to retrieve pre-match odds from.
             var marketId = 56;  // int | The ID of the market you want to retrieve pre-match odds from.
             var version = "v3";  // string | The version of the API. (optional) 
@@ -4771,7 +4683,7 @@ namespace Example
             try
             {
                 // Pre-match by Fixture and Market ID
-                SportOddsPreMatchByFixtureAndMarketIdResponse result = apiInstance.OddsPreMatchByFixtureAndMarketId(fixtureId, marketId, version, sport);
+                SportOddsPreMatchByFixtureAndMarketIdResponse result = client.Sport.OddsPreMatchByFixtureAndMarketId(fixtureId, marketId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -4853,7 +4765,6 @@ Pre-match by Fixture ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -4872,7 +4783,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var fixtureId = 233366;  // int | The ID of the fixture you want to retrieve pre-match odds from.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -4880,7 +4790,7 @@ namespace Example
             try
             {
                 // Pre-match by Fixture ID
-                SportOddsPreMatchByFixtureIdResponse result = apiInstance.OddsPreMatchByFixtureId(fixtureId, version, sport);
+                SportOddsPreMatchByFixtureIdResponse result = client.Sport.OddsPreMatchByFixtureId(fixtureId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -4961,7 +4871,6 @@ By ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -4980,7 +4889,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var playerId = 14;  // int | The ID of the player you want to retrieve.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -4988,7 +4896,7 @@ namespace Example
             try
             {
                 // By ID
-                SportPlayerByIdResponse result = apiInstance.PlayerById(playerId, version, sport);
+                SportPlayerByIdResponse result = client.Sport.PlayerById(playerId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -5069,7 +4977,6 @@ All
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -5088,14 +4995,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // All
-                SportPlayersAllResponse result = apiInstance.PlayersAll(version, sport);
+                SportPlayersAllResponse result = client.Sport.PlayersAll(version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -5175,7 +5081,6 @@ By Country ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -5194,7 +5099,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var countryId = 320;  // int | The ID of the country you want to retrieve players from.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -5202,7 +5106,7 @@ namespace Example
             try
             {
                 // By Country ID
-                SportPlayersByCountryIdResponse result = apiInstance.PlayersByCountryId(countryId, version, sport);
+                SportPlayersByCountryIdResponse result = client.Sport.PlayersByCountryId(countryId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -5283,7 +5187,6 @@ Latest Updated
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -5302,14 +5205,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // Latest Updated
-                SportPlayersLatestResponse result = apiInstance.PlayersLatest(version, sport);
+                SportPlayersLatestResponse result = client.Sport.PlayersLatest(version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -5389,7 +5291,6 @@ Search
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -5408,7 +5309,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var name = "Agg";  // string | The name you want to search on.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -5416,7 +5316,7 @@ namespace Example
             try
             {
                 // Search
-                SportPlayersSearchResponse result = apiInstance.PlayersSearch(name, version, sport);
+                SportPlayersSearchResponse result = client.Sport.PlayersSearch(name, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -5497,7 +5397,6 @@ All
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -5516,14 +5415,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // All
-                SportPredictionsAllResponse result = apiInstance.PredictionsAll(version, sport);
+                SportPredictionsAllResponse result = client.Sport.PredictionsAll(version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -5603,7 +5501,6 @@ All Value Bets
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -5622,14 +5519,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // All Value Bets
-                SportPredictionsAllValueBetsResponse result = apiInstance.PredictionsAllValueBets(version, sport);
+                SportPredictionsAllValueBetsResponse result = client.Sport.PredictionsAllValueBets(version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -5709,7 +5605,6 @@ By Fixture ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -5728,7 +5623,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var fixtureId = 16774022;  // int | The ID of the fixture you want to retrieve predictions from.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -5736,7 +5630,7 @@ namespace Example
             try
             {
                 // By Fixture ID
-                SportPredictionsByFixtureIdResponse result = apiInstance.PredictionsByFixtureId(fixtureId, version, sport);
+                SportPredictionsByFixtureIdResponse result = client.Sport.PredictionsByFixtureId(fixtureId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -5817,7 +5711,6 @@ Value Bets by Fixture ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -5836,7 +5729,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var fixtureId = 18535050;  // int | The ID of the fixture you want to retrieve value bets from.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -5844,7 +5736,7 @@ namespace Example
             try
             {
                 // Value Bets by Fixture ID
-                Object result = apiInstance.PredictionsValueBetsByFixtureId(fixtureId, version, sport);
+                Object result = client.Sport.PredictionsValueBetsByFixtureId(fixtureId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -5925,7 +5817,6 @@ By ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -5944,7 +5835,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var refereeId = 11698;  // int | The ID of the referee you want to retrieve.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -5952,7 +5842,7 @@ namespace Example
             try
             {
                 // By ID
-                SportRefereeByIdResponse result = apiInstance.RefereeById(refereeId, version, sport);
+                SportRefereeByIdResponse result = client.Sport.RefereeById(refereeId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -6033,7 +5923,6 @@ All
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -6052,14 +5941,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // All
-                SportRefereesAllResponse result = apiInstance.RefereesAll(version, sport);
+                SportRefereesAllResponse result = client.Sport.RefereesAll(version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -6139,7 +6027,6 @@ By Country ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -6158,7 +6045,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var countryId = 320;  // int | The ID of the country you want to retrieve referees from.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -6166,7 +6052,7 @@ namespace Example
             try
             {
                 // By Country ID
-                SportRefereesByCountryIdResponse result = apiInstance.RefereesByCountryId(countryId, version, sport);
+                SportRefereesByCountryIdResponse result = client.Sport.RefereesByCountryId(countryId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -6247,7 +6133,6 @@ By Season ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -6266,7 +6151,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var seasonId = 19686;  // int | The ID of the season you want to retrieve referees from.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -6274,7 +6158,7 @@ namespace Example
             try
             {
                 // By Season ID
-                SportRefereesBySeasonIdResponse result = apiInstance.RefereesBySeasonId(seasonId, version, sport);
+                SportRefereesBySeasonIdResponse result = client.Sport.RefereesBySeasonId(seasonId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -6355,7 +6239,6 @@ Search
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -6374,7 +6257,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var name = "Munch";  // string | The name you want to search on.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -6382,7 +6264,7 @@ namespace Example
             try
             {
                 // Search
-                SportRefereesSearchResponse result = apiInstance.RefereesSearch(name, version, sport);
+                SportRefereesSearchResponse result = client.Sport.RefereesSearch(name, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -6463,7 +6345,6 @@ All
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -6482,14 +6363,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // All
-                SportRivalsAllResponse result = apiInstance.RivalsAll(version, sport);
+                SportRivalsAllResponse result = client.Sport.RivalsAll(version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -6569,7 +6449,6 @@ By Team ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -6588,7 +6467,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var teamId = 53;  // int | The ID of the team you want to retrieve rivals from.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -6596,7 +6474,7 @@ namespace Example
             try
             {
                 // By Team ID
-                SportRivalsByTeamIdResponse result = apiInstance.RivalsByTeamId(teamId, version, sport);
+                SportRivalsByTeamIdResponse result = client.Sport.RivalsByTeamId(teamId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -6677,7 +6555,6 @@ By ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -6696,7 +6573,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var roundId = 23317;  // int | The ID of the round you want to retrieve.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -6704,7 +6580,7 @@ namespace Example
             try
             {
                 // By ID
-                SportRoundByIdResponse result = apiInstance.RoundById(roundId, version, sport);
+                SportRoundByIdResponse result = client.Sport.RoundById(roundId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -6785,7 +6661,6 @@ All
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -6804,14 +6679,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // All
-                SportRoundsAllResponse result = apiInstance.RoundsAll(version, sport);
+                SportRoundsAllResponse result = client.Sport.RoundsAll(version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -6891,7 +6765,6 @@ Season ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -6910,7 +6783,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var seasonId = 19686;  // int | The ID of the season you want to retrieve rounds from.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -6918,7 +6790,7 @@ namespace Example
             try
             {
                 // Season ID
-                SportRoundsBySeasonIdResponse result = apiInstance.RoundsBySeasonId(seasonId, version, sport);
+                SportRoundsBySeasonIdResponse result = client.Sport.RoundsBySeasonId(seasonId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -6999,7 +6871,6 @@ Search
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -7018,7 +6889,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var name = 2;  // int | The name you want to search on.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -7026,7 +6896,7 @@ namespace Example
             try
             {
                 // Search
-                SportRoundsSearchResponse result = apiInstance.RoundsSearch(name, version, sport);
+                SportRoundsSearchResponse result = client.Sport.RoundsSearch(name, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -7107,7 +6977,6 @@ By Season ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -7126,7 +6995,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var seasonId = 19686;  // int | 
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -7134,7 +7002,7 @@ namespace Example
             try
             {
                 // By Season ID
-                SportSchedulesBySeasonIdResponse result = apiInstance.SchedulesBySeasonId(seasonId, version, sport);
+                SportSchedulesBySeasonIdResponse result = client.Sport.SchedulesBySeasonId(seasonId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -7215,7 +7083,6 @@ By Team and Season ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -7234,7 +7101,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var seasonId = 19686;  // int | The ID of the season you want to retrieve schedule from.
             var teamId = 282;  // int | The ID of the team you want to retrieve schedule from.
             var version = "v3";  // string | The version of the API. (optional) 
@@ -7243,7 +7109,7 @@ namespace Example
             try
             {
                 // By Team and Season ID
-                SportSchedulesByTeamAndSeasonIdResponse result = apiInstance.SchedulesByTeamAndSeasonId(seasonId, teamId, version, sport);
+                SportSchedulesByTeamAndSeasonIdResponse result = client.Sport.SchedulesByTeamAndSeasonId(seasonId, teamId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -7325,7 +7191,6 @@ By Team ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -7344,7 +7209,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var teamId = 282;  // int | The ID of the team you want to retrieve schedule from.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -7352,7 +7216,7 @@ namespace Example
             try
             {
                 // By Team ID
-                SportSchedulesByTeamIdResponse result = apiInstance.SchedulesByTeamId(teamId, version, sport);
+                SportSchedulesByTeamIdResponse result = client.Sport.SchedulesByTeamId(teamId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -7433,7 +7297,6 @@ By ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -7452,7 +7315,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var seasonId = 19686;  // int | The ID of the season you want to retrieve.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -7460,7 +7322,7 @@ namespace Example
             try
             {
                 // By ID
-                SportSeasonByIdResponse result = apiInstance.SeasonById(seasonId, version, sport);
+                SportSeasonByIdResponse result = client.Sport.SeasonById(seasonId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -7541,7 +7403,6 @@ All
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -7560,14 +7421,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // All
-                SportSeasonsAllResponse result = apiInstance.SeasonsAll(version, sport);
+                SportSeasonsAllResponse result = client.Sport.SeasonsAll(version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -7647,7 +7507,6 @@ By Team ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -7666,7 +7525,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var teamId = 282;  // int | The ID of the team you want to retrieve seasons from.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -7674,7 +7532,7 @@ namespace Example
             try
             {
                 // By Team ID
-                Object result = apiInstance.SeasonsByTeamId(teamId, version, sport);
+                Object result = client.Sport.SeasonsByTeamId(teamId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -7755,7 +7613,6 @@ Search
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -7774,7 +7631,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var name = 2022;  // int | The name you want to search on.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -7782,7 +7638,7 @@ namespace Example
             try
             {
                 // Search
-                SportSeasonsSearchResponse result = apiInstance.SeasonsSearch(name, version, sport);
+                SportSeasonsSearchResponse result = client.Sport.SeasonsSearch(name, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -7863,7 +7719,6 @@ By Season and Team ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -7882,7 +7737,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var seasonId = 19686;  // int | The ID of the season you want to retrieve squads from.
             var teamId = 282;  // int | The ID of the team you want to retrieve squads from.
             var version = "v3";  // string | The version of the API. (optional) 
@@ -7891,7 +7745,7 @@ namespace Example
             try
             {
                 // By Season and Team ID
-                SportSquadsBySeasonAndTeamIdResponse result = apiInstance.SquadsBySeasonAndTeamId(seasonId, teamId, version, sport);
+                SportSquadsBySeasonAndTeamIdResponse result = client.Sport.SquadsBySeasonAndTeamId(seasonId, teamId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -7973,7 +7827,6 @@ By Team ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -7992,7 +7845,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var teamId = 282;  // int | The ID of the team you want to retrieve squads from.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -8000,7 +7852,7 @@ namespace Example
             try
             {
                 // By Team ID
-                SportSquadsByTeamIdResponse result = apiInstance.SquadsByTeamId(teamId, version, sport);
+                SportSquadsByTeamIdResponse result = client.Sport.SquadsByTeamId(teamId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -8081,7 +7933,6 @@ By ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -8100,7 +7951,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var stageId = 1100;  // int | The ID of the stage you want to retrieve.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -8108,7 +7958,7 @@ namespace Example
             try
             {
                 // By ID
-                SportStageByIdResponse result = apiInstance.StageById(stageId, version, sport);
+                SportStageByIdResponse result = client.Sport.StageById(stageId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -8189,7 +8039,6 @@ All
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -8208,14 +8057,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // All
-                SportStagesAllResponse result = apiInstance.StagesAll(version, sport);
+                SportStagesAllResponse result = client.Sport.StagesAll(version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -8295,7 +8143,6 @@ By Season ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -8314,7 +8161,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var seasonId = 19686;  // int | The ID of the season you want to retrieve stages from.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -8322,7 +8168,7 @@ namespace Example
             try
             {
                 // By Season ID
-                SportStagesBySeasonIdResponse result = apiInstance.StagesBySeasonId(seasonId, version, sport);
+                SportStagesBySeasonIdResponse result = client.Sport.StagesBySeasonId(seasonId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -8403,7 +8249,6 @@ Search
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -8422,7 +8267,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var name = "Championship";  // string | The name you want to search on.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -8430,7 +8274,7 @@ namespace Example
             try
             {
                 // Search
-                SportStagesSearchResponse result = apiInstance.StagesSearch(name, version, sport);
+                SportStagesSearchResponse result = client.Sport.StagesSearch(name, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -8511,7 +8355,6 @@ Correction by Season ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -8530,7 +8373,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var seasonId = 19686;  // int | The ID of the season you want to retrieve standing corrections from.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -8538,7 +8380,7 @@ namespace Example
             try
             {
                 // Correction by Season ID
-                SportStandingCorrectionsBySeasonIdResponse result = apiInstance.StandingCorrectionsBySeasonId(seasonId, version, sport);
+                SportStandingCorrectionsBySeasonIdResponse result = client.Sport.StandingCorrectionsBySeasonId(seasonId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -8619,7 +8461,6 @@ All
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -8638,14 +8479,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // All
-                SportStandingsAllResponse result = apiInstance.StandingsAll(version, sport);
+                SportStandingsAllResponse result = client.Sport.StandingsAll(version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -8725,7 +8565,6 @@ By Round ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -8744,7 +8583,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var roundId = 23318;  // int | The ID of the round you want to retrieve standing from.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -8752,7 +8590,7 @@ namespace Example
             try
             {
                 // By Round ID
-                SportStandingsByRoundIdResponse result = apiInstance.StandingsByRoundId(roundId, version, sport);
+                SportStandingsByRoundIdResponse result = client.Sport.StandingsByRoundId(roundId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -8833,7 +8671,6 @@ By Season ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -8852,7 +8689,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var seasonId = 19686;  // int | The ID of the season you want to retrieve standing from.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -8860,7 +8696,7 @@ namespace Example
             try
             {
                 // By Season ID
-                SportStandingsBySeasonIdResponse result = apiInstance.StandingsBySeasonId(seasonId, version, sport);
+                SportStandingsBySeasonIdResponse result = client.Sport.StandingsBySeasonId(seasonId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -8941,7 +8777,6 @@ By League ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -8960,7 +8795,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var leagueId = 271;  // int | The ID of the league you want to retrieve standings from.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -8968,7 +8802,7 @@ namespace Example
             try
             {
                 // By League ID
-                SportStandingsLiveByLeagueIdResponse result = apiInstance.StandingsLiveByLeagueId(leagueId, version, sport);
+                SportStandingsLiveByLeagueIdResponse result = client.Sport.StandingsLiveByLeagueId(leagueId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -9049,7 +8883,6 @@ By ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -9068,7 +8901,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var stateId = 1;  // int | The ID of the state you want to retrieve.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -9076,7 +8908,7 @@ namespace Example
             try
             {
                 // By ID
-                SportStateByIdResponse result = apiInstance.StateById(stateId, version, sport);
+                SportStateByIdResponse result = client.Sport.StateById(stateId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -9157,7 +8989,6 @@ By Sport
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -9176,14 +9007,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By Sport
-                SportStatesBySportResponse result = apiInstance.StatesBySport(version, sport);
+                SportStatesBySportResponse result = client.Sport.StatesBySport(version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -9263,7 +9093,6 @@ All
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -9282,14 +9111,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // All
-                SportTeamsAllResponse result = apiInstance.TeamsAll(version, sport);
+                SportTeamsAllResponse result = client.Sport.TeamsAll(version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -9369,7 +9197,6 @@ By Country ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -9388,7 +9215,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var countryId = 320;  // int | The ID of the country you want to retrieve teams from.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -9396,7 +9222,7 @@ namespace Example
             try
             {
                 // By Country ID
-                SportTeamsByCountryIdResponse result = apiInstance.TeamsByCountryId(countryId, version, sport);
+                SportTeamsByCountryIdResponse result = client.Sport.TeamsByCountryId(countryId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -9477,7 +9303,6 @@ By ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -9496,7 +9321,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var teamId = 180;  // int | The ID of the team you want to retrieve.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -9504,7 +9328,7 @@ namespace Example
             try
             {
                 // By ID
-                SportTeamsByIdResponse result = apiInstance.TeamsById(teamId, version, sport);
+                SportTeamsByIdResponse result = client.Sport.TeamsById(teamId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -9585,7 +9409,6 @@ By Season ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -9604,7 +9427,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var seasonId = 19686;  // int | The ID of the season you want to retrieve teams from.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -9612,7 +9434,7 @@ namespace Example
             try
             {
                 // By Season ID
-                SportTeamsBySeasonIdResponse result = apiInstance.TeamsBySeasonId(seasonId, version, sport);
+                SportTeamsBySeasonIdResponse result = client.Sport.TeamsBySeasonId(seasonId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -9693,7 +9515,6 @@ Search
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -9712,7 +9533,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var name = "Hors";  // string | The name you want to search on.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -9720,7 +9540,7 @@ namespace Example
             try
             {
                 // Search
-                SportTeamsSearchResponse result = apiInstance.TeamsSearch(name, version, sport);
+                SportTeamsSearchResponse result = client.Sport.TeamsSearch(name, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -9801,7 +9621,6 @@ By Season ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -9820,7 +9639,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var seasonId = 19686;  // int | The ID of the season you want to retrieve topscorers from.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -9828,7 +9646,7 @@ namespace Example
             try
             {
                 // By Season ID
-                SportTopScorersBySeasonIdResponse result = apiInstance.TopScorersBySeasonId(seasonId, version, sport);
+                SportTopScorersBySeasonIdResponse result = client.Sport.TopScorersBySeasonId(seasonId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -9909,7 +9727,6 @@ By Stage ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -9928,7 +9745,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var stageId = 1100;  // int | The ID of the stage you want to retrieve topscorers from.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -9936,7 +9752,7 @@ namespace Example
             try
             {
                 // By Stage ID
-                SportTopScorersByStageIdResponse result = apiInstance.TopScorersByStageId(stageId, version, sport);
+                SportTopScorersByStageIdResponse result = client.Sport.TopScorersByStageId(stageId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -10017,7 +9833,6 @@ By Date Range
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -10036,7 +9851,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var startDate = "2021-12-27";  // string | The start date you want to retrieve transfers from.
             var endDate = "2021-12-30";  // string | The end date you want to retrieve transfers from.
             var version = "v3";  // string | The version of the API. (optional) 
@@ -10045,7 +9859,7 @@ namespace Example
             try
             {
                 // By Date Range
-                SportTranfersByDateRangeResponse result = apiInstance.TranfersByDateRange(startDate, endDate, version, sport);
+                SportTranfersByDateRangeResponse result = client.Sport.TranfersByDateRange(startDate, endDate, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -10127,7 +9941,6 @@ By ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -10146,7 +9959,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var transferId = 1;  // int | 
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -10154,7 +9966,7 @@ namespace Example
             try
             {
                 // By ID
-                SportTransferByIdResponse result = apiInstance.TransferById(transferId, version, sport);
+                SportTransferByIdResponse result = client.Sport.TransferById(transferId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -10235,7 +10047,6 @@ All
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -10254,14 +10065,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // All
-                SportTransfersAllResponse result = apiInstance.TransfersAll(version, sport);
+                SportTransfersAllResponse result = client.Sport.TransfersAll(version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -10341,7 +10151,6 @@ By Player ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -10360,7 +10169,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var playerId = 35659846;  // int | The ID of the player you want to retrieve transfers from.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -10368,7 +10176,7 @@ namespace Example
             try
             {
                 // By Player ID
-                SportTransfersByPlayerIdResponse result = apiInstance.TransfersByPlayerId(playerId, version, sport);
+                SportTransfersByPlayerIdResponse result = client.Sport.TransfersByPlayerId(playerId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -10449,7 +10257,6 @@ By Team ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -10468,7 +10275,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var teamId = 3736;  // int | The ID of the team you want to retrieve transfers from.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -10476,7 +10282,7 @@ namespace Example
             try
             {
                 // By Team ID
-                SportTransfersByTeamIdResponse result = apiInstance.TransfersByTeamId(teamId, version, sport);
+                SportTransfersByTeamIdResponse result = client.Sport.TransfersByTeamId(teamId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -10557,7 +10363,6 @@ Last Updated
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -10576,14 +10381,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // Last Updated
-                SportTransfersLatestResponse result = apiInstance.TransfersLatest(version, sport);
+                SportTransfersLatestResponse result = client.Sport.TransfersLatest(version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -10663,7 +10467,6 @@ By ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -10682,7 +10485,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var tvStationId = 33;  // int | The ID of the tv station you want to retrieve.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -10690,7 +10492,7 @@ namespace Example
             try
             {
                 // By ID
-                SportTvStationByIdResponse result = apiInstance.TvStationById(tvStationId, version, sport);
+                SportTvStationByIdResponse result = client.Sport.TvStationById(tvStationId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -10771,7 +10573,6 @@ All
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -10790,14 +10591,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // All
-                SportTvStationsAllResponse result = apiInstance.TvStationsAll(version, sport);
+                SportTvStationsAllResponse result = client.Sport.TvStationsAll(version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -10877,7 +10677,6 @@ By Fixture ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -10896,7 +10695,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var fixtureId = 16808591;  // int | The ID of the fixture you want to retrieve tv-stations from.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -10904,7 +10702,7 @@ namespace Example
             try
             {
                 // By Fixture ID
-                SportTvStationsByFixtureIdResponse result = apiInstance.TvStationsByFixtureId(fixtureId, version, sport);
+                SportTvStationsByFixtureIdResponse result = client.Sport.TvStationsByFixtureId(fixtureId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -10985,7 +10783,6 @@ By ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -11004,7 +10801,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var venueId = 219;  // int | The ID of the venue you want to retrieve.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -11012,7 +10808,7 @@ namespace Example
             try
             {
                 // By ID
-                SportVenueByIdResponse result = apiInstance.VenueById(venueId, version, sport);
+                SportVenueByIdResponse result = client.Sport.VenueById(venueId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -11093,7 +10889,6 @@ All
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -11112,14 +10907,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // All
-                SportVenuesAllResponse result = apiInstance.VenuesAll(version, sport);
+                SportVenuesAllResponse result = client.Sport.VenuesAll(version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -11199,7 +10993,6 @@ By Season ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -11218,7 +11011,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var seasonId = 19686;  // int | The ID of the season you want to retrieve venues from.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -11226,7 +11018,7 @@ namespace Example
             try
             {
                 // By Season ID
-                SportVenuesBySeasonIdResponse result = apiInstance.VenuesBySeasonId(seasonId, version, sport);
+                SportVenuesBySeasonIdResponse result = client.Sport.VenuesBySeasonId(seasonId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -11307,7 +11099,6 @@ Search
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -11326,7 +11117,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new SportApi(config);
             var name = "Park";  // string | The name you want to search on.
             var version = "v3";  // string | The version of the API. (optional) 
             var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
@@ -11334,7 +11124,7 @@ namespace Example
             try
             {
                 // Search
-                SportVenuesSearchResponse result = apiInstance.VenuesSearch(name, version, sport);
+                SportVenuesSearchResponse result = client.Sport.VenuesSearch(name, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)

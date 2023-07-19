@@ -46,7 +46,6 @@ using Sportmonks.Net.Model;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -65,13 +64,12 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new CitiesApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
 
             try
             {
                 // All
-                CitiesAllResponse result = apiInstance.All(version);
+                CitiesAllResponse result = client.Cities.All(version);
                 Console.WriteLine(result);
             }
             catch (ApiException e)

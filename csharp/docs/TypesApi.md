@@ -18,7 +18,6 @@ All
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -37,13 +36,12 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new TypesApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
 
             try
             {
                 // All
-                TypesAllResponse result = apiInstance.All(version);
+                TypesAllResponse result = client.Types.All(version);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -122,7 +120,6 @@ By ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -141,14 +138,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new TypesApi(config);
             var typeId = 1;  // int | The ID of the type you want to retrieve
             var version = "v3";  // string | The version of the API. (optional) 
 
             try
             {
                 // By ID
-                TypesGetByIdResponse result = apiInstance.GetById(typeId, version);
+                TypesGetByIdResponse result = client.Types.GetById(typeId, version);
                 Console.WriteLine(result);
             }
             catch (ApiException e)

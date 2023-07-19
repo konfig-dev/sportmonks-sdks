@@ -19,7 +19,6 @@ All
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -38,13 +37,12 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new CountriesApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
 
             try
             {
                 // All
-                CountriesAllResponse result = apiInstance.All(version);
+                CountriesAllResponse result = client.Countries.All(version);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -123,7 +121,6 @@ By ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -142,14 +139,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new CountriesApi(config);
             var countryId = 1161;  // int | The ID of the country you want to retrieve.
             var version = "v3";  // string | The version of the API. (optional) 
 
             try
             {
                 // By ID
-                CountriesGetByIdResponse result = apiInstance.GetById(countryId, version);
+                CountriesGetByIdResponse result = client.Countries.GetById(countryId, version);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -229,7 +225,6 @@ Search
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -248,14 +243,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new CountriesApi(config);
             var name = "Fra";  // string | The name you want to search on
             var version = "v3";  // string | The version of the API. (optional) 
 
             try
             {
                 // Search
-                CountriesSearchResponse result = apiInstance.Search(name, version);
+                CountriesSearchResponse result = client.Countries.Search(name, version);
                 Console.WriteLine(result);
             }
             catch (ApiException e)

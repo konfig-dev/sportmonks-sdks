@@ -25,7 +25,6 @@ By ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -44,14 +43,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new OddsApi(config);
             var bookmakerId = 1;  // int | The ID of the bookmaker you want to retrieve.
             var version = "v3";  // string | The version of the API. (optional) 
 
             try
             {
                 // By ID
-                OddsBookmakerByIdResponse result = apiInstance.BookmakerById(bookmakerId, version);
+                OddsBookmakerByIdResponse result = client.Odds.BookmakerById(bookmakerId, version);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -131,7 +129,6 @@ All
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -150,13 +147,12 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new OddsApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
 
             try
             {
                 // All
-                OddsBookmakersAllResponse result = apiInstance.BookmakersAll(version);
+                OddsBookmakersAllResponse result = client.Odds.BookmakersAll(version);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -235,7 +231,6 @@ By Fixture ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -254,14 +249,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new OddsApi(config);
             var fixtureId = 18528479;  // int | The ID of the bookmaker you want to retrieve.
             var version = "v3";  // string | The version of the API. (optional) 
 
             try
             {
                 // By Fixture ID
-                OddsBookmakersByFixtureIdResponse result = apiInstance.BookmakersByFixtureId(fixtureId, version);
+                OddsBookmakersByFixtureIdResponse result = client.Odds.BookmakersByFixtureId(fixtureId, version);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -341,7 +335,6 @@ Mapping by Fixture ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -360,14 +353,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new OddsApi(config);
             var fixtureId = 18528479;  // int | The fixtureId you want to retrieve the bookmaker mapping from.
             var version = "v3";  // string | The version of the API. (optional) 
 
             try
             {
                 // Mapping by Fixture ID
-                OddsBookmakersMappingByFixtureIdResponse result = apiInstance.BookmakersMappingByFixtureId(fixtureId, version);
+                OddsBookmakersMappingByFixtureIdResponse result = client.Odds.BookmakersMappingByFixtureId(fixtureId, version);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -447,7 +439,6 @@ Search
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -466,14 +457,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new OddsApi(config);
             var name = "Bet";  // string | The name you want to search on
             var version = "v3";  // string | The version of the API. (optional) 
 
             try
             {
                 // Search
-                OddsBookmakersSearchResponse result = apiInstance.BookmakersSearch(name, version);
+                OddsBookmakersSearchResponse result = client.Odds.BookmakersSearch(name, version);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -553,7 +543,6 @@ Upcoming Fixtures by Market ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -572,7 +561,6 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new OddsApi(config);
             var marketId = 1;  // int | The ID of the market you want to retrieve upcoming fixtures from.
             var version = "v3";  // string | The sport you want to retrieve upcoming fixtures from. (optional) 
             var sport = "football";  // string |  (optional) 
@@ -580,7 +568,7 @@ namespace Example
             try
             {
                 // Upcoming Fixtures by Market ID
-                OddsFixturesUpcomingByMarketIdResponse result = apiInstance.FixturesUpcomingByMarketId(marketId, version, sport);
+                OddsFixturesUpcomingByMarketIdResponse result = client.Odds.FixturesUpcomingByMarketId(marketId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -661,7 +649,6 @@ By ID
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -680,14 +667,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new OddsApi(config);
             var marketId = 1;  // int | The ID of the market you want to retrieve.
             var version = "v3";  // string | The version of the API. (optional) 
 
             try
             {
                 // By ID
-                OddsMarketByIdResponse result = apiInstance.MarketById(marketId, version);
+                OddsMarketByIdResponse result = client.Odds.MarketById(marketId, version);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -767,7 +753,6 @@ All
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -786,13 +771,12 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new OddsApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
 
             try
             {
                 // All
-                OddsMarketsAllResponse result = apiInstance.MarketsAll(version);
+                OddsMarketsAllResponse result = client.Odds.MarketsAll(version);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -871,7 +855,6 @@ Search
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -890,14 +873,13 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new OddsApi(config);
             var name = "Over";  // string | The name you want to search on
             var version = "v3";  // string | The version of the API. (optional) 
 
             try
             {
                 // Search
-                OddsMarketsSearchResponse result = apiInstance.MarketsSearch(name, version);
+                OddsMarketsSearchResponse result = client.Odds.MarketsSearch(name, version);
                 Console.WriteLine(result);
             }
             catch (ApiException e)

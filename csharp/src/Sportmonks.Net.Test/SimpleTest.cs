@@ -64,5 +64,41 @@ namespace Sportmonks.Net.Test
             );
             Console.WriteLine(sportSquadsByTeamIdResponse);
         }
+
+        /// <summary>
+        /// Countries All Test
+        /// </summary>
+        [Fact]
+        public void CountriesAllTest()
+        {
+            SportmonksClient client = new SportmonksClient();
+            // Configure custom BasePath if desired
+            client.SetBasePath("https://api.sportmonks.com");
+            client.SetVersion("v3");
+            client.SetSport("football");
+            // Configure API key authorization: apikeyAuth
+            client.SetApiKey(Environment.GetEnvironmentVariable("SPORTMONKS_API_TOKEN"));
+
+            var version = "v3"; // string | The version of the API. (optional)
+
+            try
+            {
+                // All
+                CountriesAllResponse result = client.Countries.All(version);
+                Console.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Console.WriteLine("Exception when calling CountriesApi.All: " + e.Message);
+                Console.WriteLine("Status Code: " + e.ErrorCode);
+                Console.WriteLine(e.StackTrace);
+            }
+            catch (ClientException e)
+            {
+                Console.WriteLine(e.Response.StatusCode);
+                Console.WriteLine(e.Response.RawContent);
+                Console.WriteLine(e.InnerException);
+            }
+        }
     }
 }

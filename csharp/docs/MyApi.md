@@ -19,7 +19,6 @@ All
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -38,13 +37,12 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new MyApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
 
             try
             {
                 // All
-                MyEnrichmentsResponse result = apiInstance.Enrichments(version);
+                MyEnrichmentsResponse result = client.My.Enrichments(version);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -123,7 +121,6 @@ All
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -142,13 +139,12 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new MyApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
 
             try
             {
                 // All
-                MyLeaguesResponse result = apiInstance.Leagues(version);
+                MyLeaguesResponse result = client.My.Leagues(version);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -227,7 +223,6 @@ All
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Sportmonks.Net.Api;
 using Sportmonks.Net.Client;
 using Sportmonks.Net.Model;
 
@@ -246,13 +241,12 @@ namespace Example
             // Configure API key authorization: apikeyAuth
             client.SetApiKey("YOUR_API_KEY");
 
-            var apiInstance = new MyApi(config);
             var version = "v3";  // string | The version of the API. (optional) 
 
             try
             {
                 // All
-                MyResourcesResponse result = apiInstance.Resources(version);
+                MyResourcesResponse result = client.My.Resources(version);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
