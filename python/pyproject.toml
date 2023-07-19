@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "sportmonks"
+name = "sportmonks-python-sdk"
 version = "0.1.0"
 description = "Client for SportMonks"
 authors = ["Konfig <engineering@konfigthis.com>"]

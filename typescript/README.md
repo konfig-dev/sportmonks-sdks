@@ -1,16 +1,16 @@
-# sportmonks@0.1.0
+# sportmonks-typescript-sdk@0.1.0
 
 Surpass the competition with superior sports data
 ## Installing
 
 ### npm
 ```
-npm install sportmonks --save
+npm install sportmonks-typescript-sdk --save
 ```
 
 ### yarn
 ```
-yarn add sportmonks
+yarn add sportmonks-typescript-sdk
 ```
 
 **Important note: this library can be used in both the client-side or server-side, but using it
@@ -21,7 +21,7 @@ in client-side browser code is not recommended as you would expose security cred
 ## Getting Started
 
 ```typescript
-import { Sportmonks } from "sportmonks";
+import { Sportmonks } from "sportmonks-typescript-sdk";
 
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com

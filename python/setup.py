@@ -11,7 +11,7 @@
 
 from setuptools import setup, find_packages  # noqa: H301
 
-NAME = "sportmonks"
+NAME = "sportmonks-python-sdk"
 VERSION = "0.1.0"
 # To install the library, run the following
 #

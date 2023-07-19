@@ -38,7 +38,7 @@ generators:
   typescript:
     version: 0.1.0
     clientName: Sportmonks
-    npmName: sportmonks
+    npmName: sportmonks-typescript-sdk
     outputDirectory: typescript
     clientStateWithExamples:
       - name: version
@@ -63,4 +63,4 @@ generators:
       userId: konfig-dev
       repoId: sportmonks-sdks/tree/main/python
     packageName: sportmonks
-    projectName: sportmonks
+    projectName: sportmonks-python-sdk

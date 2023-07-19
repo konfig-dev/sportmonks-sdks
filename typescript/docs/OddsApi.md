@@ -24,7 +24,7 @@ Method | HTTP request | Description
 
 
 ```typescript
-import { Sportmonks } from "sportmonks";
+import { Sportmonks } from "sportmonks-typescript-sdk";
 
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import { Sportmonks } from "sportmonks";
+import { Sportmonks } from "sportmonks-typescript-sdk";
 
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import { Sportmonks } from "sportmonks";
+import { Sportmonks } from "sportmonks-typescript-sdk";
 
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
@@ -178,7 +178,7 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import { Sportmonks } from "sportmonks";
+import { Sportmonks } from "sportmonks-typescript-sdk";
 
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
@@ -231,7 +231,7 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import { Sportmonks } from "sportmonks";
+import { Sportmonks } from "sportmonks-typescript-sdk";
 
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
@@ -283,7 +283,7 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import { Sportmonks } from "sportmonks";
+import { Sportmonks } from "sportmonks-typescript-sdk";
 
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
@@ -337,7 +337,7 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import { Sportmonks } from "sportmonks";
+import { Sportmonks } from "sportmonks-typescript-sdk";
 
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
@@ -389,7 +389,7 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import { Sportmonks } from "sportmonks";
+import { Sportmonks } from "sportmonks-typescript-sdk";
 
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com
@@ -438,7 +438,7 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import { Sportmonks } from "sportmonks";
+import { Sportmonks } from "sportmonks-typescript-sdk";
 
 const sportmonks = new Sportmonks({
   // Defining the base path is optional and defaults to https://api.sportmonks.com

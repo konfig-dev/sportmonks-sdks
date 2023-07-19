@@ -1,5 +1,5 @@
 {
-  "name": "sportmonks",
+  "name": "sportmonks-typescript-sdk",
   "version": "0.1.0",
   "description": "Client for SportMonks",
   "author": "Konfig",
@@ -14,7 +14,7 @@
     "axios",
     "typescript",
     "konfig",
-    "sportmonks"
+    "sportmonks-typescript-sdk"
   ],
   "license": "Unlicense",
   "files": [
