@@ -1,0 +1,20 @@
+# sportmonks.model.sport_predictions_by_fixture_id_response_data_item_predictions.SportPredictionsByFixtureIdResponseDataItemPredictions
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+dict, frozendict.frozendict,  | frozendict.frozendict,  |  | 
+
+### Dictionary Keys
+Key | Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | ------------- | -------------
+**true** | decimal.Decimal, int, float,  | decimal.Decimal,  |  | [optional] 
+**false** | decimal.Decimal, int, float,  | decimal.Decimal,  |  | [optional] 
+**scores** | [**SportPredictionsByFixtureIdResponseDataItemPredictionsScores**](SportPredictionsByFixtureIdResponseDataItemPredictionsScores.md) | [**SportPredictionsByFixtureIdResponseDataItemPredictionsScores**](SportPredictionsByFixtureIdResponseDataItemPredictionsScores.md) |  | [optional] 
+**home** | decimal.Decimal, int, float,  | decimal.Decimal,  |  | [optional] 
+**draw** | decimal.Decimal, int, float,  | decimal.Decimal,  |  | [optional] 
+**away** | decimal.Decimal, int, float,  | decimal.Decimal,  |  | [optional] 
+**any_string_name** | dict, frozendict.frozendict, str, date, datetime, int, float, bool, decimal.Decimal, None, list, tuple, bytes, io.FileIO, io.BufferedReader | frozendict.frozendict, str, BoolClass, decimal.Decimal, NoneClass, tuple, bytes, FileIO | any string name can be used but the value must be the correct type | [optional]
+
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
+

@@ -14,18 +14,22 @@ import typing
 from enum import Enum
 from typing_extensions import TypedDict, Literal
 
+from sportmonks.type.sport_news_pre_match_by_season_id_response_data import SportNewsPreMatchBySeasonIdResponseData
+from sportmonks.type.sport_news_pre_match_by_season_id_response_pagination import SportNewsPreMatchBySeasonIdResponsePagination
+from sportmonks.type.sport_news_pre_match_by_season_id_response_rate_limit import SportNewsPreMatchBySeasonIdResponseRateLimit
+from sportmonks.type.sport_news_pre_match_by_season_id_response_subscription import SportNewsPreMatchBySeasonIdResponseSubscription
 
 class RequiredSportNewsPreMatchBySeasonIdResponse(TypedDict):
     pass
 
 class OptionalSportNewsPreMatchBySeasonIdResponse(TypedDict, total=False):
-    data: typing.List[typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]]
+    data: SportNewsPreMatchBySeasonIdResponseData
 
-    pagination: typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]
+    pagination: SportNewsPreMatchBySeasonIdResponsePagination
 
-    subscription: typing.List[typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]]
+    subscription: SportNewsPreMatchBySeasonIdResponseSubscription
 
-    rate_limit: typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]
+    rate_limit: SportNewsPreMatchBySeasonIdResponseRateLimit
 
     timezone: str
 

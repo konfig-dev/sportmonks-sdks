@@ -14,16 +14,19 @@ import typing
 from enum import Enum
 from typing_extensions import TypedDict, Literal
 
+from sportmonks.type.my_resources_response_data import MyResourcesResponseData
+from sportmonks.type.my_resources_response_rate_limit import MyResourcesResponseRateLimit
+from sportmonks.type.my_resources_response_subscription import MyResourcesResponseSubscription
 
 class RequiredMyResourcesResponse(TypedDict):
     pass
 
 class OptionalMyResourcesResponse(TypedDict, total=False):
-    data: typing.List[typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]]
+    data: MyResourcesResponseData
 
-    subscription: typing.List[typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]]
+    subscription: MyResourcesResponseSubscription
 
-    rate_limit: typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]
+    rate_limit: MyResourcesResponseRateLimit
 
     timezone: str
 

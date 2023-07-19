@@ -14,16 +14,19 @@ import typing
 from enum import Enum
 from typing_extensions import TypedDict, Literal
 
+from sportmonks.type.sport_schedules_by_season_id_response_data import SportSchedulesBySeasonIdResponseData
+from sportmonks.type.sport_schedules_by_season_id_response_rate_limit import SportSchedulesBySeasonIdResponseRateLimit
+from sportmonks.type.sport_schedules_by_season_id_response_subscription import SportSchedulesBySeasonIdResponseSubscription
 
 class RequiredSportSchedulesBySeasonIdResponse(TypedDict):
     pass
 
 class OptionalSportSchedulesBySeasonIdResponse(TypedDict, total=False):
-    data: typing.List[typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]]
+    data: SportSchedulesBySeasonIdResponseData
 
-    subscription: typing.List[typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]]
+    subscription: SportSchedulesBySeasonIdResponseSubscription
 
-    rate_limit: typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]
+    rate_limit: SportSchedulesBySeasonIdResponseRateLimit
 
     timezone: str
 

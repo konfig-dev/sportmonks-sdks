@@ -14,16 +14,19 @@ import typing
 from enum import Enum
 from typing_extensions import TypedDict, Literal
 
+from sportmonks.type.sport_odds_in_play_by_fixture_id_response_data import SportOddsInPlayByFixtureIdResponseData
+from sportmonks.type.sport_odds_in_play_by_fixture_id_response_rate_limit import SportOddsInPlayByFixtureIdResponseRateLimit
+from sportmonks.type.sport_odds_in_play_by_fixture_id_response_subscription import SportOddsInPlayByFixtureIdResponseSubscription
 
 class RequiredSportOddsInPlayByFixtureIdResponse(TypedDict):
     pass
 
 class OptionalSportOddsInPlayByFixtureIdResponse(TypedDict, total=False):
-    data: typing.List[typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]]
+    data: SportOddsInPlayByFixtureIdResponseData
 
-    subscription: typing.List[typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]]
+    subscription: SportOddsInPlayByFixtureIdResponseSubscription
 
-    rate_limit: typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]
+    rate_limit: SportOddsInPlayByFixtureIdResponseRateLimit
 
     timezone: str
 

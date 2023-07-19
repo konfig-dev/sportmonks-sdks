@@ -14,16 +14,19 @@ import typing
 from enum import Enum
 from typing_extensions import TypedDict, Literal
 
+from sportmonks.type.regions_get_by_id_response_data import RegionsGetByIdResponseData
+from sportmonks.type.regions_get_by_id_response_rate_limit import RegionsGetByIdResponseRateLimit
+from sportmonks.type.regions_get_by_id_response_subscription import RegionsGetByIdResponseSubscription
 
 class RequiredRegionsGetByIdResponse(TypedDict):
     pass
 
 class OptionalRegionsGetByIdResponse(TypedDict, total=False):
-    data: typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]
+    data: RegionsGetByIdResponseData
 
-    subscription: typing.List[typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]]
+    subscription: RegionsGetByIdResponseSubscription
 
-    rate_limit: typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]
+    rate_limit: RegionsGetByIdResponseRateLimit
 
     timezone: str
 

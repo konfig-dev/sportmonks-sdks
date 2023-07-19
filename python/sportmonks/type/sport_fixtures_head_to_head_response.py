@@ -14,16 +14,19 @@ import typing
 from enum import Enum
 from typing_extensions import TypedDict, Literal
 
+from sportmonks.type.sport_fixtures_head_to_head_response_data import SportFixturesHeadToHeadResponseData
+from sportmonks.type.sport_fixtures_head_to_head_response_rate_limit import SportFixturesHeadToHeadResponseRateLimit
+from sportmonks.type.sport_fixtures_head_to_head_response_subscription import SportFixturesHeadToHeadResponseSubscription
 
 class RequiredSportFixturesHeadToHeadResponse(TypedDict):
     pass
 
 class OptionalSportFixturesHeadToHeadResponse(TypedDict, total=False):
-    data: typing.List[typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]]
+    data: SportFixturesHeadToHeadResponseData
 
-    subscription: typing.List[typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]]
+    subscription: SportFixturesHeadToHeadResponseSubscription
 
-    rate_limit: typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]
+    rate_limit: SportFixturesHeadToHeadResponseRateLimit
 
     timezone: str
 

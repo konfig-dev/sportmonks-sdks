@@ -14,18 +14,22 @@ import typing
 from enum import Enum
 from typing_extensions import TypedDict, Literal
 
+from sportmonks.type.sport_top_scorers_by_season_id_response_data import SportTopScorersBySeasonIdResponseData
+from sportmonks.type.sport_top_scorers_by_season_id_response_pagination import SportTopScorersBySeasonIdResponsePagination
+from sportmonks.type.sport_top_scorers_by_season_id_response_rate_limit import SportTopScorersBySeasonIdResponseRateLimit
+from sportmonks.type.sport_top_scorers_by_season_id_response_subscription import SportTopScorersBySeasonIdResponseSubscription
 
 class RequiredSportTopScorersBySeasonIdResponse(TypedDict):
     pass
 
 class OptionalSportTopScorersBySeasonIdResponse(TypedDict, total=False):
-    data: typing.List[typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]]
+    data: SportTopScorersBySeasonIdResponseData
 
-    pagination: typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]
+    pagination: SportTopScorersBySeasonIdResponsePagination
 
-    subscription: typing.List[typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]]
+    subscription: SportTopScorersBySeasonIdResponseSubscription
 
-    rate_limit: typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]
+    rate_limit: SportTopScorersBySeasonIdResponseRateLimit
 
     timezone: str
 

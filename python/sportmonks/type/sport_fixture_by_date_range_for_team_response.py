@@ -14,18 +14,22 @@ import typing
 from enum import Enum
 from typing_extensions import TypedDict, Literal
 
+from sportmonks.type.sport_fixture_by_date_range_for_team_response_data import SportFixtureByDateRangeForTeamResponseData
+from sportmonks.type.sport_fixture_by_date_range_for_team_response_pagination import SportFixtureByDateRangeForTeamResponsePagination
+from sportmonks.type.sport_fixture_by_date_range_for_team_response_rate_limit import SportFixtureByDateRangeForTeamResponseRateLimit
+from sportmonks.type.sport_fixture_by_date_range_for_team_response_subscription import SportFixtureByDateRangeForTeamResponseSubscription
 
 class RequiredSportFixtureByDateRangeForTeamResponse(TypedDict):
     pass
 
 class OptionalSportFixtureByDateRangeForTeamResponse(TypedDict, total=False):
-    data: typing.List[typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]]
+    data: SportFixtureByDateRangeForTeamResponseData
 
-    pagination: typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]
+    pagination: SportFixtureByDateRangeForTeamResponsePagination
 
-    subscription: typing.List[typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]]
+    subscription: SportFixtureByDateRangeForTeamResponseSubscription
 
-    rate_limit: typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]
+    rate_limit: SportFixtureByDateRangeForTeamResponseRateLimit
 
     timezone: str
 

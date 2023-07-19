@@ -14,18 +14,22 @@ import typing
 from enum import Enum
 from typing_extensions import TypedDict, Literal
 
+from sportmonks.type.odds_markets_search_response_data import OddsMarketsSearchResponseData
+from sportmonks.type.odds_markets_search_response_pagination import OddsMarketsSearchResponsePagination
+from sportmonks.type.odds_markets_search_response_rate_limit import OddsMarketsSearchResponseRateLimit
+from sportmonks.type.odds_markets_search_response_subscription import OddsMarketsSearchResponseSubscription
 
 class RequiredOddsMarketsSearchResponse(TypedDict):
     pass
 
 class OptionalOddsMarketsSearchResponse(TypedDict, total=False):
-    data: typing.List[typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]]
+    data: OddsMarketsSearchResponseData
 
-    pagination: typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]
+    pagination: OddsMarketsSearchResponsePagination
 
-    subscription: typing.List[typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]]
+    subscription: OddsMarketsSearchResponseSubscription
 
-    rate_limit: typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]
+    rate_limit: OddsMarketsSearchResponseRateLimit
 
     timezone: str
 

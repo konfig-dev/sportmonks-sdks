@@ -39,7 +39,13 @@ class TestSimple(unittest.TestCase):
         teams = sportmonks.sport.teams_all()
         if "data" not in teams.body:
             raise Exception('Missing "data"')
-        first_team = teams.body["data"]
+        first_team = teams.body["data"][0]
+        if "id" not in first_team: raise Exception('Missing "id"')
+        first_team_id = first_team["id"]
+        squads = sportmonks.sport.squads_by_team_id(team_id=first_team_id) # type: ignore
+        pprint(squads.body)
+        self.assertGreater(len(squads.body), 0)
+
 
     def tearDown(self):
         pass

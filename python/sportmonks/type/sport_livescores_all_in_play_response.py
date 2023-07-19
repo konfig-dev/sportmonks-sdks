@@ -14,16 +14,19 @@ import typing
 from enum import Enum
 from typing_extensions import TypedDict, Literal
 
+from sportmonks.type.sport_livescores_all_in_play_response_data import SportLivescoresAllInPlayResponseData
+from sportmonks.type.sport_livescores_all_in_play_response_rate_limit import SportLivescoresAllInPlayResponseRateLimit
+from sportmonks.type.sport_livescores_all_in_play_response_subscription import SportLivescoresAllInPlayResponseSubscription
 
 class RequiredSportLivescoresAllInPlayResponse(TypedDict):
     pass
 
 class OptionalSportLivescoresAllInPlayResponse(TypedDict, total=False):
-    data: typing.List[typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]]
+    data: SportLivescoresAllInPlayResponseData
 
-    subscription: typing.List[typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]]
+    subscription: SportLivescoresAllInPlayResponseSubscription
 
-    rate_limit: typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]
+    rate_limit: SportLivescoresAllInPlayResponseRateLimit
 
     timezone: str
 

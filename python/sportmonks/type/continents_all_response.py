@@ -14,18 +14,22 @@ import typing
 from enum import Enum
 from typing_extensions import TypedDict, Literal
 
+from sportmonks.type.continents_all_response_data import ContinentsAllResponseData
+from sportmonks.type.continents_all_response_pagination import ContinentsAllResponsePagination
+from sportmonks.type.continents_all_response_rate_limit import ContinentsAllResponseRateLimit
+from sportmonks.type.continents_all_response_subscription import ContinentsAllResponseSubscription
 
 class RequiredContinentsAllResponse(TypedDict):
     pass
 
 class OptionalContinentsAllResponse(TypedDict, total=False):
-    data: typing.List[typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]]
+    data: ContinentsAllResponseData
 
-    pagination: typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]
+    pagination: ContinentsAllResponsePagination
 
-    subscription: typing.List[typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]]
+    subscription: ContinentsAllResponseSubscription
 
-    rate_limit: typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]
+    rate_limit: ContinentsAllResponseRateLimit
 
     timezone: str
 

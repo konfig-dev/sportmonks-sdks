@@ -14,18 +14,22 @@ import typing
 from enum import Enum
 from typing_extensions import TypedDict, Literal
 
+from sportmonks.type.sport_leagues_by_country_id_response_data import SportLeaguesByCountryIdResponseData
+from sportmonks.type.sport_leagues_by_country_id_response_pagination import SportLeaguesByCountryIdResponsePagination
+from sportmonks.type.sport_leagues_by_country_id_response_rate_limit import SportLeaguesByCountryIdResponseRateLimit
+from sportmonks.type.sport_leagues_by_country_id_response_subscription import SportLeaguesByCountryIdResponseSubscription
 
 class RequiredSportLeaguesByCountryIdResponse(TypedDict):
     pass
 
 class OptionalSportLeaguesByCountryIdResponse(TypedDict, total=False):
-    data: typing.List[typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]]
+    data: SportLeaguesByCountryIdResponseData
 
-    pagination: typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]
+    pagination: SportLeaguesByCountryIdResponsePagination
 
-    subscription: typing.List[typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]]
+    subscription: SportLeaguesByCountryIdResponseSubscription
 
-    rate_limit: typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]
+    rate_limit: SportLeaguesByCountryIdResponseRateLimit
 
     timezone: str
 

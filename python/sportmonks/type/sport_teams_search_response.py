@@ -14,18 +14,22 @@ import typing
 from enum import Enum
 from typing_extensions import TypedDict, Literal
 
+from sportmonks.type.sport_teams_search_response_data import SportTeamsSearchResponseData
+from sportmonks.type.sport_teams_search_response_pagination import SportTeamsSearchResponsePagination
+from sportmonks.type.sport_teams_search_response_rate_limit import SportTeamsSearchResponseRateLimit
+from sportmonks.type.sport_teams_search_response_subscription import SportTeamsSearchResponseSubscription
 
 class RequiredSportTeamsSearchResponse(TypedDict):
     pass
 
 class OptionalSportTeamsSearchResponse(TypedDict, total=False):
-    data: typing.List[typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]]
+    data: SportTeamsSearchResponseData
 
-    pagination: typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]
+    pagination: SportTeamsSearchResponsePagination
 
-    subscription: typing.List[typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]]
+    subscription: SportTeamsSearchResponseSubscription
 
-    rate_limit: typing.Dict[str, typing.Union[bool, date, datetime, dict, float, int, list, str, None]]
+    rate_limit: SportTeamsSearchResponseRateLimit
 
     timezone: str
 

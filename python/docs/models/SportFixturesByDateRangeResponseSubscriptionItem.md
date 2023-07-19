@@ -1,0 +1,18 @@
+# sportmonks.model.sport_fixtures_by_date_range_response_subscription_item.SportFixturesByDateRangeResponseSubscriptionItem
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+dict, frozendict.frozendict,  | frozendict.frozendict,  |  | 
+
+### Dictionary Keys
+Key | Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | ------------- | -------------
+**meta** | [**SportFixturesByDateRangeResponseSubscriptionItemMeta**](SportFixturesByDateRangeResponseSubscriptionItemMeta.md) | [**SportFixturesByDateRangeResponseSubscriptionItemMeta**](SportFixturesByDateRangeResponseSubscriptionItemMeta.md) |  | [optional] 
+**plans** | [**SportFixturesByDateRangeResponseSubscriptionItemPlans**](SportFixturesByDateRangeResponseSubscriptionItemPlans.md) | [**SportFixturesByDateRangeResponseSubscriptionItemPlans**](SportFixturesByDateRangeResponseSubscriptionItemPlans.md) |  | [optional] 
+**add_ons** | [**SportFixturesByDateRangeResponseSubscriptionItemAddOns**](SportFixturesByDateRangeResponseSubscriptionItemAddOns.md) | [**SportFixturesByDateRangeResponseSubscriptionItemAddOns**](SportFixturesByDateRangeResponseSubscriptionItemAddOns.md) |  | [optional] 
+**widgets** | [**SportFixturesByDateRangeResponseSubscriptionItemWidgets**](SportFixturesByDateRangeResponseSubscriptionItemWidgets.md) | [**SportFixturesByDateRangeResponseSubscriptionItemWidgets**](SportFixturesByDateRangeResponseSubscriptionItemWidgets.md) |  | [optional] 
+**any_string_name** | dict, frozendict.frozendict, str, date, datetime, int, float, bool, decimal.Decimal, None, list, tuple, bytes, io.FileIO, io.BufferedReader | frozendict.frozendict, str, BoolClass, decimal.Decimal, NoneClass, tuple, bytes, FileIO | any string name can be used but the value must be the correct type | [optional]
+
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
+
