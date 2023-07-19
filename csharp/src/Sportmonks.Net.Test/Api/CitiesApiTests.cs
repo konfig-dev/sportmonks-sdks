@@ -73,9 +73,9 @@ namespace Sportmonks.Net.Test.Api
         public void GetByIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string version = null;
             //int cityId = null;
-            //var response = instance.GetById(version, cityId);
+            //string version = null;
+            //var response = instance.GetById(cityId, version);
             //Assert.IsType<CitiesGetByIdResponse>(response);
         }
 
@@ -86,9 +86,9 @@ namespace Sportmonks.Net.Test.Api
         public void SearchTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string version = null;
             //string name = null;
-            //var response = instance.Search(version, name);
+            //string version = null;
+            //var response = instance.Search(name, version);
             //Assert.IsType<CitiesSearchResponse>(response);
         }
     }

@@ -9,7 +9,7 @@ All URIs are relative to *https://api.sportmonks.com*
 
 <a name="all"></a>
 # **All**
-> ContinentsAllResponse All (string version)
+> ContinentsAllResponse All (string version = null)
 
 All
 
@@ -33,9 +33,13 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new ContinentsApi(config);
-            var version = v3;  // string | The version of the API.
+            var version = "v3";  // string | The version of the API. (optional) 
 
             try
             {
@@ -84,7 +88,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
+| **version** | **string** | The version of the API. | [optional]  |
 
 ### Return type
 
@@ -109,7 +113,7 @@ catch (ApiException e)
 
 <a name="getbyid"></a>
 # **GetById**
-> ContinentsGetByIdResponse GetById (string version, int continentId)
+> ContinentsGetByIdResponse GetById (int continentId, string version = null)
 
 By ID
 
@@ -133,15 +137,19 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new ContinentsApi(config);
-            var version = v3;  // string | The version of the API.
             var continentId = 1;  // int | The ID of the continent you want to retrieve
+            var version = "v3";  // string | The version of the API. (optional) 
 
             try
             {
                 // By ID
-                ContinentsGetByIdResponse result = apiInstance.GetById(version, continentId);
+                ContinentsGetByIdResponse result = apiInstance.GetById(continentId, version);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -168,7 +176,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By ID
-    ApiResponse<ContinentsGetByIdResponse> response = apiInstance.GetByIdWithHttpInfo(version, continentId);
+    ApiResponse<ContinentsGetByIdResponse> response = apiInstance.GetByIdWithHttpInfo(continentId, version);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -185,8 +193,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
 | **continentId** | **int** | The ID of the continent you want to retrieve |  |
+| **version** | **string** | The version of the API. | [optional]  |
 
 ### Return type
 

@@ -28,5 +28,9 @@
       "useBundler": true
     }
   },
+  "[csharp]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "csharpier.csharpier-vscode"
+  },
   "ruby.format": "rubocop"
 }

@@ -10,7 +10,7 @@ All URIs are relative to *https://api.sportmonks.com*
 
 <a name="all"></a>
 # **All**
-> CitiesAllResponse All (string version)
+> CitiesAllResponse All (string version = null)
 
 All
 
@@ -34,9 +34,13 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new CitiesApi(config);
-            var version = v3;  // string | The version of the API.
+            var version = "v3";  // string | The version of the API. (optional) 
 
             try
             {
@@ -85,7 +89,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
+| **version** | **string** | The version of the API. | [optional]  |
 
 ### Return type
 
@@ -110,7 +114,7 @@ catch (ApiException e)
 
 <a name="getbyid"></a>
 # **GetById**
-> CitiesGetByIdResponse GetById (string version, int cityId)
+> CitiesGetByIdResponse GetById (int cityId, string version = null)
 
 By ID
 
@@ -134,15 +138,19 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new CitiesApi(config);
-            var version = v3;  // string | The version of the API.
             var cityId = 29834;  // int | The ID of the city you want to retrieve
+            var version = "v3";  // string | The version of the API. (optional) 
 
             try
             {
                 // By ID
-                CitiesGetByIdResponse result = apiInstance.GetById(version, cityId);
+                CitiesGetByIdResponse result = apiInstance.GetById(cityId, version);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -169,7 +177,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By ID
-    ApiResponse<CitiesGetByIdResponse> response = apiInstance.GetByIdWithHttpInfo(version, cityId);
+    ApiResponse<CitiesGetByIdResponse> response = apiInstance.GetByIdWithHttpInfo(cityId, version);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -186,8 +194,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
 | **cityId** | **int** | The ID of the city you want to retrieve |  |
+| **version** | **string** | The version of the API. | [optional]  |
 
 ### Return type
 
@@ -212,7 +220,7 @@ catch (ApiException e)
 
 <a name="search"></a>
 # **Search**
-> CitiesSearchResponse Search (string version, string name)
+> CitiesSearchResponse Search (string name, string version = null)
 
 Search
 
@@ -236,15 +244,19 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new CitiesApi(config);
-            var version = v3;  // string | The version of the API.
-            var name = Lon;  // string | The name you want to search on
+            var name = "Lon";  // string | The name you want to search on
+            var version = "v3";  // string | The version of the API. (optional) 
 
             try
             {
                 // Search
-                CitiesSearchResponse result = apiInstance.Search(version, name);
+                CitiesSearchResponse result = apiInstance.Search(name, version);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -271,7 +283,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Search
-    ApiResponse<CitiesSearchResponse> response = apiInstance.SearchWithHttpInfo(version, name);
+    ApiResponse<CitiesSearchResponse> response = apiInstance.SearchWithHttpInfo(name, version);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -288,8 +300,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
 | **name** | **string** | The name you want to search on |  |
+| **version** | **string** | The version of the API. | [optional]  |
 
 ### Return type
 

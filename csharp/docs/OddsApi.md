@@ -16,7 +16,7 @@ All URIs are relative to *https://api.sportmonks.com*
 
 <a name="bookmakerbyid"></a>
 # **BookmakerById**
-> OddsBookmakerByIdResponse BookmakerById (string version, int bookmakerId)
+> OddsBookmakerByIdResponse BookmakerById (int bookmakerId, string version = null)
 
 By ID
 
@@ -40,15 +40,19 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new OddsApi(config);
-            var version = v3;  // string | The version of the API.
             var bookmakerId = 1;  // int | The ID of the bookmaker you want to retrieve.
+            var version = "v3";  // string | The version of the API. (optional) 
 
             try
             {
                 // By ID
-                OddsBookmakerByIdResponse result = apiInstance.BookmakerById(version, bookmakerId);
+                OddsBookmakerByIdResponse result = apiInstance.BookmakerById(bookmakerId, version);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -75,7 +79,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By ID
-    ApiResponse<OddsBookmakerByIdResponse> response = apiInstance.BookmakerByIdWithHttpInfo(version, bookmakerId);
+    ApiResponse<OddsBookmakerByIdResponse> response = apiInstance.BookmakerByIdWithHttpInfo(bookmakerId, version);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -92,8 +96,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
 | **bookmakerId** | **int** | The ID of the bookmaker you want to retrieve. |  |
+| **version** | **string** | The version of the API. | [optional]  |
 
 ### Return type
 
@@ -118,7 +122,7 @@ catch (ApiException e)
 
 <a name="bookmakersall"></a>
 # **BookmakersAll**
-> OddsBookmakersAllResponse BookmakersAll (string version)
+> OddsBookmakersAllResponse BookmakersAll (string version = null)
 
 All
 
@@ -142,9 +146,13 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new OddsApi(config);
-            var version = v3;  // string | The version of the API.
+            var version = "v3";  // string | The version of the API. (optional) 
 
             try
             {
@@ -193,7 +201,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
+| **version** | **string** | The version of the API. | [optional]  |
 
 ### Return type
 
@@ -218,7 +226,7 @@ catch (ApiException e)
 
 <a name="bookmakersbyfixtureid"></a>
 # **BookmakersByFixtureId**
-> OddsBookmakersByFixtureIdResponse BookmakersByFixtureId (string version, int fixtureId)
+> OddsBookmakersByFixtureIdResponse BookmakersByFixtureId (int fixtureId, string version = null)
 
 By Fixture ID
 
@@ -242,15 +250,19 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new OddsApi(config);
-            var version = v3;  // string | The version of the API.
             var fixtureId = 18528479;  // int | The ID of the bookmaker you want to retrieve.
+            var version = "v3";  // string | The version of the API. (optional) 
 
             try
             {
                 // By Fixture ID
-                OddsBookmakersByFixtureIdResponse result = apiInstance.BookmakersByFixtureId(version, fixtureId);
+                OddsBookmakersByFixtureIdResponse result = apiInstance.BookmakersByFixtureId(fixtureId, version);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -277,7 +289,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By Fixture ID
-    ApiResponse<OddsBookmakersByFixtureIdResponse> response = apiInstance.BookmakersByFixtureIdWithHttpInfo(version, fixtureId);
+    ApiResponse<OddsBookmakersByFixtureIdResponse> response = apiInstance.BookmakersByFixtureIdWithHttpInfo(fixtureId, version);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -294,8 +306,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
 | **fixtureId** | **int** | The ID of the bookmaker you want to retrieve. |  |
+| **version** | **string** | The version of the API. | [optional]  |
 
 ### Return type
 
@@ -320,7 +332,7 @@ catch (ApiException e)
 
 <a name="bookmakersmappingbyfixtureid"></a>
 # **BookmakersMappingByFixtureId**
-> OddsBookmakersMappingByFixtureIdResponse BookmakersMappingByFixtureId (string version, int fixtureId)
+> OddsBookmakersMappingByFixtureIdResponse BookmakersMappingByFixtureId (int fixtureId, string version = null)
 
 Mapping by Fixture ID
 
@@ -344,15 +356,19 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new OddsApi(config);
-            var version = v3;  // string | The version of the API.
             var fixtureId = 18528479;  // int | The fixtureId you want to retrieve the bookmaker mapping from.
+            var version = "v3";  // string | The version of the API. (optional) 
 
             try
             {
                 // Mapping by Fixture ID
-                OddsBookmakersMappingByFixtureIdResponse result = apiInstance.BookmakersMappingByFixtureId(version, fixtureId);
+                OddsBookmakersMappingByFixtureIdResponse result = apiInstance.BookmakersMappingByFixtureId(fixtureId, version);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -379,7 +395,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Mapping by Fixture ID
-    ApiResponse<OddsBookmakersMappingByFixtureIdResponse> response = apiInstance.BookmakersMappingByFixtureIdWithHttpInfo(version, fixtureId);
+    ApiResponse<OddsBookmakersMappingByFixtureIdResponse> response = apiInstance.BookmakersMappingByFixtureIdWithHttpInfo(fixtureId, version);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -396,8 +412,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
 | **fixtureId** | **int** | The fixtureId you want to retrieve the bookmaker mapping from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
 
 ### Return type
 
@@ -422,7 +438,7 @@ catch (ApiException e)
 
 <a name="bookmakerssearch"></a>
 # **BookmakersSearch**
-> OddsBookmakersSearchResponse BookmakersSearch (string version, string name)
+> OddsBookmakersSearchResponse BookmakersSearch (string name, string version = null)
 
 Search
 
@@ -446,15 +462,19 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new OddsApi(config);
-            var version = v3;  // string | The version of the API.
-            var name = Bet;  // string | The name you want to search on
+            var name = "Bet";  // string | The name you want to search on
+            var version = "v3";  // string | The version of the API. (optional) 
 
             try
             {
                 // Search
-                OddsBookmakersSearchResponse result = apiInstance.BookmakersSearch(version, name);
+                OddsBookmakersSearchResponse result = apiInstance.BookmakersSearch(name, version);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -481,7 +501,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Search
-    ApiResponse<OddsBookmakersSearchResponse> response = apiInstance.BookmakersSearchWithHttpInfo(version, name);
+    ApiResponse<OddsBookmakersSearchResponse> response = apiInstance.BookmakersSearchWithHttpInfo(name, version);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -498,8 +518,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
 | **name** | **string** | The name you want to search on |  |
+| **version** | **string** | The version of the API. | [optional]  |
 
 ### Return type
 
@@ -524,7 +544,7 @@ catch (ApiException e)
 
 <a name="fixturesupcomingbymarketid"></a>
 # **FixturesUpcomingByMarketId**
-> OddsFixturesUpcomingByMarketIdResponse FixturesUpcomingByMarketId (string version, string sport, int marketId)
+> OddsFixturesUpcomingByMarketIdResponse FixturesUpcomingByMarketId (int marketId, string version = null, string sport = null)
 
 Upcoming Fixtures by Market ID
 
@@ -548,16 +568,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new OddsApi(config);
-            var version = v3;  // string | The sport you want to retrieve upcoming fixtures from.
-            var sport = football;  // string | 
             var marketId = 1;  // int | The ID of the market you want to retrieve upcoming fixtures from.
+            var version = "v3";  // string | The sport you want to retrieve upcoming fixtures from. (optional) 
+            var sport = "football";  // string |  (optional) 
 
             try
             {
                 // Upcoming Fixtures by Market ID
-                OddsFixturesUpcomingByMarketIdResponse result = apiInstance.FixturesUpcomingByMarketId(version, sport, marketId);
+                OddsFixturesUpcomingByMarketIdResponse result = apiInstance.FixturesUpcomingByMarketId(marketId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -584,7 +608,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Upcoming Fixtures by Market ID
-    ApiResponse<OddsFixturesUpcomingByMarketIdResponse> response = apiInstance.FixturesUpcomingByMarketIdWithHttpInfo(version, sport, marketId);
+    ApiResponse<OddsFixturesUpcomingByMarketIdResponse> response = apiInstance.FixturesUpcomingByMarketIdWithHttpInfo(marketId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -601,9 +625,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The sport you want to retrieve upcoming fixtures from. |  |
-| **sport** | **string** |  |  |
 | **marketId** | **int** | The ID of the market you want to retrieve upcoming fixtures from. |  |
+| **version** | **string** | The sport you want to retrieve upcoming fixtures from. | [optional]  |
+| **sport** | **string** |  | [optional]  |
 
 ### Return type
 
@@ -628,7 +652,7 @@ catch (ApiException e)
 
 <a name="marketbyid"></a>
 # **MarketById**
-> OddsMarketByIdResponse MarketById (string version, int marketId)
+> OddsMarketByIdResponse MarketById (int marketId, string version = null)
 
 By ID
 
@@ -652,15 +676,19 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new OddsApi(config);
-            var version = v3;  // string | The version of the API.
             var marketId = 1;  // int | The ID of the market you want to retrieve.
+            var version = "v3";  // string | The version of the API. (optional) 
 
             try
             {
                 // By ID
-                OddsMarketByIdResponse result = apiInstance.MarketById(version, marketId);
+                OddsMarketByIdResponse result = apiInstance.MarketById(marketId, version);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -687,7 +715,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By ID
-    ApiResponse<OddsMarketByIdResponse> response = apiInstance.MarketByIdWithHttpInfo(version, marketId);
+    ApiResponse<OddsMarketByIdResponse> response = apiInstance.MarketByIdWithHttpInfo(marketId, version);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -704,8 +732,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
 | **marketId** | **int** | The ID of the market you want to retrieve. |  |
+| **version** | **string** | The version of the API. | [optional]  |
 
 ### Return type
 
@@ -730,7 +758,7 @@ catch (ApiException e)
 
 <a name="marketsall"></a>
 # **MarketsAll**
-> OddsMarketsAllResponse MarketsAll (string version)
+> OddsMarketsAllResponse MarketsAll (string version = null)
 
 All
 
@@ -754,9 +782,13 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new OddsApi(config);
-            var version = v3;  // string | The version of the API.
+            var version = "v3";  // string | The version of the API. (optional) 
 
             try
             {
@@ -805,7 +837,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
+| **version** | **string** | The version of the API. | [optional]  |
 
 ### Return type
 
@@ -830,7 +862,7 @@ catch (ApiException e)
 
 <a name="marketssearch"></a>
 # **MarketsSearch**
-> OddsMarketsSearchResponse MarketsSearch (string version, string name)
+> OddsMarketsSearchResponse MarketsSearch (string name, string version = null)
 
 Search
 
@@ -854,15 +886,19 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new OddsApi(config);
-            var version = v3;  // string | The version of the API.
-            var name = Over;  // string | The name you want to search on
+            var name = "Over";  // string | The name you want to search on
+            var version = "v3";  // string | The version of the API. (optional) 
 
             try
             {
                 // Search
-                OddsMarketsSearchResponse result = apiInstance.MarketsSearch(version, name);
+                OddsMarketsSearchResponse result = apiInstance.MarketsSearch(name, version);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -889,7 +925,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Search
-    ApiResponse<OddsMarketsSearchResponse> response = apiInstance.MarketsSearchWithHttpInfo(version, name);
+    ApiResponse<OddsMarketsSearchResponse> response = apiInstance.MarketsSearchWithHttpInfo(name, version);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -906,8 +942,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
 | **name** | **string** | The name you want to search on |  |
+| **version** | **string** | The version of the API. | [optional]  |
 
 ### Return type
 

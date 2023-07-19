@@ -61,9 +61,9 @@ namespace Sportmonks.Net.Test.Api
         public void BookmakerByIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string version = null;
             //int bookmakerId = null;
-            //var response = instance.BookmakerById(version, bookmakerId);
+            //string version = null;
+            //var response = instance.BookmakerById(bookmakerId, version);
             //Assert.IsType<OddsBookmakerByIdResponse>(response);
         }
 
@@ -86,9 +86,9 @@ namespace Sportmonks.Net.Test.Api
         public void BookmakersByFixtureIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string version = null;
             //int fixtureId = null;
-            //var response = instance.BookmakersByFixtureId(version, fixtureId);
+            //string version = null;
+            //var response = instance.BookmakersByFixtureId(fixtureId, version);
             //Assert.IsType<OddsBookmakersByFixtureIdResponse>(response);
         }
 
@@ -99,9 +99,9 @@ namespace Sportmonks.Net.Test.Api
         public void BookmakersMappingByFixtureIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string version = null;
             //int fixtureId = null;
-            //var response = instance.BookmakersMappingByFixtureId(version, fixtureId);
+            //string version = null;
+            //var response = instance.BookmakersMappingByFixtureId(fixtureId, version);
             //Assert.IsType<OddsBookmakersMappingByFixtureIdResponse>(response);
         }
 
@@ -112,9 +112,9 @@ namespace Sportmonks.Net.Test.Api
         public void BookmakersSearchTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string version = null;
             //string name = null;
-            //var response = instance.BookmakersSearch(version, name);
+            //string version = null;
+            //var response = instance.BookmakersSearch(name, version);
             //Assert.IsType<OddsBookmakersSearchResponse>(response);
         }
 
@@ -125,10 +125,10 @@ namespace Sportmonks.Net.Test.Api
         public void FixturesUpcomingByMarketIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int marketId = null;
             //string version = null;
             //string sport = null;
-            //int marketId = null;
-            //var response = instance.FixturesUpcomingByMarketId(version, sport, marketId);
+            //var response = instance.FixturesUpcomingByMarketId(marketId, version, sport);
             //Assert.IsType<OddsFixturesUpcomingByMarketIdResponse>(response);
         }
 
@@ -139,9 +139,9 @@ namespace Sportmonks.Net.Test.Api
         public void MarketByIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string version = null;
             //int marketId = null;
-            //var response = instance.MarketById(version, marketId);
+            //string version = null;
+            //var response = instance.MarketById(marketId, version);
             //Assert.IsType<OddsMarketByIdResponse>(response);
         }
 
@@ -164,9 +164,9 @@ namespace Sportmonks.Net.Test.Api
         public void MarketsSearchTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string version = null;
             //string name = null;
-            //var response = instance.MarketsSearch(version, name);
+            //string version = null;
+            //var response = instance.MarketsSearch(name, version);
             //Assert.IsType<OddsMarketsSearchResponse>(response);
         }
     }

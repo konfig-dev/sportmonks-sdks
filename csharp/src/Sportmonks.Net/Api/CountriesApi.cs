@@ -30,10 +30,10 @@ namespace Sportmonks.Net.Api
         /// All
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CountriesAllResponse</returns>
-        CountriesAllResponse All(string version, int operationIndex = 0);
+        CountriesAllResponse All(string version = default(string), int operationIndex = 0);
 
         /// <summary>
         /// All
@@ -42,19 +42,19 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CountriesAllResponse</returns>
-        ApiResponse<CountriesAllResponse> AllWithHttpInfo(string version, int operationIndex = 0);
+        ApiResponse<CountriesAllResponse> AllWithHttpInfo(string version = default(string), int operationIndex = 0);
         /// <summary>
         /// By ID
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="countryId">The ID of the country you want to retrieve.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CountriesGetByIdResponse</returns>
-        CountriesGetByIdResponse GetById(string version, int countryId, int operationIndex = 0);
+        CountriesGetByIdResponse GetById(int countryId, string version = default(string), int operationIndex = 0);
 
         /// <summary>
         /// By ID
@@ -63,20 +63,20 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="countryId">The ID of the country you want to retrieve.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CountriesGetByIdResponse</returns>
-        ApiResponse<CountriesGetByIdResponse> GetByIdWithHttpInfo(string version, int countryId, int operationIndex = 0);
+        ApiResponse<CountriesGetByIdResponse> GetByIdWithHttpInfo(int countryId, string version = default(string), int operationIndex = 0);
         /// <summary>
         /// Search
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="name">The name you want to search on</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CountriesSearchResponse</returns>
-        CountriesSearchResponse Search(string version, string name, int operationIndex = 0);
+        CountriesSearchResponse Search(string name, string version = default(string), int operationIndex = 0);
 
         /// <summary>
         /// Search
@@ -85,11 +85,11 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="name">The name you want to search on</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CountriesSearchResponse</returns>
-        ApiResponse<CountriesSearchResponse> SearchWithHttpInfo(string version, string name, int operationIndex = 0);
+        ApiResponse<CountriesSearchResponse> SearchWithHttpInfo(string name, string version = default(string), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -106,11 +106,11 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CountriesAllResponse</returns>
-        System.Threading.Tasks.Task<CountriesAllResponse> AllAsync(string version, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CountriesAllResponse> AllAsync(string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// All
@@ -119,11 +119,11 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CountriesAllResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CountriesAllResponse>> AllWithHttpInfoAsync(string version, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CountriesAllResponse>> AllWithHttpInfoAsync(string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// By ID
         /// </summary>
@@ -131,12 +131,12 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="countryId">The ID of the country you want to retrieve.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CountriesGetByIdResponse</returns>
-        System.Threading.Tasks.Task<CountriesGetByIdResponse> GetByIdAsync(string version, int countryId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CountriesGetByIdResponse> GetByIdAsync(int countryId, string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// By ID
@@ -145,12 +145,12 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="countryId">The ID of the country you want to retrieve.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CountriesGetByIdResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CountriesGetByIdResponse>> GetByIdWithHttpInfoAsync(string version, int countryId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CountriesGetByIdResponse>> GetByIdWithHttpInfoAsync(int countryId, string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Search
         /// </summary>
@@ -158,12 +158,12 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="name">The name you want to search on</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CountriesSearchResponse</returns>
-        System.Threading.Tasks.Task<CountriesSearchResponse> SearchAsync(string version, string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CountriesSearchResponse> SearchAsync(string name, string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Search
@@ -172,12 +172,12 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="name">The name you want to search on</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CountriesSearchResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CountriesSearchResponse>> SearchWithHttpInfoAsync(string version, string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CountriesSearchResponse>> SearchWithHttpInfoAsync(string name, string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -302,10 +302,10 @@ namespace Sportmonks.Net.Api
         /// All 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CountriesAllResponse</returns>
-        public CountriesAllResponse All(string version, int operationIndex = 0)
+        public CountriesAllResponse All(string version = default(string), int operationIndex = 0)
         {
             Sportmonks.Net.Client.ApiResponse<CountriesAllResponse> localVarResponse = AllWithHttpInfo(version);
             return localVarResponse.Data;
@@ -315,17 +315,11 @@ namespace Sportmonks.Net.Api
         /// All 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CountriesAllResponse</returns>
-        public Sportmonks.Net.Client.ApiResponse<CountriesAllResponse> AllWithHttpInfo(string version, int operationIndex = 0)
+        public Sportmonks.Net.Client.ApiResponse<CountriesAllResponse> AllWithHttpInfo(string version = default(string), int operationIndex = 0)
         {
-            // verify the required parameter 'version' is set
-            if (version == null)
-            {
-                throw new Sportmonks.Net.Client.ApiException(400, "Missing required parameter 'version' when calling CountriesApi->All");
-            }
-
             Sportmonks.Net.Client.RequestOptions localVarRequestOptions = new Sportmonks.Net.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
@@ -348,12 +342,19 @@ namespace Sportmonks.Net.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            if (version != null)
+            {
+                localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            }
 
             localVarRequestOptions.Operation = "CountriesApi.All";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (apikeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<CountriesAllResponse>("/{version}/core/countries", localVarRequestOptions, this.Configuration);
@@ -373,11 +374,11 @@ namespace Sportmonks.Net.Api
         /// All 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CountriesAllResponse</returns>
-        public async System.Threading.Tasks.Task<CountriesAllResponse> AllAsync(string version, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CountriesAllResponse> AllAsync(string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             Sportmonks.Net.Client.ApiResponse<CountriesAllResponse> localVarResponse = await AllWithHttpInfoAsync(version, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -387,18 +388,12 @@ namespace Sportmonks.Net.Api
         /// All 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CountriesAllResponse)</returns>
-        public async System.Threading.Tasks.Task<Sportmonks.Net.Client.ApiResponse<CountriesAllResponse>> AllWithHttpInfoAsync(string version, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Sportmonks.Net.Client.ApiResponse<CountriesAllResponse>> AllWithHttpInfoAsync(string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'version' is set
-            if (version == null)
-            {
-                throw new Sportmonks.Net.Client.ApiException(400, "Missing required parameter 'version' when calling CountriesApi->All");
-            }
-
 
             Sportmonks.Net.Client.RequestOptions localVarRequestOptions = new Sportmonks.Net.Client.RequestOptions();
 
@@ -422,12 +417,19 @@ namespace Sportmonks.Net.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            if (version != null)
+            {
+                localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            }
 
             localVarRequestOptions.Operation = "CountriesApi.All";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (apikeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.GetAsync<CountriesAllResponse>("/{version}/core/countries", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -448,13 +450,13 @@ namespace Sportmonks.Net.Api
         /// By ID 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="countryId">The ID of the country you want to retrieve.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CountriesGetByIdResponse</returns>
-        public CountriesGetByIdResponse GetById(string version, int countryId, int operationIndex = 0)
+        public CountriesGetByIdResponse GetById(int countryId, string version = default(string), int operationIndex = 0)
         {
-            Sportmonks.Net.Client.ApiResponse<CountriesGetByIdResponse> localVarResponse = GetByIdWithHttpInfo(version, countryId);
+            Sportmonks.Net.Client.ApiResponse<CountriesGetByIdResponse> localVarResponse = GetByIdWithHttpInfo(countryId, version);
             return localVarResponse.Data;
         }
 
@@ -462,18 +464,12 @@ namespace Sportmonks.Net.Api
         /// By ID 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="countryId">The ID of the country you want to retrieve.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CountriesGetByIdResponse</returns>
-        public Sportmonks.Net.Client.ApiResponse<CountriesGetByIdResponse> GetByIdWithHttpInfo(string version, int countryId, int operationIndex = 0)
+        public Sportmonks.Net.Client.ApiResponse<CountriesGetByIdResponse> GetByIdWithHttpInfo(int countryId, string version = default(string), int operationIndex = 0)
         {
-            // verify the required parameter 'version' is set
-            if (version == null)
-            {
-                throw new Sportmonks.Net.Client.ApiException(400, "Missing required parameter 'version' when calling CountriesApi->GetById");
-            }
-
             Sportmonks.Net.Client.RequestOptions localVarRequestOptions = new Sportmonks.Net.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
@@ -496,13 +492,20 @@ namespace Sportmonks.Net.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            if (version != null)
+            {
+                localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            }
             localVarRequestOptions.PathParameters.Add("countryId", Sportmonks.Net.Client.ClientUtils.ParameterToString(countryId)); // path parameter
 
             localVarRequestOptions.Operation = "CountriesApi.GetById";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (apikeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<CountriesGetByIdResponse>("/{version}/core/countries/{countryId}", localVarRequestOptions, this.Configuration);
@@ -522,14 +525,14 @@ namespace Sportmonks.Net.Api
         /// By ID 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="countryId">The ID of the country you want to retrieve.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CountriesGetByIdResponse</returns>
-        public async System.Threading.Tasks.Task<CountriesGetByIdResponse> GetByIdAsync(string version, int countryId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CountriesGetByIdResponse> GetByIdAsync(int countryId, string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Sportmonks.Net.Client.ApiResponse<CountriesGetByIdResponse> localVarResponse = await GetByIdWithHttpInfoAsync(version, countryId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Sportmonks.Net.Client.ApiResponse<CountriesGetByIdResponse> localVarResponse = await GetByIdWithHttpInfoAsync(countryId, version, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -537,19 +540,13 @@ namespace Sportmonks.Net.Api
         /// By ID 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="countryId">The ID of the country you want to retrieve.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CountriesGetByIdResponse)</returns>
-        public async System.Threading.Tasks.Task<Sportmonks.Net.Client.ApiResponse<CountriesGetByIdResponse>> GetByIdWithHttpInfoAsync(string version, int countryId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Sportmonks.Net.Client.ApiResponse<CountriesGetByIdResponse>> GetByIdWithHttpInfoAsync(int countryId, string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'version' is set
-            if (version == null)
-            {
-                throw new Sportmonks.Net.Client.ApiException(400, "Missing required parameter 'version' when calling CountriesApi->GetById");
-            }
-
 
             Sportmonks.Net.Client.RequestOptions localVarRequestOptions = new Sportmonks.Net.Client.RequestOptions();
 
@@ -573,13 +570,20 @@ namespace Sportmonks.Net.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            if (version != null)
+            {
+                localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            }
             localVarRequestOptions.PathParameters.Add("countryId", Sportmonks.Net.Client.ClientUtils.ParameterToString(countryId)); // path parameter
 
             localVarRequestOptions.Operation = "CountriesApi.GetById";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (apikeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.GetAsync<CountriesGetByIdResponse>("/{version}/core/countries/{countryId}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -600,13 +604,13 @@ namespace Sportmonks.Net.Api
         /// Search 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="name">The name you want to search on</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CountriesSearchResponse</returns>
-        public CountriesSearchResponse Search(string version, string name, int operationIndex = 0)
+        public CountriesSearchResponse Search(string name, string version = default(string), int operationIndex = 0)
         {
-            Sportmonks.Net.Client.ApiResponse<CountriesSearchResponse> localVarResponse = SearchWithHttpInfo(version, name);
+            Sportmonks.Net.Client.ApiResponse<CountriesSearchResponse> localVarResponse = SearchWithHttpInfo(name, version);
             return localVarResponse.Data;
         }
 
@@ -614,18 +618,12 @@ namespace Sportmonks.Net.Api
         /// Search 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="name">The name you want to search on</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CountriesSearchResponse</returns>
-        public Sportmonks.Net.Client.ApiResponse<CountriesSearchResponse> SearchWithHttpInfo(string version, string name, int operationIndex = 0)
+        public Sportmonks.Net.Client.ApiResponse<CountriesSearchResponse> SearchWithHttpInfo(string name, string version = default(string), int operationIndex = 0)
         {
-            // verify the required parameter 'version' is set
-            if (version == null)
-            {
-                throw new Sportmonks.Net.Client.ApiException(400, "Missing required parameter 'version' when calling CountriesApi->Search");
-            }
-
             // verify the required parameter 'name' is set
             if (name == null)
             {
@@ -654,13 +652,20 @@ namespace Sportmonks.Net.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            if (version != null)
+            {
+                localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            }
             localVarRequestOptions.PathParameters.Add("name", Sportmonks.Net.Client.ClientUtils.ParameterToString(name)); // path parameter
 
             localVarRequestOptions.Operation = "CountriesApi.Search";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (apikeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<CountriesSearchResponse>("/{version}/core/countries/search/{name}", localVarRequestOptions, this.Configuration);
@@ -680,14 +685,14 @@ namespace Sportmonks.Net.Api
         /// Search 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="name">The name you want to search on</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CountriesSearchResponse</returns>
-        public async System.Threading.Tasks.Task<CountriesSearchResponse> SearchAsync(string version, string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CountriesSearchResponse> SearchAsync(string name, string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Sportmonks.Net.Client.ApiResponse<CountriesSearchResponse> localVarResponse = await SearchWithHttpInfoAsync(version, name, operationIndex, cancellationToken).ConfigureAwait(false);
+            Sportmonks.Net.Client.ApiResponse<CountriesSearchResponse> localVarResponse = await SearchWithHttpInfoAsync(name, version, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -695,19 +700,13 @@ namespace Sportmonks.Net.Api
         /// Search 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="name">The name you want to search on</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CountriesSearchResponse)</returns>
-        public async System.Threading.Tasks.Task<Sportmonks.Net.Client.ApiResponse<CountriesSearchResponse>> SearchWithHttpInfoAsync(string version, string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Sportmonks.Net.Client.ApiResponse<CountriesSearchResponse>> SearchWithHttpInfoAsync(string name, string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'version' is set
-            if (version == null)
-            {
-                throw new Sportmonks.Net.Client.ApiException(400, "Missing required parameter 'version' when calling CountriesApi->Search");
-            }
-
             // verify the required parameter 'name' is set
             if (name == null)
             {
@@ -737,13 +736,20 @@ namespace Sportmonks.Net.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            if (version != null)
+            {
+                localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            }
             localVarRequestOptions.PathParameters.Add("name", Sportmonks.Net.Client.ClientUtils.ParameterToString(name)); // path parameter
 
             localVarRequestOptions.Operation = "CountriesApi.Search";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (apikeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.GetAsync<CountriesSearchResponse>("/{version}/core/countries/search/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);

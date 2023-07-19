@@ -30,10 +30,10 @@ namespace Sportmonks.Net.Api
         /// All
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>MyEnrichmentsResponse</returns>
-        MyEnrichmentsResponse Enrichments(string version, int operationIndex = 0);
+        MyEnrichmentsResponse Enrichments(string version = default(string), int operationIndex = 0);
 
         /// <summary>
         /// All
@@ -42,18 +42,18 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of MyEnrichmentsResponse</returns>
-        ApiResponse<MyEnrichmentsResponse> EnrichmentsWithHttpInfo(string version, int operationIndex = 0);
+        ApiResponse<MyEnrichmentsResponse> EnrichmentsWithHttpInfo(string version = default(string), int operationIndex = 0);
         /// <summary>
         /// All
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>MyLeaguesResponse</returns>
-        MyLeaguesResponse Leagues(string version, int operationIndex = 0);
+        MyLeaguesResponse Leagues(string version = default(string), int operationIndex = 0);
 
         /// <summary>
         /// All
@@ -62,18 +62,18 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of MyLeaguesResponse</returns>
-        ApiResponse<MyLeaguesResponse> LeaguesWithHttpInfo(string version, int operationIndex = 0);
+        ApiResponse<MyLeaguesResponse> LeaguesWithHttpInfo(string version = default(string), int operationIndex = 0);
         /// <summary>
         /// All
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>MyResourcesResponse</returns>
-        MyResourcesResponse Resources(string version, int operationIndex = 0);
+        MyResourcesResponse Resources(string version = default(string), int operationIndex = 0);
 
         /// <summary>
         /// All
@@ -82,10 +82,10 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of MyResourcesResponse</returns>
-        ApiResponse<MyResourcesResponse> ResourcesWithHttpInfo(string version, int operationIndex = 0);
+        ApiResponse<MyResourcesResponse> ResourcesWithHttpInfo(string version = default(string), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -102,11 +102,11 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of MyEnrichmentsResponse</returns>
-        System.Threading.Tasks.Task<MyEnrichmentsResponse> EnrichmentsAsync(string version, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<MyEnrichmentsResponse> EnrichmentsAsync(string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// All
@@ -115,11 +115,11 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (MyEnrichmentsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MyEnrichmentsResponse>> EnrichmentsWithHttpInfoAsync(string version, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<MyEnrichmentsResponse>> EnrichmentsWithHttpInfoAsync(string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// All
         /// </summary>
@@ -127,11 +127,11 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of MyLeaguesResponse</returns>
-        System.Threading.Tasks.Task<MyLeaguesResponse> LeaguesAsync(string version, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<MyLeaguesResponse> LeaguesAsync(string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// All
@@ -140,11 +140,11 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (MyLeaguesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MyLeaguesResponse>> LeaguesWithHttpInfoAsync(string version, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<MyLeaguesResponse>> LeaguesWithHttpInfoAsync(string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// All
         /// </summary>
@@ -152,11 +152,11 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of MyResourcesResponse</returns>
-        System.Threading.Tasks.Task<MyResourcesResponse> ResourcesAsync(string version, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<MyResourcesResponse> ResourcesAsync(string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// All
@@ -165,11 +165,11 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (MyResourcesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MyResourcesResponse>> ResourcesWithHttpInfoAsync(string version, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<MyResourcesResponse>> ResourcesWithHttpInfoAsync(string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -294,10 +294,10 @@ namespace Sportmonks.Net.Api
         /// All 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>MyEnrichmentsResponse</returns>
-        public MyEnrichmentsResponse Enrichments(string version, int operationIndex = 0)
+        public MyEnrichmentsResponse Enrichments(string version = default(string), int operationIndex = 0)
         {
             Sportmonks.Net.Client.ApiResponse<MyEnrichmentsResponse> localVarResponse = EnrichmentsWithHttpInfo(version);
             return localVarResponse.Data;
@@ -307,17 +307,11 @@ namespace Sportmonks.Net.Api
         /// All 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of MyEnrichmentsResponse</returns>
-        public Sportmonks.Net.Client.ApiResponse<MyEnrichmentsResponse> EnrichmentsWithHttpInfo(string version, int operationIndex = 0)
+        public Sportmonks.Net.Client.ApiResponse<MyEnrichmentsResponse> EnrichmentsWithHttpInfo(string version = default(string), int operationIndex = 0)
         {
-            // verify the required parameter 'version' is set
-            if (version == null)
-            {
-                throw new Sportmonks.Net.Client.ApiException(400, "Missing required parameter 'version' when calling MyApi->Enrichments");
-            }
-
             Sportmonks.Net.Client.RequestOptions localVarRequestOptions = new Sportmonks.Net.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
@@ -340,12 +334,19 @@ namespace Sportmonks.Net.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            if (version != null)
+            {
+                localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            }
 
             localVarRequestOptions.Operation = "MyApi.Enrichments";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (apikeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<MyEnrichmentsResponse>("/{version}/my/enrichments", localVarRequestOptions, this.Configuration);
@@ -365,11 +366,11 @@ namespace Sportmonks.Net.Api
         /// All 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of MyEnrichmentsResponse</returns>
-        public async System.Threading.Tasks.Task<MyEnrichmentsResponse> EnrichmentsAsync(string version, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<MyEnrichmentsResponse> EnrichmentsAsync(string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             Sportmonks.Net.Client.ApiResponse<MyEnrichmentsResponse> localVarResponse = await EnrichmentsWithHttpInfoAsync(version, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -379,18 +380,12 @@ namespace Sportmonks.Net.Api
         /// All 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (MyEnrichmentsResponse)</returns>
-        public async System.Threading.Tasks.Task<Sportmonks.Net.Client.ApiResponse<MyEnrichmentsResponse>> EnrichmentsWithHttpInfoAsync(string version, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Sportmonks.Net.Client.ApiResponse<MyEnrichmentsResponse>> EnrichmentsWithHttpInfoAsync(string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'version' is set
-            if (version == null)
-            {
-                throw new Sportmonks.Net.Client.ApiException(400, "Missing required parameter 'version' when calling MyApi->Enrichments");
-            }
-
 
             Sportmonks.Net.Client.RequestOptions localVarRequestOptions = new Sportmonks.Net.Client.RequestOptions();
 
@@ -414,12 +409,19 @@ namespace Sportmonks.Net.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            if (version != null)
+            {
+                localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            }
 
             localVarRequestOptions.Operation = "MyApi.Enrichments";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (apikeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.GetAsync<MyEnrichmentsResponse>("/{version}/my/enrichments", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -440,10 +442,10 @@ namespace Sportmonks.Net.Api
         /// All 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>MyLeaguesResponse</returns>
-        public MyLeaguesResponse Leagues(string version, int operationIndex = 0)
+        public MyLeaguesResponse Leagues(string version = default(string), int operationIndex = 0)
         {
             Sportmonks.Net.Client.ApiResponse<MyLeaguesResponse> localVarResponse = LeaguesWithHttpInfo(version);
             return localVarResponse.Data;
@@ -453,17 +455,11 @@ namespace Sportmonks.Net.Api
         /// All 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of MyLeaguesResponse</returns>
-        public Sportmonks.Net.Client.ApiResponse<MyLeaguesResponse> LeaguesWithHttpInfo(string version, int operationIndex = 0)
+        public Sportmonks.Net.Client.ApiResponse<MyLeaguesResponse> LeaguesWithHttpInfo(string version = default(string), int operationIndex = 0)
         {
-            // verify the required parameter 'version' is set
-            if (version == null)
-            {
-                throw new Sportmonks.Net.Client.ApiException(400, "Missing required parameter 'version' when calling MyApi->Leagues");
-            }
-
             Sportmonks.Net.Client.RequestOptions localVarRequestOptions = new Sportmonks.Net.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
@@ -486,12 +482,19 @@ namespace Sportmonks.Net.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            if (version != null)
+            {
+                localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            }
 
             localVarRequestOptions.Operation = "MyApi.Leagues";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (apikeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<MyLeaguesResponse>("/{version}/my/leagues", localVarRequestOptions, this.Configuration);
@@ -511,11 +514,11 @@ namespace Sportmonks.Net.Api
         /// All 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of MyLeaguesResponse</returns>
-        public async System.Threading.Tasks.Task<MyLeaguesResponse> LeaguesAsync(string version, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<MyLeaguesResponse> LeaguesAsync(string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             Sportmonks.Net.Client.ApiResponse<MyLeaguesResponse> localVarResponse = await LeaguesWithHttpInfoAsync(version, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -525,18 +528,12 @@ namespace Sportmonks.Net.Api
         /// All 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (MyLeaguesResponse)</returns>
-        public async System.Threading.Tasks.Task<Sportmonks.Net.Client.ApiResponse<MyLeaguesResponse>> LeaguesWithHttpInfoAsync(string version, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Sportmonks.Net.Client.ApiResponse<MyLeaguesResponse>> LeaguesWithHttpInfoAsync(string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'version' is set
-            if (version == null)
-            {
-                throw new Sportmonks.Net.Client.ApiException(400, "Missing required parameter 'version' when calling MyApi->Leagues");
-            }
-
 
             Sportmonks.Net.Client.RequestOptions localVarRequestOptions = new Sportmonks.Net.Client.RequestOptions();
 
@@ -560,12 +557,19 @@ namespace Sportmonks.Net.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            if (version != null)
+            {
+                localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            }
 
             localVarRequestOptions.Operation = "MyApi.Leagues";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (apikeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.GetAsync<MyLeaguesResponse>("/{version}/my/leagues", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -586,10 +590,10 @@ namespace Sportmonks.Net.Api
         /// All 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>MyResourcesResponse</returns>
-        public MyResourcesResponse Resources(string version, int operationIndex = 0)
+        public MyResourcesResponse Resources(string version = default(string), int operationIndex = 0)
         {
             Sportmonks.Net.Client.ApiResponse<MyResourcesResponse> localVarResponse = ResourcesWithHttpInfo(version);
             return localVarResponse.Data;
@@ -599,17 +603,11 @@ namespace Sportmonks.Net.Api
         /// All 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of MyResourcesResponse</returns>
-        public Sportmonks.Net.Client.ApiResponse<MyResourcesResponse> ResourcesWithHttpInfo(string version, int operationIndex = 0)
+        public Sportmonks.Net.Client.ApiResponse<MyResourcesResponse> ResourcesWithHttpInfo(string version = default(string), int operationIndex = 0)
         {
-            // verify the required parameter 'version' is set
-            if (version == null)
-            {
-                throw new Sportmonks.Net.Client.ApiException(400, "Missing required parameter 'version' when calling MyApi->Resources");
-            }
-
             Sportmonks.Net.Client.RequestOptions localVarRequestOptions = new Sportmonks.Net.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
@@ -632,12 +630,19 @@ namespace Sportmonks.Net.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            if (version != null)
+            {
+                localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            }
 
             localVarRequestOptions.Operation = "MyApi.Resources";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (apikeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<MyResourcesResponse>("/{version}/my/resources", localVarRequestOptions, this.Configuration);
@@ -657,11 +662,11 @@ namespace Sportmonks.Net.Api
         /// All 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of MyResourcesResponse</returns>
-        public async System.Threading.Tasks.Task<MyResourcesResponse> ResourcesAsync(string version, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<MyResourcesResponse> ResourcesAsync(string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             Sportmonks.Net.Client.ApiResponse<MyResourcesResponse> localVarResponse = await ResourcesWithHttpInfoAsync(version, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -671,18 +676,12 @@ namespace Sportmonks.Net.Api
         /// All 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (MyResourcesResponse)</returns>
-        public async System.Threading.Tasks.Task<Sportmonks.Net.Client.ApiResponse<MyResourcesResponse>> ResourcesWithHttpInfoAsync(string version, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Sportmonks.Net.Client.ApiResponse<MyResourcesResponse>> ResourcesWithHttpInfoAsync(string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'version' is set
-            if (version == null)
-            {
-                throw new Sportmonks.Net.Client.ApiException(400, "Missing required parameter 'version' when calling MyApi->Resources");
-            }
-
 
             Sportmonks.Net.Client.RequestOptions localVarRequestOptions = new Sportmonks.Net.Client.RequestOptions();
 
@@ -706,12 +705,19 @@ namespace Sportmonks.Net.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            if (version != null)
+            {
+                localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            }
 
             localVarRequestOptions.Operation = "MyApi.Resources";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (apikeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.GetAsync<MyResourcesResponse>("/{version}/my/resources", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);

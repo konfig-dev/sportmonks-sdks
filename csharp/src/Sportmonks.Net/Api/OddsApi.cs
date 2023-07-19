@@ -30,11 +30,11 @@ namespace Sportmonks.Net.Api
         /// By ID
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="bookmakerId">The ID of the bookmaker you want to retrieve.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>OddsBookmakerByIdResponse</returns>
-        OddsBookmakerByIdResponse BookmakerById(string version, int bookmakerId, int operationIndex = 0);
+        OddsBookmakerByIdResponse BookmakerById(int bookmakerId, string version = default(string), int operationIndex = 0);
 
         /// <summary>
         /// By ID
@@ -43,19 +43,19 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="bookmakerId">The ID of the bookmaker you want to retrieve.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of OddsBookmakerByIdResponse</returns>
-        ApiResponse<OddsBookmakerByIdResponse> BookmakerByIdWithHttpInfo(string version, int bookmakerId, int operationIndex = 0);
+        ApiResponse<OddsBookmakerByIdResponse> BookmakerByIdWithHttpInfo(int bookmakerId, string version = default(string), int operationIndex = 0);
         /// <summary>
         /// All
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>OddsBookmakersAllResponse</returns>
-        OddsBookmakersAllResponse BookmakersAll(string version, int operationIndex = 0);
+        OddsBookmakersAllResponse BookmakersAll(string version = default(string), int operationIndex = 0);
 
         /// <summary>
         /// All
@@ -64,19 +64,19 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of OddsBookmakersAllResponse</returns>
-        ApiResponse<OddsBookmakersAllResponse> BookmakersAllWithHttpInfo(string version, int operationIndex = 0);
+        ApiResponse<OddsBookmakersAllResponse> BookmakersAllWithHttpInfo(string version = default(string), int operationIndex = 0);
         /// <summary>
         /// By Fixture ID
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="fixtureId">The ID of the bookmaker you want to retrieve.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>OddsBookmakersByFixtureIdResponse</returns>
-        OddsBookmakersByFixtureIdResponse BookmakersByFixtureId(string version, int fixtureId, int operationIndex = 0);
+        OddsBookmakersByFixtureIdResponse BookmakersByFixtureId(int fixtureId, string version = default(string), int operationIndex = 0);
 
         /// <summary>
         /// By Fixture ID
@@ -85,20 +85,20 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="fixtureId">The ID of the bookmaker you want to retrieve.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of OddsBookmakersByFixtureIdResponse</returns>
-        ApiResponse<OddsBookmakersByFixtureIdResponse> BookmakersByFixtureIdWithHttpInfo(string version, int fixtureId, int operationIndex = 0);
+        ApiResponse<OddsBookmakersByFixtureIdResponse> BookmakersByFixtureIdWithHttpInfo(int fixtureId, string version = default(string), int operationIndex = 0);
         /// <summary>
         /// Mapping by Fixture ID
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="fixtureId">The fixtureId you want to retrieve the bookmaker mapping from.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>OddsBookmakersMappingByFixtureIdResponse</returns>
-        OddsBookmakersMappingByFixtureIdResponse BookmakersMappingByFixtureId(string version, int fixtureId, int operationIndex = 0);
+        OddsBookmakersMappingByFixtureIdResponse BookmakersMappingByFixtureId(int fixtureId, string version = default(string), int operationIndex = 0);
 
         /// <summary>
         /// Mapping by Fixture ID
@@ -107,20 +107,20 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="fixtureId">The fixtureId you want to retrieve the bookmaker mapping from.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of OddsBookmakersMappingByFixtureIdResponse</returns>
-        ApiResponse<OddsBookmakersMappingByFixtureIdResponse> BookmakersMappingByFixtureIdWithHttpInfo(string version, int fixtureId, int operationIndex = 0);
+        ApiResponse<OddsBookmakersMappingByFixtureIdResponse> BookmakersMappingByFixtureIdWithHttpInfo(int fixtureId, string version = default(string), int operationIndex = 0);
         /// <summary>
         /// Search
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="name">The name you want to search on</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>OddsBookmakersSearchResponse</returns>
-        OddsBookmakersSearchResponse BookmakersSearch(string version, string name, int operationIndex = 0);
+        OddsBookmakersSearchResponse BookmakersSearch(string name, string version = default(string), int operationIndex = 0);
 
         /// <summary>
         /// Search
@@ -129,21 +129,21 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="name">The name you want to search on</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of OddsBookmakersSearchResponse</returns>
-        ApiResponse<OddsBookmakersSearchResponse> BookmakersSearchWithHttpInfo(string version, string name, int operationIndex = 0);
+        ApiResponse<OddsBookmakersSearchResponse> BookmakersSearchWithHttpInfo(string name, string version = default(string), int operationIndex = 0);
         /// <summary>
         /// Upcoming Fixtures by Market ID
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The sport you want to retrieve upcoming fixtures from.</param>
-        /// <param name="sport"></param>
         /// <param name="marketId">The ID of the market you want to retrieve upcoming fixtures from.</param>
+        /// <param name="version">The sport you want to retrieve upcoming fixtures from. (optional)</param>
+        /// <param name="sport"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>OddsFixturesUpcomingByMarketIdResponse</returns>
-        OddsFixturesUpcomingByMarketIdResponse FixturesUpcomingByMarketId(string version, string sport, int marketId, int operationIndex = 0);
+        OddsFixturesUpcomingByMarketIdResponse FixturesUpcomingByMarketId(int marketId, string version = default(string), string sport = default(string), int operationIndex = 0);
 
         /// <summary>
         /// Upcoming Fixtures by Market ID
@@ -152,21 +152,21 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The sport you want to retrieve upcoming fixtures from.</param>
-        /// <param name="sport"></param>
         /// <param name="marketId">The ID of the market you want to retrieve upcoming fixtures from.</param>
+        /// <param name="version">The sport you want to retrieve upcoming fixtures from. (optional)</param>
+        /// <param name="sport"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of OddsFixturesUpcomingByMarketIdResponse</returns>
-        ApiResponse<OddsFixturesUpcomingByMarketIdResponse> FixturesUpcomingByMarketIdWithHttpInfo(string version, string sport, int marketId, int operationIndex = 0);
+        ApiResponse<OddsFixturesUpcomingByMarketIdResponse> FixturesUpcomingByMarketIdWithHttpInfo(int marketId, string version = default(string), string sport = default(string), int operationIndex = 0);
         /// <summary>
         /// By ID
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="marketId">The ID of the market you want to retrieve.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>OddsMarketByIdResponse</returns>
-        OddsMarketByIdResponse MarketById(string version, int marketId, int operationIndex = 0);
+        OddsMarketByIdResponse MarketById(int marketId, string version = default(string), int operationIndex = 0);
 
         /// <summary>
         /// By ID
@@ -175,19 +175,19 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="marketId">The ID of the market you want to retrieve.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of OddsMarketByIdResponse</returns>
-        ApiResponse<OddsMarketByIdResponse> MarketByIdWithHttpInfo(string version, int marketId, int operationIndex = 0);
+        ApiResponse<OddsMarketByIdResponse> MarketByIdWithHttpInfo(int marketId, string version = default(string), int operationIndex = 0);
         /// <summary>
         /// All
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>OddsMarketsAllResponse</returns>
-        OddsMarketsAllResponse MarketsAll(string version, int operationIndex = 0);
+        OddsMarketsAllResponse MarketsAll(string version = default(string), int operationIndex = 0);
 
         /// <summary>
         /// All
@@ -196,19 +196,19 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of OddsMarketsAllResponse</returns>
-        ApiResponse<OddsMarketsAllResponse> MarketsAllWithHttpInfo(string version, int operationIndex = 0);
+        ApiResponse<OddsMarketsAllResponse> MarketsAllWithHttpInfo(string version = default(string), int operationIndex = 0);
         /// <summary>
         /// Search
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="name">The name you want to search on</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>OddsMarketsSearchResponse</returns>
-        OddsMarketsSearchResponse MarketsSearch(string version, string name, int operationIndex = 0);
+        OddsMarketsSearchResponse MarketsSearch(string name, string version = default(string), int operationIndex = 0);
 
         /// <summary>
         /// Search
@@ -217,11 +217,11 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="name">The name you want to search on</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of OddsMarketsSearchResponse</returns>
-        ApiResponse<OddsMarketsSearchResponse> MarketsSearchWithHttpInfo(string version, string name, int operationIndex = 0);
+        ApiResponse<OddsMarketsSearchResponse> MarketsSearchWithHttpInfo(string name, string version = default(string), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -238,12 +238,12 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="bookmakerId">The ID of the bookmaker you want to retrieve.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OddsBookmakerByIdResponse</returns>
-        System.Threading.Tasks.Task<OddsBookmakerByIdResponse> BookmakerByIdAsync(string version, int bookmakerId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OddsBookmakerByIdResponse> BookmakerByIdAsync(int bookmakerId, string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// By ID
@@ -252,12 +252,12 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="bookmakerId">The ID of the bookmaker you want to retrieve.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OddsBookmakerByIdResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OddsBookmakerByIdResponse>> BookmakerByIdWithHttpInfoAsync(string version, int bookmakerId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OddsBookmakerByIdResponse>> BookmakerByIdWithHttpInfoAsync(int bookmakerId, string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// All
         /// </summary>
@@ -265,11 +265,11 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OddsBookmakersAllResponse</returns>
-        System.Threading.Tasks.Task<OddsBookmakersAllResponse> BookmakersAllAsync(string version, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OddsBookmakersAllResponse> BookmakersAllAsync(string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// All
@@ -278,11 +278,11 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OddsBookmakersAllResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OddsBookmakersAllResponse>> BookmakersAllWithHttpInfoAsync(string version, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OddsBookmakersAllResponse>> BookmakersAllWithHttpInfoAsync(string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// By Fixture ID
         /// </summary>
@@ -290,12 +290,12 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="fixtureId">The ID of the bookmaker you want to retrieve.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OddsBookmakersByFixtureIdResponse</returns>
-        System.Threading.Tasks.Task<OddsBookmakersByFixtureIdResponse> BookmakersByFixtureIdAsync(string version, int fixtureId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OddsBookmakersByFixtureIdResponse> BookmakersByFixtureIdAsync(int fixtureId, string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// By Fixture ID
@@ -304,12 +304,12 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="fixtureId">The ID of the bookmaker you want to retrieve.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OddsBookmakersByFixtureIdResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OddsBookmakersByFixtureIdResponse>> BookmakersByFixtureIdWithHttpInfoAsync(string version, int fixtureId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OddsBookmakersByFixtureIdResponse>> BookmakersByFixtureIdWithHttpInfoAsync(int fixtureId, string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Mapping by Fixture ID
         /// </summary>
@@ -317,12 +317,12 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="fixtureId">The fixtureId you want to retrieve the bookmaker mapping from.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OddsBookmakersMappingByFixtureIdResponse</returns>
-        System.Threading.Tasks.Task<OddsBookmakersMappingByFixtureIdResponse> BookmakersMappingByFixtureIdAsync(string version, int fixtureId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OddsBookmakersMappingByFixtureIdResponse> BookmakersMappingByFixtureIdAsync(int fixtureId, string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Mapping by Fixture ID
@@ -331,12 +331,12 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="fixtureId">The fixtureId you want to retrieve the bookmaker mapping from.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OddsBookmakersMappingByFixtureIdResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OddsBookmakersMappingByFixtureIdResponse>> BookmakersMappingByFixtureIdWithHttpInfoAsync(string version, int fixtureId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OddsBookmakersMappingByFixtureIdResponse>> BookmakersMappingByFixtureIdWithHttpInfoAsync(int fixtureId, string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Search
         /// </summary>
@@ -344,12 +344,12 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="name">The name you want to search on</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OddsBookmakersSearchResponse</returns>
-        System.Threading.Tasks.Task<OddsBookmakersSearchResponse> BookmakersSearchAsync(string version, string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OddsBookmakersSearchResponse> BookmakersSearchAsync(string name, string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Search
@@ -358,12 +358,12 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="name">The name you want to search on</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OddsBookmakersSearchResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OddsBookmakersSearchResponse>> BookmakersSearchWithHttpInfoAsync(string version, string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OddsBookmakersSearchResponse>> BookmakersSearchWithHttpInfoAsync(string name, string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Upcoming Fixtures by Market ID
         /// </summary>
@@ -371,13 +371,13 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The sport you want to retrieve upcoming fixtures from.</param>
-        /// <param name="sport"></param>
         /// <param name="marketId">The ID of the market you want to retrieve upcoming fixtures from.</param>
+        /// <param name="version">The sport you want to retrieve upcoming fixtures from. (optional)</param>
+        /// <param name="sport"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OddsFixturesUpcomingByMarketIdResponse</returns>
-        System.Threading.Tasks.Task<OddsFixturesUpcomingByMarketIdResponse> FixturesUpcomingByMarketIdAsync(string version, string sport, int marketId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OddsFixturesUpcomingByMarketIdResponse> FixturesUpcomingByMarketIdAsync(int marketId, string version = default(string), string sport = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Upcoming Fixtures by Market ID
@@ -386,13 +386,13 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The sport you want to retrieve upcoming fixtures from.</param>
-        /// <param name="sport"></param>
         /// <param name="marketId">The ID of the market you want to retrieve upcoming fixtures from.</param>
+        /// <param name="version">The sport you want to retrieve upcoming fixtures from. (optional)</param>
+        /// <param name="sport"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OddsFixturesUpcomingByMarketIdResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OddsFixturesUpcomingByMarketIdResponse>> FixturesUpcomingByMarketIdWithHttpInfoAsync(string version, string sport, int marketId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OddsFixturesUpcomingByMarketIdResponse>> FixturesUpcomingByMarketIdWithHttpInfoAsync(int marketId, string version = default(string), string sport = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// By ID
         /// </summary>
@@ -400,12 +400,12 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="marketId">The ID of the market you want to retrieve.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OddsMarketByIdResponse</returns>
-        System.Threading.Tasks.Task<OddsMarketByIdResponse> MarketByIdAsync(string version, int marketId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OddsMarketByIdResponse> MarketByIdAsync(int marketId, string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// By ID
@@ -414,12 +414,12 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="marketId">The ID of the market you want to retrieve.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OddsMarketByIdResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OddsMarketByIdResponse>> MarketByIdWithHttpInfoAsync(string version, int marketId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OddsMarketByIdResponse>> MarketByIdWithHttpInfoAsync(int marketId, string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// All
         /// </summary>
@@ -427,11 +427,11 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OddsMarketsAllResponse</returns>
-        System.Threading.Tasks.Task<OddsMarketsAllResponse> MarketsAllAsync(string version, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OddsMarketsAllResponse> MarketsAllAsync(string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// All
@@ -440,11 +440,11 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OddsMarketsAllResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OddsMarketsAllResponse>> MarketsAllWithHttpInfoAsync(string version, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OddsMarketsAllResponse>> MarketsAllWithHttpInfoAsync(string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Search
         /// </summary>
@@ -452,12 +452,12 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="name">The name you want to search on</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OddsMarketsSearchResponse</returns>
-        System.Threading.Tasks.Task<OddsMarketsSearchResponse> MarketsSearchAsync(string version, string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OddsMarketsSearchResponse> MarketsSearchAsync(string name, string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Search
@@ -466,12 +466,12 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="name">The name you want to search on</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OddsMarketsSearchResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OddsMarketsSearchResponse>> MarketsSearchWithHttpInfoAsync(string version, string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OddsMarketsSearchResponse>> MarketsSearchWithHttpInfoAsync(string name, string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -596,13 +596,13 @@ namespace Sportmonks.Net.Api
         /// By ID 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="bookmakerId">The ID of the bookmaker you want to retrieve.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>OddsBookmakerByIdResponse</returns>
-        public OddsBookmakerByIdResponse BookmakerById(string version, int bookmakerId, int operationIndex = 0)
+        public OddsBookmakerByIdResponse BookmakerById(int bookmakerId, string version = default(string), int operationIndex = 0)
         {
-            Sportmonks.Net.Client.ApiResponse<OddsBookmakerByIdResponse> localVarResponse = BookmakerByIdWithHttpInfo(version, bookmakerId);
+            Sportmonks.Net.Client.ApiResponse<OddsBookmakerByIdResponse> localVarResponse = BookmakerByIdWithHttpInfo(bookmakerId, version);
             return localVarResponse.Data;
         }
 
@@ -610,18 +610,12 @@ namespace Sportmonks.Net.Api
         /// By ID 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="bookmakerId">The ID of the bookmaker you want to retrieve.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of OddsBookmakerByIdResponse</returns>
-        public Sportmonks.Net.Client.ApiResponse<OddsBookmakerByIdResponse> BookmakerByIdWithHttpInfo(string version, int bookmakerId, int operationIndex = 0)
+        public Sportmonks.Net.Client.ApiResponse<OddsBookmakerByIdResponse> BookmakerByIdWithHttpInfo(int bookmakerId, string version = default(string), int operationIndex = 0)
         {
-            // verify the required parameter 'version' is set
-            if (version == null)
-            {
-                throw new Sportmonks.Net.Client.ApiException(400, "Missing required parameter 'version' when calling OddsApi->BookmakerById");
-            }
-
             Sportmonks.Net.Client.RequestOptions localVarRequestOptions = new Sportmonks.Net.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
@@ -644,13 +638,20 @@ namespace Sportmonks.Net.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            if (version != null)
+            {
+                localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            }
             localVarRequestOptions.PathParameters.Add("bookmakerId", Sportmonks.Net.Client.ClientUtils.ParameterToString(bookmakerId)); // path parameter
 
             localVarRequestOptions.Operation = "OddsApi.BookmakerById";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (apikeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<OddsBookmakerByIdResponse>("/{version}/odds/bookmakers/{bookmakerId}", localVarRequestOptions, this.Configuration);
@@ -670,14 +671,14 @@ namespace Sportmonks.Net.Api
         /// By ID 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="bookmakerId">The ID of the bookmaker you want to retrieve.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OddsBookmakerByIdResponse</returns>
-        public async System.Threading.Tasks.Task<OddsBookmakerByIdResponse> BookmakerByIdAsync(string version, int bookmakerId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OddsBookmakerByIdResponse> BookmakerByIdAsync(int bookmakerId, string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Sportmonks.Net.Client.ApiResponse<OddsBookmakerByIdResponse> localVarResponse = await BookmakerByIdWithHttpInfoAsync(version, bookmakerId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Sportmonks.Net.Client.ApiResponse<OddsBookmakerByIdResponse> localVarResponse = await BookmakerByIdWithHttpInfoAsync(bookmakerId, version, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -685,19 +686,13 @@ namespace Sportmonks.Net.Api
         /// By ID 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="bookmakerId">The ID of the bookmaker you want to retrieve.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OddsBookmakerByIdResponse)</returns>
-        public async System.Threading.Tasks.Task<Sportmonks.Net.Client.ApiResponse<OddsBookmakerByIdResponse>> BookmakerByIdWithHttpInfoAsync(string version, int bookmakerId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Sportmonks.Net.Client.ApiResponse<OddsBookmakerByIdResponse>> BookmakerByIdWithHttpInfoAsync(int bookmakerId, string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'version' is set
-            if (version == null)
-            {
-                throw new Sportmonks.Net.Client.ApiException(400, "Missing required parameter 'version' when calling OddsApi->BookmakerById");
-            }
-
 
             Sportmonks.Net.Client.RequestOptions localVarRequestOptions = new Sportmonks.Net.Client.RequestOptions();
 
@@ -721,13 +716,20 @@ namespace Sportmonks.Net.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            if (version != null)
+            {
+                localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            }
             localVarRequestOptions.PathParameters.Add("bookmakerId", Sportmonks.Net.Client.ClientUtils.ParameterToString(bookmakerId)); // path parameter
 
             localVarRequestOptions.Operation = "OddsApi.BookmakerById";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (apikeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.GetAsync<OddsBookmakerByIdResponse>("/{version}/odds/bookmakers/{bookmakerId}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -748,10 +750,10 @@ namespace Sportmonks.Net.Api
         /// All 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>OddsBookmakersAllResponse</returns>
-        public OddsBookmakersAllResponse BookmakersAll(string version, int operationIndex = 0)
+        public OddsBookmakersAllResponse BookmakersAll(string version = default(string), int operationIndex = 0)
         {
             Sportmonks.Net.Client.ApiResponse<OddsBookmakersAllResponse> localVarResponse = BookmakersAllWithHttpInfo(version);
             return localVarResponse.Data;
@@ -761,17 +763,11 @@ namespace Sportmonks.Net.Api
         /// All 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of OddsBookmakersAllResponse</returns>
-        public Sportmonks.Net.Client.ApiResponse<OddsBookmakersAllResponse> BookmakersAllWithHttpInfo(string version, int operationIndex = 0)
+        public Sportmonks.Net.Client.ApiResponse<OddsBookmakersAllResponse> BookmakersAllWithHttpInfo(string version = default(string), int operationIndex = 0)
         {
-            // verify the required parameter 'version' is set
-            if (version == null)
-            {
-                throw new Sportmonks.Net.Client.ApiException(400, "Missing required parameter 'version' when calling OddsApi->BookmakersAll");
-            }
-
             Sportmonks.Net.Client.RequestOptions localVarRequestOptions = new Sportmonks.Net.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
@@ -794,12 +790,19 @@ namespace Sportmonks.Net.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            if (version != null)
+            {
+                localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            }
 
             localVarRequestOptions.Operation = "OddsApi.BookmakersAll";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (apikeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<OddsBookmakersAllResponse>("/{version}/odds/bookmakers", localVarRequestOptions, this.Configuration);
@@ -819,11 +822,11 @@ namespace Sportmonks.Net.Api
         /// All 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OddsBookmakersAllResponse</returns>
-        public async System.Threading.Tasks.Task<OddsBookmakersAllResponse> BookmakersAllAsync(string version, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OddsBookmakersAllResponse> BookmakersAllAsync(string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             Sportmonks.Net.Client.ApiResponse<OddsBookmakersAllResponse> localVarResponse = await BookmakersAllWithHttpInfoAsync(version, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -833,18 +836,12 @@ namespace Sportmonks.Net.Api
         /// All 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OddsBookmakersAllResponse)</returns>
-        public async System.Threading.Tasks.Task<Sportmonks.Net.Client.ApiResponse<OddsBookmakersAllResponse>> BookmakersAllWithHttpInfoAsync(string version, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Sportmonks.Net.Client.ApiResponse<OddsBookmakersAllResponse>> BookmakersAllWithHttpInfoAsync(string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'version' is set
-            if (version == null)
-            {
-                throw new Sportmonks.Net.Client.ApiException(400, "Missing required parameter 'version' when calling OddsApi->BookmakersAll");
-            }
-
 
             Sportmonks.Net.Client.RequestOptions localVarRequestOptions = new Sportmonks.Net.Client.RequestOptions();
 
@@ -868,12 +865,19 @@ namespace Sportmonks.Net.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            if (version != null)
+            {
+                localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            }
 
             localVarRequestOptions.Operation = "OddsApi.BookmakersAll";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (apikeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.GetAsync<OddsBookmakersAllResponse>("/{version}/odds/bookmakers", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -894,13 +898,13 @@ namespace Sportmonks.Net.Api
         /// By Fixture ID 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="fixtureId">The ID of the bookmaker you want to retrieve.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>OddsBookmakersByFixtureIdResponse</returns>
-        public OddsBookmakersByFixtureIdResponse BookmakersByFixtureId(string version, int fixtureId, int operationIndex = 0)
+        public OddsBookmakersByFixtureIdResponse BookmakersByFixtureId(int fixtureId, string version = default(string), int operationIndex = 0)
         {
-            Sportmonks.Net.Client.ApiResponse<OddsBookmakersByFixtureIdResponse> localVarResponse = BookmakersByFixtureIdWithHttpInfo(version, fixtureId);
+            Sportmonks.Net.Client.ApiResponse<OddsBookmakersByFixtureIdResponse> localVarResponse = BookmakersByFixtureIdWithHttpInfo(fixtureId, version);
             return localVarResponse.Data;
         }
 
@@ -908,18 +912,12 @@ namespace Sportmonks.Net.Api
         /// By Fixture ID 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="fixtureId">The ID of the bookmaker you want to retrieve.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of OddsBookmakersByFixtureIdResponse</returns>
-        public Sportmonks.Net.Client.ApiResponse<OddsBookmakersByFixtureIdResponse> BookmakersByFixtureIdWithHttpInfo(string version, int fixtureId, int operationIndex = 0)
+        public Sportmonks.Net.Client.ApiResponse<OddsBookmakersByFixtureIdResponse> BookmakersByFixtureIdWithHttpInfo(int fixtureId, string version = default(string), int operationIndex = 0)
         {
-            // verify the required parameter 'version' is set
-            if (version == null)
-            {
-                throw new Sportmonks.Net.Client.ApiException(400, "Missing required parameter 'version' when calling OddsApi->BookmakersByFixtureId");
-            }
-
             Sportmonks.Net.Client.RequestOptions localVarRequestOptions = new Sportmonks.Net.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
@@ -942,13 +940,20 @@ namespace Sportmonks.Net.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            if (version != null)
+            {
+                localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            }
             localVarRequestOptions.PathParameters.Add("fixtureId", Sportmonks.Net.Client.ClientUtils.ParameterToString(fixtureId)); // path parameter
 
             localVarRequestOptions.Operation = "OddsApi.BookmakersByFixtureId";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (apikeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<OddsBookmakersByFixtureIdResponse>("/{version}/odds/bookmakers/fixtures/{fixtureId}", localVarRequestOptions, this.Configuration);
@@ -968,14 +973,14 @@ namespace Sportmonks.Net.Api
         /// By Fixture ID 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="fixtureId">The ID of the bookmaker you want to retrieve.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OddsBookmakersByFixtureIdResponse</returns>
-        public async System.Threading.Tasks.Task<OddsBookmakersByFixtureIdResponse> BookmakersByFixtureIdAsync(string version, int fixtureId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OddsBookmakersByFixtureIdResponse> BookmakersByFixtureIdAsync(int fixtureId, string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Sportmonks.Net.Client.ApiResponse<OddsBookmakersByFixtureIdResponse> localVarResponse = await BookmakersByFixtureIdWithHttpInfoAsync(version, fixtureId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Sportmonks.Net.Client.ApiResponse<OddsBookmakersByFixtureIdResponse> localVarResponse = await BookmakersByFixtureIdWithHttpInfoAsync(fixtureId, version, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -983,19 +988,13 @@ namespace Sportmonks.Net.Api
         /// By Fixture ID 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="fixtureId">The ID of the bookmaker you want to retrieve.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OddsBookmakersByFixtureIdResponse)</returns>
-        public async System.Threading.Tasks.Task<Sportmonks.Net.Client.ApiResponse<OddsBookmakersByFixtureIdResponse>> BookmakersByFixtureIdWithHttpInfoAsync(string version, int fixtureId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Sportmonks.Net.Client.ApiResponse<OddsBookmakersByFixtureIdResponse>> BookmakersByFixtureIdWithHttpInfoAsync(int fixtureId, string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'version' is set
-            if (version == null)
-            {
-                throw new Sportmonks.Net.Client.ApiException(400, "Missing required parameter 'version' when calling OddsApi->BookmakersByFixtureId");
-            }
-
 
             Sportmonks.Net.Client.RequestOptions localVarRequestOptions = new Sportmonks.Net.Client.RequestOptions();
 
@@ -1019,13 +1018,20 @@ namespace Sportmonks.Net.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            if (version != null)
+            {
+                localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            }
             localVarRequestOptions.PathParameters.Add("fixtureId", Sportmonks.Net.Client.ClientUtils.ParameterToString(fixtureId)); // path parameter
 
             localVarRequestOptions.Operation = "OddsApi.BookmakersByFixtureId";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (apikeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.GetAsync<OddsBookmakersByFixtureIdResponse>("/{version}/odds/bookmakers/fixtures/{fixtureId}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -1046,13 +1052,13 @@ namespace Sportmonks.Net.Api
         /// Mapping by Fixture ID 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="fixtureId">The fixtureId you want to retrieve the bookmaker mapping from.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>OddsBookmakersMappingByFixtureIdResponse</returns>
-        public OddsBookmakersMappingByFixtureIdResponse BookmakersMappingByFixtureId(string version, int fixtureId, int operationIndex = 0)
+        public OddsBookmakersMappingByFixtureIdResponse BookmakersMappingByFixtureId(int fixtureId, string version = default(string), int operationIndex = 0)
         {
-            Sportmonks.Net.Client.ApiResponse<OddsBookmakersMappingByFixtureIdResponse> localVarResponse = BookmakersMappingByFixtureIdWithHttpInfo(version, fixtureId);
+            Sportmonks.Net.Client.ApiResponse<OddsBookmakersMappingByFixtureIdResponse> localVarResponse = BookmakersMappingByFixtureIdWithHttpInfo(fixtureId, version);
             return localVarResponse.Data;
         }
 
@@ -1060,18 +1066,12 @@ namespace Sportmonks.Net.Api
         /// Mapping by Fixture ID 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="fixtureId">The fixtureId you want to retrieve the bookmaker mapping from.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of OddsBookmakersMappingByFixtureIdResponse</returns>
-        public Sportmonks.Net.Client.ApiResponse<OddsBookmakersMappingByFixtureIdResponse> BookmakersMappingByFixtureIdWithHttpInfo(string version, int fixtureId, int operationIndex = 0)
+        public Sportmonks.Net.Client.ApiResponse<OddsBookmakersMappingByFixtureIdResponse> BookmakersMappingByFixtureIdWithHttpInfo(int fixtureId, string version = default(string), int operationIndex = 0)
         {
-            // verify the required parameter 'version' is set
-            if (version == null)
-            {
-                throw new Sportmonks.Net.Client.ApiException(400, "Missing required parameter 'version' when calling OddsApi->BookmakersMappingByFixtureId");
-            }
-
             Sportmonks.Net.Client.RequestOptions localVarRequestOptions = new Sportmonks.Net.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
@@ -1094,13 +1094,20 @@ namespace Sportmonks.Net.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            if (version != null)
+            {
+                localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            }
             localVarRequestOptions.PathParameters.Add("fixtureId", Sportmonks.Net.Client.ClientUtils.ParameterToString(fixtureId)); // path parameter
 
             localVarRequestOptions.Operation = "OddsApi.BookmakersMappingByFixtureId";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (apikeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<OddsBookmakersMappingByFixtureIdResponse>("/{version}/odds/bookmakers/fixtures/{fixtureId}/mapping", localVarRequestOptions, this.Configuration);
@@ -1120,14 +1127,14 @@ namespace Sportmonks.Net.Api
         /// Mapping by Fixture ID 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="fixtureId">The fixtureId you want to retrieve the bookmaker mapping from.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OddsBookmakersMappingByFixtureIdResponse</returns>
-        public async System.Threading.Tasks.Task<OddsBookmakersMappingByFixtureIdResponse> BookmakersMappingByFixtureIdAsync(string version, int fixtureId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OddsBookmakersMappingByFixtureIdResponse> BookmakersMappingByFixtureIdAsync(int fixtureId, string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Sportmonks.Net.Client.ApiResponse<OddsBookmakersMappingByFixtureIdResponse> localVarResponse = await BookmakersMappingByFixtureIdWithHttpInfoAsync(version, fixtureId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Sportmonks.Net.Client.ApiResponse<OddsBookmakersMappingByFixtureIdResponse> localVarResponse = await BookmakersMappingByFixtureIdWithHttpInfoAsync(fixtureId, version, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1135,19 +1142,13 @@ namespace Sportmonks.Net.Api
         /// Mapping by Fixture ID 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="fixtureId">The fixtureId you want to retrieve the bookmaker mapping from.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OddsBookmakersMappingByFixtureIdResponse)</returns>
-        public async System.Threading.Tasks.Task<Sportmonks.Net.Client.ApiResponse<OddsBookmakersMappingByFixtureIdResponse>> BookmakersMappingByFixtureIdWithHttpInfoAsync(string version, int fixtureId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Sportmonks.Net.Client.ApiResponse<OddsBookmakersMappingByFixtureIdResponse>> BookmakersMappingByFixtureIdWithHttpInfoAsync(int fixtureId, string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'version' is set
-            if (version == null)
-            {
-                throw new Sportmonks.Net.Client.ApiException(400, "Missing required parameter 'version' when calling OddsApi->BookmakersMappingByFixtureId");
-            }
-
 
             Sportmonks.Net.Client.RequestOptions localVarRequestOptions = new Sportmonks.Net.Client.RequestOptions();
 
@@ -1171,13 +1172,20 @@ namespace Sportmonks.Net.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            if (version != null)
+            {
+                localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            }
             localVarRequestOptions.PathParameters.Add("fixtureId", Sportmonks.Net.Client.ClientUtils.ParameterToString(fixtureId)); // path parameter
 
             localVarRequestOptions.Operation = "OddsApi.BookmakersMappingByFixtureId";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (apikeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.GetAsync<OddsBookmakersMappingByFixtureIdResponse>("/{version}/odds/bookmakers/fixtures/{fixtureId}/mapping", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -1198,13 +1206,13 @@ namespace Sportmonks.Net.Api
         /// Search 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="name">The name you want to search on</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>OddsBookmakersSearchResponse</returns>
-        public OddsBookmakersSearchResponse BookmakersSearch(string version, string name, int operationIndex = 0)
+        public OddsBookmakersSearchResponse BookmakersSearch(string name, string version = default(string), int operationIndex = 0)
         {
-            Sportmonks.Net.Client.ApiResponse<OddsBookmakersSearchResponse> localVarResponse = BookmakersSearchWithHttpInfo(version, name);
+            Sportmonks.Net.Client.ApiResponse<OddsBookmakersSearchResponse> localVarResponse = BookmakersSearchWithHttpInfo(name, version);
             return localVarResponse.Data;
         }
 
@@ -1212,18 +1220,12 @@ namespace Sportmonks.Net.Api
         /// Search 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="name">The name you want to search on</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of OddsBookmakersSearchResponse</returns>
-        public Sportmonks.Net.Client.ApiResponse<OddsBookmakersSearchResponse> BookmakersSearchWithHttpInfo(string version, string name, int operationIndex = 0)
+        public Sportmonks.Net.Client.ApiResponse<OddsBookmakersSearchResponse> BookmakersSearchWithHttpInfo(string name, string version = default(string), int operationIndex = 0)
         {
-            // verify the required parameter 'version' is set
-            if (version == null)
-            {
-                throw new Sportmonks.Net.Client.ApiException(400, "Missing required parameter 'version' when calling OddsApi->BookmakersSearch");
-            }
-
             // verify the required parameter 'name' is set
             if (name == null)
             {
@@ -1252,13 +1254,20 @@ namespace Sportmonks.Net.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            if (version != null)
+            {
+                localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            }
             localVarRequestOptions.PathParameters.Add("name", Sportmonks.Net.Client.ClientUtils.ParameterToString(name)); // path parameter
 
             localVarRequestOptions.Operation = "OddsApi.BookmakersSearch";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (apikeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<OddsBookmakersSearchResponse>("/{version}/odds/bookmakers/search/{name}", localVarRequestOptions, this.Configuration);
@@ -1278,14 +1287,14 @@ namespace Sportmonks.Net.Api
         /// Search 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="name">The name you want to search on</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OddsBookmakersSearchResponse</returns>
-        public async System.Threading.Tasks.Task<OddsBookmakersSearchResponse> BookmakersSearchAsync(string version, string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OddsBookmakersSearchResponse> BookmakersSearchAsync(string name, string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Sportmonks.Net.Client.ApiResponse<OddsBookmakersSearchResponse> localVarResponse = await BookmakersSearchWithHttpInfoAsync(version, name, operationIndex, cancellationToken).ConfigureAwait(false);
+            Sportmonks.Net.Client.ApiResponse<OddsBookmakersSearchResponse> localVarResponse = await BookmakersSearchWithHttpInfoAsync(name, version, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1293,19 +1302,13 @@ namespace Sportmonks.Net.Api
         /// Search 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="name">The name you want to search on</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OddsBookmakersSearchResponse)</returns>
-        public async System.Threading.Tasks.Task<Sportmonks.Net.Client.ApiResponse<OddsBookmakersSearchResponse>> BookmakersSearchWithHttpInfoAsync(string version, string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Sportmonks.Net.Client.ApiResponse<OddsBookmakersSearchResponse>> BookmakersSearchWithHttpInfoAsync(string name, string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'version' is set
-            if (version == null)
-            {
-                throw new Sportmonks.Net.Client.ApiException(400, "Missing required parameter 'version' when calling OddsApi->BookmakersSearch");
-            }
-
             // verify the required parameter 'name' is set
             if (name == null)
             {
@@ -1335,13 +1338,20 @@ namespace Sportmonks.Net.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            if (version != null)
+            {
+                localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            }
             localVarRequestOptions.PathParameters.Add("name", Sportmonks.Net.Client.ClientUtils.ParameterToString(name)); // path parameter
 
             localVarRequestOptions.Operation = "OddsApi.BookmakersSearch";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (apikeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.GetAsync<OddsBookmakersSearchResponse>("/{version}/odds/bookmakers/search/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -1362,14 +1372,14 @@ namespace Sportmonks.Net.Api
         /// Upcoming Fixtures by Market ID 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The sport you want to retrieve upcoming fixtures from.</param>
-        /// <param name="sport"></param>
         /// <param name="marketId">The ID of the market you want to retrieve upcoming fixtures from.</param>
+        /// <param name="version">The sport you want to retrieve upcoming fixtures from. (optional)</param>
+        /// <param name="sport"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>OddsFixturesUpcomingByMarketIdResponse</returns>
-        public OddsFixturesUpcomingByMarketIdResponse FixturesUpcomingByMarketId(string version, string sport, int marketId, int operationIndex = 0)
+        public OddsFixturesUpcomingByMarketIdResponse FixturesUpcomingByMarketId(int marketId, string version = default(string), string sport = default(string), int operationIndex = 0)
         {
-            Sportmonks.Net.Client.ApiResponse<OddsFixturesUpcomingByMarketIdResponse> localVarResponse = FixturesUpcomingByMarketIdWithHttpInfo(version, sport, marketId);
+            Sportmonks.Net.Client.ApiResponse<OddsFixturesUpcomingByMarketIdResponse> localVarResponse = FixturesUpcomingByMarketIdWithHttpInfo(marketId, version, sport);
             return localVarResponse.Data;
         }
 
@@ -1377,25 +1387,13 @@ namespace Sportmonks.Net.Api
         /// Upcoming Fixtures by Market ID 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The sport you want to retrieve upcoming fixtures from.</param>
-        /// <param name="sport"></param>
         /// <param name="marketId">The ID of the market you want to retrieve upcoming fixtures from.</param>
+        /// <param name="version">The sport you want to retrieve upcoming fixtures from. (optional)</param>
+        /// <param name="sport"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of OddsFixturesUpcomingByMarketIdResponse</returns>
-        public Sportmonks.Net.Client.ApiResponse<OddsFixturesUpcomingByMarketIdResponse> FixturesUpcomingByMarketIdWithHttpInfo(string version, string sport, int marketId, int operationIndex = 0)
+        public Sportmonks.Net.Client.ApiResponse<OddsFixturesUpcomingByMarketIdResponse> FixturesUpcomingByMarketIdWithHttpInfo(int marketId, string version = default(string), string sport = default(string), int operationIndex = 0)
         {
-            // verify the required parameter 'version' is set
-            if (version == null)
-            {
-                throw new Sportmonks.Net.Client.ApiException(400, "Missing required parameter 'version' when calling OddsApi->FixturesUpcomingByMarketId");
-            }
-
-            // verify the required parameter 'sport' is set
-            if (sport == null)
-            {
-                throw new Sportmonks.Net.Client.ApiException(400, "Missing required parameter 'sport' when calling OddsApi->FixturesUpcomingByMarketId");
-            }
-
             Sportmonks.Net.Client.RequestOptions localVarRequestOptions = new Sportmonks.Net.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
@@ -1418,14 +1416,24 @@ namespace Sportmonks.Net.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
-            localVarRequestOptions.PathParameters.Add("sport", Sportmonks.Net.Client.ClientUtils.ParameterToString(sport)); // path parameter
+            if (version != null)
+            {
+                localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            }
+            if (sport != null)
+            {
+                localVarRequestOptions.PathParameters.Add("sport", Sportmonks.Net.Client.ClientUtils.ParameterToString(sport)); // path parameter
+            }
             localVarRequestOptions.PathParameters.Add("marketId", Sportmonks.Net.Client.ClientUtils.ParameterToString(marketId)); // path parameter
 
             localVarRequestOptions.Operation = "OddsApi.FixturesUpcomingByMarketId";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (apikeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<OddsFixturesUpcomingByMarketIdResponse>("/{version}/{sport}/fixtures/upcoming/markets/{marketId}", localVarRequestOptions, this.Configuration);
@@ -1445,15 +1453,15 @@ namespace Sportmonks.Net.Api
         /// Upcoming Fixtures by Market ID 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The sport you want to retrieve upcoming fixtures from.</param>
-        /// <param name="sport"></param>
         /// <param name="marketId">The ID of the market you want to retrieve upcoming fixtures from.</param>
+        /// <param name="version">The sport you want to retrieve upcoming fixtures from. (optional)</param>
+        /// <param name="sport"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OddsFixturesUpcomingByMarketIdResponse</returns>
-        public async System.Threading.Tasks.Task<OddsFixturesUpcomingByMarketIdResponse> FixturesUpcomingByMarketIdAsync(string version, string sport, int marketId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OddsFixturesUpcomingByMarketIdResponse> FixturesUpcomingByMarketIdAsync(int marketId, string version = default(string), string sport = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Sportmonks.Net.Client.ApiResponse<OddsFixturesUpcomingByMarketIdResponse> localVarResponse = await FixturesUpcomingByMarketIdWithHttpInfoAsync(version, sport, marketId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Sportmonks.Net.Client.ApiResponse<OddsFixturesUpcomingByMarketIdResponse> localVarResponse = await FixturesUpcomingByMarketIdWithHttpInfoAsync(marketId, version, sport, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1461,26 +1469,14 @@ namespace Sportmonks.Net.Api
         /// Upcoming Fixtures by Market ID 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The sport you want to retrieve upcoming fixtures from.</param>
-        /// <param name="sport"></param>
         /// <param name="marketId">The ID of the market you want to retrieve upcoming fixtures from.</param>
+        /// <param name="version">The sport you want to retrieve upcoming fixtures from. (optional)</param>
+        /// <param name="sport"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OddsFixturesUpcomingByMarketIdResponse)</returns>
-        public async System.Threading.Tasks.Task<Sportmonks.Net.Client.ApiResponse<OddsFixturesUpcomingByMarketIdResponse>> FixturesUpcomingByMarketIdWithHttpInfoAsync(string version, string sport, int marketId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Sportmonks.Net.Client.ApiResponse<OddsFixturesUpcomingByMarketIdResponse>> FixturesUpcomingByMarketIdWithHttpInfoAsync(int marketId, string version = default(string), string sport = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'version' is set
-            if (version == null)
-            {
-                throw new Sportmonks.Net.Client.ApiException(400, "Missing required parameter 'version' when calling OddsApi->FixturesUpcomingByMarketId");
-            }
-
-            // verify the required parameter 'sport' is set
-            if (sport == null)
-            {
-                throw new Sportmonks.Net.Client.ApiException(400, "Missing required parameter 'sport' when calling OddsApi->FixturesUpcomingByMarketId");
-            }
-
 
             Sportmonks.Net.Client.RequestOptions localVarRequestOptions = new Sportmonks.Net.Client.RequestOptions();
 
@@ -1504,14 +1500,24 @@ namespace Sportmonks.Net.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
-            localVarRequestOptions.PathParameters.Add("sport", Sportmonks.Net.Client.ClientUtils.ParameterToString(sport)); // path parameter
+            if (version != null)
+            {
+                localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            }
+            if (sport != null)
+            {
+                localVarRequestOptions.PathParameters.Add("sport", Sportmonks.Net.Client.ClientUtils.ParameterToString(sport)); // path parameter
+            }
             localVarRequestOptions.PathParameters.Add("marketId", Sportmonks.Net.Client.ClientUtils.ParameterToString(marketId)); // path parameter
 
             localVarRequestOptions.Operation = "OddsApi.FixturesUpcomingByMarketId";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (apikeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.GetAsync<OddsFixturesUpcomingByMarketIdResponse>("/{version}/{sport}/fixtures/upcoming/markets/{marketId}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -1532,13 +1538,13 @@ namespace Sportmonks.Net.Api
         /// By ID 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="marketId">The ID of the market you want to retrieve.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>OddsMarketByIdResponse</returns>
-        public OddsMarketByIdResponse MarketById(string version, int marketId, int operationIndex = 0)
+        public OddsMarketByIdResponse MarketById(int marketId, string version = default(string), int operationIndex = 0)
         {
-            Sportmonks.Net.Client.ApiResponse<OddsMarketByIdResponse> localVarResponse = MarketByIdWithHttpInfo(version, marketId);
+            Sportmonks.Net.Client.ApiResponse<OddsMarketByIdResponse> localVarResponse = MarketByIdWithHttpInfo(marketId, version);
             return localVarResponse.Data;
         }
 
@@ -1546,18 +1552,12 @@ namespace Sportmonks.Net.Api
         /// By ID 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="marketId">The ID of the market you want to retrieve.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of OddsMarketByIdResponse</returns>
-        public Sportmonks.Net.Client.ApiResponse<OddsMarketByIdResponse> MarketByIdWithHttpInfo(string version, int marketId, int operationIndex = 0)
+        public Sportmonks.Net.Client.ApiResponse<OddsMarketByIdResponse> MarketByIdWithHttpInfo(int marketId, string version = default(string), int operationIndex = 0)
         {
-            // verify the required parameter 'version' is set
-            if (version == null)
-            {
-                throw new Sportmonks.Net.Client.ApiException(400, "Missing required parameter 'version' when calling OddsApi->MarketById");
-            }
-
             Sportmonks.Net.Client.RequestOptions localVarRequestOptions = new Sportmonks.Net.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
@@ -1580,13 +1580,20 @@ namespace Sportmonks.Net.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            if (version != null)
+            {
+                localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            }
             localVarRequestOptions.PathParameters.Add("marketId", Sportmonks.Net.Client.ClientUtils.ParameterToString(marketId)); // path parameter
 
             localVarRequestOptions.Operation = "OddsApi.MarketById";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (apikeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<OddsMarketByIdResponse>("/{version}/odds/markets/{marketId}", localVarRequestOptions, this.Configuration);
@@ -1606,14 +1613,14 @@ namespace Sportmonks.Net.Api
         /// By ID 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="marketId">The ID of the market you want to retrieve.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OddsMarketByIdResponse</returns>
-        public async System.Threading.Tasks.Task<OddsMarketByIdResponse> MarketByIdAsync(string version, int marketId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OddsMarketByIdResponse> MarketByIdAsync(int marketId, string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Sportmonks.Net.Client.ApiResponse<OddsMarketByIdResponse> localVarResponse = await MarketByIdWithHttpInfoAsync(version, marketId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Sportmonks.Net.Client.ApiResponse<OddsMarketByIdResponse> localVarResponse = await MarketByIdWithHttpInfoAsync(marketId, version, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1621,19 +1628,13 @@ namespace Sportmonks.Net.Api
         /// By ID 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="marketId">The ID of the market you want to retrieve.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OddsMarketByIdResponse)</returns>
-        public async System.Threading.Tasks.Task<Sportmonks.Net.Client.ApiResponse<OddsMarketByIdResponse>> MarketByIdWithHttpInfoAsync(string version, int marketId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Sportmonks.Net.Client.ApiResponse<OddsMarketByIdResponse>> MarketByIdWithHttpInfoAsync(int marketId, string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'version' is set
-            if (version == null)
-            {
-                throw new Sportmonks.Net.Client.ApiException(400, "Missing required parameter 'version' when calling OddsApi->MarketById");
-            }
-
 
             Sportmonks.Net.Client.RequestOptions localVarRequestOptions = new Sportmonks.Net.Client.RequestOptions();
 
@@ -1657,13 +1658,20 @@ namespace Sportmonks.Net.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            if (version != null)
+            {
+                localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            }
             localVarRequestOptions.PathParameters.Add("marketId", Sportmonks.Net.Client.ClientUtils.ParameterToString(marketId)); // path parameter
 
             localVarRequestOptions.Operation = "OddsApi.MarketById";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (apikeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.GetAsync<OddsMarketByIdResponse>("/{version}/odds/markets/{marketId}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -1684,10 +1692,10 @@ namespace Sportmonks.Net.Api
         /// All 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>OddsMarketsAllResponse</returns>
-        public OddsMarketsAllResponse MarketsAll(string version, int operationIndex = 0)
+        public OddsMarketsAllResponse MarketsAll(string version = default(string), int operationIndex = 0)
         {
             Sportmonks.Net.Client.ApiResponse<OddsMarketsAllResponse> localVarResponse = MarketsAllWithHttpInfo(version);
             return localVarResponse.Data;
@@ -1697,17 +1705,11 @@ namespace Sportmonks.Net.Api
         /// All 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of OddsMarketsAllResponse</returns>
-        public Sportmonks.Net.Client.ApiResponse<OddsMarketsAllResponse> MarketsAllWithHttpInfo(string version, int operationIndex = 0)
+        public Sportmonks.Net.Client.ApiResponse<OddsMarketsAllResponse> MarketsAllWithHttpInfo(string version = default(string), int operationIndex = 0)
         {
-            // verify the required parameter 'version' is set
-            if (version == null)
-            {
-                throw new Sportmonks.Net.Client.ApiException(400, "Missing required parameter 'version' when calling OddsApi->MarketsAll");
-            }
-
             Sportmonks.Net.Client.RequestOptions localVarRequestOptions = new Sportmonks.Net.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
@@ -1730,12 +1732,19 @@ namespace Sportmonks.Net.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            if (version != null)
+            {
+                localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            }
 
             localVarRequestOptions.Operation = "OddsApi.MarketsAll";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (apikeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<OddsMarketsAllResponse>("/{version}/odds/markets", localVarRequestOptions, this.Configuration);
@@ -1755,11 +1764,11 @@ namespace Sportmonks.Net.Api
         /// All 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OddsMarketsAllResponse</returns>
-        public async System.Threading.Tasks.Task<OddsMarketsAllResponse> MarketsAllAsync(string version, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OddsMarketsAllResponse> MarketsAllAsync(string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             Sportmonks.Net.Client.ApiResponse<OddsMarketsAllResponse> localVarResponse = await MarketsAllWithHttpInfoAsync(version, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1769,18 +1778,12 @@ namespace Sportmonks.Net.Api
         /// All 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OddsMarketsAllResponse)</returns>
-        public async System.Threading.Tasks.Task<Sportmonks.Net.Client.ApiResponse<OddsMarketsAllResponse>> MarketsAllWithHttpInfoAsync(string version, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Sportmonks.Net.Client.ApiResponse<OddsMarketsAllResponse>> MarketsAllWithHttpInfoAsync(string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'version' is set
-            if (version == null)
-            {
-                throw new Sportmonks.Net.Client.ApiException(400, "Missing required parameter 'version' when calling OddsApi->MarketsAll");
-            }
-
 
             Sportmonks.Net.Client.RequestOptions localVarRequestOptions = new Sportmonks.Net.Client.RequestOptions();
 
@@ -1804,12 +1807,19 @@ namespace Sportmonks.Net.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            if (version != null)
+            {
+                localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            }
 
             localVarRequestOptions.Operation = "OddsApi.MarketsAll";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (apikeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.GetAsync<OddsMarketsAllResponse>("/{version}/odds/markets", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -1830,13 +1840,13 @@ namespace Sportmonks.Net.Api
         /// Search 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="name">The name you want to search on</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>OddsMarketsSearchResponse</returns>
-        public OddsMarketsSearchResponse MarketsSearch(string version, string name, int operationIndex = 0)
+        public OddsMarketsSearchResponse MarketsSearch(string name, string version = default(string), int operationIndex = 0)
         {
-            Sportmonks.Net.Client.ApiResponse<OddsMarketsSearchResponse> localVarResponse = MarketsSearchWithHttpInfo(version, name);
+            Sportmonks.Net.Client.ApiResponse<OddsMarketsSearchResponse> localVarResponse = MarketsSearchWithHttpInfo(name, version);
             return localVarResponse.Data;
         }
 
@@ -1844,18 +1854,12 @@ namespace Sportmonks.Net.Api
         /// Search 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="name">The name you want to search on</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of OddsMarketsSearchResponse</returns>
-        public Sportmonks.Net.Client.ApiResponse<OddsMarketsSearchResponse> MarketsSearchWithHttpInfo(string version, string name, int operationIndex = 0)
+        public Sportmonks.Net.Client.ApiResponse<OddsMarketsSearchResponse> MarketsSearchWithHttpInfo(string name, string version = default(string), int operationIndex = 0)
         {
-            // verify the required parameter 'version' is set
-            if (version == null)
-            {
-                throw new Sportmonks.Net.Client.ApiException(400, "Missing required parameter 'version' when calling OddsApi->MarketsSearch");
-            }
-
             // verify the required parameter 'name' is set
             if (name == null)
             {
@@ -1884,13 +1888,20 @@ namespace Sportmonks.Net.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            if (version != null)
+            {
+                localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            }
             localVarRequestOptions.PathParameters.Add("name", Sportmonks.Net.Client.ClientUtils.ParameterToString(name)); // path parameter
 
             localVarRequestOptions.Operation = "OddsApi.MarketsSearch";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (apikeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<OddsMarketsSearchResponse>("/{version}/odds/markets/search/{name}", localVarRequestOptions, this.Configuration);
@@ -1910,14 +1921,14 @@ namespace Sportmonks.Net.Api
         /// Search 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="name">The name you want to search on</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OddsMarketsSearchResponse</returns>
-        public async System.Threading.Tasks.Task<OddsMarketsSearchResponse> MarketsSearchAsync(string version, string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OddsMarketsSearchResponse> MarketsSearchAsync(string name, string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Sportmonks.Net.Client.ApiResponse<OddsMarketsSearchResponse> localVarResponse = await MarketsSearchWithHttpInfoAsync(version, name, operationIndex, cancellationToken).ConfigureAwait(false);
+            Sportmonks.Net.Client.ApiResponse<OddsMarketsSearchResponse> localVarResponse = await MarketsSearchWithHttpInfoAsync(name, version, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1925,19 +1936,13 @@ namespace Sportmonks.Net.Api
         /// Search 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="name">The name you want to search on</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OddsMarketsSearchResponse)</returns>
-        public async System.Threading.Tasks.Task<Sportmonks.Net.Client.ApiResponse<OddsMarketsSearchResponse>> MarketsSearchWithHttpInfoAsync(string version, string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Sportmonks.Net.Client.ApiResponse<OddsMarketsSearchResponse>> MarketsSearchWithHttpInfoAsync(string name, string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'version' is set
-            if (version == null)
-            {
-                throw new Sportmonks.Net.Client.ApiException(400, "Missing required parameter 'version' when calling OddsApi->MarketsSearch");
-            }
-
             // verify the required parameter 'name' is set
             if (name == null)
             {
@@ -1967,13 +1972,20 @@ namespace Sportmonks.Net.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            if (version != null)
+            {
+                localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            }
             localVarRequestOptions.PathParameters.Add("name", Sportmonks.Net.Client.ClientUtils.ParameterToString(name)); // path parameter
 
             localVarRequestOptions.Operation = "OddsApi.MarketsSearch";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (apikeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.GetAsync<OddsMarketsSearchResponse>("/{version}/odds/markets/search/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);

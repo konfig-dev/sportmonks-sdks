@@ -61,10 +61,10 @@ namespace Sportmonks.Net.Test.Api
         public void CoachByIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int coachId = null;
             //string version = null;
             //string sport = null;
-            //int coachId = null;
-            //var response = instance.CoachById(version, sport, coachId);
+            //var response = instance.CoachById(coachId, version, sport);
             //Assert.IsType<SportCoachByIdResponse>(response);
         }
 
@@ -88,10 +88,10 @@ namespace Sportmonks.Net.Test.Api
         public void CoachesByCountryIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int countryId = null;
             //string version = null;
             //string sport = null;
-            //int countryId = null;
-            //var response = instance.CoachesByCountryId(version, sport, countryId);
+            //var response = instance.CoachesByCountryId(countryId, version, sport);
             //Assert.IsType<SportCoachesByCountryIdResponse>(response);
         }
 
@@ -115,10 +115,10 @@ namespace Sportmonks.Net.Test.Api
         public void CoachesSearchTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
             //string version = null;
             //string sport = null;
-            //string name = null;
-            //var response = instance.CoachesSearch(version, sport, name);
+            //var response = instance.CoachesSearch(name, version, sport);
             //Assert.IsType<SportCoachesSearchResponse>(response);
         }
 
@@ -142,10 +142,10 @@ namespace Sportmonks.Net.Test.Api
         public void CommentariesByFixtureIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int fixtureId = null;
             //string version = null;
             //string sport = null;
-            //int fixtureId = null;
-            //var response = instance.CommentariesByFixtureId(version, sport, fixtureId);
+            //var response = instance.CommentariesByFixtureId(fixtureId, version, sport);
             //Assert.IsType<SportCommentariesByFixtureIdResponse>(response);
         }
 
@@ -156,12 +156,12 @@ namespace Sportmonks.Net.Test.Api
         public void FixtureByDateRangeForTeamTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string version = null;
-            //string sport = null;
             //string startDate = null;
             //string endDate = null;
             //string teamId = null;
-            //var response = instance.FixtureByDateRangeForTeam(version, sport, startDate, endDate, teamId);
+            //string version = null;
+            //string sport = null;
+            //var response = instance.FixtureByDateRangeForTeam(startDate, endDate, teamId, version, sport);
             //Assert.IsType<SportFixtureByDateRangeForTeamResponse>(response);
         }
 
@@ -172,10 +172,10 @@ namespace Sportmonks.Net.Test.Api
         public void FixtureByIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int fixtureId = null;
             //string version = null;
             //string sport = null;
-            //int fixtureId = null;
-            //var response = instance.FixtureById(version, sport, fixtureId);
+            //var response = instance.FixtureById(fixtureId, version, sport);
             //Assert.IsType<SportFixtureByIdResponse>(response);
         }
 
@@ -199,10 +199,10 @@ namespace Sportmonks.Net.Test.Api
         public void FixturesByDateTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //string date = null;
             //string version = null;
             //string sport = null;
-            //string date = null;
-            //var response = instance.FixturesByDate(version, sport, date);
+            //var response = instance.FixturesByDate(date, version, sport);
             //Assert.IsType<SportFixturesByDateResponse>(response);
         }
 
@@ -213,11 +213,11 @@ namespace Sportmonks.Net.Test.Api
         public void FixturesByDateRangeTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string version = null;
-            //string sport = null;
             //string startDate = null;
             //string endDate = null;
-            //var response = instance.FixturesByDateRange(version, sport, startDate, endDate);
+            //string version = null;
+            //string sport = null;
+            //var response = instance.FixturesByDateRange(startDate, endDate, version, sport);
             //Assert.IsType<SportFixturesByDateRangeResponse>(response);
         }
 
@@ -228,10 +228,10 @@ namespace Sportmonks.Net.Test.Api
         public void FixturesByIdsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //string fixtureIds = null;
             //string version = null;
             //string sport = null;
-            //string fixtureIds = null;
-            //var response = instance.FixturesByIds(version, sport, fixtureIds);
+            //var response = instance.FixturesByIds(fixtureIds, version, sport);
             //Assert.IsType<SportFixturesByIdsResponse>(response);
         }
 
@@ -242,11 +242,11 @@ namespace Sportmonks.Net.Test.Api
         public void FixturesHeadToHeadTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string version = null;
-            //string sport = null;
             //int firstTeam = null;
             //int secondTeam = null;
-            //var response = instance.FixturesHeadToHead(version, sport, firstTeam, secondTeam);
+            //string version = null;
+            //string sport = null;
+            //var response = instance.FixturesHeadToHead(firstTeam, secondTeam, version, sport);
             //Assert.IsType<SportFixturesHeadToHeadResponse>(response);
         }
 
@@ -270,10 +270,10 @@ namespace Sportmonks.Net.Test.Api
         public void FixturesSearchTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
             //string version = null;
             //string sport = null;
-            //string name = null;
-            //var response = instance.FixturesSearch(version, sport, name);
+            //var response = instance.FixturesSearch(name, version, sport);
             //Assert.IsType<SportFixturesSearchResponse>(response);
         }
 
@@ -284,10 +284,10 @@ namespace Sportmonks.Net.Test.Api
         public void LeagueByIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int leagueId = null;
             //string version = null;
             //string sport = null;
-            //int leagueId = null;
-            //var response = instance.LeagueById(version, sport, leagueId);
+            //var response = instance.LeagueById(leagueId, version, sport);
             //Assert.IsType<SportLeagueByIdResponse>(response);
         }
 
@@ -298,10 +298,10 @@ namespace Sportmonks.Net.Test.Api
         public void LeagueEnrichmentsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int leagueId = null;
             //string version = null;
             //string sport = null;
-            //int leagueId = null;
-            //var response = instance.LeagueEnrichments(version, sport, leagueId);
+            //var response = instance.LeagueEnrichments(leagueId, version, sport);
             //Assert.IsType<Object>(response);
         }
 
@@ -312,10 +312,10 @@ namespace Sportmonks.Net.Test.Api
         public void LeagueShirtsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int leagueId = null;
             //string version = null;
             //string sport = null;
-            //int leagueId = null;
-            //var response = instance.LeagueShirts(version, sport, leagueId);
+            //var response = instance.LeagueShirts(leagueId, version, sport);
             //Assert.IsType<Object>(response);
         }
 
@@ -339,10 +339,10 @@ namespace Sportmonks.Net.Test.Api
         public void LeaguesByCountryIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int countryId = null;
             //string version = null;
             //string sport = null;
-            //int countryId = null;
-            //var response = instance.LeaguesByCountryId(version, sport, countryId);
+            //var response = instance.LeaguesByCountryId(countryId, version, sport);
             //Assert.IsType<SportLeaguesByCountryIdResponse>(response);
         }
 
@@ -353,10 +353,10 @@ namespace Sportmonks.Net.Test.Api
         public void LeaguesByDateTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //string date = null;
             //string version = null;
             //string sport = null;
-            //string date = null;
-            //var response = instance.LeaguesByDate(version, sport, date);
+            //var response = instance.LeaguesByDate(date, version, sport);
             //Assert.IsType<SportLeaguesByDateResponse>(response);
         }
 
@@ -367,10 +367,10 @@ namespace Sportmonks.Net.Test.Api
         public void LeaguesByTeamIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int teamId = null;
             //string version = null;
             //string sport = null;
-            //int teamId = null;
-            //var response = instance.LeaguesByTeamId(version, sport, teamId);
+            //var response = instance.LeaguesByTeamId(teamId, version, sport);
             //Assert.IsType<Object>(response);
         }
 
@@ -381,10 +381,10 @@ namespace Sportmonks.Net.Test.Api
         public void LeaguesCurrentByTeamIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int teamId = null;
             //string version = null;
             //string sport = null;
-            //int teamId = null;
-            //var response = instance.LeaguesCurrentByTeamId(version, sport, teamId);
+            //var response = instance.LeaguesCurrentByTeamId(teamId, version, sport);
             //Assert.IsType<Object>(response);
         }
 
@@ -408,10 +408,10 @@ namespace Sportmonks.Net.Test.Api
         public void LeaguesSearchTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
             //string version = null;
             //string sport = null;
-            //string name = null;
-            //var response = instance.LeaguesSearch(version, sport, name);
+            //var response = instance.LeaguesSearch(name, version, sport);
             //Assert.IsType<SportLeaguesSearchResponse>(response);
         }
 
@@ -487,10 +487,10 @@ namespace Sportmonks.Net.Test.Api
         public void NewsPostMatchBySeasonIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int seasonId = null;
             //string version = null;
             //string sport = null;
-            //int seasonId = null;
-            //var response = instance.NewsPostMatchBySeasonId(version, sport, seasonId);
+            //var response = instance.NewsPostMatchBySeasonId(seasonId, version, sport);
             //Assert.IsType<string>(response);
         }
 
@@ -501,10 +501,10 @@ namespace Sportmonks.Net.Test.Api
         public void NewsPreMatchBySeasonIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int seasonId = null;
             //string version = null;
             //string sport = null;
-            //int seasonId = null;
-            //var response = instance.NewsPreMatchBySeasonId(version, sport, seasonId);
+            //var response = instance.NewsPreMatchBySeasonId(seasonId, version, sport);
             //Assert.IsType<SportNewsPreMatchBySeasonIdResponse>(response);
         }
 
@@ -567,11 +567,11 @@ namespace Sportmonks.Net.Test.Api
         public void OddsInPlayByFixtureAndBookmakerIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string version = null;
-            //string sport = null;
             //int fixtureId = null;
             //int bookmakerId = null;
-            //var response = instance.OddsInPlayByFixtureAndBookmakerId(version, sport, fixtureId, bookmakerId);
+            //string version = null;
+            //string sport = null;
+            //var response = instance.OddsInPlayByFixtureAndBookmakerId(fixtureId, bookmakerId, version, sport);
             //Assert.IsType<Object>(response);
         }
 
@@ -582,11 +582,11 @@ namespace Sportmonks.Net.Test.Api
         public void OddsInPlayByFixtureAndMarketIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string version = null;
-            //string sport = null;
             //int fixtureId = null;
             //int marketId = null;
-            //var response = instance.OddsInPlayByFixtureAndMarketId(version, sport, fixtureId, marketId);
+            //string version = null;
+            //string sport = null;
+            //var response = instance.OddsInPlayByFixtureAndMarketId(fixtureId, marketId, version, sport);
             //Assert.IsType<Object>(response);
         }
 
@@ -597,10 +597,10 @@ namespace Sportmonks.Net.Test.Api
         public void OddsInPlayByFixtureIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int fixtureId = null;
             //string version = null;
             //string sport = null;
-            //int fixtureId = null;
-            //var response = instance.OddsInPlayByFixtureId(version, sport, fixtureId);
+            //var response = instance.OddsInPlayByFixtureId(fixtureId, version, sport);
             //Assert.IsType<SportOddsInPlayByFixtureIdResponse>(response);
         }
 
@@ -637,11 +637,11 @@ namespace Sportmonks.Net.Test.Api
         public void OddsPreMatchByFixtureAndBookmakerIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string version = null;
-            //string sport = null;
             //int fixtureId = null;
             //int bookmakerId = null;
-            //var response = instance.OddsPreMatchByFixtureAndBookmakerId(version, sport, fixtureId, bookmakerId);
+            //string version = null;
+            //string sport = null;
+            //var response = instance.OddsPreMatchByFixtureAndBookmakerId(fixtureId, bookmakerId, version, sport);
             //Assert.IsType<SportOddsPreMatchByFixtureAndBookmakerIdResponse>(response);
         }
 
@@ -652,11 +652,11 @@ namespace Sportmonks.Net.Test.Api
         public void OddsPreMatchByFixtureAndMarketIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string version = null;
-            //string sport = null;
             //int fixtureId = null;
             //int marketId = null;
-            //var response = instance.OddsPreMatchByFixtureAndMarketId(version, sport, fixtureId, marketId);
+            //string version = null;
+            //string sport = null;
+            //var response = instance.OddsPreMatchByFixtureAndMarketId(fixtureId, marketId, version, sport);
             //Assert.IsType<SportOddsPreMatchByFixtureAndMarketIdResponse>(response);
         }
 
@@ -667,10 +667,10 @@ namespace Sportmonks.Net.Test.Api
         public void OddsPreMatchByFixtureIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int fixtureId = null;
             //string version = null;
             //string sport = null;
-            //int fixtureId = null;
-            //var response = instance.OddsPreMatchByFixtureId(version, sport, fixtureId);
+            //var response = instance.OddsPreMatchByFixtureId(fixtureId, version, sport);
             //Assert.IsType<SportOddsPreMatchByFixtureIdResponse>(response);
         }
 
@@ -681,10 +681,10 @@ namespace Sportmonks.Net.Test.Api
         public void PlayerByIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int playerId = null;
             //string version = null;
             //string sport = null;
-            //int playerId = null;
-            //var response = instance.PlayerById(version, sport, playerId);
+            //var response = instance.PlayerById(playerId, version, sport);
             //Assert.IsType<SportPlayerByIdResponse>(response);
         }
 
@@ -708,10 +708,10 @@ namespace Sportmonks.Net.Test.Api
         public void PlayersByCountryIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int countryId = null;
             //string version = null;
             //string sport = null;
-            //int countryId = null;
-            //var response = instance.PlayersByCountryId(version, sport, countryId);
+            //var response = instance.PlayersByCountryId(countryId, version, sport);
             //Assert.IsType<SportPlayersByCountryIdResponse>(response);
         }
 
@@ -735,10 +735,10 @@ namespace Sportmonks.Net.Test.Api
         public void PlayersSearchTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
             //string version = null;
             //string sport = null;
-            //string name = null;
-            //var response = instance.PlayersSearch(version, sport, name);
+            //var response = instance.PlayersSearch(name, version, sport);
             //Assert.IsType<SportPlayersSearchResponse>(response);
         }
 
@@ -775,10 +775,10 @@ namespace Sportmonks.Net.Test.Api
         public void PredictionsByFixtureIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int fixtureId = null;
             //string version = null;
             //string sport = null;
-            //int fixtureId = null;
-            //var response = instance.PredictionsByFixtureId(version, sport, fixtureId);
+            //var response = instance.PredictionsByFixtureId(fixtureId, version, sport);
             //Assert.IsType<SportPredictionsByFixtureIdResponse>(response);
         }
 
@@ -789,10 +789,10 @@ namespace Sportmonks.Net.Test.Api
         public void PredictionsValueBetsByFixtureIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int fixtureId = null;
             //string version = null;
             //string sport = null;
-            //int fixtureId = null;
-            //var response = instance.PredictionsValueBetsByFixtureId(version, sport, fixtureId);
+            //var response = instance.PredictionsValueBetsByFixtureId(fixtureId, version, sport);
             //Assert.IsType<Object>(response);
         }
 
@@ -803,10 +803,10 @@ namespace Sportmonks.Net.Test.Api
         public void RefereeByIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int refereeId = null;
             //string version = null;
             //string sport = null;
-            //int refereeId = null;
-            //var response = instance.RefereeById(version, sport, refereeId);
+            //var response = instance.RefereeById(refereeId, version, sport);
             //Assert.IsType<SportRefereeByIdResponse>(response);
         }
 
@@ -830,10 +830,10 @@ namespace Sportmonks.Net.Test.Api
         public void RefereesByCountryIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int countryId = null;
             //string version = null;
             //string sport = null;
-            //int countryId = null;
-            //var response = instance.RefereesByCountryId(version, sport, countryId);
+            //var response = instance.RefereesByCountryId(countryId, version, sport);
             //Assert.IsType<SportRefereesByCountryIdResponse>(response);
         }
 
@@ -844,10 +844,10 @@ namespace Sportmonks.Net.Test.Api
         public void RefereesBySeasonIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int seasonId = null;
             //string version = null;
             //string sport = null;
-            //int seasonId = null;
-            //var response = instance.RefereesBySeasonId(version, sport, seasonId);
+            //var response = instance.RefereesBySeasonId(seasonId, version, sport);
             //Assert.IsType<SportRefereesBySeasonIdResponse>(response);
         }
 
@@ -858,10 +858,10 @@ namespace Sportmonks.Net.Test.Api
         public void RefereesSearchTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
             //string version = null;
             //string sport = null;
-            //string name = null;
-            //var response = instance.RefereesSearch(version, sport, name);
+            //var response = instance.RefereesSearch(name, version, sport);
             //Assert.IsType<SportRefereesSearchResponse>(response);
         }
 
@@ -885,10 +885,10 @@ namespace Sportmonks.Net.Test.Api
         public void RivalsByTeamIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int teamId = null;
             //string version = null;
             //string sport = null;
-            //int teamId = null;
-            //var response = instance.RivalsByTeamId(version, sport, teamId);
+            //var response = instance.RivalsByTeamId(teamId, version, sport);
             //Assert.IsType<SportRivalsByTeamIdResponse>(response);
         }
 
@@ -899,10 +899,10 @@ namespace Sportmonks.Net.Test.Api
         public void RoundByIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int roundId = null;
             //string version = null;
             //string sport = null;
-            //int roundId = null;
-            //var response = instance.RoundById(version, sport, roundId);
+            //var response = instance.RoundById(roundId, version, sport);
             //Assert.IsType<SportRoundByIdResponse>(response);
         }
 
@@ -926,10 +926,10 @@ namespace Sportmonks.Net.Test.Api
         public void RoundsBySeasonIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int seasonId = null;
             //string version = null;
             //string sport = null;
-            //int seasonId = null;
-            //var response = instance.RoundsBySeasonId(version, sport, seasonId);
+            //var response = instance.RoundsBySeasonId(seasonId, version, sport);
             //Assert.IsType<SportRoundsBySeasonIdResponse>(response);
         }
 
@@ -940,10 +940,10 @@ namespace Sportmonks.Net.Test.Api
         public void RoundsSearchTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int name = null;
             //string version = null;
             //string sport = null;
-            //int name = null;
-            //var response = instance.RoundsSearch(version, sport, name);
+            //var response = instance.RoundsSearch(name, version, sport);
             //Assert.IsType<SportRoundsSearchResponse>(response);
         }
 
@@ -954,10 +954,10 @@ namespace Sportmonks.Net.Test.Api
         public void SchedulesBySeasonIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int seasonId = null;
             //string version = null;
             //string sport = null;
-            //int seasonId = null;
-            //var response = instance.SchedulesBySeasonId(version, sport, seasonId);
+            //var response = instance.SchedulesBySeasonId(seasonId, version, sport);
             //Assert.IsType<SportSchedulesBySeasonIdResponse>(response);
         }
 
@@ -968,11 +968,11 @@ namespace Sportmonks.Net.Test.Api
         public void SchedulesByTeamAndSeasonIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string version = null;
-            //string sport = null;
             //int seasonId = null;
             //int teamId = null;
-            //var response = instance.SchedulesByTeamAndSeasonId(version, sport, seasonId, teamId);
+            //string version = null;
+            //string sport = null;
+            //var response = instance.SchedulesByTeamAndSeasonId(seasonId, teamId, version, sport);
             //Assert.IsType<SportSchedulesByTeamAndSeasonIdResponse>(response);
         }
 
@@ -983,10 +983,10 @@ namespace Sportmonks.Net.Test.Api
         public void SchedulesByTeamIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int teamId = null;
             //string version = null;
             //string sport = null;
-            //int teamId = null;
-            //var response = instance.SchedulesByTeamId(version, sport, teamId);
+            //var response = instance.SchedulesByTeamId(teamId, version, sport);
             //Assert.IsType<SportSchedulesByTeamIdResponse>(response);
         }
 
@@ -997,10 +997,10 @@ namespace Sportmonks.Net.Test.Api
         public void SeasonByIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int seasonId = null;
             //string version = null;
             //string sport = null;
-            //int seasonId = null;
-            //var response = instance.SeasonById(version, sport, seasonId);
+            //var response = instance.SeasonById(seasonId, version, sport);
             //Assert.IsType<SportSeasonByIdResponse>(response);
         }
 
@@ -1024,10 +1024,10 @@ namespace Sportmonks.Net.Test.Api
         public void SeasonsByTeamIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int teamId = null;
             //string version = null;
             //string sport = null;
-            //int teamId = null;
-            //var response = instance.SeasonsByTeamId(version, sport, teamId);
+            //var response = instance.SeasonsByTeamId(teamId, version, sport);
             //Assert.IsType<Object>(response);
         }
 
@@ -1038,10 +1038,10 @@ namespace Sportmonks.Net.Test.Api
         public void SeasonsSearchTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int name = null;
             //string version = null;
             //string sport = null;
-            //int name = null;
-            //var response = instance.SeasonsSearch(version, sport, name);
+            //var response = instance.SeasonsSearch(name, version, sport);
             //Assert.IsType<SportSeasonsSearchResponse>(response);
         }
 
@@ -1052,11 +1052,11 @@ namespace Sportmonks.Net.Test.Api
         public void SquadsBySeasonAndTeamIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string version = null;
-            //string sport = null;
             //int seasonId = null;
             //int teamId = null;
-            //var response = instance.SquadsBySeasonAndTeamId(version, sport, seasonId, teamId);
+            //string version = null;
+            //string sport = null;
+            //var response = instance.SquadsBySeasonAndTeamId(seasonId, teamId, version, sport);
             //Assert.IsType<SportSquadsBySeasonAndTeamIdResponse>(response);
         }
 
@@ -1067,10 +1067,10 @@ namespace Sportmonks.Net.Test.Api
         public void SquadsByTeamIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int teamId = null;
             //string version = null;
             //string sport = null;
-            //int teamId = null;
-            //var response = instance.SquadsByTeamId(version, sport, teamId);
+            //var response = instance.SquadsByTeamId(teamId, version, sport);
             //Assert.IsType<SportSquadsByTeamIdResponse>(response);
         }
 
@@ -1081,10 +1081,10 @@ namespace Sportmonks.Net.Test.Api
         public void StageByIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int stageId = null;
             //string version = null;
             //string sport = null;
-            //int stageId = null;
-            //var response = instance.StageById(version, sport, stageId);
+            //var response = instance.StageById(stageId, version, sport);
             //Assert.IsType<SportStageByIdResponse>(response);
         }
 
@@ -1108,10 +1108,10 @@ namespace Sportmonks.Net.Test.Api
         public void StagesBySeasonIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int seasonId = null;
             //string version = null;
             //string sport = null;
-            //int seasonId = null;
-            //var response = instance.StagesBySeasonId(version, sport, seasonId);
+            //var response = instance.StagesBySeasonId(seasonId, version, sport);
             //Assert.IsType<SportStagesBySeasonIdResponse>(response);
         }
 
@@ -1122,10 +1122,10 @@ namespace Sportmonks.Net.Test.Api
         public void StagesSearchTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
             //string version = null;
             //string sport = null;
-            //string name = null;
-            //var response = instance.StagesSearch(version, sport, name);
+            //var response = instance.StagesSearch(name, version, sport);
             //Assert.IsType<SportStagesSearchResponse>(response);
         }
 
@@ -1136,10 +1136,10 @@ namespace Sportmonks.Net.Test.Api
         public void StandingCorrectionsBySeasonIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int seasonId = null;
             //string version = null;
             //string sport = null;
-            //int seasonId = null;
-            //var response = instance.StandingCorrectionsBySeasonId(version, sport, seasonId);
+            //var response = instance.StandingCorrectionsBySeasonId(seasonId, version, sport);
             //Assert.IsType<SportStandingCorrectionsBySeasonIdResponse>(response);
         }
 
@@ -1163,10 +1163,10 @@ namespace Sportmonks.Net.Test.Api
         public void StandingsByRoundIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int roundId = null;
             //string version = null;
             //string sport = null;
-            //int roundId = null;
-            //var response = instance.StandingsByRoundId(version, sport, roundId);
+            //var response = instance.StandingsByRoundId(roundId, version, sport);
             //Assert.IsType<SportStandingsByRoundIdResponse>(response);
         }
 
@@ -1177,10 +1177,10 @@ namespace Sportmonks.Net.Test.Api
         public void StandingsBySeasonIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int seasonId = null;
             //string version = null;
             //string sport = null;
-            //int seasonId = null;
-            //var response = instance.StandingsBySeasonId(version, sport, seasonId);
+            //var response = instance.StandingsBySeasonId(seasonId, version, sport);
             //Assert.IsType<SportStandingsBySeasonIdResponse>(response);
         }
 
@@ -1191,10 +1191,10 @@ namespace Sportmonks.Net.Test.Api
         public void StandingsLiveByLeagueIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int leagueId = null;
             //string version = null;
             //string sport = null;
-            //int leagueId = null;
-            //var response = instance.StandingsLiveByLeagueId(version, sport, leagueId);
+            //var response = instance.StandingsLiveByLeagueId(leagueId, version, sport);
             //Assert.IsType<SportStandingsLiveByLeagueIdResponse>(response);
         }
 
@@ -1205,10 +1205,10 @@ namespace Sportmonks.Net.Test.Api
         public void StateByIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int stateId = null;
             //string version = null;
             //string sport = null;
-            //int stateId = null;
-            //var response = instance.StateById(version, sport, stateId);
+            //var response = instance.StateById(stateId, version, sport);
             //Assert.IsType<SportStateByIdResponse>(response);
         }
 
@@ -1245,10 +1245,10 @@ namespace Sportmonks.Net.Test.Api
         public void TeamsByCountryIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int countryId = null;
             //string version = null;
             //string sport = null;
-            //int countryId = null;
-            //var response = instance.TeamsByCountryId(version, sport, countryId);
+            //var response = instance.TeamsByCountryId(countryId, version, sport);
             //Assert.IsType<SportTeamsByCountryIdResponse>(response);
         }
 
@@ -1259,10 +1259,10 @@ namespace Sportmonks.Net.Test.Api
         public void TeamsByIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int teamId = null;
             //string version = null;
             //string sport = null;
-            //int teamId = null;
-            //var response = instance.TeamsById(version, sport, teamId);
+            //var response = instance.TeamsById(teamId, version, sport);
             //Assert.IsType<SportTeamsByIdResponse>(response);
         }
 
@@ -1273,10 +1273,10 @@ namespace Sportmonks.Net.Test.Api
         public void TeamsBySeasonIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int seasonId = null;
             //string version = null;
             //string sport = null;
-            //int seasonId = null;
-            //var response = instance.TeamsBySeasonId(version, sport, seasonId);
+            //var response = instance.TeamsBySeasonId(seasonId, version, sport);
             //Assert.IsType<SportTeamsBySeasonIdResponse>(response);
         }
 
@@ -1287,10 +1287,10 @@ namespace Sportmonks.Net.Test.Api
         public void TeamsSearchTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
             //string version = null;
             //string sport = null;
-            //string name = null;
-            //var response = instance.TeamsSearch(version, sport, name);
+            //var response = instance.TeamsSearch(name, version, sport);
             //Assert.IsType<SportTeamsSearchResponse>(response);
         }
 
@@ -1301,10 +1301,10 @@ namespace Sportmonks.Net.Test.Api
         public void TopScorersBySeasonIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int seasonId = null;
             //string version = null;
             //string sport = null;
-            //int seasonId = null;
-            //var response = instance.TopScorersBySeasonId(version, sport, seasonId);
+            //var response = instance.TopScorersBySeasonId(seasonId, version, sport);
             //Assert.IsType<SportTopScorersBySeasonIdResponse>(response);
         }
 
@@ -1315,10 +1315,10 @@ namespace Sportmonks.Net.Test.Api
         public void TopScorersByStageIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int stageId = null;
             //string version = null;
             //string sport = null;
-            //int stageId = null;
-            //var response = instance.TopScorersByStageId(version, sport, stageId);
+            //var response = instance.TopScorersByStageId(stageId, version, sport);
             //Assert.IsType<SportTopScorersByStageIdResponse>(response);
         }
 
@@ -1329,11 +1329,11 @@ namespace Sportmonks.Net.Test.Api
         public void TranfersByDateRangeTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string version = null;
-            //string sport = null;
             //string startDate = null;
             //string endDate = null;
-            //var response = instance.TranfersByDateRange(version, sport, startDate, endDate);
+            //string version = null;
+            //string sport = null;
+            //var response = instance.TranfersByDateRange(startDate, endDate, version, sport);
             //Assert.IsType<SportTranfersByDateRangeResponse>(response);
         }
 
@@ -1344,10 +1344,10 @@ namespace Sportmonks.Net.Test.Api
         public void TransferByIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int transferId = null;
             //string version = null;
             //string sport = null;
-            //int transferId = null;
-            //var response = instance.TransferById(version, sport, transferId);
+            //var response = instance.TransferById(transferId, version, sport);
             //Assert.IsType<SportTransferByIdResponse>(response);
         }
 
@@ -1371,10 +1371,10 @@ namespace Sportmonks.Net.Test.Api
         public void TransfersByPlayerIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int playerId = null;
             //string version = null;
             //string sport = null;
-            //int playerId = null;
-            //var response = instance.TransfersByPlayerId(version, sport, playerId);
+            //var response = instance.TransfersByPlayerId(playerId, version, sport);
             //Assert.IsType<SportTransfersByPlayerIdResponse>(response);
         }
 
@@ -1385,10 +1385,10 @@ namespace Sportmonks.Net.Test.Api
         public void TransfersByTeamIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int teamId = null;
             //string version = null;
             //string sport = null;
-            //int teamId = null;
-            //var response = instance.TransfersByTeamId(version, sport, teamId);
+            //var response = instance.TransfersByTeamId(teamId, version, sport);
             //Assert.IsType<SportTransfersByTeamIdResponse>(response);
         }
 
@@ -1412,10 +1412,10 @@ namespace Sportmonks.Net.Test.Api
         public void TvStationByIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int tvStationId = null;
             //string version = null;
             //string sport = null;
-            //int tvStationId = null;
-            //var response = instance.TvStationById(version, sport, tvStationId);
+            //var response = instance.TvStationById(tvStationId, version, sport);
             //Assert.IsType<SportTvStationByIdResponse>(response);
         }
 
@@ -1439,10 +1439,10 @@ namespace Sportmonks.Net.Test.Api
         public void TvStationsByFixtureIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int fixtureId = null;
             //string version = null;
             //string sport = null;
-            //int fixtureId = null;
-            //var response = instance.TvStationsByFixtureId(version, sport, fixtureId);
+            //var response = instance.TvStationsByFixtureId(fixtureId, version, sport);
             //Assert.IsType<SportTvStationsByFixtureIdResponse>(response);
         }
 
@@ -1453,10 +1453,10 @@ namespace Sportmonks.Net.Test.Api
         public void VenueByIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int venueId = null;
             //string version = null;
             //string sport = null;
-            //int venueId = null;
-            //var response = instance.VenueById(version, sport, venueId);
+            //var response = instance.VenueById(venueId, version, sport);
             //Assert.IsType<SportVenueByIdResponse>(response);
         }
 
@@ -1480,10 +1480,10 @@ namespace Sportmonks.Net.Test.Api
         public void VenuesBySeasonIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int seasonId = null;
             //string version = null;
             //string sport = null;
-            //int seasonId = null;
-            //var response = instance.VenuesBySeasonId(version, sport, seasonId);
+            //var response = instance.VenuesBySeasonId(seasonId, version, sport);
             //Assert.IsType<SportVenuesBySeasonIdResponse>(response);
         }
 
@@ -1494,10 +1494,10 @@ namespace Sportmonks.Net.Test.Api
         public void VenuesSearchTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
             //string version = null;
             //string sport = null;
-            //string name = null;
-            //var response = instance.VenuesSearch(version, sport, name);
+            //var response = instance.VenuesSearch(name, version, sport);
             //Assert.IsType<SportVenuesSearchResponse>(response);
         }
     }

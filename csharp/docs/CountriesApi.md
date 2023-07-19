@@ -10,7 +10,7 @@ All URIs are relative to *https://api.sportmonks.com*
 
 <a name="all"></a>
 # **All**
-> CountriesAllResponse All (string version)
+> CountriesAllResponse All (string version = null)
 
 All
 
@@ -34,9 +34,13 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new CountriesApi(config);
-            var version = v3;  // string | The version of the API.
+            var version = "v3";  // string | The version of the API. (optional) 
 
             try
             {
@@ -85,7 +89,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
+| **version** | **string** | The version of the API. | [optional]  |
 
 ### Return type
 
@@ -110,7 +114,7 @@ catch (ApiException e)
 
 <a name="getbyid"></a>
 # **GetById**
-> CountriesGetByIdResponse GetById (string version, int countryId)
+> CountriesGetByIdResponse GetById (int countryId, string version = null)
 
 By ID
 
@@ -134,15 +138,19 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new CountriesApi(config);
-            var version = v3;  // string | The version of the API.
             var countryId = 1161;  // int | The ID of the country you want to retrieve.
+            var version = "v3";  // string | The version of the API. (optional) 
 
             try
             {
                 // By ID
-                CountriesGetByIdResponse result = apiInstance.GetById(version, countryId);
+                CountriesGetByIdResponse result = apiInstance.GetById(countryId, version);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -169,7 +177,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By ID
-    ApiResponse<CountriesGetByIdResponse> response = apiInstance.GetByIdWithHttpInfo(version, countryId);
+    ApiResponse<CountriesGetByIdResponse> response = apiInstance.GetByIdWithHttpInfo(countryId, version);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -186,8 +194,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
 | **countryId** | **int** | The ID of the country you want to retrieve. |  |
+| **version** | **string** | The version of the API. | [optional]  |
 
 ### Return type
 
@@ -212,7 +220,7 @@ catch (ApiException e)
 
 <a name="search"></a>
 # **Search**
-> CountriesSearchResponse Search (string version, string name)
+> CountriesSearchResponse Search (string name, string version = null)
 
 Search
 
@@ -236,15 +244,19 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new CountriesApi(config);
-            var version = v3;  // string | The version of the API.
-            var name = Fra;  // string | The name you want to search on
+            var name = "Fra";  // string | The name you want to search on
+            var version = "v3";  // string | The version of the API. (optional) 
 
             try
             {
                 // Search
-                CountriesSearchResponse result = apiInstance.Search(version, name);
+                CountriesSearchResponse result = apiInstance.Search(name, version);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -271,7 +283,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Search
-    ApiResponse<CountriesSearchResponse> response = apiInstance.SearchWithHttpInfo(version, name);
+    ApiResponse<CountriesSearchResponse> response = apiInstance.SearchWithHttpInfo(name, version);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -288,8 +300,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
 | **name** | **string** | The name you want to search on |  |
+| **version** | **string** | The version of the API. | [optional]  |
 
 ### Return type
 

@@ -112,7 +112,7 @@ All URIs are relative to *https://api.sportmonks.com*
 
 <a name="coachbyid"></a>
 # **CoachById**
-> SportCoachByIdResponse CoachById (string version, string sport, int coachId)
+> SportCoachByIdResponse CoachById (int coachId, string version = null, string sport = null)
 
 By ID
 
@@ -136,16 +136,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var coachId = 171906;  // int | The ID of the coach you want to retrieve.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By ID
-                SportCoachByIdResponse result = apiInstance.CoachById(version, sport, coachId);
+                SportCoachByIdResponse result = apiInstance.CoachById(coachId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -172,7 +176,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By ID
-    ApiResponse<SportCoachByIdResponse> response = apiInstance.CoachByIdWithHttpInfo(version, sport, coachId);
+    ApiResponse<SportCoachByIdResponse> response = apiInstance.CoachByIdWithHttpInfo(coachId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -189,9 +193,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **coachId** | **int** | The ID of the coach you want to retrieve. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -216,7 +220,7 @@ catch (ApiException e)
 
 <a name="coachesall"></a>
 # **CoachesAll**
-> SportCoachesAllResponse CoachesAll (string version, string sport)
+> SportCoachesAllResponse CoachesAll (string version = null, string sport = null)
 
 All
 
@@ -240,10 +244,14 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
@@ -292,8 +300,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -318,7 +326,7 @@ catch (ApiException e)
 
 <a name="coachesbycountryid"></a>
 # **CoachesByCountryId**
-> SportCoachesByCountryIdResponse CoachesByCountryId (string version, string sport, int countryId)
+> SportCoachesByCountryIdResponse CoachesByCountryId (int countryId, string version = null, string sport = null)
 
 By Country ID
 
@@ -342,16 +350,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var countryId = 320;  // int | The ID of the country you want to retrieve coaches from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By Country ID
-                SportCoachesByCountryIdResponse result = apiInstance.CoachesByCountryId(version, sport, countryId);
+                SportCoachesByCountryIdResponse result = apiInstance.CoachesByCountryId(countryId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -378,7 +390,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By Country ID
-    ApiResponse<SportCoachesByCountryIdResponse> response = apiInstance.CoachesByCountryIdWithHttpInfo(version, sport, countryId);
+    ApiResponse<SportCoachesByCountryIdResponse> response = apiInstance.CoachesByCountryIdWithHttpInfo(countryId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -395,9 +407,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **countryId** | **int** | The ID of the country you want to retrieve coaches from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -422,7 +434,7 @@ catch (ApiException e)
 
 <a name="coacheslatest"></a>
 # **CoachesLatest**
-> SportCoachesLatestResponse CoachesLatest (string version, string sport)
+> SportCoachesLatestResponse CoachesLatest (string version = null, string sport = null)
 
 Last updated
 
@@ -446,10 +458,14 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
@@ -498,8 +514,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -524,7 +540,7 @@ catch (ApiException e)
 
 <a name="coachessearch"></a>
 # **CoachesSearch**
-> SportCoachesSearchResponse CoachesSearch (string version, string sport, string name)
+> SportCoachesSearchResponse CoachesSearch (string name, string version = null, string sport = null)
 
 Search
 
@@ -548,16 +564,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
-            var name = John;  // string | The name you want to search on.
+            var name = "John";  // string | The name you want to search on.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // Search
-                SportCoachesSearchResponse result = apiInstance.CoachesSearch(version, sport, name);
+                SportCoachesSearchResponse result = apiInstance.CoachesSearch(name, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -584,7 +604,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Search
-    ApiResponse<SportCoachesSearchResponse> response = apiInstance.CoachesSearchWithHttpInfo(version, sport, name);
+    ApiResponse<SportCoachesSearchResponse> response = apiInstance.CoachesSearchWithHttpInfo(name, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -601,9 +621,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **name** | **string** | The name you want to search on. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -628,7 +648,7 @@ catch (ApiException e)
 
 <a name="commentariesall"></a>
 # **CommentariesAll**
-> SportCommentariesAllResponse CommentariesAll (string version, string sport)
+> SportCommentariesAllResponse CommentariesAll (string version = null, string sport = null)
 
 All
 
@@ -652,10 +672,14 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
@@ -704,8 +728,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -730,7 +754,7 @@ catch (ApiException e)
 
 <a name="commentariesbyfixtureid"></a>
 # **CommentariesByFixtureId**
-> SportCommentariesByFixtureIdResponse CommentariesByFixtureId (string version, string sport, int fixtureId)
+> SportCommentariesByFixtureIdResponse CommentariesByFixtureId (int fixtureId, string version = null, string sport = null)
 
 By Fixture ID
 
@@ -754,16 +778,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var fixtureId = 16808591;  // int | The ID of the fixture you want to retrieve commentaries from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By Fixture ID
-                SportCommentariesByFixtureIdResponse result = apiInstance.CommentariesByFixtureId(version, sport, fixtureId);
+                SportCommentariesByFixtureIdResponse result = apiInstance.CommentariesByFixtureId(fixtureId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -790,7 +818,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By Fixture ID
-    ApiResponse<SportCommentariesByFixtureIdResponse> response = apiInstance.CommentariesByFixtureIdWithHttpInfo(version, sport, fixtureId);
+    ApiResponse<SportCommentariesByFixtureIdResponse> response = apiInstance.CommentariesByFixtureIdWithHttpInfo(fixtureId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -807,9 +835,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **fixtureId** | **int** | The ID of the fixture you want to retrieve commentaries from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -834,7 +862,7 @@ catch (ApiException e)
 
 <a name="fixturebydaterangeforteam"></a>
 # **FixtureByDateRangeForTeam**
-> SportFixtureByDateRangeForTeamResponse FixtureByDateRangeForTeam (string version, string sport, string startDate, string endDate, string teamId)
+> SportFixtureByDateRangeForTeamResponse FixtureByDateRangeForTeam (string startDate, string endDate, string teamId, string version = null, string sport = null)
 
 By Date Range for Team
 
@@ -858,18 +886,22 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
-            var startDate = maiores;  // string | 
-            var endDate = voluptates;  // string | 
-            var teamId = ut;  // string | 
+            var startDate = "maiores";  // string | 
+            var endDate = "voluptates";  // string | 
+            var teamId = "ut";  // string | 
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By Date Range for Team
-                SportFixtureByDateRangeForTeamResponse result = apiInstance.FixtureByDateRangeForTeam(version, sport, startDate, endDate, teamId);
+                SportFixtureByDateRangeForTeamResponse result = apiInstance.FixtureByDateRangeForTeam(startDate, endDate, teamId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -896,7 +928,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By Date Range for Team
-    ApiResponse<SportFixtureByDateRangeForTeamResponse> response = apiInstance.FixtureByDateRangeForTeamWithHttpInfo(version, sport, startDate, endDate, teamId);
+    ApiResponse<SportFixtureByDateRangeForTeamResponse> response = apiInstance.FixtureByDateRangeForTeamWithHttpInfo(startDate, endDate, teamId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -913,11 +945,11 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **startDate** | **string** |  |  |
 | **endDate** | **string** |  |  |
 | **teamId** | **string** |  |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -942,7 +974,7 @@ catch (ApiException e)
 
 <a name="fixturebyid"></a>
 # **FixtureById**
-> SportFixtureByIdResponse FixtureById (string version, string sport, int fixtureId)
+> SportFixtureByIdResponse FixtureById (int fixtureId, string version = null, string sport = null)
 
 Fixture ID
 
@@ -966,16 +998,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var fixtureId = 18528480;  // int | The ID of the fixture you want to retrieve.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // Fixture ID
-                SportFixtureByIdResponse result = apiInstance.FixtureById(version, sport, fixtureId);
+                SportFixtureByIdResponse result = apiInstance.FixtureById(fixtureId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -1002,7 +1038,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Fixture ID
-    ApiResponse<SportFixtureByIdResponse> response = apiInstance.FixtureByIdWithHttpInfo(version, sport, fixtureId);
+    ApiResponse<SportFixtureByIdResponse> response = apiInstance.FixtureByIdWithHttpInfo(fixtureId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1019,9 +1055,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **fixtureId** | **int** | The ID of the fixture you want to retrieve. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -1046,7 +1082,7 @@ catch (ApiException e)
 
 <a name="fixturesall"></a>
 # **FixturesAll**
-> SportFixturesAllResponse FixturesAll (string version, string sport)
+> SportFixturesAllResponse FixturesAll (string version = null, string sport = null)
 
 All
 
@@ -1070,10 +1106,14 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
@@ -1122,8 +1162,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -1148,7 +1188,7 @@ catch (ApiException e)
 
 <a name="fixturesbydate"></a>
 # **FixturesByDate**
-> SportFixturesByDateResponse FixturesByDate (string version, string sport, string date)
+> SportFixturesByDateResponse FixturesByDate (string date, string version = null, string sport = null)
 
 By Date
 
@@ -1172,16 +1212,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
-            var date = 2022-07-24;  // string | The date you want to retrieve fixtures from.
+            var date = "2022-07-24";  // string | The date you want to retrieve fixtures from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By Date
-                SportFixturesByDateResponse result = apiInstance.FixturesByDate(version, sport, date);
+                SportFixturesByDateResponse result = apiInstance.FixturesByDate(date, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -1208,7 +1252,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By Date
-    ApiResponse<SportFixturesByDateResponse> response = apiInstance.FixturesByDateWithHttpInfo(version, sport, date);
+    ApiResponse<SportFixturesByDateResponse> response = apiInstance.FixturesByDateWithHttpInfo(date, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1225,9 +1269,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **date** | **string** | The date you want to retrieve fixtures from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -1252,7 +1296,7 @@ catch (ApiException e)
 
 <a name="fixturesbydaterange"></a>
 # **FixturesByDateRange**
-> SportFixturesByDateRangeResponse FixturesByDateRange (string version, string sport, string startDate, string endDate)
+> SportFixturesByDateRangeResponse FixturesByDateRange (string startDate, string endDate, string version = null, string sport = null)
 
 By Date Range
 
@@ -1276,17 +1320,21 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
-            var startDate = 2022-07-17;  // string | The start date you want to retrieve fixtures from.
-            var endDate = 2022-07-25;  // string | The end date you want to retrieve fixtures from.
+            var startDate = "2022-07-17";  // string | The start date you want to retrieve fixtures from.
+            var endDate = "2022-07-25";  // string | The end date you want to retrieve fixtures from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By Date Range
-                SportFixturesByDateRangeResponse result = apiInstance.FixturesByDateRange(version, sport, startDate, endDate);
+                SportFixturesByDateRangeResponse result = apiInstance.FixturesByDateRange(startDate, endDate, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -1313,7 +1361,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By Date Range
-    ApiResponse<SportFixturesByDateRangeResponse> response = apiInstance.FixturesByDateRangeWithHttpInfo(version, sport, startDate, endDate);
+    ApiResponse<SportFixturesByDateRangeResponse> response = apiInstance.FixturesByDateRangeWithHttpInfo(startDate, endDate, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1330,10 +1378,10 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **startDate** | **string** | The start date you want to retrieve fixtures from. |  |
 | **endDate** | **string** | The end date you want to retrieve fixtures from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -1358,7 +1406,7 @@ catch (ApiException e)
 
 <a name="fixturesbyids"></a>
 # **FixturesByIds**
-> SportFixturesByIdsResponse FixturesByIds (string version, string sport, string fixtureIds)
+> SportFixturesByIdsResponse FixturesByIds (string fixtureIds, string version = null, string sport = null)
 
 By IDs
 
@@ -1382,16 +1430,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
-            var fixtureIds = 18528484%2C18531140;  // string | The IDs you want to retrieve.
+            var fixtureIds = "18528484%2C18531140";  // string | The IDs you want to retrieve.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By IDs
-                SportFixturesByIdsResponse result = apiInstance.FixturesByIds(version, sport, fixtureIds);
+                SportFixturesByIdsResponse result = apiInstance.FixturesByIds(fixtureIds, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -1418,7 +1470,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By IDs
-    ApiResponse<SportFixturesByIdsResponse> response = apiInstance.FixturesByIdsWithHttpInfo(version, sport, fixtureIds);
+    ApiResponse<SportFixturesByIdsResponse> response = apiInstance.FixturesByIdsWithHttpInfo(fixtureIds, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1435,9 +1487,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **fixtureIds** | **string** | The IDs you want to retrieve. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -1462,7 +1514,7 @@ catch (ApiException e)
 
 <a name="fixturesheadtohead"></a>
 # **FixturesHeadToHead**
-> SportFixturesHeadToHeadResponse FixturesHeadToHead (string version, string sport, int firstTeam, int secondTeam)
+> SportFixturesHeadToHeadResponse FixturesHeadToHead (int firstTeam, int secondTeam, string version = null, string sport = null)
 
 Head to Head
 
@@ -1486,17 +1538,21 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var firstTeam = 2650;  // int | The ID of the first team retrieve fixtures from.
             var secondTeam = 86;  // int | The ID of the second team retrieve fixtures from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // Head to Head
-                SportFixturesHeadToHeadResponse result = apiInstance.FixturesHeadToHead(version, sport, firstTeam, secondTeam);
+                SportFixturesHeadToHeadResponse result = apiInstance.FixturesHeadToHead(firstTeam, secondTeam, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -1523,7 +1579,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Head to Head
-    ApiResponse<SportFixturesHeadToHeadResponse> response = apiInstance.FixturesHeadToHeadWithHttpInfo(version, sport, firstTeam, secondTeam);
+    ApiResponse<SportFixturesHeadToHeadResponse> response = apiInstance.FixturesHeadToHeadWithHttpInfo(firstTeam, secondTeam, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1540,10 +1596,10 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **firstTeam** | **int** | The ID of the first team retrieve fixtures from. |  |
 | **secondTeam** | **int** | The ID of the second team retrieve fixtures from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -1568,7 +1624,7 @@ catch (ApiException e)
 
 <a name="fixtureslatest"></a>
 # **FixturesLatest**
-> string FixturesLatest (string version, string sport)
+> string FixturesLatest (string version = null, string sport = null)
 
 Last Updated
 
@@ -1592,10 +1648,14 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
@@ -1644,8 +1704,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -1670,7 +1730,7 @@ catch (ApiException e)
 
 <a name="fixturessearch"></a>
 # **FixturesSearch**
-> SportFixturesSearchResponse FixturesSearch (string version, string sport, string name)
+> SportFixturesSearchResponse FixturesSearch (string name, string version = null, string sport = null)
 
 Search
 
@@ -1694,16 +1754,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
-            var name = havn;  // string | The name you want search on.
+            var name = "havn";  // string | The name you want search on.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // Search
-                SportFixturesSearchResponse result = apiInstance.FixturesSearch(version, sport, name);
+                SportFixturesSearchResponse result = apiInstance.FixturesSearch(name, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -1730,7 +1794,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Search
-    ApiResponse<SportFixturesSearchResponse> response = apiInstance.FixturesSearchWithHttpInfo(version, sport, name);
+    ApiResponse<SportFixturesSearchResponse> response = apiInstance.FixturesSearchWithHttpInfo(name, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1747,9 +1811,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **name** | **string** | The name you want search on. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -1774,7 +1838,7 @@ catch (ApiException e)
 
 <a name="leaguebyid"></a>
 # **LeagueById**
-> SportLeagueByIdResponse LeagueById (string version, string sport, int leagueId)
+> SportLeagueByIdResponse LeagueById (int leagueId, string version = null, string sport = null)
 
 By ID
 
@@ -1798,16 +1862,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var leagueId = 271;  // int | The ID of the league you want to retrieve.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By ID
-                SportLeagueByIdResponse result = apiInstance.LeagueById(version, sport, leagueId);
+                SportLeagueByIdResponse result = apiInstance.LeagueById(leagueId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -1834,7 +1902,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By ID
-    ApiResponse<SportLeagueByIdResponse> response = apiInstance.LeagueByIdWithHttpInfo(version, sport, leagueId);
+    ApiResponse<SportLeagueByIdResponse> response = apiInstance.LeagueByIdWithHttpInfo(leagueId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1851,9 +1919,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **leagueId** | **int** | The ID of the league you want to retrieve. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -1878,7 +1946,7 @@ catch (ApiException e)
 
 <a name="leagueenrichments"></a>
 # **LeagueEnrichments**
-> Object LeagueEnrichments (string version, string sport, int leagueId)
+> Object LeagueEnrichments (int leagueId, string version = null, string sport = null)
 
 Enrichments
 
@@ -1902,16 +1970,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var leagueId = 271;  // int | The ID of the league you want to retrieve enrichments from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // Enrichments
-                Object result = apiInstance.LeagueEnrichments(version, sport, leagueId);
+                Object result = apiInstance.LeagueEnrichments(leagueId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -1938,7 +2010,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Enrichments
-    ApiResponse<Object> response = apiInstance.LeagueEnrichmentsWithHttpInfo(version, sport, leagueId);
+    ApiResponse<Object> response = apiInstance.LeagueEnrichmentsWithHttpInfo(leagueId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1955,9 +2027,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **leagueId** | **int** | The ID of the league you want to retrieve enrichments from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -1982,7 +2054,7 @@ catch (ApiException e)
 
 <a name="leagueshirts"></a>
 # **LeagueShirts**
-> Object LeagueShirts (string version, string sport, int leagueId)
+> Object LeagueShirts (int leagueId, string version = null, string sport = null)
 
 Shirts By League ID
 
@@ -2006,16 +2078,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var leagueId = 271;  // int | The ID of the league you want to retrieve.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // Shirts By League ID
-                Object result = apiInstance.LeagueShirts(version, sport, leagueId);
+                Object result = apiInstance.LeagueShirts(leagueId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -2042,7 +2118,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Shirts By League ID
-    ApiResponse<Object> response = apiInstance.LeagueShirtsWithHttpInfo(version, sport, leagueId);
+    ApiResponse<Object> response = apiInstance.LeagueShirtsWithHttpInfo(leagueId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2059,9 +2135,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **leagueId** | **int** | The ID of the league you want to retrieve. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -2086,7 +2162,7 @@ catch (ApiException e)
 
 <a name="leaguesall"></a>
 # **LeaguesAll**
-> SportLeaguesAllResponse LeaguesAll (string version, string sport)
+> SportLeaguesAllResponse LeaguesAll (string version = null, string sport = null)
 
 All
 
@@ -2110,10 +2186,14 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
@@ -2162,8 +2242,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -2188,7 +2268,7 @@ catch (ApiException e)
 
 <a name="leaguesbycountryid"></a>
 # **LeaguesByCountryId**
-> SportLeaguesByCountryIdResponse LeaguesByCountryId (string version, string sport, int countryId)
+> SportLeaguesByCountryIdResponse LeaguesByCountryId (int countryId, string version = null, string sport = null)
 
 By Country ID
 
@@ -2212,16 +2292,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var countryId = 320;  // int | The ID of the country you want to retrieve leagues from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By Country ID
-                SportLeaguesByCountryIdResponse result = apiInstance.LeaguesByCountryId(version, sport, countryId);
+                SportLeaguesByCountryIdResponse result = apiInstance.LeaguesByCountryId(countryId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -2248,7 +2332,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By Country ID
-    ApiResponse<SportLeaguesByCountryIdResponse> response = apiInstance.LeaguesByCountryIdWithHttpInfo(version, sport, countryId);
+    ApiResponse<SportLeaguesByCountryIdResponse> response = apiInstance.LeaguesByCountryIdWithHttpInfo(countryId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2265,9 +2349,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **countryId** | **int** | The ID of the country you want to retrieve leagues from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -2292,7 +2376,7 @@ catch (ApiException e)
 
 <a name="leaguesbydate"></a>
 # **LeaguesByDate**
-> SportLeaguesByDateResponse LeaguesByDate (string version, string sport, string date)
+> SportLeaguesByDateResponse LeaguesByDate (string date, string version = null, string sport = null)
 
 By Date
 
@@ -2316,16 +2400,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
-            var date = 2022-07-15;  // string | The date of fixtures you want to retrieve leagues from.
+            var date = "2022-07-15";  // string | The date of fixtures you want to retrieve leagues from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By Date
-                SportLeaguesByDateResponse result = apiInstance.LeaguesByDate(version, sport, date);
+                SportLeaguesByDateResponse result = apiInstance.LeaguesByDate(date, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -2352,7 +2440,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By Date
-    ApiResponse<SportLeaguesByDateResponse> response = apiInstance.LeaguesByDateWithHttpInfo(version, sport, date);
+    ApiResponse<SportLeaguesByDateResponse> response = apiInstance.LeaguesByDateWithHttpInfo(date, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2369,9 +2457,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **date** | **string** | The date of fixtures you want to retrieve leagues from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -2396,7 +2484,7 @@ catch (ApiException e)
 
 <a name="leaguesbyteamid"></a>
 # **LeaguesByTeamId**
-> Object LeaguesByTeamId (string version, string sport, int teamId)
+> Object LeaguesByTeamId (int teamId, string version = null, string sport = null)
 
 Leagues By Team ID
 
@@ -2420,16 +2508,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var teamId = 180;  // int | The ID of the team you want to retrieve leagues from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // Leagues By Team ID
-                Object result = apiInstance.LeaguesByTeamId(version, sport, teamId);
+                Object result = apiInstance.LeaguesByTeamId(teamId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -2456,7 +2548,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Leagues By Team ID
-    ApiResponse<Object> response = apiInstance.LeaguesByTeamIdWithHttpInfo(version, sport, teamId);
+    ApiResponse<Object> response = apiInstance.LeaguesByTeamIdWithHttpInfo(teamId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2473,9 +2565,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **teamId** | **int** | The ID of the team you want to retrieve leagues from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -2500,7 +2592,7 @@ catch (ApiException e)
 
 <a name="leaguescurrentbyteamid"></a>
 # **LeaguesCurrentByTeamId**
-> Object LeaguesCurrentByTeamId (string version, string sport, int teamId)
+> Object LeaguesCurrentByTeamId (int teamId, string version = null, string sport = null)
 
 Current Leagues By Team ID
 
@@ -2524,16 +2616,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var teamId = 180;  // int | The ID of the team you want to retrieve current leagues from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // Current Leagues By Team ID
-                Object result = apiInstance.LeaguesCurrentByTeamId(version, sport, teamId);
+                Object result = apiInstance.LeaguesCurrentByTeamId(teamId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -2560,7 +2656,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Current Leagues By Team ID
-    ApiResponse<Object> response = apiInstance.LeaguesCurrentByTeamIdWithHttpInfo(version, sport, teamId);
+    ApiResponse<Object> response = apiInstance.LeaguesCurrentByTeamIdWithHttpInfo(teamId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2577,9 +2673,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **teamId** | **int** | The ID of the team you want to retrieve current leagues from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -2604,7 +2700,7 @@ catch (ApiException e)
 
 <a name="leagueslive"></a>
 # **LeaguesLive**
-> SportLeaguesLiveResponse LeaguesLive (string version, string sport)
+> SportLeaguesLiveResponse LeaguesLive (string version = null, string sport = null)
 
 Live
 
@@ -2628,10 +2724,14 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
@@ -2680,8 +2780,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -2706,7 +2806,7 @@ catch (ApiException e)
 
 <a name="leaguessearch"></a>
 # **LeaguesSearch**
-> SportLeaguesSearchResponse LeaguesSearch (string version, string sport, string name)
+> SportLeaguesSearchResponse LeaguesSearch (string name, string version = null, string sport = null)
 
 Search
 
@@ -2730,16 +2830,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
-            var name = Super;  // string | The name you want to search on.
+            var name = "Super";  // string | The name you want to search on.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // Search
-                SportLeaguesSearchResponse result = apiInstance.LeaguesSearch(version, sport, name);
+                SportLeaguesSearchResponse result = apiInstance.LeaguesSearch(name, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -2766,7 +2870,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Search
-    ApiResponse<SportLeaguesSearchResponse> response = apiInstance.LeaguesSearchWithHttpInfo(version, sport, name);
+    ApiResponse<SportLeaguesSearchResponse> response = apiInstance.LeaguesSearchWithHttpInfo(name, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2783,9 +2887,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **name** | **string** | The name you want to search on. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -2810,7 +2914,7 @@ catch (ApiException e)
 
 <a name="livescoresall"></a>
 # **LivescoresAll**
-> SportLivescoresAllResponse LivescoresAll (string version, string sport)
+> SportLivescoresAllResponse LivescoresAll (string version = null, string sport = null)
 
 All
 
@@ -2834,10 +2938,14 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
@@ -2886,8 +2994,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -2912,7 +3020,7 @@ catch (ApiException e)
 
 <a name="livescoresallinplay"></a>
 # **LivescoresAllInPlay**
-> SportLivescoresAllInPlayResponse LivescoresAllInPlay (string version, string sport)
+> SportLivescoresAllInPlayResponse LivescoresAllInPlay (string version = null, string sport = null)
 
 All In-play
 
@@ -2936,10 +3044,14 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
@@ -2988,8 +3100,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -3014,7 +3126,7 @@ catch (ApiException e)
 
 <a name="livescoreslatest"></a>
 # **LivescoresLatest**
-> SportLivescoresLatestResponse LivescoresLatest (string version, string sport)
+> SportLivescoresLatestResponse LivescoresLatest (string version = null, string sport = null)
 
 Last Updated In-play
 
@@ -3038,10 +3150,14 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
@@ -3090,8 +3206,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -3116,7 +3232,7 @@ catch (ApiException e)
 
 <a name="newsallpostmatch"></a>
 # **NewsAllPostMatch**
-> string NewsAllPostMatch (string version, string sport)
+> string NewsAllPostMatch (string version = null, string sport = null)
 
 All Post Match
 
@@ -3140,10 +3256,14 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
@@ -3192,8 +3312,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -3218,7 +3338,7 @@ catch (ApiException e)
 
 <a name="newsallprematch"></a>
 # **NewsAllPreMatch**
-> SportNewsAllPreMatchResponse NewsAllPreMatch (string version, string sport)
+> SportNewsAllPreMatchResponse NewsAllPreMatch (string version = null, string sport = null)
 
 All Pre-match
 
@@ -3242,10 +3362,14 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
@@ -3294,8 +3418,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -3320,7 +3444,7 @@ catch (ApiException e)
 
 <a name="newspostmatchbyseasonid"></a>
 # **NewsPostMatchBySeasonId**
-> string NewsPostMatchBySeasonId (string version, string sport, int seasonId)
+> string NewsPostMatchBySeasonId (int seasonId, string version = null, string sport = null)
 
 Post Match by Season ID
 
@@ -3344,16 +3468,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var seasonId = 19686;  // int | The ID of the season you want to retrieve post-match news from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // Post Match by Season ID
-                string result = apiInstance.NewsPostMatchBySeasonId(version, sport, seasonId);
+                string result = apiInstance.NewsPostMatchBySeasonId(seasonId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -3380,7 +3508,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Post Match by Season ID
-    ApiResponse<string> response = apiInstance.NewsPostMatchBySeasonIdWithHttpInfo(version, sport, seasonId);
+    ApiResponse<string> response = apiInstance.NewsPostMatchBySeasonIdWithHttpInfo(seasonId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -3397,9 +3525,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **seasonId** | **int** | The ID of the season you want to retrieve post-match news from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -3424,7 +3552,7 @@ catch (ApiException e)
 
 <a name="newsprematchbyseasonid"></a>
 # **NewsPreMatchBySeasonId**
-> SportNewsPreMatchBySeasonIdResponse NewsPreMatchBySeasonId (string version, string sport, int seasonId)
+> SportNewsPreMatchBySeasonIdResponse NewsPreMatchBySeasonId (int seasonId, string version = null, string sport = null)
 
 Pre-match By Season ID
 
@@ -3448,16 +3576,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var seasonId = 19734;  // int | The ID of the season you want to retrieve post-match news from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // Pre-match By Season ID
-                SportNewsPreMatchBySeasonIdResponse result = apiInstance.NewsPreMatchBySeasonId(version, sport, seasonId);
+                SportNewsPreMatchBySeasonIdResponse result = apiInstance.NewsPreMatchBySeasonId(seasonId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -3484,7 +3616,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Pre-match By Season ID
-    ApiResponse<SportNewsPreMatchBySeasonIdResponse> response = apiInstance.NewsPreMatchBySeasonIdWithHttpInfo(version, sport, seasonId);
+    ApiResponse<SportNewsPreMatchBySeasonIdResponse> response = apiInstance.NewsPreMatchBySeasonIdWithHttpInfo(seasonId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -3501,9 +3633,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **seasonId** | **int** | The ID of the season you want to retrieve post-match news from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -3528,7 +3660,7 @@ catch (ApiException e)
 
 <a name="newsupcomingpostmatch"></a>
 # **NewsUpcomingPostMatch**
-> string NewsUpcomingPostMatch (string version, string sport)
+> string NewsUpcomingPostMatch (string version = null, string sport = null)
 
 Upcoming Post Match
 
@@ -3552,10 +3684,14 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
@@ -3604,8 +3740,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -3630,7 +3766,7 @@ catch (ApiException e)
 
 <a name="newsupcomingprematch"></a>
 # **NewsUpcomingPreMatch**
-> SportNewsUpcomingPreMatchResponse NewsUpcomingPreMatch (string version, string sport)
+> SportNewsUpcomingPreMatchResponse NewsUpcomingPreMatch (string version = null, string sport = null)
 
 Upcoming Pre-match
 
@@ -3654,10 +3790,14 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
@@ -3706,8 +3846,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -3732,7 +3872,7 @@ catch (ApiException e)
 
 <a name="oddsallinplay"></a>
 # **OddsAllInPlay**
-> SportOddsAllInPlayResponse OddsAllInPlay (string version, string sport)
+> SportOddsAllInPlayResponse OddsAllInPlay (string version = null, string sport = null)
 
 All In-play
 
@@ -3756,10 +3896,14 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
@@ -3808,8 +3952,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -3834,7 +3978,7 @@ catch (ApiException e)
 
 <a name="oddsallprematch"></a>
 # **OddsAllPreMatch**
-> SportOddsAllPreMatchResponse OddsAllPreMatch (string version, string sport)
+> SportOddsAllPreMatchResponse OddsAllPreMatch (string version = null, string sport = null)
 
 All Pre-match
 
@@ -3858,10 +4002,14 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
@@ -3910,8 +4058,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -3936,7 +4084,7 @@ catch (ApiException e)
 
 <a name="oddsinplaybyfixtureandbookmakerid"></a>
 # **OddsInPlayByFixtureAndBookmakerId**
-> Object OddsInPlayByFixtureAndBookmakerId (string version, string sport, int fixtureId, int bookmakerId)
+> Object OddsInPlayByFixtureAndBookmakerId (int fixtureId, int bookmakerId, string version = null, string sport = null)
 
 In-play by Fixture and Bookmaker ID
 
@@ -3960,17 +4108,21 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var fixtureId = 18535046;  // int | The ID of the fixture you want to retrieve in-play odds from.
             var bookmakerId = 6;  // int | The ID of the bookmaker you want to retrieve in-play odds from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // In-play by Fixture and Bookmaker ID
-                Object result = apiInstance.OddsInPlayByFixtureAndBookmakerId(version, sport, fixtureId, bookmakerId);
+                Object result = apiInstance.OddsInPlayByFixtureAndBookmakerId(fixtureId, bookmakerId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -3997,7 +4149,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // In-play by Fixture and Bookmaker ID
-    ApiResponse<Object> response = apiInstance.OddsInPlayByFixtureAndBookmakerIdWithHttpInfo(version, sport, fixtureId, bookmakerId);
+    ApiResponse<Object> response = apiInstance.OddsInPlayByFixtureAndBookmakerIdWithHttpInfo(fixtureId, bookmakerId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -4014,10 +4166,10 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **fixtureId** | **int** | The ID of the fixture you want to retrieve in-play odds from. |  |
 | **bookmakerId** | **int** | The ID of the bookmaker you want to retrieve in-play odds from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -4042,7 +4194,7 @@ catch (ApiException e)
 
 <a name="oddsinplaybyfixtureandmarketid"></a>
 # **OddsInPlayByFixtureAndMarketId**
-> Object OddsInPlayByFixtureAndMarketId (string version, string sport, int fixtureId, int marketId)
+> Object OddsInPlayByFixtureAndMarketId (int fixtureId, int marketId, string version = null, string sport = null)
 
 In-play by Fixture and Market ID
 
@@ -4066,17 +4218,21 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var fixtureId = 233366;  // int | The ID of the fixture you want to retrieve in-play odds from.
             var marketId = 56;  // int | The ID of the market you want to retrieve in-play odds from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // In-play by Fixture and Market ID
-                Object result = apiInstance.OddsInPlayByFixtureAndMarketId(version, sport, fixtureId, marketId);
+                Object result = apiInstance.OddsInPlayByFixtureAndMarketId(fixtureId, marketId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -4103,7 +4259,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // In-play by Fixture and Market ID
-    ApiResponse<Object> response = apiInstance.OddsInPlayByFixtureAndMarketIdWithHttpInfo(version, sport, fixtureId, marketId);
+    ApiResponse<Object> response = apiInstance.OddsInPlayByFixtureAndMarketIdWithHttpInfo(fixtureId, marketId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -4120,10 +4276,10 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **fixtureId** | **int** | The ID of the fixture you want to retrieve in-play odds from. |  |
 | **marketId** | **int** | The ID of the market you want to retrieve in-play odds from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -4148,7 +4304,7 @@ catch (ApiException e)
 
 <a name="oddsinplaybyfixtureid"></a>
 # **OddsInPlayByFixtureId**
-> SportOddsInPlayByFixtureIdResponse OddsInPlayByFixtureId (string version, string sport, int fixtureId)
+> SportOddsInPlayByFixtureIdResponse OddsInPlayByFixtureId (int fixtureId, string version = null, string sport = null)
 
 In-play by Fixture ID
 
@@ -4172,16 +4328,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var fixtureId = 18535046;  // int | The ID of the fixture you want to retrieve in-play odds from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // In-play by Fixture ID
-                SportOddsInPlayByFixtureIdResponse result = apiInstance.OddsInPlayByFixtureId(version, sport, fixtureId);
+                SportOddsInPlayByFixtureIdResponse result = apiInstance.OddsInPlayByFixtureId(fixtureId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -4208,7 +4368,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // In-play by Fixture ID
-    ApiResponse<SportOddsInPlayByFixtureIdResponse> response = apiInstance.OddsInPlayByFixtureIdWithHttpInfo(version, sport, fixtureId);
+    ApiResponse<SportOddsInPlayByFixtureIdResponse> response = apiInstance.OddsInPlayByFixtureIdWithHttpInfo(fixtureId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -4225,9 +4385,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **fixtureId** | **int** | The ID of the fixture you want to retrieve in-play odds from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -4252,7 +4412,7 @@ catch (ApiException e)
 
 <a name="oddslatestinplay"></a>
 # **OddsLatestInPlay**
-> Object OddsLatestInPlay (string version, string sport)
+> Object OddsLatestInPlay (string version = null, string sport = null)
 
 Latest In-play
 
@@ -4276,10 +4436,14 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
@@ -4328,8 +4492,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -4354,7 +4518,7 @@ catch (ApiException e)
 
 <a name="oddslatestprematch"></a>
 # **OddsLatestPreMatch**
-> Object OddsLatestPreMatch (string version, string sport)
+> Object OddsLatestPreMatch (string version = null, string sport = null)
 
 Last Updated Pre-match
 
@@ -4378,10 +4542,14 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
@@ -4430,8 +4598,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -4456,7 +4624,7 @@ catch (ApiException e)
 
 <a name="oddsprematchbyfixtureandbookmakerid"></a>
 # **OddsPreMatchByFixtureAndBookmakerId**
-> SportOddsPreMatchByFixtureAndBookmakerIdResponse OddsPreMatchByFixtureAndBookmakerId (string version, string sport, int fixtureId, int bookmakerId)
+> SportOddsPreMatchByFixtureAndBookmakerIdResponse OddsPreMatchByFixtureAndBookmakerId (int fixtureId, int bookmakerId, string version = null, string sport = null)
 
 Pre-match by Fixture and Bookmaker ID
 
@@ -4480,17 +4648,21 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var fixtureId = 233366;  // int | The ID of the fixture you want to retrieve pre-match odds from.
             var bookmakerId = 6;  // int | The ID of the bookmaker you want to retrieve pre-match odds from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // Pre-match by Fixture and Bookmaker ID
-                SportOddsPreMatchByFixtureAndBookmakerIdResponse result = apiInstance.OddsPreMatchByFixtureAndBookmakerId(version, sport, fixtureId, bookmakerId);
+                SportOddsPreMatchByFixtureAndBookmakerIdResponse result = apiInstance.OddsPreMatchByFixtureAndBookmakerId(fixtureId, bookmakerId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -4517,7 +4689,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Pre-match by Fixture and Bookmaker ID
-    ApiResponse<SportOddsPreMatchByFixtureAndBookmakerIdResponse> response = apiInstance.OddsPreMatchByFixtureAndBookmakerIdWithHttpInfo(version, sport, fixtureId, bookmakerId);
+    ApiResponse<SportOddsPreMatchByFixtureAndBookmakerIdResponse> response = apiInstance.OddsPreMatchByFixtureAndBookmakerIdWithHttpInfo(fixtureId, bookmakerId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -4534,10 +4706,10 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **fixtureId** | **int** | The ID of the fixture you want to retrieve pre-match odds from. |  |
 | **bookmakerId** | **int** | The ID of the bookmaker you want to retrieve pre-match odds from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -4562,7 +4734,7 @@ catch (ApiException e)
 
 <a name="oddsprematchbyfixtureandmarketid"></a>
 # **OddsPreMatchByFixtureAndMarketId**
-> SportOddsPreMatchByFixtureAndMarketIdResponse OddsPreMatchByFixtureAndMarketId (string version, string sport, int fixtureId, int marketId)
+> SportOddsPreMatchByFixtureAndMarketIdResponse OddsPreMatchByFixtureAndMarketId (int fixtureId, int marketId, string version = null, string sport = null)
 
 Pre-match by Fixture and Market ID
 
@@ -4586,17 +4758,21 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var fixtureId = 233366;  // int | The ID of the fixture you want to retrieve pre-match odds from.
             var marketId = 56;  // int | The ID of the market you want to retrieve pre-match odds from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // Pre-match by Fixture and Market ID
-                SportOddsPreMatchByFixtureAndMarketIdResponse result = apiInstance.OddsPreMatchByFixtureAndMarketId(version, sport, fixtureId, marketId);
+                SportOddsPreMatchByFixtureAndMarketIdResponse result = apiInstance.OddsPreMatchByFixtureAndMarketId(fixtureId, marketId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -4623,7 +4799,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Pre-match by Fixture and Market ID
-    ApiResponse<SportOddsPreMatchByFixtureAndMarketIdResponse> response = apiInstance.OddsPreMatchByFixtureAndMarketIdWithHttpInfo(version, sport, fixtureId, marketId);
+    ApiResponse<SportOddsPreMatchByFixtureAndMarketIdResponse> response = apiInstance.OddsPreMatchByFixtureAndMarketIdWithHttpInfo(fixtureId, marketId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -4640,10 +4816,10 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **fixtureId** | **int** | The ID of the fixture you want to retrieve pre-match odds from. |  |
 | **marketId** | **int** | The ID of the market you want to retrieve pre-match odds from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -4668,7 +4844,7 @@ catch (ApiException e)
 
 <a name="oddsprematchbyfixtureid"></a>
 # **OddsPreMatchByFixtureId**
-> SportOddsPreMatchByFixtureIdResponse OddsPreMatchByFixtureId (string version, string sport, int fixtureId)
+> SportOddsPreMatchByFixtureIdResponse OddsPreMatchByFixtureId (int fixtureId, string version = null, string sport = null)
 
 Pre-match by Fixture ID
 
@@ -4692,16 +4868,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var fixtureId = 233366;  // int | The ID of the fixture you want to retrieve pre-match odds from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // Pre-match by Fixture ID
-                SportOddsPreMatchByFixtureIdResponse result = apiInstance.OddsPreMatchByFixtureId(version, sport, fixtureId);
+                SportOddsPreMatchByFixtureIdResponse result = apiInstance.OddsPreMatchByFixtureId(fixtureId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -4728,7 +4908,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Pre-match by Fixture ID
-    ApiResponse<SportOddsPreMatchByFixtureIdResponse> response = apiInstance.OddsPreMatchByFixtureIdWithHttpInfo(version, sport, fixtureId);
+    ApiResponse<SportOddsPreMatchByFixtureIdResponse> response = apiInstance.OddsPreMatchByFixtureIdWithHttpInfo(fixtureId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -4745,9 +4925,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **fixtureId** | **int** | The ID of the fixture you want to retrieve pre-match odds from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -4772,7 +4952,7 @@ catch (ApiException e)
 
 <a name="playerbyid"></a>
 # **PlayerById**
-> SportPlayerByIdResponse PlayerById (string version, string sport, int playerId)
+> SportPlayerByIdResponse PlayerById (int playerId, string version = null, string sport = null)
 
 By ID
 
@@ -4796,16 +4976,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var playerId = 14;  // int | The ID of the player you want to retrieve.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By ID
-                SportPlayerByIdResponse result = apiInstance.PlayerById(version, sport, playerId);
+                SportPlayerByIdResponse result = apiInstance.PlayerById(playerId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -4832,7 +5016,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By ID
-    ApiResponse<SportPlayerByIdResponse> response = apiInstance.PlayerByIdWithHttpInfo(version, sport, playerId);
+    ApiResponse<SportPlayerByIdResponse> response = apiInstance.PlayerByIdWithHttpInfo(playerId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -4849,9 +5033,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **playerId** | **int** | The ID of the player you want to retrieve. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -4876,7 +5060,7 @@ catch (ApiException e)
 
 <a name="playersall"></a>
 # **PlayersAll**
-> SportPlayersAllResponse PlayersAll (string version, string sport)
+> SportPlayersAllResponse PlayersAll (string version = null, string sport = null)
 
 All
 
@@ -4900,10 +5084,14 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
@@ -4952,8 +5140,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -4978,7 +5166,7 @@ catch (ApiException e)
 
 <a name="playersbycountryid"></a>
 # **PlayersByCountryId**
-> SportPlayersByCountryIdResponse PlayersByCountryId (string version, string sport, int countryId)
+> SportPlayersByCountryIdResponse PlayersByCountryId (int countryId, string version = null, string sport = null)
 
 By Country ID
 
@@ -5002,16 +5190,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var countryId = 320;  // int | The ID of the country you want to retrieve players from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By Country ID
-                SportPlayersByCountryIdResponse result = apiInstance.PlayersByCountryId(version, sport, countryId);
+                SportPlayersByCountryIdResponse result = apiInstance.PlayersByCountryId(countryId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -5038,7 +5230,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By Country ID
-    ApiResponse<SportPlayersByCountryIdResponse> response = apiInstance.PlayersByCountryIdWithHttpInfo(version, sport, countryId);
+    ApiResponse<SportPlayersByCountryIdResponse> response = apiInstance.PlayersByCountryIdWithHttpInfo(countryId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -5055,9 +5247,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **countryId** | **int** | The ID of the country you want to retrieve players from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -5082,7 +5274,7 @@ catch (ApiException e)
 
 <a name="playerslatest"></a>
 # **PlayersLatest**
-> SportPlayersLatestResponse PlayersLatest (string version, string sport)
+> SportPlayersLatestResponse PlayersLatest (string version = null, string sport = null)
 
 Latest Updated
 
@@ -5106,10 +5298,14 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
@@ -5158,8 +5354,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -5184,7 +5380,7 @@ catch (ApiException e)
 
 <a name="playerssearch"></a>
 # **PlayersSearch**
-> SportPlayersSearchResponse PlayersSearch (string version, string sport, string name)
+> SportPlayersSearchResponse PlayersSearch (string name, string version = null, string sport = null)
 
 Search
 
@@ -5208,16 +5404,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
-            var name = Agg;  // string | The name you want to search on.
+            var name = "Agg";  // string | The name you want to search on.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // Search
-                SportPlayersSearchResponse result = apiInstance.PlayersSearch(version, sport, name);
+                SportPlayersSearchResponse result = apiInstance.PlayersSearch(name, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -5244,7 +5444,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Search
-    ApiResponse<SportPlayersSearchResponse> response = apiInstance.PlayersSearchWithHttpInfo(version, sport, name);
+    ApiResponse<SportPlayersSearchResponse> response = apiInstance.PlayersSearchWithHttpInfo(name, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -5261,9 +5461,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **name** | **string** | The name you want to search on. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -5288,7 +5488,7 @@ catch (ApiException e)
 
 <a name="predictionsall"></a>
 # **PredictionsAll**
-> SportPredictionsAllResponse PredictionsAll (string version, string sport)
+> SportPredictionsAllResponse PredictionsAll (string version = null, string sport = null)
 
 All
 
@@ -5312,10 +5512,14 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
@@ -5364,8 +5568,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -5390,7 +5594,7 @@ catch (ApiException e)
 
 <a name="predictionsallvaluebets"></a>
 # **PredictionsAllValueBets**
-> SportPredictionsAllValueBetsResponse PredictionsAllValueBets (string version, string sport)
+> SportPredictionsAllValueBetsResponse PredictionsAllValueBets (string version = null, string sport = null)
 
 All Value Bets
 
@@ -5414,10 +5618,14 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
@@ -5466,8 +5674,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -5492,7 +5700,7 @@ catch (ApiException e)
 
 <a name="predictionsbyfixtureid"></a>
 # **PredictionsByFixtureId**
-> SportPredictionsByFixtureIdResponse PredictionsByFixtureId (string version, string sport, int fixtureId)
+> SportPredictionsByFixtureIdResponse PredictionsByFixtureId (int fixtureId, string version = null, string sport = null)
 
 By Fixture ID
 
@@ -5516,16 +5724,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var fixtureId = 16774022;  // int | The ID of the fixture you want to retrieve predictions from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By Fixture ID
-                SportPredictionsByFixtureIdResponse result = apiInstance.PredictionsByFixtureId(version, sport, fixtureId);
+                SportPredictionsByFixtureIdResponse result = apiInstance.PredictionsByFixtureId(fixtureId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -5552,7 +5764,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By Fixture ID
-    ApiResponse<SportPredictionsByFixtureIdResponse> response = apiInstance.PredictionsByFixtureIdWithHttpInfo(version, sport, fixtureId);
+    ApiResponse<SportPredictionsByFixtureIdResponse> response = apiInstance.PredictionsByFixtureIdWithHttpInfo(fixtureId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -5569,9 +5781,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **fixtureId** | **int** | The ID of the fixture you want to retrieve predictions from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -5596,7 +5808,7 @@ catch (ApiException e)
 
 <a name="predictionsvaluebetsbyfixtureid"></a>
 # **PredictionsValueBetsByFixtureId**
-> Object PredictionsValueBetsByFixtureId (string version, string sport, int fixtureId)
+> Object PredictionsValueBetsByFixtureId (int fixtureId, string version = null, string sport = null)
 
 Value Bets by Fixture ID
 
@@ -5620,16 +5832,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var fixtureId = 18535050;  // int | The ID of the fixture you want to retrieve value bets from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // Value Bets by Fixture ID
-                Object result = apiInstance.PredictionsValueBetsByFixtureId(version, sport, fixtureId);
+                Object result = apiInstance.PredictionsValueBetsByFixtureId(fixtureId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -5656,7 +5872,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Value Bets by Fixture ID
-    ApiResponse<Object> response = apiInstance.PredictionsValueBetsByFixtureIdWithHttpInfo(version, sport, fixtureId);
+    ApiResponse<Object> response = apiInstance.PredictionsValueBetsByFixtureIdWithHttpInfo(fixtureId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -5673,9 +5889,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **fixtureId** | **int** | The ID of the fixture you want to retrieve value bets from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -5700,7 +5916,7 @@ catch (ApiException e)
 
 <a name="refereebyid"></a>
 # **RefereeById**
-> SportRefereeByIdResponse RefereeById (string version, string sport, int refereeId)
+> SportRefereeByIdResponse RefereeById (int refereeId, string version = null, string sport = null)
 
 By ID
 
@@ -5724,16 +5940,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var refereeId = 11698;  // int | The ID of the referee you want to retrieve.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By ID
-                SportRefereeByIdResponse result = apiInstance.RefereeById(version, sport, refereeId);
+                SportRefereeByIdResponse result = apiInstance.RefereeById(refereeId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -5760,7 +5980,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By ID
-    ApiResponse<SportRefereeByIdResponse> response = apiInstance.RefereeByIdWithHttpInfo(version, sport, refereeId);
+    ApiResponse<SportRefereeByIdResponse> response = apiInstance.RefereeByIdWithHttpInfo(refereeId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -5777,9 +5997,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **refereeId** | **int** | The ID of the referee you want to retrieve. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -5804,7 +6024,7 @@ catch (ApiException e)
 
 <a name="refereesall"></a>
 # **RefereesAll**
-> SportRefereesAllResponse RefereesAll (string version, string sport)
+> SportRefereesAllResponse RefereesAll (string version = null, string sport = null)
 
 All
 
@@ -5828,10 +6048,14 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
@@ -5880,8 +6104,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -5906,7 +6130,7 @@ catch (ApiException e)
 
 <a name="refereesbycountryid"></a>
 # **RefereesByCountryId**
-> SportRefereesByCountryIdResponse RefereesByCountryId (string version, string sport, int countryId)
+> SportRefereesByCountryIdResponse RefereesByCountryId (int countryId, string version = null, string sport = null)
 
 By Country ID
 
@@ -5930,16 +6154,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var countryId = 320;  // int | The ID of the country you want to retrieve referees from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By Country ID
-                SportRefereesByCountryIdResponse result = apiInstance.RefereesByCountryId(version, sport, countryId);
+                SportRefereesByCountryIdResponse result = apiInstance.RefereesByCountryId(countryId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -5966,7 +6194,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By Country ID
-    ApiResponse<SportRefereesByCountryIdResponse> response = apiInstance.RefereesByCountryIdWithHttpInfo(version, sport, countryId);
+    ApiResponse<SportRefereesByCountryIdResponse> response = apiInstance.RefereesByCountryIdWithHttpInfo(countryId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -5983,9 +6211,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **countryId** | **int** | The ID of the country you want to retrieve referees from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -6010,7 +6238,7 @@ catch (ApiException e)
 
 <a name="refereesbyseasonid"></a>
 # **RefereesBySeasonId**
-> SportRefereesBySeasonIdResponse RefereesBySeasonId (string version, string sport, int seasonId)
+> SportRefereesBySeasonIdResponse RefereesBySeasonId (int seasonId, string version = null, string sport = null)
 
 By Season ID
 
@@ -6034,16 +6262,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var seasonId = 19686;  // int | The ID of the season you want to retrieve referees from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By Season ID
-                SportRefereesBySeasonIdResponse result = apiInstance.RefereesBySeasonId(version, sport, seasonId);
+                SportRefereesBySeasonIdResponse result = apiInstance.RefereesBySeasonId(seasonId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -6070,7 +6302,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By Season ID
-    ApiResponse<SportRefereesBySeasonIdResponse> response = apiInstance.RefereesBySeasonIdWithHttpInfo(version, sport, seasonId);
+    ApiResponse<SportRefereesBySeasonIdResponse> response = apiInstance.RefereesBySeasonIdWithHttpInfo(seasonId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -6087,9 +6319,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **seasonId** | **int** | The ID of the season you want to retrieve referees from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -6114,7 +6346,7 @@ catch (ApiException e)
 
 <a name="refereessearch"></a>
 # **RefereesSearch**
-> SportRefereesSearchResponse RefereesSearch (string version, string sport, string name)
+> SportRefereesSearchResponse RefereesSearch (string name, string version = null, string sport = null)
 
 Search
 
@@ -6138,16 +6370,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
-            var name = Munch;  // string | The name you want to search on.
+            var name = "Munch";  // string | The name you want to search on.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // Search
-                SportRefereesSearchResponse result = apiInstance.RefereesSearch(version, sport, name);
+                SportRefereesSearchResponse result = apiInstance.RefereesSearch(name, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -6174,7 +6410,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Search
-    ApiResponse<SportRefereesSearchResponse> response = apiInstance.RefereesSearchWithHttpInfo(version, sport, name);
+    ApiResponse<SportRefereesSearchResponse> response = apiInstance.RefereesSearchWithHttpInfo(name, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -6191,9 +6427,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **name** | **string** | The name you want to search on. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -6218,7 +6454,7 @@ catch (ApiException e)
 
 <a name="rivalsall"></a>
 # **RivalsAll**
-> SportRivalsAllResponse RivalsAll (string version, string sport)
+> SportRivalsAllResponse RivalsAll (string version = null, string sport = null)
 
 All
 
@@ -6242,10 +6478,14 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
@@ -6294,8 +6534,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -6320,7 +6560,7 @@ catch (ApiException e)
 
 <a name="rivalsbyteamid"></a>
 # **RivalsByTeamId**
-> SportRivalsByTeamIdResponse RivalsByTeamId (string version, string sport, int teamId)
+> SportRivalsByTeamIdResponse RivalsByTeamId (int teamId, string version = null, string sport = null)
 
 By Team ID
 
@@ -6344,16 +6584,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var teamId = 53;  // int | The ID of the team you want to retrieve rivals from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By Team ID
-                SportRivalsByTeamIdResponse result = apiInstance.RivalsByTeamId(version, sport, teamId);
+                SportRivalsByTeamIdResponse result = apiInstance.RivalsByTeamId(teamId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -6380,7 +6624,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By Team ID
-    ApiResponse<SportRivalsByTeamIdResponse> response = apiInstance.RivalsByTeamIdWithHttpInfo(version, sport, teamId);
+    ApiResponse<SportRivalsByTeamIdResponse> response = apiInstance.RivalsByTeamIdWithHttpInfo(teamId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -6397,9 +6641,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **teamId** | **int** | The ID of the team you want to retrieve rivals from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -6424,7 +6668,7 @@ catch (ApiException e)
 
 <a name="roundbyid"></a>
 # **RoundById**
-> SportRoundByIdResponse RoundById (string version, string sport, int roundId)
+> SportRoundByIdResponse RoundById (int roundId, string version = null, string sport = null)
 
 By ID
 
@@ -6448,16 +6692,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var roundId = 23317;  // int | The ID of the round you want to retrieve.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By ID
-                SportRoundByIdResponse result = apiInstance.RoundById(version, sport, roundId);
+                SportRoundByIdResponse result = apiInstance.RoundById(roundId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -6484,7 +6732,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By ID
-    ApiResponse<SportRoundByIdResponse> response = apiInstance.RoundByIdWithHttpInfo(version, sport, roundId);
+    ApiResponse<SportRoundByIdResponse> response = apiInstance.RoundByIdWithHttpInfo(roundId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -6501,9 +6749,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **roundId** | **int** | The ID of the round you want to retrieve. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -6528,7 +6776,7 @@ catch (ApiException e)
 
 <a name="roundsall"></a>
 # **RoundsAll**
-> SportRoundsAllResponse RoundsAll (string version, string sport)
+> SportRoundsAllResponse RoundsAll (string version = null, string sport = null)
 
 All
 
@@ -6552,10 +6800,14 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
@@ -6604,8 +6856,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -6630,7 +6882,7 @@ catch (ApiException e)
 
 <a name="roundsbyseasonid"></a>
 # **RoundsBySeasonId**
-> SportRoundsBySeasonIdResponse RoundsBySeasonId (string version, string sport, int seasonId)
+> SportRoundsBySeasonIdResponse RoundsBySeasonId (int seasonId, string version = null, string sport = null)
 
 Season ID
 
@@ -6654,16 +6906,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var seasonId = 19686;  // int | The ID of the season you want to retrieve rounds from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // Season ID
-                SportRoundsBySeasonIdResponse result = apiInstance.RoundsBySeasonId(version, sport, seasonId);
+                SportRoundsBySeasonIdResponse result = apiInstance.RoundsBySeasonId(seasonId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -6690,7 +6946,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Season ID
-    ApiResponse<SportRoundsBySeasonIdResponse> response = apiInstance.RoundsBySeasonIdWithHttpInfo(version, sport, seasonId);
+    ApiResponse<SportRoundsBySeasonIdResponse> response = apiInstance.RoundsBySeasonIdWithHttpInfo(seasonId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -6707,9 +6963,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **seasonId** | **int** | The ID of the season you want to retrieve rounds from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -6734,7 +6990,7 @@ catch (ApiException e)
 
 <a name="roundssearch"></a>
 # **RoundsSearch**
-> SportRoundsSearchResponse RoundsSearch (string version, string sport, int name)
+> SportRoundsSearchResponse RoundsSearch (int name, string version = null, string sport = null)
 
 Search
 
@@ -6758,16 +7014,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var name = 2;  // int | The name you want to search on.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // Search
-                SportRoundsSearchResponse result = apiInstance.RoundsSearch(version, sport, name);
+                SportRoundsSearchResponse result = apiInstance.RoundsSearch(name, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -6794,7 +7054,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Search
-    ApiResponse<SportRoundsSearchResponse> response = apiInstance.RoundsSearchWithHttpInfo(version, sport, name);
+    ApiResponse<SportRoundsSearchResponse> response = apiInstance.RoundsSearchWithHttpInfo(name, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -6811,9 +7071,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **name** | **int** | The name you want to search on. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -6838,7 +7098,7 @@ catch (ApiException e)
 
 <a name="schedulesbyseasonid"></a>
 # **SchedulesBySeasonId**
-> SportSchedulesBySeasonIdResponse SchedulesBySeasonId (string version, string sport, int seasonId)
+> SportSchedulesBySeasonIdResponse SchedulesBySeasonId (int seasonId, string version = null, string sport = null)
 
 By Season ID
 
@@ -6862,16 +7122,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var seasonId = 19686;  // int | 
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By Season ID
-                SportSchedulesBySeasonIdResponse result = apiInstance.SchedulesBySeasonId(version, sport, seasonId);
+                SportSchedulesBySeasonIdResponse result = apiInstance.SchedulesBySeasonId(seasonId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -6898,7 +7162,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By Season ID
-    ApiResponse<SportSchedulesBySeasonIdResponse> response = apiInstance.SchedulesBySeasonIdWithHttpInfo(version, sport, seasonId);
+    ApiResponse<SportSchedulesBySeasonIdResponse> response = apiInstance.SchedulesBySeasonIdWithHttpInfo(seasonId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -6915,9 +7179,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **seasonId** | **int** |  |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -6942,7 +7206,7 @@ catch (ApiException e)
 
 <a name="schedulesbyteamandseasonid"></a>
 # **SchedulesByTeamAndSeasonId**
-> SportSchedulesByTeamAndSeasonIdResponse SchedulesByTeamAndSeasonId (string version, string sport, int seasonId, int teamId)
+> SportSchedulesByTeamAndSeasonIdResponse SchedulesByTeamAndSeasonId (int seasonId, int teamId, string version = null, string sport = null)
 
 By Team and Season ID
 
@@ -6966,17 +7230,21 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var seasonId = 19686;  // int | The ID of the season you want to retrieve schedule from.
             var teamId = 282;  // int | The ID of the team you want to retrieve schedule from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By Team and Season ID
-                SportSchedulesByTeamAndSeasonIdResponse result = apiInstance.SchedulesByTeamAndSeasonId(version, sport, seasonId, teamId);
+                SportSchedulesByTeamAndSeasonIdResponse result = apiInstance.SchedulesByTeamAndSeasonId(seasonId, teamId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -7003,7 +7271,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By Team and Season ID
-    ApiResponse<SportSchedulesByTeamAndSeasonIdResponse> response = apiInstance.SchedulesByTeamAndSeasonIdWithHttpInfo(version, sport, seasonId, teamId);
+    ApiResponse<SportSchedulesByTeamAndSeasonIdResponse> response = apiInstance.SchedulesByTeamAndSeasonIdWithHttpInfo(seasonId, teamId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -7020,10 +7288,10 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **seasonId** | **int** | The ID of the season you want to retrieve schedule from. |  |
 | **teamId** | **int** | The ID of the team you want to retrieve schedule from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -7048,7 +7316,7 @@ catch (ApiException e)
 
 <a name="schedulesbyteamid"></a>
 # **SchedulesByTeamId**
-> SportSchedulesByTeamIdResponse SchedulesByTeamId (string version, string sport, int teamId)
+> SportSchedulesByTeamIdResponse SchedulesByTeamId (int teamId, string version = null, string sport = null)
 
 By Team ID
 
@@ -7072,16 +7340,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var teamId = 282;  // int | The ID of the team you want to retrieve schedule from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By Team ID
-                SportSchedulesByTeamIdResponse result = apiInstance.SchedulesByTeamId(version, sport, teamId);
+                SportSchedulesByTeamIdResponse result = apiInstance.SchedulesByTeamId(teamId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -7108,7 +7380,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By Team ID
-    ApiResponse<SportSchedulesByTeamIdResponse> response = apiInstance.SchedulesByTeamIdWithHttpInfo(version, sport, teamId);
+    ApiResponse<SportSchedulesByTeamIdResponse> response = apiInstance.SchedulesByTeamIdWithHttpInfo(teamId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -7125,9 +7397,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **teamId** | **int** | The ID of the team you want to retrieve schedule from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -7152,7 +7424,7 @@ catch (ApiException e)
 
 <a name="seasonbyid"></a>
 # **SeasonById**
-> SportSeasonByIdResponse SeasonById (string version, string sport, int seasonId)
+> SportSeasonByIdResponse SeasonById (int seasonId, string version = null, string sport = null)
 
 By ID
 
@@ -7176,16 +7448,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var seasonId = 19686;  // int | The ID of the season you want to retrieve.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By ID
-                SportSeasonByIdResponse result = apiInstance.SeasonById(version, sport, seasonId);
+                SportSeasonByIdResponse result = apiInstance.SeasonById(seasonId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -7212,7 +7488,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By ID
-    ApiResponse<SportSeasonByIdResponse> response = apiInstance.SeasonByIdWithHttpInfo(version, sport, seasonId);
+    ApiResponse<SportSeasonByIdResponse> response = apiInstance.SeasonByIdWithHttpInfo(seasonId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -7229,9 +7505,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **seasonId** | **int** | The ID of the season you want to retrieve. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -7256,7 +7532,7 @@ catch (ApiException e)
 
 <a name="seasonsall"></a>
 # **SeasonsAll**
-> SportSeasonsAllResponse SeasonsAll (string version, string sport)
+> SportSeasonsAllResponse SeasonsAll (string version = null, string sport = null)
 
 All
 
@@ -7280,10 +7556,14 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
@@ -7332,8 +7612,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -7358,7 +7638,7 @@ catch (ApiException e)
 
 <a name="seasonsbyteamid"></a>
 # **SeasonsByTeamId**
-> Object SeasonsByTeamId (string version, string sport, int teamId)
+> Object SeasonsByTeamId (int teamId, string version = null, string sport = null)
 
 By Team ID
 
@@ -7382,16 +7662,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var teamId = 282;  // int | The ID of the team you want to retrieve seasons from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By Team ID
-                Object result = apiInstance.SeasonsByTeamId(version, sport, teamId);
+                Object result = apiInstance.SeasonsByTeamId(teamId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -7418,7 +7702,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By Team ID
-    ApiResponse<Object> response = apiInstance.SeasonsByTeamIdWithHttpInfo(version, sport, teamId);
+    ApiResponse<Object> response = apiInstance.SeasonsByTeamIdWithHttpInfo(teamId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -7435,9 +7719,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **teamId** | **int** | The ID of the team you want to retrieve seasons from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -7462,7 +7746,7 @@ catch (ApiException e)
 
 <a name="seasonssearch"></a>
 # **SeasonsSearch**
-> SportSeasonsSearchResponse SeasonsSearch (string version, string sport, int name)
+> SportSeasonsSearchResponse SeasonsSearch (int name, string version = null, string sport = null)
 
 Search
 
@@ -7486,16 +7770,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var name = 2022;  // int | The name you want to search on.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // Search
-                SportSeasonsSearchResponse result = apiInstance.SeasonsSearch(version, sport, name);
+                SportSeasonsSearchResponse result = apiInstance.SeasonsSearch(name, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -7522,7 +7810,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Search
-    ApiResponse<SportSeasonsSearchResponse> response = apiInstance.SeasonsSearchWithHttpInfo(version, sport, name);
+    ApiResponse<SportSeasonsSearchResponse> response = apiInstance.SeasonsSearchWithHttpInfo(name, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -7539,9 +7827,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **name** | **int** | The name you want to search on. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -7566,7 +7854,7 @@ catch (ApiException e)
 
 <a name="squadsbyseasonandteamid"></a>
 # **SquadsBySeasonAndTeamId**
-> SportSquadsBySeasonAndTeamIdResponse SquadsBySeasonAndTeamId (string version, string sport, int seasonId, int teamId)
+> SportSquadsBySeasonAndTeamIdResponse SquadsBySeasonAndTeamId (int seasonId, int teamId, string version = null, string sport = null)
 
 By Season and Team ID
 
@@ -7590,17 +7878,21 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var seasonId = 19686;  // int | The ID of the season you want to retrieve squads from.
             var teamId = 282;  // int | The ID of the team you want to retrieve squads from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By Season and Team ID
-                SportSquadsBySeasonAndTeamIdResponse result = apiInstance.SquadsBySeasonAndTeamId(version, sport, seasonId, teamId);
+                SportSquadsBySeasonAndTeamIdResponse result = apiInstance.SquadsBySeasonAndTeamId(seasonId, teamId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -7627,7 +7919,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By Season and Team ID
-    ApiResponse<SportSquadsBySeasonAndTeamIdResponse> response = apiInstance.SquadsBySeasonAndTeamIdWithHttpInfo(version, sport, seasonId, teamId);
+    ApiResponse<SportSquadsBySeasonAndTeamIdResponse> response = apiInstance.SquadsBySeasonAndTeamIdWithHttpInfo(seasonId, teamId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -7644,10 +7936,10 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **seasonId** | **int** | The ID of the season you want to retrieve squads from. |  |
 | **teamId** | **int** | The ID of the team you want to retrieve squads from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -7672,7 +7964,7 @@ catch (ApiException e)
 
 <a name="squadsbyteamid"></a>
 # **SquadsByTeamId**
-> SportSquadsByTeamIdResponse SquadsByTeamId (string version, string sport, int teamId)
+> SportSquadsByTeamIdResponse SquadsByTeamId (int teamId, string version = null, string sport = null)
 
 By Team ID
 
@@ -7696,16 +7988,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var teamId = 282;  // int | The ID of the team you want to retrieve squads from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By Team ID
-                SportSquadsByTeamIdResponse result = apiInstance.SquadsByTeamId(version, sport, teamId);
+                SportSquadsByTeamIdResponse result = apiInstance.SquadsByTeamId(teamId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -7732,7 +8028,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By Team ID
-    ApiResponse<SportSquadsByTeamIdResponse> response = apiInstance.SquadsByTeamIdWithHttpInfo(version, sport, teamId);
+    ApiResponse<SportSquadsByTeamIdResponse> response = apiInstance.SquadsByTeamIdWithHttpInfo(teamId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -7749,9 +8045,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **teamId** | **int** | The ID of the team you want to retrieve squads from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -7776,7 +8072,7 @@ catch (ApiException e)
 
 <a name="stagebyid"></a>
 # **StageById**
-> SportStageByIdResponse StageById (string version, string sport, int stageId)
+> SportStageByIdResponse StageById (int stageId, string version = null, string sport = null)
 
 By ID
 
@@ -7800,16 +8096,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var stageId = 1100;  // int | The ID of the stage you want to retrieve.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By ID
-                SportStageByIdResponse result = apiInstance.StageById(version, sport, stageId);
+                SportStageByIdResponse result = apiInstance.StageById(stageId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -7836,7 +8136,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By ID
-    ApiResponse<SportStageByIdResponse> response = apiInstance.StageByIdWithHttpInfo(version, sport, stageId);
+    ApiResponse<SportStageByIdResponse> response = apiInstance.StageByIdWithHttpInfo(stageId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -7853,9 +8153,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **stageId** | **int** | The ID of the stage you want to retrieve. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -7880,7 +8180,7 @@ catch (ApiException e)
 
 <a name="stagesall"></a>
 # **StagesAll**
-> SportStagesAllResponse StagesAll (string version, string sport)
+> SportStagesAllResponse StagesAll (string version = null, string sport = null)
 
 All
 
@@ -7904,10 +8204,14 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
@@ -7956,8 +8260,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -7982,7 +8286,7 @@ catch (ApiException e)
 
 <a name="stagesbyseasonid"></a>
 # **StagesBySeasonId**
-> SportStagesBySeasonIdResponse StagesBySeasonId (string version, string sport, int seasonId)
+> SportStagesBySeasonIdResponse StagesBySeasonId (int seasonId, string version = null, string sport = null)
 
 By Season ID
 
@@ -8006,16 +8310,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var seasonId = 19686;  // int | The ID of the season you want to retrieve stages from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By Season ID
-                SportStagesBySeasonIdResponse result = apiInstance.StagesBySeasonId(version, sport, seasonId);
+                SportStagesBySeasonIdResponse result = apiInstance.StagesBySeasonId(seasonId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -8042,7 +8350,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By Season ID
-    ApiResponse<SportStagesBySeasonIdResponse> response = apiInstance.StagesBySeasonIdWithHttpInfo(version, sport, seasonId);
+    ApiResponse<SportStagesBySeasonIdResponse> response = apiInstance.StagesBySeasonIdWithHttpInfo(seasonId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -8059,9 +8367,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **seasonId** | **int** | The ID of the season you want to retrieve stages from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -8086,7 +8394,7 @@ catch (ApiException e)
 
 <a name="stagessearch"></a>
 # **StagesSearch**
-> SportStagesSearchResponse StagesSearch (string version, string sport, string name)
+> SportStagesSearchResponse StagesSearch (string name, string version = null, string sport = null)
 
 Search
 
@@ -8110,16 +8418,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
-            var name = Championship;  // string | The name you want to search on.
+            var name = "Championship";  // string | The name you want to search on.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // Search
-                SportStagesSearchResponse result = apiInstance.StagesSearch(version, sport, name);
+                SportStagesSearchResponse result = apiInstance.StagesSearch(name, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -8146,7 +8458,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Search
-    ApiResponse<SportStagesSearchResponse> response = apiInstance.StagesSearchWithHttpInfo(version, sport, name);
+    ApiResponse<SportStagesSearchResponse> response = apiInstance.StagesSearchWithHttpInfo(name, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -8163,9 +8475,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **name** | **string** | The name you want to search on. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -8190,7 +8502,7 @@ catch (ApiException e)
 
 <a name="standingcorrectionsbyseasonid"></a>
 # **StandingCorrectionsBySeasonId**
-> SportStandingCorrectionsBySeasonIdResponse StandingCorrectionsBySeasonId (string version, string sport, int seasonId)
+> SportStandingCorrectionsBySeasonIdResponse StandingCorrectionsBySeasonId (int seasonId, string version = null, string sport = null)
 
 Correction by Season ID
 
@@ -8214,16 +8526,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var seasonId = 19686;  // int | The ID of the season you want to retrieve standing corrections from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // Correction by Season ID
-                SportStandingCorrectionsBySeasonIdResponse result = apiInstance.StandingCorrectionsBySeasonId(version, sport, seasonId);
+                SportStandingCorrectionsBySeasonIdResponse result = apiInstance.StandingCorrectionsBySeasonId(seasonId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -8250,7 +8566,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Correction by Season ID
-    ApiResponse<SportStandingCorrectionsBySeasonIdResponse> response = apiInstance.StandingCorrectionsBySeasonIdWithHttpInfo(version, sport, seasonId);
+    ApiResponse<SportStandingCorrectionsBySeasonIdResponse> response = apiInstance.StandingCorrectionsBySeasonIdWithHttpInfo(seasonId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -8267,9 +8583,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **seasonId** | **int** | The ID of the season you want to retrieve standing corrections from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -8294,7 +8610,7 @@ catch (ApiException e)
 
 <a name="standingsall"></a>
 # **StandingsAll**
-> SportStandingsAllResponse StandingsAll (string version, string sport)
+> SportStandingsAllResponse StandingsAll (string version = null, string sport = null)
 
 All
 
@@ -8318,10 +8634,14 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
@@ -8370,8 +8690,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -8396,7 +8716,7 @@ catch (ApiException e)
 
 <a name="standingsbyroundid"></a>
 # **StandingsByRoundId**
-> SportStandingsByRoundIdResponse StandingsByRoundId (string version, string sport, int roundId)
+> SportStandingsByRoundIdResponse StandingsByRoundId (int roundId, string version = null, string sport = null)
 
 By Round ID
 
@@ -8420,16 +8740,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var roundId = 23318;  // int | The ID of the round you want to retrieve standing from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By Round ID
-                SportStandingsByRoundIdResponse result = apiInstance.StandingsByRoundId(version, sport, roundId);
+                SportStandingsByRoundIdResponse result = apiInstance.StandingsByRoundId(roundId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -8456,7 +8780,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By Round ID
-    ApiResponse<SportStandingsByRoundIdResponse> response = apiInstance.StandingsByRoundIdWithHttpInfo(version, sport, roundId);
+    ApiResponse<SportStandingsByRoundIdResponse> response = apiInstance.StandingsByRoundIdWithHttpInfo(roundId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -8473,9 +8797,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **roundId** | **int** | The ID of the round you want to retrieve standing from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -8500,7 +8824,7 @@ catch (ApiException e)
 
 <a name="standingsbyseasonid"></a>
 # **StandingsBySeasonId**
-> SportStandingsBySeasonIdResponse StandingsBySeasonId (string version, string sport, int seasonId)
+> SportStandingsBySeasonIdResponse StandingsBySeasonId (int seasonId, string version = null, string sport = null)
 
 By Season ID
 
@@ -8524,16 +8848,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var seasonId = 19686;  // int | The ID of the season you want to retrieve standing from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By Season ID
-                SportStandingsBySeasonIdResponse result = apiInstance.StandingsBySeasonId(version, sport, seasonId);
+                SportStandingsBySeasonIdResponse result = apiInstance.StandingsBySeasonId(seasonId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -8560,7 +8888,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By Season ID
-    ApiResponse<SportStandingsBySeasonIdResponse> response = apiInstance.StandingsBySeasonIdWithHttpInfo(version, sport, seasonId);
+    ApiResponse<SportStandingsBySeasonIdResponse> response = apiInstance.StandingsBySeasonIdWithHttpInfo(seasonId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -8577,9 +8905,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **seasonId** | **int** | The ID of the season you want to retrieve standing from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -8604,7 +8932,7 @@ catch (ApiException e)
 
 <a name="standingslivebyleagueid"></a>
 # **StandingsLiveByLeagueId**
-> SportStandingsLiveByLeagueIdResponse StandingsLiveByLeagueId (string version, string sport, int leagueId)
+> SportStandingsLiveByLeagueIdResponse StandingsLiveByLeagueId (int leagueId, string version = null, string sport = null)
 
 By League ID
 
@@ -8628,16 +8956,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var leagueId = 271;  // int | The ID of the league you want to retrieve standings from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By League ID
-                SportStandingsLiveByLeagueIdResponse result = apiInstance.StandingsLiveByLeagueId(version, sport, leagueId);
+                SportStandingsLiveByLeagueIdResponse result = apiInstance.StandingsLiveByLeagueId(leagueId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -8664,7 +8996,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By League ID
-    ApiResponse<SportStandingsLiveByLeagueIdResponse> response = apiInstance.StandingsLiveByLeagueIdWithHttpInfo(version, sport, leagueId);
+    ApiResponse<SportStandingsLiveByLeagueIdResponse> response = apiInstance.StandingsLiveByLeagueIdWithHttpInfo(leagueId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -8681,9 +9013,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **leagueId** | **int** | The ID of the league you want to retrieve standings from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -8708,7 +9040,7 @@ catch (ApiException e)
 
 <a name="statebyid"></a>
 # **StateById**
-> SportStateByIdResponse StateById (string version, string sport, int stateId)
+> SportStateByIdResponse StateById (int stateId, string version = null, string sport = null)
 
 By ID
 
@@ -8732,16 +9064,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var stateId = 1;  // int | The ID of the state you want to retrieve.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By ID
-                SportStateByIdResponse result = apiInstance.StateById(version, sport, stateId);
+                SportStateByIdResponse result = apiInstance.StateById(stateId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -8768,7 +9104,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By ID
-    ApiResponse<SportStateByIdResponse> response = apiInstance.StateByIdWithHttpInfo(version, sport, stateId);
+    ApiResponse<SportStateByIdResponse> response = apiInstance.StateByIdWithHttpInfo(stateId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -8785,9 +9121,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **stateId** | **int** | The ID of the state you want to retrieve. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -8812,7 +9148,7 @@ catch (ApiException e)
 
 <a name="statesbysport"></a>
 # **StatesBySport**
-> SportStatesBySportResponse StatesBySport (string version, string sport)
+> SportStatesBySportResponse StatesBySport (string version = null, string sport = null)
 
 By Sport
 
@@ -8836,10 +9172,14 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
@@ -8888,8 +9228,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -8914,7 +9254,7 @@ catch (ApiException e)
 
 <a name="teamsall"></a>
 # **TeamsAll**
-> SportTeamsAllResponse TeamsAll (string version, string sport)
+> SportTeamsAllResponse TeamsAll (string version = null, string sport = null)
 
 All
 
@@ -8938,10 +9278,14 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
@@ -8990,8 +9334,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -9016,7 +9360,7 @@ catch (ApiException e)
 
 <a name="teamsbycountryid"></a>
 # **TeamsByCountryId**
-> SportTeamsByCountryIdResponse TeamsByCountryId (string version, string sport, int countryId)
+> SportTeamsByCountryIdResponse TeamsByCountryId (int countryId, string version = null, string sport = null)
 
 By Country ID
 
@@ -9040,16 +9384,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var countryId = 320;  // int | The ID of the country you want to retrieve teams from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By Country ID
-                SportTeamsByCountryIdResponse result = apiInstance.TeamsByCountryId(version, sport, countryId);
+                SportTeamsByCountryIdResponse result = apiInstance.TeamsByCountryId(countryId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -9076,7 +9424,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By Country ID
-    ApiResponse<SportTeamsByCountryIdResponse> response = apiInstance.TeamsByCountryIdWithHttpInfo(version, sport, countryId);
+    ApiResponse<SportTeamsByCountryIdResponse> response = apiInstance.TeamsByCountryIdWithHttpInfo(countryId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -9093,9 +9441,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **countryId** | **int** | The ID of the country you want to retrieve teams from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -9120,7 +9468,7 @@ catch (ApiException e)
 
 <a name="teamsbyid"></a>
 # **TeamsById**
-> SportTeamsByIdResponse TeamsById (string version, string sport, int teamId)
+> SportTeamsByIdResponse TeamsById (int teamId, string version = null, string sport = null)
 
 By ID
 
@@ -9144,16 +9492,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var teamId = 180;  // int | The ID of the team you want to retrieve.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By ID
-                SportTeamsByIdResponse result = apiInstance.TeamsById(version, sport, teamId);
+                SportTeamsByIdResponse result = apiInstance.TeamsById(teamId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -9180,7 +9532,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By ID
-    ApiResponse<SportTeamsByIdResponse> response = apiInstance.TeamsByIdWithHttpInfo(version, sport, teamId);
+    ApiResponse<SportTeamsByIdResponse> response = apiInstance.TeamsByIdWithHttpInfo(teamId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -9197,9 +9549,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **teamId** | **int** | The ID of the team you want to retrieve. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -9224,7 +9576,7 @@ catch (ApiException e)
 
 <a name="teamsbyseasonid"></a>
 # **TeamsBySeasonId**
-> SportTeamsBySeasonIdResponse TeamsBySeasonId (string version, string sport, int seasonId)
+> SportTeamsBySeasonIdResponse TeamsBySeasonId (int seasonId, string version = null, string sport = null)
 
 By Season ID
 
@@ -9248,16 +9600,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var seasonId = 19686;  // int | The ID of the season you want to retrieve teams from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By Season ID
-                SportTeamsBySeasonIdResponse result = apiInstance.TeamsBySeasonId(version, sport, seasonId);
+                SportTeamsBySeasonIdResponse result = apiInstance.TeamsBySeasonId(seasonId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -9284,7 +9640,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By Season ID
-    ApiResponse<SportTeamsBySeasonIdResponse> response = apiInstance.TeamsBySeasonIdWithHttpInfo(version, sport, seasonId);
+    ApiResponse<SportTeamsBySeasonIdResponse> response = apiInstance.TeamsBySeasonIdWithHttpInfo(seasonId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -9301,9 +9657,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **seasonId** | **int** | The ID of the season you want to retrieve teams from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -9328,7 +9684,7 @@ catch (ApiException e)
 
 <a name="teamssearch"></a>
 # **TeamsSearch**
-> SportTeamsSearchResponse TeamsSearch (string version, string sport, string name)
+> SportTeamsSearchResponse TeamsSearch (string name, string version = null, string sport = null)
 
 Search
 
@@ -9352,16 +9708,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
-            var name = Hors;  // string | The name you want to search on.
+            var name = "Hors";  // string | The name you want to search on.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // Search
-                SportTeamsSearchResponse result = apiInstance.TeamsSearch(version, sport, name);
+                SportTeamsSearchResponse result = apiInstance.TeamsSearch(name, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -9388,7 +9748,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Search
-    ApiResponse<SportTeamsSearchResponse> response = apiInstance.TeamsSearchWithHttpInfo(version, sport, name);
+    ApiResponse<SportTeamsSearchResponse> response = apiInstance.TeamsSearchWithHttpInfo(name, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -9405,9 +9765,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **name** | **string** | The name you want to search on. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -9432,7 +9792,7 @@ catch (ApiException e)
 
 <a name="topscorersbyseasonid"></a>
 # **TopScorersBySeasonId**
-> SportTopScorersBySeasonIdResponse TopScorersBySeasonId (string version, string sport, int seasonId)
+> SportTopScorersBySeasonIdResponse TopScorersBySeasonId (int seasonId, string version = null, string sport = null)
 
 By Season ID
 
@@ -9456,16 +9816,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var seasonId = 19686;  // int | The ID of the season you want to retrieve topscorers from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By Season ID
-                SportTopScorersBySeasonIdResponse result = apiInstance.TopScorersBySeasonId(version, sport, seasonId);
+                SportTopScorersBySeasonIdResponse result = apiInstance.TopScorersBySeasonId(seasonId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -9492,7 +9856,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By Season ID
-    ApiResponse<SportTopScorersBySeasonIdResponse> response = apiInstance.TopScorersBySeasonIdWithHttpInfo(version, sport, seasonId);
+    ApiResponse<SportTopScorersBySeasonIdResponse> response = apiInstance.TopScorersBySeasonIdWithHttpInfo(seasonId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -9509,9 +9873,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **seasonId** | **int** | The ID of the season you want to retrieve topscorers from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -9536,7 +9900,7 @@ catch (ApiException e)
 
 <a name="topscorersbystageid"></a>
 # **TopScorersByStageId**
-> SportTopScorersByStageIdResponse TopScorersByStageId (string version, string sport, int stageId)
+> SportTopScorersByStageIdResponse TopScorersByStageId (int stageId, string version = null, string sport = null)
 
 By Stage ID
 
@@ -9560,16 +9924,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var stageId = 1100;  // int | The ID of the stage you want to retrieve topscorers from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By Stage ID
-                SportTopScorersByStageIdResponse result = apiInstance.TopScorersByStageId(version, sport, stageId);
+                SportTopScorersByStageIdResponse result = apiInstance.TopScorersByStageId(stageId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -9596,7 +9964,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By Stage ID
-    ApiResponse<SportTopScorersByStageIdResponse> response = apiInstance.TopScorersByStageIdWithHttpInfo(version, sport, stageId);
+    ApiResponse<SportTopScorersByStageIdResponse> response = apiInstance.TopScorersByStageIdWithHttpInfo(stageId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -9613,9 +9981,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **stageId** | **int** | The ID of the stage you want to retrieve topscorers from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -9640,7 +10008,7 @@ catch (ApiException e)
 
 <a name="tranfersbydaterange"></a>
 # **TranfersByDateRange**
-> SportTranfersByDateRangeResponse TranfersByDateRange (string version, string sport, string startDate, string endDate)
+> SportTranfersByDateRangeResponse TranfersByDateRange (string startDate, string endDate, string version = null, string sport = null)
 
 By Date Range
 
@@ -9664,17 +10032,21 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
-            var startDate = 2021-12-27;  // string | The start date you want to retrieve transfers from.
-            var endDate = 2021-12-30;  // string | The end date you want to retrieve transfers from.
+            var startDate = "2021-12-27";  // string | The start date you want to retrieve transfers from.
+            var endDate = "2021-12-30";  // string | The end date you want to retrieve transfers from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By Date Range
-                SportTranfersByDateRangeResponse result = apiInstance.TranfersByDateRange(version, sport, startDate, endDate);
+                SportTranfersByDateRangeResponse result = apiInstance.TranfersByDateRange(startDate, endDate, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -9701,7 +10073,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By Date Range
-    ApiResponse<SportTranfersByDateRangeResponse> response = apiInstance.TranfersByDateRangeWithHttpInfo(version, sport, startDate, endDate);
+    ApiResponse<SportTranfersByDateRangeResponse> response = apiInstance.TranfersByDateRangeWithHttpInfo(startDate, endDate, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -9718,10 +10090,10 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **startDate** | **string** | The start date you want to retrieve transfers from. |  |
 | **endDate** | **string** | The end date you want to retrieve transfers from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -9746,7 +10118,7 @@ catch (ApiException e)
 
 <a name="transferbyid"></a>
 # **TransferById**
-> SportTransferByIdResponse TransferById (string version, string sport, int transferId)
+> SportTransferByIdResponse TransferById (int transferId, string version = null, string sport = null)
 
 By ID
 
@@ -9770,16 +10142,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var transferId = 1;  // int | 
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By ID
-                SportTransferByIdResponse result = apiInstance.TransferById(version, sport, transferId);
+                SportTransferByIdResponse result = apiInstance.TransferById(transferId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -9806,7 +10182,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By ID
-    ApiResponse<SportTransferByIdResponse> response = apiInstance.TransferByIdWithHttpInfo(version, sport, transferId);
+    ApiResponse<SportTransferByIdResponse> response = apiInstance.TransferByIdWithHttpInfo(transferId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -9823,9 +10199,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **transferId** | **int** |  |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -9850,7 +10226,7 @@ catch (ApiException e)
 
 <a name="transfersall"></a>
 # **TransfersAll**
-> SportTransfersAllResponse TransfersAll (string version, string sport)
+> SportTransfersAllResponse TransfersAll (string version = null, string sport = null)
 
 All
 
@@ -9874,10 +10250,14 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
@@ -9926,8 +10306,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -9952,7 +10332,7 @@ catch (ApiException e)
 
 <a name="transfersbyplayerid"></a>
 # **TransfersByPlayerId**
-> SportTransfersByPlayerIdResponse TransfersByPlayerId (string version, string sport, int playerId)
+> SportTransfersByPlayerIdResponse TransfersByPlayerId (int playerId, string version = null, string sport = null)
 
 By Player ID
 
@@ -9976,16 +10356,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var playerId = 35659846;  // int | The ID of the player you want to retrieve transfers from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By Player ID
-                SportTransfersByPlayerIdResponse result = apiInstance.TransfersByPlayerId(version, sport, playerId);
+                SportTransfersByPlayerIdResponse result = apiInstance.TransfersByPlayerId(playerId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -10012,7 +10396,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By Player ID
-    ApiResponse<SportTransfersByPlayerIdResponse> response = apiInstance.TransfersByPlayerIdWithHttpInfo(version, sport, playerId);
+    ApiResponse<SportTransfersByPlayerIdResponse> response = apiInstance.TransfersByPlayerIdWithHttpInfo(playerId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -10029,9 +10413,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **playerId** | **int** | The ID of the player you want to retrieve transfers from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -10056,7 +10440,7 @@ catch (ApiException e)
 
 <a name="transfersbyteamid"></a>
 # **TransfersByTeamId**
-> SportTransfersByTeamIdResponse TransfersByTeamId (string version, string sport, int teamId)
+> SportTransfersByTeamIdResponse TransfersByTeamId (int teamId, string version = null, string sport = null)
 
 By Team ID
 
@@ -10080,16 +10464,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var teamId = 3736;  // int | The ID of the team you want to retrieve transfers from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By Team ID
-                SportTransfersByTeamIdResponse result = apiInstance.TransfersByTeamId(version, sport, teamId);
+                SportTransfersByTeamIdResponse result = apiInstance.TransfersByTeamId(teamId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -10116,7 +10504,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By Team ID
-    ApiResponse<SportTransfersByTeamIdResponse> response = apiInstance.TransfersByTeamIdWithHttpInfo(version, sport, teamId);
+    ApiResponse<SportTransfersByTeamIdResponse> response = apiInstance.TransfersByTeamIdWithHttpInfo(teamId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -10133,9 +10521,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **teamId** | **int** | The ID of the team you want to retrieve transfers from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -10160,7 +10548,7 @@ catch (ApiException e)
 
 <a name="transferslatest"></a>
 # **TransfersLatest**
-> SportTransfersLatestResponse TransfersLatest (string version, string sport)
+> SportTransfersLatestResponse TransfersLatest (string version = null, string sport = null)
 
 Last Updated
 
@@ -10184,10 +10572,14 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
@@ -10236,8 +10628,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -10262,7 +10654,7 @@ catch (ApiException e)
 
 <a name="tvstationbyid"></a>
 # **TvStationById**
-> SportTvStationByIdResponse TvStationById (string version, string sport, int tvStationId)
+> SportTvStationByIdResponse TvStationById (int tvStationId, string version = null, string sport = null)
 
 By ID
 
@@ -10286,16 +10678,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var tvStationId = 33;  // int | The ID of the tv station you want to retrieve.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By ID
-                SportTvStationByIdResponse result = apiInstance.TvStationById(version, sport, tvStationId);
+                SportTvStationByIdResponse result = apiInstance.TvStationById(tvStationId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -10322,7 +10718,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By ID
-    ApiResponse<SportTvStationByIdResponse> response = apiInstance.TvStationByIdWithHttpInfo(version, sport, tvStationId);
+    ApiResponse<SportTvStationByIdResponse> response = apiInstance.TvStationByIdWithHttpInfo(tvStationId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -10339,9 +10735,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **tvStationId** | **int** | The ID of the tv station you want to retrieve. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -10366,7 +10762,7 @@ catch (ApiException e)
 
 <a name="tvstationsall"></a>
 # **TvStationsAll**
-> SportTvStationsAllResponse TvStationsAll (string version, string sport)
+> SportTvStationsAllResponse TvStationsAll (string version = null, string sport = null)
 
 All
 
@@ -10390,10 +10786,14 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
@@ -10442,8 +10842,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -10468,7 +10868,7 @@ catch (ApiException e)
 
 <a name="tvstationsbyfixtureid"></a>
 # **TvStationsByFixtureId**
-> SportTvStationsByFixtureIdResponse TvStationsByFixtureId (string version, string sport, int fixtureId)
+> SportTvStationsByFixtureIdResponse TvStationsByFixtureId (int fixtureId, string version = null, string sport = null)
 
 By Fixture ID
 
@@ -10492,16 +10892,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var fixtureId = 16808591;  // int | The ID of the fixture you want to retrieve tv-stations from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By Fixture ID
-                SportTvStationsByFixtureIdResponse result = apiInstance.TvStationsByFixtureId(version, sport, fixtureId);
+                SportTvStationsByFixtureIdResponse result = apiInstance.TvStationsByFixtureId(fixtureId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -10528,7 +10932,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By Fixture ID
-    ApiResponse<SportTvStationsByFixtureIdResponse> response = apiInstance.TvStationsByFixtureIdWithHttpInfo(version, sport, fixtureId);
+    ApiResponse<SportTvStationsByFixtureIdResponse> response = apiInstance.TvStationsByFixtureIdWithHttpInfo(fixtureId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -10545,9 +10949,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **fixtureId** | **int** | The ID of the fixture you want to retrieve tv-stations from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -10572,7 +10976,7 @@ catch (ApiException e)
 
 <a name="venuebyid"></a>
 # **VenueById**
-> SportVenueByIdResponse VenueById (string version, string sport, int venueId)
+> SportVenueByIdResponse VenueById (int venueId, string version = null, string sport = null)
 
 By ID
 
@@ -10596,16 +11000,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var venueId = 219;  // int | The ID of the venue you want to retrieve.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By ID
-                SportVenueByIdResponse result = apiInstance.VenueById(version, sport, venueId);
+                SportVenueByIdResponse result = apiInstance.VenueById(venueId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -10632,7 +11040,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By ID
-    ApiResponse<SportVenueByIdResponse> response = apiInstance.VenueByIdWithHttpInfo(version, sport, venueId);
+    ApiResponse<SportVenueByIdResponse> response = apiInstance.VenueByIdWithHttpInfo(venueId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -10649,9 +11057,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **venueId** | **int** | The ID of the venue you want to retrieve. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -10676,7 +11084,7 @@ catch (ApiException e)
 
 <a name="venuesall"></a>
 # **VenuesAll**
-> SportVenuesAllResponse VenuesAll (string version, string sport)
+> SportVenuesAllResponse VenuesAll (string version = null, string sport = null)
 
 All
 
@@ -10700,10 +11108,14 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
@@ -10752,8 +11164,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -10778,7 +11190,7 @@ catch (ApiException e)
 
 <a name="venuesbyseasonid"></a>
 # **VenuesBySeasonId**
-> SportVenuesBySeasonIdResponse VenuesBySeasonId (string version, string sport, int seasonId)
+> SportVenuesBySeasonIdResponse VenuesBySeasonId (int seasonId, string version = null, string sport = null)
 
 By Season ID
 
@@ -10802,16 +11214,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
             var seasonId = 19686;  // int | The ID of the season you want to retrieve venues from.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // By Season ID
-                SportVenuesBySeasonIdResponse result = apiInstance.VenuesBySeasonId(version, sport, seasonId);
+                SportVenuesBySeasonIdResponse result = apiInstance.VenuesBySeasonId(seasonId, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -10838,7 +11254,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By Season ID
-    ApiResponse<SportVenuesBySeasonIdResponse> response = apiInstance.VenuesBySeasonIdWithHttpInfo(version, sport, seasonId);
+    ApiResponse<SportVenuesBySeasonIdResponse> response = apiInstance.VenuesBySeasonIdWithHttpInfo(seasonId, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -10855,9 +11271,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **seasonId** | **int** | The ID of the season you want to retrieve venues from. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 
@@ -10882,7 +11298,7 @@ catch (ApiException e)
 
 <a name="venuessearch"></a>
 # **VenuesSearch**
-> SportVenuesSearchResponse VenuesSearch (string version, string sport, string name)
+> SportVenuesSearchResponse VenuesSearch (string name, string version = null, string sport = null)
 
 Search
 
@@ -10906,16 +11322,20 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new SportApi(config);
-            var version = v3;  // string | The version of the API.
-            var sport = football;  // string | The sport you want retrieve entities from.
-            var name = Park;  // string | The name you want to search on.
+            var name = "Park";  // string | The name you want to search on.
+            var version = "v3";  // string | The version of the API. (optional) 
+            var sport = "football";  // string | The sport you want retrieve entities from. (optional) 
 
             try
             {
                 // Search
-                SportVenuesSearchResponse result = apiInstance.VenuesSearch(version, sport, name);
+                SportVenuesSearchResponse result = apiInstance.VenuesSearch(name, version, sport);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -10942,7 +11362,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Search
-    ApiResponse<SportVenuesSearchResponse> response = apiInstance.VenuesSearchWithHttpInfo(version, sport, name);
+    ApiResponse<SportVenuesSearchResponse> response = apiInstance.VenuesSearchWithHttpInfo(name, version, sport);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -10959,9 +11379,9 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
-| **sport** | **string** | The sport you want retrieve entities from. |  |
 | **name** | **string** | The name you want to search on. |  |
+| **version** | **string** | The version of the API. | [optional]  |
+| **sport** | **string** | The sport you want retrieve entities from. | [optional]  |
 
 ### Return type
 

@@ -9,7 +9,7 @@ All URIs are relative to *https://api.sportmonks.com*
 
 <a name="all"></a>
 # **All**
-> TypesAllResponse All (string version)
+> TypesAllResponse All (string version = null)
 
 All
 
@@ -33,9 +33,13 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new TypesApi(config);
-            var version = v3;  // string | The version of the API.
+            var version = "v3";  // string | The version of the API. (optional) 
 
             try
             {
@@ -84,7 +88,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
+| **version** | **string** | The version of the API. | [optional]  |
 
 ### Return type
 
@@ -109,7 +113,7 @@ catch (ApiException e)
 
 <a name="getbyid"></a>
 # **GetById**
-> TypesGetByIdResponse GetById (string version, int typeId)
+> TypesGetByIdResponse GetById (int typeId, string version = null)
 
 By ID
 
@@ -133,15 +137,19 @@ namespace Example
             // Configure custom BasePath if desired
             // config.BasePath = "https://api.sportmonks.com";
 
+            // Configure API key authorization: apikeyAuth
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new TypesApi(config);
-            var version = v3;  // string | The version of the API.
             var typeId = 1;  // int | The ID of the type you want to retrieve
+            var version = "v3";  // string | The version of the API. (optional) 
 
             try
             {
                 // By ID
-                TypesGetByIdResponse result = apiInstance.GetById(version, typeId);
+                TypesGetByIdResponse result = apiInstance.GetById(typeId, version);
                 Console.WriteLine(result);
             }
             catch (ApiException e)
@@ -168,7 +176,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // By ID
-    ApiResponse<TypesGetByIdResponse> response = apiInstance.GetByIdWithHttpInfo(version, typeId);
+    ApiResponse<TypesGetByIdResponse> response = apiInstance.GetByIdWithHttpInfo(typeId, version);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -185,8 +193,8 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **version** | **string** | The version of the API. |  |
 | **typeId** | **int** | The ID of the type you want to retrieve |  |
+| **version** | **string** | The version of the API. | [optional]  |
 
 ### Return type
 

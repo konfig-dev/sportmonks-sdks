@@ -30,10 +30,10 @@ namespace Sportmonks.Net.Api
         /// All
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>RegionsAllResponse</returns>
-        RegionsAllResponse All(string version, int operationIndex = 0);
+        RegionsAllResponse All(string version = default(string), int operationIndex = 0);
 
         /// <summary>
         /// All
@@ -42,19 +42,19 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of RegionsAllResponse</returns>
-        ApiResponse<RegionsAllResponse> AllWithHttpInfo(string version, int operationIndex = 0);
+        ApiResponse<RegionsAllResponse> AllWithHttpInfo(string version = default(string), int operationIndex = 0);
         /// <summary>
         /// By ID
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="regionId">The ID of the region you want to retrieve.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>RegionsGetByIdResponse</returns>
-        RegionsGetByIdResponse GetById(string version, int regionId, int operationIndex = 0);
+        RegionsGetByIdResponse GetById(int regionId, string version = default(string), int operationIndex = 0);
 
         /// <summary>
         /// By ID
@@ -63,20 +63,20 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="regionId">The ID of the region you want to retrieve.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of RegionsGetByIdResponse</returns>
-        ApiResponse<RegionsGetByIdResponse> GetByIdWithHttpInfo(string version, int regionId, int operationIndex = 0);
+        ApiResponse<RegionsGetByIdResponse> GetByIdWithHttpInfo(int regionId, string version = default(string), int operationIndex = 0);
         /// <summary>
         /// Search
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="name">The name you want to search on</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>RegionsSearchResponse</returns>
-        RegionsSearchResponse Search(string version, string name, int operationIndex = 0);
+        RegionsSearchResponse Search(string name, string version = default(string), int operationIndex = 0);
 
         /// <summary>
         /// Search
@@ -85,11 +85,11 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="name">The name you want to search on</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of RegionsSearchResponse</returns>
-        ApiResponse<RegionsSearchResponse> SearchWithHttpInfo(string version, string name, int operationIndex = 0);
+        ApiResponse<RegionsSearchResponse> SearchWithHttpInfo(string name, string version = default(string), int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -106,11 +106,11 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RegionsAllResponse</returns>
-        System.Threading.Tasks.Task<RegionsAllResponse> AllAsync(string version, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RegionsAllResponse> AllAsync(string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// All
@@ -119,11 +119,11 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RegionsAllResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RegionsAllResponse>> AllWithHttpInfoAsync(string version, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RegionsAllResponse>> AllWithHttpInfoAsync(string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// By ID
         /// </summary>
@@ -131,12 +131,12 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="regionId">The ID of the region you want to retrieve.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RegionsGetByIdResponse</returns>
-        System.Threading.Tasks.Task<RegionsGetByIdResponse> GetByIdAsync(string version, int regionId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RegionsGetByIdResponse> GetByIdAsync(int regionId, string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// By ID
@@ -145,12 +145,12 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="regionId">The ID of the region you want to retrieve.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RegionsGetByIdResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RegionsGetByIdResponse>> GetByIdWithHttpInfoAsync(string version, int regionId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RegionsGetByIdResponse>> GetByIdWithHttpInfoAsync(int regionId, string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Search
         /// </summary>
@@ -158,12 +158,12 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="name">The name you want to search on</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RegionsSearchResponse</returns>
-        System.Threading.Tasks.Task<RegionsSearchResponse> SearchAsync(string version, string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RegionsSearchResponse> SearchAsync(string name, string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Search
@@ -172,12 +172,12 @@ namespace Sportmonks.Net.Api
         /// 
         /// </remarks>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="name">The name you want to search on</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RegionsSearchResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RegionsSearchResponse>> SearchWithHttpInfoAsync(string version, string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RegionsSearchResponse>> SearchWithHttpInfoAsync(string name, string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -302,10 +302,10 @@ namespace Sportmonks.Net.Api
         /// All 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>RegionsAllResponse</returns>
-        public RegionsAllResponse All(string version, int operationIndex = 0)
+        public RegionsAllResponse All(string version = default(string), int operationIndex = 0)
         {
             Sportmonks.Net.Client.ApiResponse<RegionsAllResponse> localVarResponse = AllWithHttpInfo(version);
             return localVarResponse.Data;
@@ -315,17 +315,11 @@ namespace Sportmonks.Net.Api
         /// All 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of RegionsAllResponse</returns>
-        public Sportmonks.Net.Client.ApiResponse<RegionsAllResponse> AllWithHttpInfo(string version, int operationIndex = 0)
+        public Sportmonks.Net.Client.ApiResponse<RegionsAllResponse> AllWithHttpInfo(string version = default(string), int operationIndex = 0)
         {
-            // verify the required parameter 'version' is set
-            if (version == null)
-            {
-                throw new Sportmonks.Net.Client.ApiException(400, "Missing required parameter 'version' when calling RegionsApi->All");
-            }
-
             Sportmonks.Net.Client.RequestOptions localVarRequestOptions = new Sportmonks.Net.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
@@ -348,12 +342,19 @@ namespace Sportmonks.Net.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            if (version != null)
+            {
+                localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            }
 
             localVarRequestOptions.Operation = "RegionsApi.All";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (apikeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<RegionsAllResponse>("/{version}/core/regions", localVarRequestOptions, this.Configuration);
@@ -373,11 +374,11 @@ namespace Sportmonks.Net.Api
         /// All 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RegionsAllResponse</returns>
-        public async System.Threading.Tasks.Task<RegionsAllResponse> AllAsync(string version, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RegionsAllResponse> AllAsync(string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             Sportmonks.Net.Client.ApiResponse<RegionsAllResponse> localVarResponse = await AllWithHttpInfoAsync(version, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -387,18 +388,12 @@ namespace Sportmonks.Net.Api
         /// All 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RegionsAllResponse)</returns>
-        public async System.Threading.Tasks.Task<Sportmonks.Net.Client.ApiResponse<RegionsAllResponse>> AllWithHttpInfoAsync(string version, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Sportmonks.Net.Client.ApiResponse<RegionsAllResponse>> AllWithHttpInfoAsync(string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'version' is set
-            if (version == null)
-            {
-                throw new Sportmonks.Net.Client.ApiException(400, "Missing required parameter 'version' when calling RegionsApi->All");
-            }
-
 
             Sportmonks.Net.Client.RequestOptions localVarRequestOptions = new Sportmonks.Net.Client.RequestOptions();
 
@@ -422,12 +417,19 @@ namespace Sportmonks.Net.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            if (version != null)
+            {
+                localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            }
 
             localVarRequestOptions.Operation = "RegionsApi.All";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (apikeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.GetAsync<RegionsAllResponse>("/{version}/core/regions", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -448,13 +450,13 @@ namespace Sportmonks.Net.Api
         /// By ID 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="regionId">The ID of the region you want to retrieve.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>RegionsGetByIdResponse</returns>
-        public RegionsGetByIdResponse GetById(string version, int regionId, int operationIndex = 0)
+        public RegionsGetByIdResponse GetById(int regionId, string version = default(string), int operationIndex = 0)
         {
-            Sportmonks.Net.Client.ApiResponse<RegionsGetByIdResponse> localVarResponse = GetByIdWithHttpInfo(version, regionId);
+            Sportmonks.Net.Client.ApiResponse<RegionsGetByIdResponse> localVarResponse = GetByIdWithHttpInfo(regionId, version);
             return localVarResponse.Data;
         }
 
@@ -462,18 +464,12 @@ namespace Sportmonks.Net.Api
         /// By ID 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="regionId">The ID of the region you want to retrieve.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of RegionsGetByIdResponse</returns>
-        public Sportmonks.Net.Client.ApiResponse<RegionsGetByIdResponse> GetByIdWithHttpInfo(string version, int regionId, int operationIndex = 0)
+        public Sportmonks.Net.Client.ApiResponse<RegionsGetByIdResponse> GetByIdWithHttpInfo(int regionId, string version = default(string), int operationIndex = 0)
         {
-            // verify the required parameter 'version' is set
-            if (version == null)
-            {
-                throw new Sportmonks.Net.Client.ApiException(400, "Missing required parameter 'version' when calling RegionsApi->GetById");
-            }
-
             Sportmonks.Net.Client.RequestOptions localVarRequestOptions = new Sportmonks.Net.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
@@ -496,13 +492,20 @@ namespace Sportmonks.Net.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            if (version != null)
+            {
+                localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            }
             localVarRequestOptions.PathParameters.Add("regionId", Sportmonks.Net.Client.ClientUtils.ParameterToString(regionId)); // path parameter
 
             localVarRequestOptions.Operation = "RegionsApi.GetById";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (apikeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<RegionsGetByIdResponse>("/{version}/core/regions/{regionId}", localVarRequestOptions, this.Configuration);
@@ -522,14 +525,14 @@ namespace Sportmonks.Net.Api
         /// By ID 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="regionId">The ID of the region you want to retrieve.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RegionsGetByIdResponse</returns>
-        public async System.Threading.Tasks.Task<RegionsGetByIdResponse> GetByIdAsync(string version, int regionId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RegionsGetByIdResponse> GetByIdAsync(int regionId, string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Sportmonks.Net.Client.ApiResponse<RegionsGetByIdResponse> localVarResponse = await GetByIdWithHttpInfoAsync(version, regionId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Sportmonks.Net.Client.ApiResponse<RegionsGetByIdResponse> localVarResponse = await GetByIdWithHttpInfoAsync(regionId, version, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -537,19 +540,13 @@ namespace Sportmonks.Net.Api
         /// By ID 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="regionId">The ID of the region you want to retrieve.</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RegionsGetByIdResponse)</returns>
-        public async System.Threading.Tasks.Task<Sportmonks.Net.Client.ApiResponse<RegionsGetByIdResponse>> GetByIdWithHttpInfoAsync(string version, int regionId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Sportmonks.Net.Client.ApiResponse<RegionsGetByIdResponse>> GetByIdWithHttpInfoAsync(int regionId, string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'version' is set
-            if (version == null)
-            {
-                throw new Sportmonks.Net.Client.ApiException(400, "Missing required parameter 'version' when calling RegionsApi->GetById");
-            }
-
 
             Sportmonks.Net.Client.RequestOptions localVarRequestOptions = new Sportmonks.Net.Client.RequestOptions();
 
@@ -573,13 +570,20 @@ namespace Sportmonks.Net.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            if (version != null)
+            {
+                localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            }
             localVarRequestOptions.PathParameters.Add("regionId", Sportmonks.Net.Client.ClientUtils.ParameterToString(regionId)); // path parameter
 
             localVarRequestOptions.Operation = "RegionsApi.GetById";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (apikeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.GetAsync<RegionsGetByIdResponse>("/{version}/core/regions/{regionId}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -600,13 +604,13 @@ namespace Sportmonks.Net.Api
         /// Search 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="name">The name you want to search on</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>RegionsSearchResponse</returns>
-        public RegionsSearchResponse Search(string version, string name, int operationIndex = 0)
+        public RegionsSearchResponse Search(string name, string version = default(string), int operationIndex = 0)
         {
-            Sportmonks.Net.Client.ApiResponse<RegionsSearchResponse> localVarResponse = SearchWithHttpInfo(version, name);
+            Sportmonks.Net.Client.ApiResponse<RegionsSearchResponse> localVarResponse = SearchWithHttpInfo(name, version);
             return localVarResponse.Data;
         }
 
@@ -614,18 +618,12 @@ namespace Sportmonks.Net.Api
         /// Search 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="name">The name you want to search on</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of RegionsSearchResponse</returns>
-        public Sportmonks.Net.Client.ApiResponse<RegionsSearchResponse> SearchWithHttpInfo(string version, string name, int operationIndex = 0)
+        public Sportmonks.Net.Client.ApiResponse<RegionsSearchResponse> SearchWithHttpInfo(string name, string version = default(string), int operationIndex = 0)
         {
-            // verify the required parameter 'version' is set
-            if (version == null)
-            {
-                throw new Sportmonks.Net.Client.ApiException(400, "Missing required parameter 'version' when calling RegionsApi->Search");
-            }
-
             // verify the required parameter 'name' is set
             if (name == null)
             {
@@ -654,13 +652,20 @@ namespace Sportmonks.Net.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            if (version != null)
+            {
+                localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            }
             localVarRequestOptions.PathParameters.Add("name", Sportmonks.Net.Client.ClientUtils.ParameterToString(name)); // path parameter
 
             localVarRequestOptions.Operation = "RegionsApi.Search";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (apikeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<RegionsSearchResponse>("/{version}/core/regions/search/{name}", localVarRequestOptions, this.Configuration);
@@ -680,14 +685,14 @@ namespace Sportmonks.Net.Api
         /// Search 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="name">The name you want to search on</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RegionsSearchResponse</returns>
-        public async System.Threading.Tasks.Task<RegionsSearchResponse> SearchAsync(string version, string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RegionsSearchResponse> SearchAsync(string name, string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Sportmonks.Net.Client.ApiResponse<RegionsSearchResponse> localVarResponse = await SearchWithHttpInfoAsync(version, name, operationIndex, cancellationToken).ConfigureAwait(false);
+            Sportmonks.Net.Client.ApiResponse<RegionsSearchResponse> localVarResponse = await SearchWithHttpInfoAsync(name, version, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -695,19 +700,13 @@ namespace Sportmonks.Net.Api
         /// Search 
         /// </summary>
         /// <exception cref="Sportmonks.Net.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="version">The version of the API.</param>
         /// <param name="name">The name you want to search on</param>
+        /// <param name="version">The version of the API. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RegionsSearchResponse)</returns>
-        public async System.Threading.Tasks.Task<Sportmonks.Net.Client.ApiResponse<RegionsSearchResponse>> SearchWithHttpInfoAsync(string version, string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Sportmonks.Net.Client.ApiResponse<RegionsSearchResponse>> SearchWithHttpInfoAsync(string name, string version = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'version' is set
-            if (version == null)
-            {
-                throw new Sportmonks.Net.Client.ApiException(400, "Missing required parameter 'version' when calling RegionsApi->Search");
-            }
-
             // verify the required parameter 'name' is set
             if (name == null)
             {
@@ -737,13 +736,20 @@ namespace Sportmonks.Net.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            if (version != null)
+            {
+                localVarRequestOptions.PathParameters.Add("version", Sportmonks.Net.Client.ClientUtils.ParameterToString(version)); // path parameter
+            }
             localVarRequestOptions.PathParameters.Add("name", Sportmonks.Net.Client.ClientUtils.ParameterToString(name)); // path parameter
 
             localVarRequestOptions.Operation = "RegionsApi.Search";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (apikeyAuth) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.GetAsync<RegionsSearchResponse>("/{version}/core/regions/search/{name}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);

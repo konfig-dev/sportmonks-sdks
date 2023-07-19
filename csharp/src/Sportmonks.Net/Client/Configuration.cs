@@ -275,6 +275,12 @@ namespace Sportmonks.Net.Client
         /// <value>The access token.</value>
         public virtual string AccessToken { get; set; }
 
+        /// <value>Client state</value>
+        public virtual string version { get; set; }
+
+        /// <value>Client state</value>
+        public virtual string sport { get; set; }
+
         /// <summary>
         /// Gets or sets the temporary folder path to store the files downloaded from the server.
         /// </summary>
@@ -590,6 +596,8 @@ namespace Sportmonks.Net.Client
                 Password = second.Password ?? first.Password,
                 VerifySsl = second.VerifySsl && first.VerifySsl,
                 AccessToken = second.AccessToken ?? first.AccessToken,
+                version = second.version ?? first.version,
+                sport = second.sport ?? first.sport,
                 TempFolderPath = second.TempFolderPath ?? first.TempFolderPath,
                 DateTimeFormat = second.DateTimeFormat ?? first.DateTimeFormat,
                 ClientCertificates = second.ClientCertificates ?? first.ClientCertificates,

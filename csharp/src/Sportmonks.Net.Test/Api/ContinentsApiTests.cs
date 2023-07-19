@@ -73,9 +73,9 @@ namespace Sportmonks.Net.Test.Api
         public void GetByIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string version = null;
             //int continentId = null;
-            //var response = instance.GetById(version, continentId);
+            //string version = null;
+            //var response = instance.GetById(continentId, version);
             //Assert.IsType<ContinentsGetByIdResponse>(response);
         }
     }
